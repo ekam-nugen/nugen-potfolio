@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Bree_Serif } from "next/font/google";
+import { Geist, Geist_Mono,Poppins } from "next/font/google";
 import "./globals.css";
 
-const breeSerif = Bree_Serif({
-  variable: "--font-bree-serif",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
   weight: "400"
 });
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -31,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${breeSerif.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased`}
       >
         {children}
       </body>

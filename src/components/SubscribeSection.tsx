@@ -17,13 +17,13 @@ export default function SubscribeSection() {
         </div>
 
         <div className="flex-1 space-y-4 w-full max-w-md">
-          <div className="flex bg-white rounded-lg overflow-hidden shadow-lg">
+          <div className="flex justify-between bg-white rounded-lg overflow-hidden shadow-lg">
             <input
               type="email"
               placeholder="Email"
-              className="px-4 py-2 flex-grow outline-none text-sm"
+              className="p-2 outline-none text-sm"
             />
-            <button className="bg-gradient-to-r from-orange-400 to-purple-600 text-white p-2 text-sm font-semibold">
+            <button className="bg-gradient-to-r from-orange-400 to-purple-600 text-white p-2 text-sm  font-semibold">
               Subscribe
             </button>
           </div>
