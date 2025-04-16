@@ -6,10 +6,10 @@ export default function SubscribeSection() {
     <section className="w-full bg-gradient-to-l from-rose-300 via-pink-100  to-orange-400 py-16 px-6 md:px-20 text-black">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
         <div className="flex-1">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
+          <h2 className="text-3xl md:text-5xl mb-4">
             Unlock Your Digital <br className="hidden md:block" /> Potential
           </h2>
-          <p className="text-sm md:text-base text-gray-700 max-w-md">
+          <p className="text-sm md:text-base text-gray-700 max-w-xl">
             Connect with us today to discover how our expertise in modern
             technologies can elevate your business. Don’t miss out on
             tailor-made solutions designed for your unique needs.
@@ -40,7 +40,7 @@ export default function SubscribeSection() {
                 />
               ))}
             </div>
-            <p className="text-sm  font-semibold mt-2 text-gray-600">
+            <p className="text-sm mt-2 text-gray-700">
               10.5 million subscribers
             </p>
           </div>

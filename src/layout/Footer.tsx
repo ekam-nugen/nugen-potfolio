@@ -9,7 +9,7 @@ export default function Footer() {
             <span className="text-2xl">🔥</span>
             <span className="text-xl font-semibold">glowy</span>
           </div>
-          <div className="p-2 text-md md:text-md min-w-auto text-balance ">
+          <div className="p-2 text-md min-w-auto text-balance ">
             Discover our services tailored to your needs.
           </div>
         </div>
