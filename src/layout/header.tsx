@@ -208,57 +208,12 @@ export default function Header() {
 
             {/* Investors Dropdown */}
             <div className="relative" ref={dropdownRef}>
-              <button
+              <Link
+              href="/case-studys"
                 className="text-black hover:text-[#ff6b3d] font-medium flex items-center"
-                onClick={() => toggleDropdown("investors")}
               >
-                Investors
-                <ChevronDown className="w-4 h-4 ml-1" />
-              </button>
-              {activeDropdown === "investors" && (
-                <div className="absolute bg-white shadow-lg rounded-md mt-2 w-64 right-0 z-50">
-                  <div className="divide-y divide-gray-200 divide-dashed">
-                    <div>
-                      <h4 className="font-semibold px-4 py-2">
-                        Financial Information
-                      </h4>
-                      <Link
-                        href="/investors/annual-accounts"
-                        className="block px-4 py-2 text-black hover:bg-gray-100"
-                        onClick={closeDropdownAndNavigate}
-                      >
-                        Annual Accounts
-                      </Link>
-                      <Link
-                        href="/investors/financial-reports"
-                        className="block px-4 py-2 text-black hover:bg-gray-100"
-                        onClick={closeDropdownAndNavigate}
-                      >
-                        Financial Reports
-                      </Link>
-                      <Link
-                        href="/investors/shareholder-info"
-                        className="block px-4 py-2 text-black hover:bg-gray-100"
-                        onClick={closeDropdownAndNavigate}
-                      >
-                        Shareholder Information
-                      </Link>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold px-4 py-2">
-                        Shareholder info
-                      </h4>
-                      <Link
-                        href="/investors/annual-reports"
-                        className="block px-4 py-2 text-black hover:bg-gray-100"
-                        onClick={closeDropdownAndNavigate}
-                      >
-                        Annual Reports
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              )}
+                Case Study
+              </Link>
             </div>
 
             {/* Resources */}
