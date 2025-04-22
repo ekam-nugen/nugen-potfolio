@@ -1,244 +1,129 @@
 "use client";
 import Link from "next/link";
-import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import { ChevronDown, Menu, X, ChevronRight } from "lucide-react";
+import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
+import { headerData } from "../json/menuData";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const dropdownRef = useRef<HTMLDivElement | null>(null);
+  const [openMobileDropdown, setOpenMobileDropdown] = useState<string | null>(
+    null
+  );
+  const pathname = usePathname();
 
-  const toggleDropdown = (dropdown: string) => {
-    // Toggle the dropdown when clicked
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+  const toggleMobileDropdown = (label: string) => {
+    setOpenMobileDropdown((prev) => (prev === label ? null : label));
   };
 
-  // Close dropdown if clicked outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
-      ) {
-        setActiveDropdown(null);
-      }
-    };
+  const isActive = (href: string) =>
+    pathname === href || pathname.startsWith(href + "/");
 
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
-
-  const closeDropdownAndNavigate = () => {
-    setActiveDropdown(null);
-  };
+  const renderDesktopDropdown = (submenu: any[]) => (
+    <div className="absolute left-0 top-full w-64 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto pointer-events-none transition z-50">
+      <div className="divide-y divide-gray-200 divide-dashed">
+        {submenu.map((section: any, index: number) => (
+          <div key={index} className="relative group/sub">
+            {section.submenu ? (
+              <>
+                <div className="flex items-center justify-between px-4 py-2 hover:bg-gray-100 cursor-pointer text-black font-semibold">
+                  {section.label}
+                  <ChevronRight className="w-4 h-4 text-[#ff6b3d]" />
+                </div>
+                <div className="absolute left-full top-0 w-64 bg-white shadow-lg rounded-md hidden group-hover/sub:block z-50">
+                  {section.submenu.map((item: any, idx: number) => (
+                    <Link
+                      key={idx}
+                      href={item.href}
+                      className={`block px-4 py-2 hover:bg-gray-100 ${
+                        isActive(item.href) ? "text-[#ff6b3d]" : "text-black"
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </>
+            ) : (
+              <Link
+                href={section.href}
+                className={`block px-4 py-2 hover:bg-gray-100 ${
+                  isActive(section.href) ? "text-[#ff6b3d]" : "text-black"
+                } font-medium`}
+              >
+                {section.label}
+              </Link>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center">
-              <Image
-                src="/logo.png" // Replace with your logo image path
-                alt="Logo"
-                width={350}
-                height={150}
-                className="h-20 w-auto"
-              />
-            </Link>
-          </div>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo.png"
+              alt="Logo"
+              width={350}
+              height={150}
+              className="h-20 w-auto"
+            />
+          </Link>
 
-          {/* Navigation */}
+          {/* Desktop Navigation */}
           <nav className="hidden lg:flex space-x-6">
-            {/* About Us Dropdown */}
-            <div className="relative" ref={dropdownRef}>
-              <button
-                className="text-black hover:text-[#ff6b3d] font-medium flex items-center"
-                onClick={() => toggleDropdown("about")}
-              >
-                About Us
-                <ChevronDown className="w-4 h-4 ml-1" />
-              </button>
-              {activeDropdown === "about" && (
-                <div className="absolute bg-white shadow-lg rounded-md mt-2 w-64 left-0 z-50">
-                  <div className="divide-y divide-gray-200 divide-dashed">
-                    <div className="relative group/sub">
-                      <h4 className="font-semibold px-4 py-2 text-black hover:bg-gray-100 cursor-pointer flex items-center justify-between">
-                        Company Profile
-                        <ChevronRight className="w-4 h-4 text-[#ff6b3d]" />
-                      </h4>
-                      <div className="absolute hidden group-hover/sub:block bg-white shadow-lg rounded-md w-64 top-0 left-full z-50">
-                        <Link
-                          href="/about"
-                          className="block px-4 py-2 text-black hover:bg-gray-100"
-                          onClick={closeDropdownAndNavigate}
-                        >
-                          Profile
-                        </Link>
-                        <Link
-                          href="/about/blog"
-                          className="block px-4 py-2 text-black hover:bg-gray-100"
-                          onClick={closeDropdownAndNavigate}
-                        >
-                          Blog
-                        </Link>
-                        <Link
-                          href="/about/csr"
-                          className="block px-4 py-2 text-black hover:bg-gray-100"
-                          onClick={closeDropdownAndNavigate}
-                        >
-                          CSR
-                        </Link>
-                      </div>
-                    </div>
-
-                    <div className="relative group/sub">
-                      <h4 className="font-semibold px-4 py-2 text-black hover:bg-gray-100 cursor-pointer flex items-center justify-between">
-                        Why Us
-                        <ChevronRight className="w-4 h-4 text-[#ff6b3d]" />
-                      </h4>
-                      <div className="absolute hidden group-hover/sub:block bg-white shadow-lg rounded-md w-64 top-0 left-full z-50">
-                        <Link
-                          href="/about/free-trial"
-                          className="block px-4 py-2 text-black hover:bg-gray-100"
-                          onClick={closeDropdownAndNavigate}
-                        >
-                          Free Trial
-                        </Link>
-                        <Link
-                          href="/about/how-we-work"
-                          className="block px-4 py-2 text-black hover:bg-gray-100"
-                          onClick={closeDropdownAndNavigate}
-                        >
-                          How We Work
-                        </Link>
-                        <Link
-                          href="/about/top-talent"
-                          className="block px-4 py-2 text-black hover:bg-gray-100"
-                          onClick={closeDropdownAndNavigate}
-                        >
-                          Work With Top 1%
-                        </Link>
-                      </div>
-                    </div>
-
-                    <div className="relative group/sub">
-                      <h4 className="font-semibold px-4 py-2 text-black hover:bg-gray-100 cursor-pointer flex items-center justify-between">
-                        How We Collaborate
-                        <ChevronRight className="w-4 h-4 text-[#ff6b3d]" />
-                      </h4>
-                      <div className="absolute hidden group-hover/sub:block bg-white shadow-lg rounded-md w-64 top-0 left-full z-50">
-                        <Link
-                          href="/about/staff-augmentation"
-                          className="block px-4 py-2 text-black hover:bg-gray-100"
-                          onClick={closeDropdownAndNavigate}
-                        >
-                          Staff Augmentation
-                        </Link>
-                        <Link
-                          href="/about/fixed-cost"
-                          className="block px-4 py-2 text-black hover:bg-gray-100"
-                          onClick={closeDropdownAndNavigate}
-                        >
-                          Fixed Cost
-                        </Link>
-                        <Link
-                          href="/about/agile-pods"
-                          className="block px-4 py-2 text-black hover:bg-gray-100"
-                          onClick={closeDropdownAndNavigate}
-                        >
-                          Agile Pods
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Services Dropdown */}
-            <div className="relative" ref={dropdownRef}>
-              <button
-                className="text-black hover:text-[#ff6b3d] font-medium flex items-center"
-                onClick={() => toggleDropdown("services")}
-              >
-                Services
-                <ChevronDown className="w-4 h-4 ml-1" />
-              </button>
-              {activeDropdown === "services" && (
-                <div className="absolute bg-white shadow-lg rounded-md mt-2 w-64 right-0 z-50">
-                  <div className="divide-y divide-gray-200 divide-dashed">
-                    <Link
-                      href="/services/ai-ml"
-                      className="block px-4 py-2 text-black hover:bg-gray-100 font-medium"
-                      onClick={closeDropdownAndNavigate}
+            {headerData.map((item, index) => (
+              <div key={index} className={item.submenu ? "relative group" : ""}>
+                {item.submenu ? (
+                  <>
+                    <button
+                      className={`font-medium flex items-center ${
+                        item.submenu.some(
+                          (s: any) =>
+                            s.submenu?.some((sub: any) => isActive(sub.href)) ||
+                            isActive(s.href)
+                        )
+                          ? "text-[#ff6b3d]"
+                          : "text-black hover:text-[#ff6b3d]"
+                      }`}
                     >
-                      AI/ML/GenAI
-                    </Link>
-                    <Link
-                      href="/services/data-engineering"
-                      className="block px-4 py-2 text-black hover:bg-gray-100 font-medium"
-                      onClick={closeDropdownAndNavigate}
-                    >
-                      Data Engineering and Analytics
-                    </Link>
-                    <Link
-                      href="/services/cloud-engineering"
-                      className="block px-4 py-2 text-black hover:bg-gray-100 font-medium"
-                      onClick={closeDropdownAndNavigate}
-                    >
-                      Cloud Engineering
-                    </Link>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Technologies */}
+                      {item.label}
+                      <ChevronDown className="w-4 h-4 ml-1" />
+                    </button>
+                    {renderDesktopDropdown(item.submenu)}
+                  </>
+                ) : (
+                  <Link
+                    href={item.href!}
+                    className={`font-medium ${
+                      isActive(item.href)
+                        ? "text-[#ff6b3d]"
+                        : "text-black hover:text-[#ff6b3d]"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                )}
+              </div>
+            ))}
             <Link
-              href="/technologies"
-              className="text-black hover:text-[#ff6b3d] font-medium"
+              href="/contact"
+              className={`bg-gradient-to-r from-orange-400 to-pink-500 hover:from-orange-500 hover:to-pink-600 text-white px-4 py-2 rounded-md font-medium`}
             >
-              Technologies
+              Contact Us
             </Link>
-
-            {/* Investors Dropdown */}
-            <div className="relative" ref={dropdownRef}>
-              <Link
-              href="/case-studys"
-                className="text-black hover:text-[#ff6b3d] font-medium flex items-center"
-              >
-                Case Study
-              </Link>
-            </div>
-
-            {/* Resources */}
-            <Link
-              href="/resources"
-              className="text-black hover:text-[#ff6b3d] font-medium"
-            >
-              Resources
-            </Link>
-
-            <div className="hidden lg:block">
-              <Link
-                href="/contact"
-                className="bg-gradient-to-r from-orange-400 to-pink-500 hover:from-orange-500 hover:to-pink-600 text-white px-4 py-2 rounded-md font-medium"
-              >
-                Contact Us
-              </Link>
-            </div>
           </nav>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Button */}
           <div className="lg:hidden flex items-center">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-black focus:outline-none"
+              className="text-black"
             >
               {isMobileMenuOpen ? <X /> : <Menu />}
             </button>
@@ -246,29 +131,96 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Navigation */}
       {isMobileMenuOpen && (
         <div className="lg:hidden bg-white shadow-md z-50">
           <div className="space-y-4 py-4 px-4">
-            <Link href="/" className="text-black block py-2">
+            <Link
+              href="/"
+              className={`block py-2 font-medium ${
+                pathname === "/" ? "text-[#ff6b3d]" : "text-black"
+              }`}
+            >
               Home
             </Link>
-            <Link href="/about" className="text-black block py-2">
-              About Us
-            </Link>
-            <Link href="/services" className="text-black block py-2">
-              Services
-            </Link>
-            <Link href="/technologies" className="text-black block py-2">
-              Technologies
-            </Link>
-            <Link href="/investors" className="text-black block py-2">
-              Investors
-            </Link>
-            <Link href="/resources" className="text-black block py-2">
-              Resources
-            </Link>
-            <Link href="/contact" className="text-black block py-2">
+            {headerData.map((item, index) => (
+              <div key={index}>
+                {item.submenu ? (
+                  <>
+                    <button
+                      className="flex justify-between w-full text-left py-2 text-black font-medium"
+                      onClick={() => toggleMobileDropdown(item.label)}
+                    >
+                      {item.label}
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform ${
+                          openMobileDropdown === item.label ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+
+                    {/* Mobile submenu toggle logic */}
+                    {openMobileDropdown === item.label && (
+                      <div className="pl-4 space-y-2">
+                        {item.submenu.map((sub: any, idx: number) =>
+                          sub.submenu ? (
+                            <div key={idx}>
+                              <div className="text-sm font-semibold text-black">
+                                {sub.label}
+                              </div>
+                              <div className="ml-4 space-y-1">
+                                {sub.submenu.map(
+                                  (nested: any, nidx: number) => (
+                                    <Link
+                                      key={nidx}
+                                      href={nested.href}
+                                      className={`block text-sm ${
+                                        isActive(nested.href)
+                                          ? "text-[#ff6b3d]"
+                                          : "text-gray-700 hover:underline"
+                                      }`}
+                                    >
+                                      {nested.label}
+                                    </Link>
+                                  )
+                                )}
+                              </div>
+                            </div>
+                          ) : (
+                            <Link
+                              key={idx}
+                              href={sub.href}
+                              className={`block text-sm ${
+                                isActive(sub.href)
+                                  ? "text-[#ff6b3d]"
+                                  : "text-gray-700 hover:underline"
+                              }`}
+                            >
+                              {sub.label}
+                            </Link>
+                          )
+                        )}
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <Link
+                    href={item.href!}
+                    className={`block py-2 font-medium ${
+                      isActive(item.href) ? "text-[#ff6b3d]" : "text-black"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                )}
+              </div>
+            ))}
+            <Link
+              href="/contact"
+              className={`block py-2 font-medium ${
+                pathname === "/contact" ? "text-[#ff6b3d]" : "text-black"
+              }`}
+            >
               Contact
             </Link>
           </div>
