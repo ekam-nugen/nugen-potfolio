@@ -67,11 +67,13 @@ export default function BlogPage() {
             key={index}
             className="group relative rounded-xl overflow-hidden bg-white transition"
           >
-            <Image
-              src={project.image}
-              alt={project.title}
-              className="w-full h-60 object-cover"
-            />
+<Image
+  src={project.image}
+  alt={project.title}
+  className="w-full h-60 object-cover"
+  width={600} // Nominal width for optimization; adjust based on context
+  height={240} // Matches h-60 (240px)
+/>
             <div className="p-4">
               <h3 className="text-lg font-semibold text-gray-900">
                 {project.title}

@@ -1,8 +1,9 @@
 import Image from "next/image";
 import homeimg from "../../public/home.png";
+
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#f4c689] via-[#f4b0ed]  to-[#f7a65b] p-4 flex flex-col items-center mt-4">
+    <div className="min-h-screen bg-gradient-to-br from-[#f4c689] via-[#f4b0ed] to-[#f7a65b] p-4 flex flex-col items-center mt-4">
       <div className="max-w-4xl mt-20">
         <h1 className="text-5xl font-bold text-gray-900 leading-tight">
           Innovative Tech, <br /> Tailored Design
@@ -29,16 +30,22 @@ export default function HomePage() {
               className="w-8 h-8 rounded-full border-2 border-white"
               src="https://i.pravatar.cc/40?img=1"
               alt="User 1"
+              width={32} // Explicit width from w-8 (32px)
+              height={32} // Matching height for consistency
             />
             <Image
               className="w-8 h-8 rounded-full border-2 border-white"
               src="https://i.pravatar.cc/40?img=2"
               alt="User 2"
+              width={32} // Explicit width from w-8 (32px)
+              height={32} // Matching height for consistency
             />
             <Image
               className="w-8 h-8 rounded-full border-2 border-white"
               src="https://i.pravatar.cc/40?img=3"
               alt="User 3"
+              width={32} // Explicit width from w-8 (32px)
+              height={32} // Matching height for consistency
             />
           </div>
           <span className="text-sm text-black">Empowering Your Vision</span>
@@ -51,6 +58,9 @@ export default function HomePage() {
           src={homeimg.src}
           alt="Dashboard UI"
           className="w-full max-w-5xl rounded-2xl"
+          width={1280} // Max width from max-w-5xl (1280px)
+          height={720} // Arbitrary height; adjust based on your image's aspect ratio
+          style={{ width: "100%", maxWidth: "1280px" }} // Inline style to match w-full max-w-5xl
         />
       </div>
     </div>
