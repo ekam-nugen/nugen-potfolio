@@ -72,7 +72,7 @@ export default function ServicesSection() {
                 alt="Service"
                 layout="fill"
                 objectFit="cover"
-                className={`rounded-xl shadow-lg absolute top-0 left-0 w-full h-full transition-opacity duration-700 -rotate-12 ${
+                className={`rounded-xl shadow-lg absolute top-0 left-0 w-full h-full transition-opacity duration-700 md:-rotate-12 ${
                   currentImage === service.image
                     ? "opacity-100 z-10"
                     : "opacity-0 z-0"

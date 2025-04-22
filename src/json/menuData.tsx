@@ -1,56 +1,45 @@
-const menuData = {
-  "about": {
-    "title": "About Us",
-    "links": [
+export const headerData = [
+  {  
+    label: "About Us",
+    submenu: [
       {
-        "name": "Company Profile",
-        "url": "/about/profile"
+        label: "Company Profile",
+        submenu: [
+          { label: "Profile", href: "/about" },
+          { label: "Blog", href: "/about/blog" },
+          { label: "CSR", href: "/about/csr" },
+        ],
       },
       {
-        "name": "Blog",
-        "url": "/about/blog"
+        label: "Why Us",
+        submenu: [
+          { label: "Free Trial", href: "/about/free-trial" },
+          { label: "How We Work", href: "/about/how-we-work" },
+          { label: "Work With Top 1%", href: "/about/top-talent" },
+        ],
       },
       {
-        "name": "CSR",
-        "url": "/about/csr"
-      }
-    ]
+        label: "How We Collaborate",
+        submenu: [
+          { label: "Staff Augmentation", href: "/about/staff-augmentation" },
+          { label: "Fixed Cost", href: "/about/fixed-cost" },
+          { label: "Agile Pods", href: "/about/agile-pods" },
+        ],
+      },
+    ],
   },
-  "services": {
-    "title": "Services",
-    "links": [
+  {
+    label: "Services",
+    submenu: [
+      { label: "AI/ML/GenAI", href: "/services/ai-ml" },
       {
-        "name": "AI/ML/GenAI",
-        "url": "/services/ai-ml"
+        label: "Data Engineering and Analytics",
+        href: "/services/data-engineering",
       },
-      {
-        "name": "Data Engineering and Analytics",
-        "url": "/services/data-engineering"
-      },
-      {
-        "name": "Cloud Engineering",
-        "url": "/services/cloud-engineering"
-      }
-    ]
+      { label: "Cloud Engineering", href: "/services/cloud-engineering" },
+    ],
   },
-  "investors": {
-    "title": "Investors",
-    "links": [
-      {
-        "name": "Annual Accounts",
-        "url": "/investors/annual-accounts"
-      },
-      {
-        "name": "Financial Reports",
-        "url": "/investors/financial-reports"
-      },
-      {
-        "name": "Shareholder Information",
-        "url": "/investors/shareholder-info"
-      }
-    ]
-  }
-};
-
-export default menuData;
-
+  { label: "Technologies", href: "/technologies" },
+  { label: "Case Study", href: "/case-studys" },
+  { label: "Resources", href: "/resources" },
+];
