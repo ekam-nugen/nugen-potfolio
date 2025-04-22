@@ -3,37 +3,38 @@
 import { useState } from "react";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
-import serviceBg from "../../../public/service-bg.jpg";
-import smm from "../../../public/smm.jpg";
-
+import Branding from "../../../public/brand-strategy-1.png";
+import Marketing from "../../../public/Marketing-cuate.svg";
+import Design from "../../../public/Advanced customization-cuate.svg";
+import webApp from "../../../public/mobile-app-development.png";
 const services = [
   {
     id: 1,
     title: "Web & Mobile Development",
     description:
       "We create, products, brands, apps & websites for companies all around the world class digital products",
-    image: smm,
+    image: webApp,
   },
   {
     id: 2,
     title: "Interaction Design",
     description:
       "Metameet combines the idea of a 3D virtual environment with companies growing need for more personalised",
-    image: serviceBg,
+    image: Design,
   },
   {
     id: 3,
     title: "Digital Marketing",
     description:
       "We partnered digital marketing to create an interactive video tool that will change the way businesses.",
-    image: smm,
+    image: Marketing,
   },
   {
     id: 4,
     title: "Branding and Strategy",
     description:
       "Funnels that increase response rates is just the first step for them and we can’t wait to see where it takes them!",
-    image: serviceBg,
+    image: Branding,
   },
 ];
 
@@ -63,7 +64,7 @@ export default function ServicesSection() {
       <div className="flex flex-col md:flex-row gap-12 items-start">
         {/* Image Section with Crossfade */}
         <div className="w-full md:w-1/2 flex justify-center">
-          <div className="relative w-[300px] h-[400px]">
+          <div className="relative w-[400px] h-[400px]">
             {services.map((service, index) => (
               <Image
                 key={index}
