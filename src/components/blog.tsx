@@ -1,5 +1,6 @@
 // Import Lucide icon
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 const projects = [
   {
@@ -66,7 +67,7 @@ export default function BlogPage() {
             key={index}
             className="group relative rounded-xl overflow-hidden bg-white transition"
           >
-            <img
+            <Image
               src={project.image}
               alt={project.title}
               className="w-full h-60 object-cover"

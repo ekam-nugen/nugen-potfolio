@@ -1,4 +1,4 @@
-import { Mail, User } from "lucide-react";
+import Image from "next/image";
 import homeimg from "../../public/home.png";
 export default function HomePage() {
   return (
@@ -25,17 +25,17 @@ export default function HomePage() {
         </div>
         <div className="flex items-center mt-4 space-x-2">
           <div className="flex -space-x-2">
-            <img
+            <Image
               className="w-8 h-8 rounded-full border-2 border-white"
               src="https://i.pravatar.cc/40?img=1"
               alt="User 1"
             />
-            <img
+            <Image
               className="w-8 h-8 rounded-full border-2 border-white"
               src="https://i.pravatar.cc/40?img=2"
               alt="User 2"
             />
-            <img
+            <Image
               className="w-8 h-8 rounded-full border-2 border-white"
               src="https://i.pravatar.cc/40?img=3"
               alt="User 3"
@@ -47,7 +47,7 @@ export default function HomePage() {
 
       {/* Dashboard Preview */}
       <div className="mt-12 shadow-2xl rounded-2xl overflow-hidden">
-        <img
+        <Image
           src={homeimg.src}
           alt="Dashboard UI"
           className="w-full max-w-5xl rounded-2xl"
