@@ -1,7 +1,6 @@
 import InnovationSection from "@/src/components/InnovationSection";
 import SubscribeSection from "@/src/components/SubscribeSection";
 import TestimonialCard from "@/src/components/TestimonialCard";
-import Footer from "@/src/layout/Footer";
 import BlogPage from "@/src/components/blog";
 import HomePage from "@/src/components/home";
 
