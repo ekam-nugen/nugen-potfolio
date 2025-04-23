@@ -3,6 +3,8 @@ import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/src/layout/header";
 import Footer from "@/src/layout/Footer";
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 const poppins = Poppins({
   variable: "--font-poppins",

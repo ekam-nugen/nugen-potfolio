@@ -1,41 +1,231 @@
 "use client";
+import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
+import { headerData } from "../json/menuData";
 
 export default function Header() {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [openMobileDropdown, setOpenMobileDropdown] = useState<string | null>(
+    null
+  );
+  const pathname = usePathname();
+
+  const toggleMobileDropdown = (label: string) => {
+    setOpenMobileDropdown((prev) => (prev === label ? null : label));
+  };
+
+  const isActive = (href: string) =>
+    pathname === href || pathname.startsWith(href + "/");
+
+  const renderDesktopDropdown = (submenu: any[]) => (
+    <div className="absolute left-0 top-full w-64 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto pointer-events-none transition z-50">
+      <div className="divide-y divide-gray-200 divide-dashed">
+        {submenu.map((section: any, index: number) => (
+          <div key={index} className="relative group/sub">
+            {section.submenu ? (
+              <>
+                <div className="flex items-center justify-between px-4 py-2 hover:bg-gray-100 cursor-pointer text-black font-semibold">
+                  {section.label}
+                  <ChevronRight className="w-4 h-4 text-[#ff6b3d]" />
+                </div>
+                <div className="absolute left-full top-0 w-64 bg-white shadow-lg rounded-md hidden group-hover/sub:block z-50">
+                  {section.submenu.map((item: any, idx: number) => (
+                    <Link
+                      key={idx}
+                      href={item.href}
+                      className={`block px-4 py-2 hover:bg-gray-100 ${
+                        isActive(item.href) ? "text-[#ff6b3d]" : "text-black"
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </>
+            ) : (
+              <Link
+                href={section.href}
+                className={`block px-4 py-2 hover:bg-gray-100 ${
+                  isActive(section.href) ? "text-[#ff6b3d]" : "text-black"
+                } font-medium`}
+              >
+                {section.label}
+              </Link>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 
   return (
-    <header className="w-full px-4 py-2 bg-white shadow-sm flex items-center justify-between rounded-xl max-w-md mx-auto mt-4">
-      <div className="flex items-center space-x-2">
-        <span className="text-xl">🔥</span>
-        <span className="font-medium text-lg text-gray-800">glowy</span>
-      </div>
+    <header className="bg-white shadow-md sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo.png"
+              alt="Logo"
+              width={350}
+              height={150}
+              className="h-20 w-auto"
+            />
+          </Link>
 
-      <div className="flex items-center space-x-2 relative">
-        <button
-          onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-          className="flex items-center px-3 py-1.5 bg-gray-100 hover:bg-gray-200 text-sm rounded-md text-gray-700"
-        >
-          Explore
-          <ChevronDown className="ml-1 w-4 h-4" />
-        </button>
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex space-x-6">
+            {headerData.map((item, index) => (
+              <div key={index} className={item.submenu ? "relative group" : ""}>
+                {item.submenu ? (
+                  <>
+                    <button
+                      className={`font-medium flex items-center ${
+                        item.submenu.some(
+                          (s: any) =>
+                            s.submenu?.some((sub: any) => isActive(sub.href)) ||
+                            isActive(s.href)
+                        )
+                          ? "text-[#ff6b3d]"
+                          : "text-black hover:text-[#ff6b3d]"
+                      }`}
+                    >
+                      {item.label}
+                      <ChevronDown className="w-4 h-4 ml-1" />
+                    </button>
+                    {renderDesktopDropdown(item.submenu)}
+                  </>
+                ) : (
+                  <Link
+                    href={item.href!}
+                    className={`font-medium ${
+                      isActive(item.href)
+                        ? "text-[#ff6b3d]"
+                        : "text-black hover:text-[#ff6b3d]"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                )}
+              </div>
+            ))}
+            <Link
+              href="/contact"
+              className={`bg-gradient-to-r from-orange-400 to-pink-500 hover:from-orange-500 hover:to-pink-600 text-white px-4 py-2 rounded-md font-medium`}
+            >
+              Contact Us
+            </Link>
+          </nav>
 
-        {isDropdownOpen && (
-          <div className="absolute top-12 right-16 bg-white border rounded-md shadow-md py-2 w-32 z-50">
-            <button className="block w-full text-left px-4 py-2 hover:bg-gray-100 text-sm">
-              Option 1
-            </button>
-            <button className="block w-full text-left px-4 py-2 hover:bg-gray-100 text-sm">
-              Option 2
+          {/* Mobile Button */}
+          <div className="lg:hidden flex items-center">
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="text-black"
+            >
+              {isMobileMenuOpen ? <X /> : <Menu />}
             </button>
           </div>
-        )}
-
-        <button className="px-4 py-1.5 rounded-md text-white text-sm font-medium bg-gradient-to-r from-orange-400 to-pink-500 hover:from-orange-500 hover:to-pink-600">
-          Learn
-        </button>
+        </div>
       </div>
+
+      {/* Mobile Navigation */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden bg-white shadow-md z-50">
+          <div className="space-y-4 py-4 px-4">
+            <Link
+              href="/"
+              className={`block py-2 font-medium ${
+                pathname === "/" ? "text-[#ff6b3d]" : "text-black"
+              }`}
+            >
+              Home
+            </Link>
+            {headerData.map((item, index) => (
+              <div key={index}>
+                {item.submenu ? (
+                  <>
+                    <button
+                      className="flex justify-between w-full text-left py-2 text-black font-medium"
+                      onClick={() => toggleMobileDropdown(item.label)}
+                    >
+                      {item.label}
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform ${
+                          openMobileDropdown === item.label ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+
+                    {/* Mobile submenu toggle logic */}
+                    {openMobileDropdown === item.label && (
+                      <div className="pl-4 space-y-2">
+                        {item.submenu.map((sub: any, idx: number) =>
+                          sub.submenu ? (
+                            <div key={idx}>
+                              <div className="text-sm font-semibold text-black">
+                                {sub.label}
+                              </div>
+                              <div className="ml-4 space-y-1">
+                                {sub.submenu.map(
+                                  (nested: any, nidx: number) => (
+                                    <Link
+                                      key={nidx}
+                                      href={nested.href}
+                                      className={`block text-sm ${
+                                        isActive(nested.href)
+                                          ? "text-[#ff6b3d]"
+                                          : "text-gray-700 hover:underline"
+                                      }`}
+                                    >
+                                      {nested.label}
+                                    </Link>
+                                  )
+                                )}
+                              </div>
+                            </div>
+                          ) : (
+                            <Link
+                              key={idx}
+                              href={sub.href}
+                              className={`block text-sm ${
+                                isActive(sub.href)
+                                  ? "text-[#ff6b3d]"
+                                  : "text-gray-700 hover:underline"
+                              }`}
+                            >
+                              {sub.label}
+                            </Link>
+                          )
+                        )}
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <Link
+                    href={item.href!}
+                    className={`block py-2 font-medium ${
+                      isActive(item.href) ? "text-[#ff6b3d]" : "text-black"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                )}
+              </div>
+            ))}
+            <Link
+              href="/contact"
+              className={`block py-2 font-medium ${
+                pathname === "/contact" ? "text-[#ff6b3d]" : "text-black"
+              }`}
+            >
+              Contact
+            </Link>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
