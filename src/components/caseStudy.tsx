@@ -1,10 +1,7 @@
-// components/CaseStudyHero.tsx
-
 "use client";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import caseStudies from "../json/caseStudy";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";

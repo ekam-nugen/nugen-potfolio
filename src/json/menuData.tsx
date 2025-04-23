@@ -1,20 +1,19 @@
 export const headerData = [
-  {  
+  { label: "Home", href: "/" },
+  {
     label: "About Us",
     submenu: [
       {
         label: "Company Profile",
         submenu: [
           { label: "Profile", href: "/about" },
-          { label: "Blog", href: "/about/blog" },
-          { label: "CSR", href: "/about/csr" },
+          { label: "Blog", href: "/blog" },
         ],
       },
       {
         label: "Why Us",
         submenu: [
-          { label: "Free Trial", href: "/about/free-trial" },
-          { label: "How We Work", href: "/about/how-we-work" },
+          { label: "How We Work", href: "/how-we-work" },
           { label: "Work With Top 1%", href: "/about/top-talent" },
         ],
       },
@@ -26,6 +25,7 @@ export const headerData = [
           { label: "Agile Pods", href: "/about/agile-pods" },
         ],
       },
+      { label: "Careers", href: "/careers" },
     ],
   },
   {
