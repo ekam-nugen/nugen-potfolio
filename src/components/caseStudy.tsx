@@ -24,7 +24,6 @@ export default function CaseStudyHero() {
           {caseStudies.map((study, index) => (
             <SwiperSlide key={index}>
               <div className="flex flex-col md:flex-row items-center gap-10">
-                
                 {/* Left Content */}
                 <motion.div
                   initial={{ opacity: 0, x: -40 }}
@@ -67,6 +66,8 @@ export default function CaseStudyHero() {
                   className="md:w-1/2"
                 >
                   <Image
+                    height={100}
+                    width={100}
                     src={study?.image ?? ""}
                     alt={study.title}
                     className="w-full h-auto object-contain"

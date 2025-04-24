@@ -72,6 +72,8 @@ export default function BlogPostPage() {
             By {blogData.author} | {blogData.date}
           </p>
           <Image
+            height={100}
+            width={100}
             src={blogData.featuredImage}
             alt={blogData.title}
             className="rounded-lg shadow-md"

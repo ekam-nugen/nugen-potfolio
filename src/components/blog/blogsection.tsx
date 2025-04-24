@@ -69,6 +69,8 @@ export default function BlogSectionPage() {
               <div className="cursor-pointer rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 bg-white hover:scale-[1.02]">
                 <div className="relative w-full h-64">
                   <Image
+                    height={100}
+                    width={100}
                     src={blog.image}
                     alt={blog.title}
                     layout="fill"

@@ -53,17 +53,41 @@ export const stats = [
     subtitle: "Certified",
   },
   {
-    icon: <Image src="/salesforce.svg" alt="Salesforce" className="w-5 h-5" />,
+    icon: (
+      <Image
+        height={100}
+        width={100}
+        src="/salesforce.svg"
+        alt="Salesforce"
+        className="w-5 h-5"
+      />
+    ),
     title: "Salesforce",
     subtitle: "Partner",
   },
   {
-    icon: <Image src="/adobe.svg" alt="Adobe" className="w-5 h-5" />,
+    icon: (
+      <Image
+        height={100}
+        width={100}
+        src="/adobe.svg"
+        alt="Adobe"
+        className="w-5 h-5"
+      />
+    ),
     title: "Adobe",
     subtitle: "Partner",
   },
   {
-    icon: <Image src="/microsoft.svg" alt="Microsoft" className="w-5 h-5" />,
+    icon: (
+      <Image
+        height={100}
+        width={100}
+        src="/microsoft.svg"
+        alt="Microsoft"
+        className="w-5 h-5"
+      />
+    ),
     title: "Microsoft",
     subtitle: "Partner",
   },

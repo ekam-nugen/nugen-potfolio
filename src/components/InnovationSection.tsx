@@ -22,9 +22,7 @@ export default function InnovationSection() {
               <Image src={User} alt="Smart Icon" width={24} height={24} />
             </div>
             <div>
-              <h5 className="text-base text-gray-800 mb-1">
-                Smart Technology
-              </h5>
+              <h5 className="text-base text-gray-800 mb-1">Smart Technology</h5>
               <p className="text-sm text-gray-600">
                 Through AI and ML, we provide innovative design strategies that
                 enhance user engagement and optimize functionality.
@@ -35,6 +33,8 @@ export default function InnovationSection() {
 
         <div className="flex justify-center  shadow-lg">
           <Image
+            height={100}
+            width={100}
             src={GraphicCards}
             alt="Card Graphic"
             className="object-cover w-full h-full rounded-lg"

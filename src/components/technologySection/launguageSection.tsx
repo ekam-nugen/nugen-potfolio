@@ -5,8 +5,11 @@ import { data } from "@/src/json/languageSection";
 import Image from "next/image";
 
 export default function TechnologyShowcase() {
-  const [selectedCategory, setSelectedCategory] = useState<keyof typeof data>("Programming Languages");
-  const [selectedSubcategory, setSelectedSubcategory] = useState("General-purpose");
+  const [selectedCategory, setSelectedCategory] = useState<keyof typeof data>(
+    "Programming Languages"
+  );
+  const [selectedSubcategory, setSelectedSubcategory] =
+    useState("General-purpose");
   const [openCategory, setOpenCategory] = useState("Programming Languages");
 
   const isExpandable = (category: string) =>
@@ -16,7 +19,10 @@ export default function TechnologyShowcase() {
   const getActiveItems = () => {
     const section = data[selectedCategory];
     if (isExpandable(selectedCategory)) {
-      const subSection = section as Record<string, { name: string; icon: string }[]>;
+      const subSection = section as Record<
+        string,
+        { name: string; icon: string }[]
+      >;
       return subSection[selectedSubcategory] || [];
     }
     if (Array.isArray(section)) {
@@ -30,7 +36,12 @@ export default function TechnologyShowcase() {
     setOpenCategory((prev) => (prev === category ? "" : category));
 
     if (isExpandable(category)) {
-      const firstSub = Object.keys(data[category as keyof typeof data] as Record<string, { name: string; icon: string }[]>)[0];
+      const firstSub = Object.keys(
+        data[category as keyof typeof data] as Record<
+          string,
+          { name: string; icon: string }[]
+        >
+      )[0];
       setSelectedSubcategory(firstSub);
     } else {
       setSelectedSubcategory("");
@@ -54,16 +65,28 @@ export default function TechnologyShowcase() {
                 <div
                   onClick={() => handleCategoryClick(category)}
                   className={`font-bold cursor-pointer flex justify-between items-center ${
-                    selectedCategory === category ? "text-[#FFC39E]" : "text-black"
+                    selectedCategory === category
+                      ? "text-[#FFC39E]"
+                      : "text-black"
                   }`}
                 >
                   <span>{category}</span>
-                  {expanded && (isOpen ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />)}
+                  {expanded &&
+                    (isOpen ? (
+                      <ChevronUp className="w-4 h-4" />
+                    ) : (
+                      <ChevronDown className="w-4 h-4" />
+                    ))}
                 </div>
 
                 {expanded && isOpen && (
                   <div className="pl-4 mt-2 space-y-2">
-                    {Object.keys(data[category as keyof typeof data] as Record<string, { name: string; icon: string }[]>).map((sub) => (
+                    {Object.keys(
+                      data[category as keyof typeof data] as Record<
+                        string,
+                        { name: string; icon: string }[]
+                      >
+                    ).map((sub) => (
                       <div
                         key={sub}
                         onClick={() => setSelectedSubcategory(sub)}
@@ -100,7 +123,13 @@ export default function TechnologyShowcase() {
                     key={name}
                     className="bg-white border p-4 rounded-lg shadow-sm flex items-center gap-3"
                   >
-                    <Image src={icon} alt={name} className="w-8 h-8 object-contain" />
+                    <Image
+                      height={100}
+                      width={100}
+                      src={icon}
+                      alt={name}
+                      className="w-8 h-8 object-contain"
+                    />
                     <span>{name}</span>
                   </div>
                 ))}
@@ -110,7 +139,9 @@ export default function TechnologyShowcase() {
               </button>
             </>
           ) : (
-            <p className="text-gray-500 italic mt-6">No technologies listed yet.</p>
+            <p className="text-gray-500 italic mt-6">
+              No technologies listed yet.
+            </p>
           )}
         </div>
       </div>
