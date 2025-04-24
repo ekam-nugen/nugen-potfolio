@@ -112,10 +112,10 @@ export default function Header() {
               </div>
             ))}
             <Link
-              href="/contact"
+              href="/book-an-appointmen"
               className={`bg-gradient-to-r from-orange-400 to-pink-500 hover:from-orange-500 hover:to-pink-600 text-white px-4 py-2 rounded-md font-medium`}
             >
-              Contact Us
+              Hire us
             </Link>
           </nav>
 
@@ -216,12 +216,12 @@ export default function Header() {
               </div>
             ))}
             <Link
-              href="/contact"
+              href="/book-an-appointmen"
               className={`block py-2 font-medium ${
                 pathname === "/contact" ? "text-[#ff6b3d]" : "text-black"
               }`}
             >
-              Contact
+              Hire us
             </Link>
           </div>
         </div>

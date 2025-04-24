@@ -38,6 +38,14 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <div className="fixed bottom-5 right-5 z-50">
+        <a
+          href="/contact-us"
+          className="bg-gradient-to-r from-[#FF5E62] to-[#FF9966] text-white px-6 py-3 rounded-full shadow-lg text-sm font-semibold"
+        >
+          💬 Get a Quote
+        </a>
+      </div>
         <Footer />
       </body>
     </html>
