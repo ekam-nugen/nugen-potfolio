@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import Image from "next/image";
 
 const caseStudiesData = [
   {
@@ -124,7 +125,9 @@ const CaseStudyCard = ({
   readMoreLink,
 }: CaseStudyCardProps) => (
   <div className="bg-white rounded-xl shadow p-4 w-full max-w-sm">
-    <img
+    <Image
+      height={100}
+      width={100}
       src={image}
       alt={title}
       className="rounded-xl h-48 object-cover w-full"

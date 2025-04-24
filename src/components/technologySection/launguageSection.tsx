@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { data } from "@/src/json/languageSection";
+import Image from "next/image";
 
 export default function TechnologyShowcase() {
   const [selectedCategory, setSelectedCategory] = useState<keyof typeof data>("Programming Languages");
@@ -99,7 +100,7 @@ export default function TechnologyShowcase() {
                     key={name}
                     className="bg-white border p-4 rounded-lg shadow-sm flex items-center gap-3"
                   >
-                    <img src={icon} alt={name} className="w-8 h-8 object-contain" />
+                    <Image src={icon} alt={name} className="w-8 h-8 object-contain" />
                     <span>{name}</span>
                   </div>
                 ))}

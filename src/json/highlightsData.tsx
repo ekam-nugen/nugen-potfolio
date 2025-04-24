@@ -10,6 +10,7 @@ import {
   ShieldCheck,
   CheckCircle,
 } from "lucide-react";
+import Image from "next/image";
 
 export const stats = [
   { icon: <Briefcase size={22} />, title: "Public Listed*", subtitle: "BSE" },
@@ -52,17 +53,17 @@ export const stats = [
     subtitle: "Certified",
   },
   {
-    icon: <img src="/salesforce.svg" alt="Salesforce" className="w-5 h-5" />,
+    icon: <Image src="/salesforce.svg" alt="Salesforce" className="w-5 h-5" />,
     title: "Salesforce",
     subtitle: "Partner",
   },
   {
-    icon: <img src="/adobe.svg" alt="Adobe" className="w-5 h-5" />,
+    icon: <Image src="/adobe.svg" alt="Adobe" className="w-5 h-5" />,
     title: "Adobe",
     subtitle: "Partner",
   },
   {
-    icon: <img src="/microsoft.svg" alt="Microsoft" className="w-5 h-5" />,
+    icon: <Image src="/microsoft.svg" alt="Microsoft" className="w-5 h-5" />,
     title: "Microsoft",
     subtitle: "Partner",
   },

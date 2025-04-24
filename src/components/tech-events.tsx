@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export default function TechEventsPage() {
@@ -52,7 +53,7 @@ export default function TechEventsPage() {
               key={idx}
               className="group bg-orange-50 hover:bg-white transition p-6 rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 duration-300"
             >
-              <img
+              <Image
                 src={event.image}
                 alt={event.name}
                 className="w-full h-56 object-cover rounded-md mb-4 transition-transform duration-300 group-hover:scale-105"

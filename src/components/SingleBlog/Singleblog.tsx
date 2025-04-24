@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const blogData = {
@@ -9,53 +10,53 @@ const blogData = {
     {
       heading: null,
       content: [
-        "In today’s fast-paced digital world, optimizing performance is not just a nice-to-have—it’s a necessity. Flutter offers great tools for building fast apps, but without optimization, performance can suffer."
-      ]
+        "In today’s fast-paced digital world, optimizing performance is not just a nice-to-have—it’s a necessity. Flutter offers great tools for building fast apps, but without optimization, performance can suffer.",
+      ],
     },
     {
       heading: "1. Optimize Widget Builds",
       content: [
-        "Reuse widgets where possible and avoid rebuilding widgets that don’t need updates. Use the `const` keyword whenever possible."
-      ]
+        "Reuse widgets where possible and avoid rebuilding widgets that don’t need updates. Use the `const` keyword whenever possible.",
+      ],
     },
     {
       heading: "2. Efficient State Management",
       content: [
-        "Use state management solutions like Provider or Riverpod to ensure minimal re-renders and improved performance."
-      ]
+        "Use state management solutions like Provider or Riverpod to ensure minimal re-renders and improved performance.",
+      ],
     },
     {
       heading: null,
-      quote: "Performance is a product of mindful design and efficient coding."
+      quote: "Performance is a product of mindful design and efficient coding.",
     },
     {
       heading: "3. Monitor and Profile",
       content: [
-        "Use the Flutter DevTools to analyze performance bottlenecks and memory leaks."
-      ]
-    }
+        "Use the Flutter DevTools to analyze performance bottlenecks and memory leaks.",
+      ],
+    },
   ],
   authorNote: {
     text: "Written by ",
     author: "Jane Doe",
-    description: "Flutter expert at YourCompany."
+    description: "Flutter expert at YourCompany.",
   },
   sidebar: {
     categories: ["Flutter", "React", "Performance", "UI/UX"],
     popularPosts: [
       "10 Flutter Tips",
       "Improve React Performance",
-      "Building with Tailwind"
+      "Building with Tailwind",
     ],
     cta: {
       title: "Need a Dev Team?",
       description: "Get expert developers for your next project.",
       button: {
         label: "Contact Us →",
-        url: "/contact-us"
-      }
-    }
-  }
+        url: "/contact-us",
+      },
+    },
+  },
 };
 
 export default function BlogPostPage() {
@@ -70,7 +71,7 @@ export default function BlogPostPage() {
           <p className="text-sm text-gray-500">
             By {blogData.author} | {blogData.date}
           </p>
-          <img
+          <Image
             src={blogData.featuredImage}
             alt={blogData.title}
             className="rounded-lg shadow-md"
@@ -90,7 +91,7 @@ export default function BlogPostPage() {
                   ))}
                 {section.quote && (
                   <blockquote className="border-l-4 border-pink-600 pl-4 italic text-gray-600">
-                    "{section.quote}"
+                    &quot;{section.quote}&quot;
                   </blockquote>
                 )}
               </div>

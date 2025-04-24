@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import { Pagination } from "swiper/modules";
+import Image from "next/image";
 
 export default function CaseStudyHero() {
   return (
@@ -65,7 +66,7 @@ export default function CaseStudyHero() {
                   transition={{ duration: 0.6 }}
                   className="md:w-1/2"
                 >
-                  <img
+                  <Image
                     src={study?.image ?? ""}
                     alt={study.title}
                     className="w-full h-auto object-contain"

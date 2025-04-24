@@ -108,7 +108,7 @@ export default function HireUsPage() {
                 whileHover={{ scale: 1.02 }}
                 className="bg-[#FFF4F2] p-6 rounded-xl shadow"
               >
-                <p className="italic text-[#444]">"{quote}"</p>
+                <p className="italic text-[#444]">&quot;{quote}&quot;</p>
                 <div className="mt-4 text-[#FF5E62] font-semibold">{name}</div>
                 <div className="text-[#888] text-sm">{position}</div>
               </motion.div>
@@ -121,7 +121,7 @@ export default function HireUsPage() {
       <section className="bg-[#FFF4F2] py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Let's Build Something Great Together
+            Let&apos;s Build Something Great Together
           </h2>
           <p className="text-[#666] mb-8">
             Fill out the form or book a quick 15-minute discovery call.

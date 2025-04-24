@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Tilt from "react-parallax-tilt";
 import { motion, AnimatePresence } from "framer-motion";
 import { evoultionData } from "@/src/json";
+import Image from "next/image";
 
 const Evolution = () => {
   const [activeYear, setActiveYear] = useState(evoultionData[0].year);
@@ -102,16 +103,22 @@ const Evolution = () => {
                 {evoultionData.map(
                   (milestone) =>
                     activeYear === milestone.year && (
-                      <motion.img
+                      <motion.div
                         key={milestone.year}
-                        src={milestone.image}
-                        alt={milestone.year}
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.9 }}
                         transition={{ duration: 0.5 }}
                         className="w-full h-80 object-cover rounded-xl shadow-lg border border-[#fff1eb]"
-                      />
+                      >
+                        <Image
+                          src={milestone.image}
+                          alt={milestone.year}
+                          layout="fill"
+                          objectFit="cover"
+                          className="rounded-xl"
+                        />
+                      </motion.div>
                     )
                 )}
               </AnimatePresence>

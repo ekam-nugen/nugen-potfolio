@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Star, ArrowRight } from "lucide-react";
+import Image from "next/image";
 // import { Parallax } from "react-scroll-parallax";
 
 export default function HowWeWorkSection() {
@@ -60,15 +61,20 @@ export default function HowWeWorkSection() {
         {/* Parallax Animated Illustration */}
         <div className="w-full flex justify-center">
           {/* <Parallax speed={-10}> */}
-            <motion.img
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: "easeOut" }}
-              viewport={{ once: true }}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="w-full max-w-md transition-transform duration-300 hover:scale-105"
+          >
+            <Image
               src="/Digital presentation-amico.svg"
               alt="Teamwork Illustration"
-              className="w-full max-w-md transition-transform duration-300 hover:scale-105"
+              width={500}
+              height={500}
             />
+          </motion.div>
           {/* </Parallax> */}
         </div>
       </div>
