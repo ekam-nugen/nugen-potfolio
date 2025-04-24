@@ -112,8 +112,6 @@ const Evolution = () => {
                         className="w-full h-80 object-cover rounded-xl shadow-lg border border-[#fff1eb]"
                       >
                         <Image
-                          height={100}
-                          width={100}
                           src={milestone.image}
                           alt={milestone.year}
                           layout="fill"
