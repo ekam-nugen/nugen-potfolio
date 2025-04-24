@@ -13,6 +13,7 @@ const blogs = [
     image: bg,
     date: "30, April 2024",
     author: "admin",
+    href: "/single-blog",
   },
   {
     title: "Grow Your Business Digitally Reach New Customers",
@@ -21,6 +22,7 @@ const blogs = [
     image: bg,
     date: "30, April 2024",
     author: "admin",
+    href: "/single-blog",
   },
   {
     title: "Boost Your Brand Online Reach Your Audience Digitally",
@@ -29,6 +31,7 @@ const blogs = [
     image: bg,
     date: "30, April 2024",
     author: "admin",
+    href: "/single-blog",
   },
   // 9 more dummy blogs to make 12
   ...Array.from({ length: 12 }, (_, i) => ({
@@ -37,6 +40,7 @@ const blogs = [
     image: bg,
     date: "30, April 2024",
     author: "admin",
+    href: "/single-blog",
   })),
 ];
 
@@ -61,41 +65,37 @@ export default function BlogSectionPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {paginatedBlogs.map((blog, idx) => (
-            <div
-              key={idx}
-              className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 bg-white hover:scale-[1.02]"
-            >
-              <div className="relative w-full h-64">
-                <Image
-                  src={blog.image}
-                  alt={blog.title}
-                  layout="fill"
-                  objectFit="cover"
-                  className="z-0"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
-              </div>
-              <div className="p-6 space-y-3 z-20 relative">
-                <div className="text-sm text-gray-500 flex items-center gap-4">
-                  <span>By {blog.author}</span>
-                  <span className="text-[#ff6b3d]">|</span>
-                  <span>{blog.date}</span>
+            <Link key={idx + blog?.href} href={blog.href}>
+              <div className="cursor-pointer rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 bg-white hover:scale-[1.02]">
+                <div className="relative w-full h-64">
+                  <Image
+                    src={blog.image}
+                    alt={blog.title}
+                    layout="fill"
+                    objectFit="cover"
+                    className="z-0"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
                 </div>
-                <h3 className="text-xl font-semibold leading-snug text-gray-900">
-                  {blog.title}
-                </h3>
-                <p className="text-sm text-gray-600">{blog.description}</p>
-                <Link
-                  href="#"
-                  className="inline-flex items-center gap-2 font-semibold text-[#ff6b3d] group"
-                >
-                  READ MORE
-                  <span className="group-hover:translate-x-1 transition-transform">
-                    →
+                <div className="p-6 space-y-3 z-20 relative">
+                  <div className="text-sm text-gray-500 flex items-center gap-4">
+                    <span>By {blog.author}</span>
+                    <span className="text-[#ff6b3d]">|</span>
+                    <span>{blog.date}</span>
+                  </div>
+                  <h3 className="text-xl font-semibold leading-snug text-gray-900">
+                    {blog.title}
+                  </h3>
+                  <p className="text-sm text-gray-600">{blog.description}</p>
+                  <span className="inline-flex items-center gap-2 font-semibold text-[#ff6b3d] group">
+                    READ MORE
+                    <span className="group-hover:translate-x-1 transition-transform">
+                      →
+                    </span>
                   </span>
-                </Link>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 

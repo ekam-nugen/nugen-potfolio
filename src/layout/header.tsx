@@ -6,6 +6,12 @@ import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 import { headerData } from "../json/menuData";
 
+interface MenuItem {
+  label: string;
+  href?: string;
+  submenu?: MenuItem[];
+}
+
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openMobileDropdown, setOpenMobileDropdown] = useState<string | null>(
@@ -20,10 +26,10 @@ export default function Header() {
   const isActive = (href: string) =>
     pathname === href || pathname.startsWith(href + "/");
 
-  const renderDesktopDropdown = (submenu: any[]) => (
+  const renderDesktopDropdown = (submenu: MenuItem[]) => (
     <div className="absolute left-0 top-full w-64 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto pointer-events-none transition z-50">
       <div className="divide-y divide-gray-200 divide-dashed">
-        {submenu.map((section: any, index: number) => (
+        {submenu.map((section, index) => (
           <div key={index} className="relative group/sub">
             {section.submenu ? (
               <>
@@ -32,12 +38,12 @@ export default function Header() {
                   <ChevronRight className="w-4 h-4 text-[#ff6b3d]" />
                 </div>
                 <div className="absolute left-full top-0 w-64 bg-white shadow-lg rounded-md hidden group-hover/sub:block z-50">
-                  {section.submenu.map((item: any, idx: number) => (
+                  {section.submenu.map((item, idx) => (
                     <Link
                       key={idx}
-                      href={item.href}
+                      href={item.href!}
                       className={`block px-4 py-2 hover:bg-gray-100 ${
-                        isActive(item.href) ? "text-[#ff6b3d]" : "text-black"
+                        isActive(item.href!) ? "text-[#ff6b3d]" : "text-black"
                       }`}
                     >
                       {item.label}
@@ -47,9 +53,9 @@ export default function Header() {
               </>
             ) : (
               <Link
-                href={section.href}
+                href={section.href!}
                 className={`block px-4 py-2 hover:bg-gray-100 ${
-                  isActive(section.href) ? "text-[#ff6b3d]" : "text-black"
+                  isActive(section.href!) ? "text-[#ff6b3d]" : "text-black"
                 } font-medium`}
               >
                 {section.label}
@@ -77,16 +83,16 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex space-x-6">
-            {headerData.map((item, index) => (
+            {headerData.map((item: MenuItem, index) => (
               <div key={index} className={item.submenu ? "relative group" : ""}>
                 {item.submenu ? (
                   <>
                     <button
                       className={`font-medium flex items-center ${
                         item.submenu.some(
-                          (s: any) =>
-                            s.submenu?.some((sub: any) => isActive(sub.href)) ||
-                            isActive(s.href)
+                          (s) =>
+                            s.submenu?.some((sub) => isActive(sub.href!)) ||
+                            isActive(s.href!)
                         )
                           ? "text-[#ff6b3d]"
                           : "text-black hover:text-[#ff6b3d]"
@@ -101,7 +107,7 @@ export default function Header() {
                   <Link
                     href={item.href!}
                     className={`font-medium ${
-                      isActive(item.href)
+                      isActive(item.href!)
                         ? "text-[#ff6b3d]"
                         : "text-black hover:text-[#ff6b3d]"
                     }`}
@@ -112,10 +118,10 @@ export default function Header() {
               </div>
             ))}
             <Link
-              href="/contact"
+              href="/book-an-appointmen"
               className={`bg-gradient-to-r from-orange-400 to-pink-500 hover:from-orange-500 hover:to-pink-600 text-white px-4 py-2 rounded-md font-medium`}
             >
-              Contact Us
+              Hire us
             </Link>
           </nav>
 
@@ -143,7 +149,7 @@ export default function Header() {
             >
               Home
             </Link>
-            {headerData.map((item, index) => (
+            {headerData.map((item: MenuItem, index) => (
               <div key={index}>
                 {item.submenu ? (
                   <>
@@ -162,36 +168,34 @@ export default function Header() {
                     {/* Mobile submenu toggle logic */}
                     {openMobileDropdown === item.label && (
                       <div className="pl-4 space-y-2">
-                        {item.submenu.map((sub: any, idx: number) =>
+                        {item.submenu.map((sub, idx) =>
                           sub.submenu ? (
                             <div key={idx}>
                               <div className="text-sm font-semibold text-black">
                                 {sub.label}
                               </div>
                               <div className="ml-4 space-y-1">
-                                {sub.submenu.map(
-                                  (nested: any, nidx: number) => (
-                                    <Link
-                                      key={nidx}
-                                      href={nested.href}
-                                      className={`block text-sm ${
-                                        isActive(nested.href)
-                                          ? "text-[#ff6b3d]"
-                                          : "text-gray-700 hover:underline"
-                                      }`}
-                                    >
-                                      {nested.label}
-                                    </Link>
-                                  )
-                                )}
+                                {sub.submenu.map((nested, nidx) => (
+                                  <Link
+                                    key={nidx}
+                                    href={nested.href!}
+                                    className={`block text-sm ${
+                                      isActive(nested.href!)
+                                        ? "text-[#ff6b3d]"
+                                        : "text-gray-700 hover:underline"
+                                    }`}
+                                  >
+                                    {nested.label}
+                                  </Link>
+                                ))}
                               </div>
                             </div>
                           ) : (
                             <Link
                               key={idx}
-                              href={sub.href}
+                              href={sub.href!}
                               className={`block text-sm ${
-                                isActive(sub.href)
+                                isActive(sub.href!)
                                   ? "text-[#ff6b3d]"
                                   : "text-gray-700 hover:underline"
                               }`}
@@ -207,7 +211,7 @@ export default function Header() {
                   <Link
                     href={item.href!}
                     className={`block py-2 font-medium ${
-                      isActive(item.href) ? "text-[#ff6b3d]" : "text-black"
+                      isActive(item.href!) ? "text-[#ff6b3d]" : "text-black"
                     }`}
                   >
                     {item.label}
@@ -216,12 +220,12 @@ export default function Header() {
               </div>
             ))}
             <Link
-              href="/contact"
+              href="/book-an-appointmen"
               className={`block py-2 font-medium ${
                 pathname === "/contact" ? "text-[#ff6b3d]" : "text-black"
               }`}
             >
-              Contact
+              Hire us
             </Link>
           </div>
         </div>

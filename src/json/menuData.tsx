@@ -12,20 +12,9 @@ export const headerData = [
       },
       {
         label: "Why Us",
-        submenu: [
-          { label: "How We Work", href: "/how-we-work" },
-          { label: "Work With Top 1%", href: "/about/top-talent" },
-        ],
+        submenu: [{ label: "How We Work", href: "/how-we-work" }],
       },
-      {
-        label: "How We Collaborate",
-        submenu: [
-          { label: "Staff Augmentation", href: "/about/staff-augmentation" },
-          { label: "Fixed Cost", href: "/about/fixed-cost" },
-          { label: "Agile Pods", href: "/about/agile-pods" },
-        ],
-      },
-      { label: "Careers", href: "/careers" },
+      { label: "Events", href: "/events" },
     ],
   },
   {
@@ -41,5 +30,5 @@ export const headerData = [
   },
   { label: "Technologies", href: "/technologies" },
   { label: "Case Study", href: "/case-studys" },
-  { label: "Resources", href: "/resources" },
+  { label: "Contact Us", href: "/contact-us" },
 ];

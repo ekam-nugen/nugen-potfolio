@@ -7,7 +7,7 @@ const caseStudies = [
       "Cloudways is a managed cloud hosting platform offering flexible solutions for developers, businesses, and agencies. It supports major cloud providers like AWS, Google Cloud, and DigitalOcean, enabling users to deploy and scale web applications with ease. Features include one-click application installations, automated backups, robust security, and optimized performance. Cloudways focuses on simplifying hosting while maintaining reliability and performance.",
     tags: ["NextJS", "Web App", "Web Admin", "React", "Node.js", "MongoDB"],
     buttonText: "Read More",
-    image: "image.webp",
+    image: "/image.webp",
     link: "/case-studies/data-engineering-nonprofit",
   },
   {

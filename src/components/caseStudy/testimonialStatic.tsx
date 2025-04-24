@@ -78,7 +78,9 @@ export default function TestimonialStatic() {
                 <p className="text-xs text-black">{t.title}</p>
               </div>
             </div>
-            <p className="text-md italic text-[#2b2b2b]">"{t.quote}"</p>
+            <p className="text-md italic text-[#2b2b2b]">
+              &quot;{t.quote}&quot;
+            </p>
             <div className="text-[#ff6b3d] text-3xl absolute bottom-4 right-4">
               ”
             </div>

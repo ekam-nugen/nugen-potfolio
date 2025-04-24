@@ -1,9 +1,13 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 import { Star, ArrowRight } from "lucide-react";
+import Image from "next/image";
+// import { Parallax } from "react-scroll-parallax";
 
 export default function HowWeWorkSection() {
   return (
-    <section className="bg-[#FFF3F0] text-black py-20 px-6 md:px-16">
+    <section className="bg-[#FFF3F0] text-black py-20 px-6 md:px-16 overflow-hidden">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         {/* Text Content */}
         <div>
@@ -54,13 +58,24 @@ export default function HowWeWorkSection() {
           </button>
         </div>
 
-        {/* Illustration */}
+        {/* Parallax Animated Illustration */}
         <div className="w-full flex justify-center">
-          <img
-            src="/Digital presentation-amico.svg"
-            alt="Teamwork Illustration"
+          {/* <Parallax speed={-10}> */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: true }}
             className="w-full max-w-md transition-transform duration-300 hover:scale-105"
-          />
+          >
+            <Image
+              src="/Digital presentation-amico.svg"
+              alt="Teamwork Illustration"
+              width={500}
+              height={500}
+            />
+          </motion.div>
+          {/* </Parallax> */}
         </div>
       </div>
     </section>

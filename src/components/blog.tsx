@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
-
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const blogData = [
   {
@@ -19,7 +19,7 @@ const blogData = [
     role: "CTO",
     image: "/image.webp",
     description:
-      "In modern web development, performance and user experience are key components of building a successful application. One of the best ways to achieve these goals is by implementing Server-Side Rendering (SSR). Next.js, a popular React framework, makes SSR incredibly easy and efficient. In this blog, we’ll dive into the fundamentals of Server-Side Rendering with Next.js and explore how you can leverage it to optimize your applications.",
+      "In modern web development, performance and user experience are key components of building a successful application. One of the best ways to achieve these goals is by implementing Server-Side Rendering (SSR). Next.js, a popular React framework, makes SSR incredibly easy and efficient.",
     highlight: false,
   },
   {
@@ -28,7 +28,34 @@ const blogData = [
     role: "Senior Business Analyst",
     image: "/image.webp",
     description:
-      "Functional Programming (FP) is a paradigm in programming that treats computation as the evaluation of mathematical functions and avoids changing state and mutable data. In JavaScript, functional programming techniques are increasingly popular because they help write cleaner, more maintainable, and scalable code. This blog will introduce you to key concepts of functional programming and how you can use them in JavaScript.",
+      "Functional Programming (FP) is a paradigm in programming that treats computation as the evaluation of mathematical functions and avoids changing state and mutable data.",
+    highlight: false,
+  },
+  {
+    title: "Introduction to Functional Programming Concepts in JavaScript",
+    author: "Saumendu Pathak",
+    role: "Senior Business Analyst",
+    image: "/image.webp",
+    description:
+      "Functional Programming (FP) is a paradigm in programming that treats computation as the evaluation of mathematical functions and avoids changing state and mutable data.",
+    highlight: false,
+  },
+  {
+    title: "Introduction to Functional Programming Concepts in JavaScript",
+    author: "Saumendu Pathak",
+    role: "Senior Business Analyst",
+    image: "/image.webp",
+    description:
+      "Functional Programming (FP) is a paradigm in programming that treats computation as the evaluation of mathematical functions and avoids changing state and mutable data.",
+    highlight: false,
+  },
+  {
+    title: "Introduction to Functional Programming Concepts in JavaScript",
+    author: "Saumendu Pathak",
+    role: "Senior Business Analyst",
+    image: "/image.webp",
+    description:
+      "Functional Programming (FP) is a paradigm in programming that treats computation as the evaluation of mathematical functions and avoids changing state and mutable data.",
     highlight: false,
   },
   {
@@ -47,6 +74,7 @@ export default function BlogSection() {
     null | (typeof blogData)[number]
   >(null);
 
+  const featuredPost = hoveredPost || blogData[0];
   return (
     <section className="px-6 md:px-20 py-16 bg-gradient-to-r from-white via-[#fff1eb] to-white">
       <div className="text-center mb-12">
@@ -59,40 +87,36 @@ export default function BlogSection() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-        {/* Featured Blog Card */}
+        {/* Featured Blog Card with Animation */}
         <div className="col-span-1 lg:col-span-1 relative">
-          <div className="shadow-xl rounded-xl overflow-hidden">
-            <Image
-              src={hoveredPost ? hoveredPost.image : blogData[0].image}
-              alt="Next.js and React Article"
-              width={800}
-              height={600}
-              className="w-full h-auto object-cover"
-            />
-            <div className="p-6">
-              <h3 className="text-xl font-semibold text-gray-900 leading-snug">
-                {hoveredPost ? hoveredPost.title : blogData[0].title}
-              </h3>
-              <p className="text-sm text-gray-500 mt-2">
-                By{" "}
-                <span className="font-medium">
-                  {hoveredPost ? hoveredPost.author : blogData[0].author}
-                </span>
-                , {hoveredPost ? hoveredPost.role : blogData[0].role}
-              </p>
-            </div>
-
-            {/* Hover Content */}
-            <div className="absolute inset-0 bg-gray-900 bg-opacity-70 text-white opacity-0 transition-opacity duration-300 p-6 flex flex-col justify-center">
-              <h4 className="text-2xl font-semibold">
-                {hoveredPost ? hoveredPost.title : blogData[0].title}
-              </h4>
-              <p className="mt-2">
-                {hoveredPost
-                  ? hoveredPost.description
-                  : blogData[0].description}
-              </p>
-            </div>
+          <div className="sticky top-24 shadow-xl rounded-xl overflow-hidden">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={featuredPost.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.4 }}
+              >
+                <Image
+                  src={featuredPost.image}
+                  alt="Featured Blog"
+                  width={800}
+                  height={600}
+                  className="w-full h-auto object-cover"
+                />
+                <div className="p-6 bg-white">
+                  <h3 className="text-xl font-semibold text-gray-900 leading-snug">
+                    {featuredPost.title}
+                  </h3>
+                  <p className="text-sm text-gray-500 mt-2">
+                    By{" "}
+                    <span className="font-medium">{featuredPost.author}</span>,{" "}
+                    {featuredPost.role}
+                  </p>
+                </div>
+              </motion.div>
+            </AnimatePresence>
           </div>
         </div>
 
@@ -102,8 +126,8 @@ export default function BlogSection() {
             <div
               key={idx}
               className="border-b pb-4 last:border-b-0 cursor-pointer"
-              onMouseEnter={() => setHoveredPost(post)} // Set hovered post
-              onMouseLeave={() => setHoveredPost(null)} // Reset when mouse leaves
+              onMouseEnter={() => setHoveredPost(post)}
+              onMouseLeave={() => setHoveredPost(null)}
             >
               <h4
                 className={`text-lg font-semibold ${

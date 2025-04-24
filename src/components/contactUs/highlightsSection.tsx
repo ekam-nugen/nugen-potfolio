@@ -6,28 +6,21 @@ interface Stat {
   subtitle: string;
   link?: string;
 }
-interface data {
-  data: Stat[];
-}
 
 export default function CompanyStatsSection({
   data,
   title,
   subTitle,
 }: {
-  data: any;
+  data: Stat[]; // Specify the type as Stat[]
   title: string;
   subTitle: string;
 }) {
   return (
     <section className="bg-white px-4 py-20 md:px-20 text-gray-900">
       <div className="max-w-6xl mx-auto text-center mb-8">
-        <h2 className="text-4xl md:text-5xl font-bold textBlack">
-         {title}
-        </h2>
-        <p className="text-lg mt-4 max-w-3xl mx-auto subtext">
-          {subTitle}
-        </p>
+        <h2 className="text-4xl md:text-5xl font-bold textBlack">{title}</h2>
+        <p className="text-lg mt-4 max-w-3xl mx-auto subtext">{subTitle}</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
