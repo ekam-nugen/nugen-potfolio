@@ -20,7 +20,7 @@ export const headerData = [
   {
     label: "Services",
     submenu: [
-      { label: "AI/ML/GenAI", href: "/services/ai-ml" },
+      { label: "AI/ML/GenAI", href: "/intelligence" },
       {
         label: "Data Engineering and Analytics",
         href: "/services/data-engineering",

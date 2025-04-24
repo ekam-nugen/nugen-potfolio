@@ -55,11 +55,11 @@ export const stats = [
   {
     icon: (
       <Image
-        height={100}
-        width={100}
         src="/salesforce.svg"
         alt="Salesforce"
         className="w-5 h-5"
+        width={20}
+        height={20}
       />
     ),
     title: "Salesforce",
@@ -68,11 +68,11 @@ export const stats = [
   {
     icon: (
       <Image
-        height={100}
-        width={100}
         src="/adobe.svg"
         alt="Adobe"
         className="w-5 h-5"
+        width={20}
+        height={20}
       />
     ),
     title: "Adobe",
@@ -81,11 +81,11 @@ export const stats = [
   {
     icon: (
       <Image
-        height={100}
-        width={100}
         src="/microsoft.svg"
         alt="Microsoft"
         className="w-5 h-5"
+        width={20}
+        height={20}
       />
     ),
     title: "Microsoft",

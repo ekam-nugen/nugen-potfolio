@@ -24,10 +24,10 @@ const CompanyOverview = () => {
         </div>
         <div className="relative h-64 md:h-96">
           <Image
-            height={100}
-            width={100}
             src={GraphicCards}
             alt="Nugeninfo Team"
+            width={400}
+            height={300}
             fill
             className="object-cover rounded-lg"
           />

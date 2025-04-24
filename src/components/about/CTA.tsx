@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 const IndustriesWeEmpower = () => {
   return (
-    <section className="py-8 sm:py-12 lg:py-16 xl:py-20 bg-[#fff1eb]">
+    <section className="py-8 sm:py-12 lg:py-16 xl:py-20 bg-gradient-to-r from-white via-[#fff1eb] to-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-center mb-8 sm:mb-10 lg:mb-12 xl:mb-16 text-black tracking-tight">
           Industries We Empower

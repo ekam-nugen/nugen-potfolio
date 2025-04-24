@@ -66,11 +66,11 @@ export default function CaseStudyHero() {
                   className="md:w-1/2"
                 >
                   <Image
-                    height={100}
-                    width={100}
                     src={study?.image ?? ""}
                     alt={study.title}
                     className="w-full h-auto object-contain"
+                    width={1200}
+                    height={800}
                   />
                 </motion.div>
               </div>

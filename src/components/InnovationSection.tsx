@@ -33,10 +33,10 @@ export default function InnovationSection() {
 
         <div className="flex justify-center  shadow-lg">
           <Image
-            height={100}
-            width={100}
-            src={GraphicCards}
+            src={GraphicCards.src}
             alt="Card Graphic"
+            width={GraphicCards.width}
+            height={GraphicCards.height}
             className="object-cover w-full h-full rounded-lg"
           />
         </div>

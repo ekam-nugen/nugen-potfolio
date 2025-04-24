@@ -3,7 +3,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Star, ArrowRight } from "lucide-react";
 import Image from "next/image";
-// import { Parallax } from "react-scroll-parallax";
 
 export default function HowWeWorkSection() {
   return (
