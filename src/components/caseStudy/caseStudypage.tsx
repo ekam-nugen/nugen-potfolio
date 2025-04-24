@@ -1,38 +1,7 @@
 import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
-import Image from "next/image";
-
-const caseStudiesData = [
-  {
-    id: 1,
-    title: "IT Staff Augmentation Fueling Digital Transformation at Cinépolis",
-    industry: "Media & Entertainment",
-    skills: ["Python", "Java", "React.js", "Next.js", "AWS", "GCP"],
-    image: "/21b1e3a7-abc6-4f97-9929-b85cbe29376b.webp",
-    pdfLink: "https://example.com/fintech-case-study.pdf",
-    readMoreLink: "https://example.com/fintech-case-study",
-  },
-  {
-    id: 2,
-    title:
-      "Capital Numbers' IT Staff Augmentation Accelerates Volvo's GenAI Innovation with SPINE",
-    industry: "Manufacturing",
-    skills: ["React.js", "HTML", "CSS", "Python", "GCP"],
-    image: "/21b1e3a7-abc6-4f97-9929-b85cbe29376b.webp",
-    pdfLink: "https://example.com/fintech-case-study.pdf",
-    readMoreLink: "https://example.com/fintech-case-study",
-  },
-  {
-    id: 3,
-    title:
-      "Capital Numbers Helps Fintech Client Quickly Launch Innovative Financial Advisory Platform",
-    industry: "Finance",
-    skills: ["React", "Rails", "PostgreSQL", "AWS"],
-    image: "/21b1e3a7-abc6-4f97-9929-b85cbe29376b.webp",
-    pdfLink: "https://example.com/fintech-case-study.pdf",
-    readMoreLink: "https://example.com/fintech-case-study",
-  },
-];
+import Image, { StaticImageData } from "next/image";
+import { caseStudiesData } from "@/src/json/caseStudy/caseStudys";
 
 const technologies = [
   "MongoDB",
@@ -82,14 +51,14 @@ const FilterDropdown = ({
     <div className="relative inline-block text-left">
       <button
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-2 px-4 py-2 border rounded-md shadow-sm"
+        className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-300 rounded-md shadow hover:shadow-md transition"
       >
-        <span>{title}</span>
+        <span className="font-medium">{title}</span>
         <ChevronDown size={16} />
       </button>
       {open && (
-        <div className="absolute mt-2 max-h-60 overflow-y-auto z-10 w-60 bg-white border rounded shadow">
-          <ul className="p-2">
+        <div className="absolute mt-2 max-h-60 overflow-y-auto z-10 w-60 bg-white border rounded shadow-lg">
+          <ul className="p-2 space-y-1">
             {options.map((option) => (
               <li key={option} className="flex items-center space-x-2 py-1">
                 <input
@@ -108,11 +77,11 @@ const FilterDropdown = ({
 };
 
 type CaseStudyCardProps = {
-  image: string;
+  image: string | StaticImageData;
   title: string;
   industry: string;
   skills: string[];
-  pdfLink: string;
+  pdfLink?: string;
   readMoreLink: string;
 };
 
@@ -121,10 +90,9 @@ const CaseStudyCard = ({
   title,
   industry,
   skills,
-  pdfLink,
   readMoreLink,
 }: CaseStudyCardProps) => (
-  <div className="bg-white rounded-xl shadow p-4 w-full max-w-sm">
+  <div className="bg-white rounded-2xl shadow-md p-5 w-full max-w-sm transition hover:shadow-lg hover:-translate-y-1 duration-200">
     <Image
       src={image}
       alt={title}
@@ -140,18 +108,10 @@ const CaseStudyCard = ({
       <strong>Skills:</strong> {skills.join(", ")}
     </p>
     <div className="mt-4 flex justify-between">
+      <a></a>
       <a
-        className="border px-4 py-2 rounded text-sm"
-        href={pdfLink}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        DOWNLOAD
-      </a>
-      <a
-        className="bg-orange-500 text-white px-4 py-2 rounded text-sm text-center"
+        className="bg-orange-500 hover:bg-orange-600 transition text-white px-4 py-2 rounded text-sm"
         href={readMoreLink}
-        target="_blank"
         rel="noopener noreferrer"
       >
         READ MORE
@@ -182,15 +142,16 @@ export default function CaseStudiesSection() {
   });
 
   return (
-    <div className="p-6 space-y-6">
-      <div className="flex flex-wrap gap-4 items-center">
+    <section className="px-6 py-12 max-w-7xl mx-auto text-center space-y-10">
+      <h2 className="text-3xl font-bold">Our Case Studies</h2>
+      <div className="flex flex-wrap justify-center gap-4 items-center">
         <FilterDropdown
           title="Filter by Technology"
           options={technologies}
           selected={selectedTech}
           onChange={toggleSelection(selectedTech, setSelectedTech)}
         />
-        <span className="font-bold">OR</span>
+        <span className="text-gray-600 font-semibold">OR</span>
         <FilterDropdown
           title="Filter by Industry"
           options={industries}
@@ -198,11 +159,13 @@ export default function CaseStudiesSection() {
           onChange={toggleSelection(selectedInd, setSelectedInd)}
         />
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <hr className="border-t border-gray-300" />
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 place-items-center">
         {filtered.map((cs) => (
           <CaseStudyCard key={cs.id} {...cs} />
         ))}
       </div>
-    </div>
+    </section>
   );
 }
