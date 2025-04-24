@@ -50,9 +50,17 @@ const testimonials = [
   },
 ];
 
-export default function TestimonialStatic() {
+interface TestimonialStaticProps {
+  className?: string;
+}
+
+export default function TestimonialStatic({
+  className,
+}: TestimonialStaticProps) {
   return (
-    <section className="py-16 bg-gradient-to-r from-white via-[#fff1eb] to-white text-black">
+    <section
+      className={`py-16  text-black ${className}`}
+    >
       <div className="text-center mb-10">
         <div className="text-yellow-400 text-3xl mb-2">★★★★★</div>
         <h2 className="text-3xl font-semibold">What Our Clients Say</h2>

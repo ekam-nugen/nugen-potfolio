@@ -1,104 +1,123 @@
 "use client";
+
 import React, { useState } from "react";
 import { Plus, Minus } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { faqData } from "@/src/json";
 
-const faqData = [
-  {
-    question:
-      "Which Programming Languages Does Nugen IT Services Specialize In?",
-    answer:
-      "Nugen IT Services excels in programming languages like Python, Java, JavaScript, C#, and more for application development.",
-  },
-  {
-    question: "How Does Nugen IT Services Support Mobile Development?",
-    answer:
-      "Nugen IT Services provides expertise in Java, React Native, Xamarin, and other technologies for Android and iOS development.",
-  },
-  {
-    question:
-      "What Cloud and Containerization Technologies Does Nugen IT Services Offer?",
-    answer:
-      "Nugen IT Services offers AWS, Azure, Google Cloud, Docker, and Kubernetes for cloud services and deployment.",
-  },
-  {
-    question: "Can Nugen IT Services Assist With AI and ML Projects?",
-    answer:
-      "Yes, Nugen IT Services leads in AI and ML with TensorFlow, PyTorch, and other frameworks for innovative solutions.",
-  },
-  {
-    question: "What E-Commerce Support Is Available at Nugen IT Services?",
-    answer:
-      "Nugen IT Services offers solutions with Magento, Shopify, WooCommerce, and other platforms for online storefronts.",
-  },
-  {
-    question: "What Web Development Frameworks Does Nugen IT Services Use?",
-    answer:
-      "Nugen IT Services uses Node.js, .NET, Spring, Django, and Laravel for back-end development.",
-  },
-  {
-    question: "How Is Data Science and Analytics Approached?",
-    answer:
-      "Nugen IT Services uses Snowflake, Redshift, Apache Spark, and Tableau for data storage, processing, and visualization.",
-  },
-  {
-    question: "Does Nugen IT Services Offer Blockchain Development?",
-    answer:
-      "Yes, offering blockchain services with Ethereum, Hyperledger Fabric, and smart contract development.",
-  },
-  {
-    question: "What UI/UX Design Support Is Provided?",
-    answer:
-      "Nugen IT Services uses Figma, Adobe XD, and Sketch, focusing on accessibility and user-friendly design.",
-  },
-  {
-    question: "How Does Nugen IT Services Ensure Software Quality?",
-    answer:
-      "Through manual and automated testing with Selenium, Cypress, Postman, and JMeter for quality and performance.",
-  },
-];
-
-export const FAQSection = () => {
+export const FAQSection: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleIndex = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  const itemVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: (i: number) => ({
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.5, delay: i * 0.1, ease: "easeOut" },
+    }),
+  };
+
+  const answerVariants = {
+    hidden: { opacity: 0, height: 0, y: -10 },
+    visible: {
+      opacity: 1,
+      height: "auto",
+      y: 0,
+      transition: { duration: 0.4, ease: "easeOut", bounce: 0.3 },
+    },
+    exit: {
+      opacity: 0,
+      height: 0,
+      y: -10,
+      transition: { duration: 0.3, ease: "easeIn" },
+    },
+  };
+
+  const iconVariants = {
+    closed: { rotate: 0, scale: 1 },
+    open: { rotate: 90, scale: 1.1, transition: { duration: 0.3 } },
+  };
+
   return (
-    <div className="bg-white py-12 px-4 sm:px-6 lg:px-8">
+    <motion.div
+      className="bg-white py-12 px-4 sm:px-6 lg:px-8"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+        <motion.h2
+          className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
           Have Questions?
-        </h2>
-        <p className="text-sm sm:text-base md:text-lg text-gray-700 mb-10">
+        </motion.h2>
+        <motion.p
+          className="text-sm sm:text-base md:text-lg text-gray-700 mb-10"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
           Got Any Queries? Our FAQ Section Has All the Answers You Need To Make
           an Informed Decision With Confidence.
-        </p>
+        </motion.p>
 
         <div className="space-y-4 text-left">
           {faqData?.map((faq, index) => (
-            <div
+            <motion.div
               key={index}
-              className="border-b border-gray-300 pb-4 cursor-pointer"
+              className="border-b border-gray-300 pb-4 cursor-pointer group"
+              variants={itemVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              custom={index}
+              whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+              role="button"
+              tabIndex={0}
               onClick={() => toggleIndex(index)}
             >
               <div className="flex items-center justify-between text-gray-800 text-sm sm:text-base md:text-lg font-semibold">
-                <span>{faq?.question}</span>
-                {openIndex === index ? (
-                  <Minus className="w-5 h-5" />
-                ) : (
-                  <Plus className="w-5 h-5" />
-                )}
+                <motion.span
+                  animate={{ scale: openIndex === index ? 1.05 : 1 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  {faq?.question}
+                </motion.span>
+                <motion.div
+                  variants={iconVariants}
+                  animate={openIndex === index ? "open" : "closed"}
+                >
+                  {openIndex === index ? (
+                    <Minus className="w-5 h-5 text-orange-500" />
+                  ) : (
+                    <Plus className="w-5 h-5 text-orange-500" />
+                  )}
+                </motion.div>
               </div>
-              {openIndex === index && (
-                <p className="mt-3 text-xs sm:text-sm text-gray-600">
-                  {faq?.answer}
-                </p>
-              )}
-            </div>
+              <AnimatePresence>
+                {openIndex === index && (
+                  <motion.p
+                    className="mt-3 text-xs sm:text-sm text-gray-600"
+                    variants={answerVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                  >
+                    {faq?.answer}
+                  </motion.p>
+                )}
+              </AnimatePresence>
+            </motion.div>
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

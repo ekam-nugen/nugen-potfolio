@@ -2,7 +2,7 @@ import { FooterSections, SocialLinks } from "../json";
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col justify-center bg-white text-zinc-800 py-10 px-6 md:px-10">
+    <footer className="flex flex-col justify-center bg-white text-zinc-800 py-10 px-6 md:px-10 bg-gradient-to-r from-white via-[#fff1eb] to-white">
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-9 px-5">
         <div className="flex gap-1/2 flex-col">
           <div className="flex items-center">

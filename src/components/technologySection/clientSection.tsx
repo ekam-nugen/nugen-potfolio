@@ -1,88 +1,82 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Image from "next/image";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
+import { logos } from "@/src/json";
 
-const logos = [
-  "/clients/ivoyant.png",
-  "/clients/quay.png",
-  "/clients/blinkPayment.svg",
-  "/clients/capitalNumber.png",
-  "/clients/simply5.svg",
-  "/clients/protaxCanada.png",
-  "/clients/Scott.png",
-  "/clients/ganpatiLogo.jpeg",
-  "/clients/sunriseIntegration.jpg",
-  "/clients/indiaCar.png",
-  "/clients/madEngine.webp",
-  "/clients/insideInjuries.png",
-  "/clients/Qudos.png",
-  "/clients/luckyR.jpeg",
-  "/clients/magicEdt.jpeg",
-  "/clients/dapt.png",
-  "/clients/cloudways.webp",
-  "/clients/optumLogo.png",
-  "/clients/skeepLogo.webp",
-];
+interface ClientSliderProps {
+  className?: string;
+}
 
-const itemsPerSlide = 5;
-const totalSlides = Math.ceil(logos.length / itemsPerSlide);
+const ClientSlider: React.FC<ClientSliderProps> = ({ className }) => {
+  const duplicatedLogos = [...logos, ...logos];
 
-const ClientSlider = () => {
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIndex((prev) => (prev + 1) % totalSlides);
-    }, 3000);
-
-    return () => clearTimeout(timer);
-  }, [index]);
-
-  const visibleLogos = logos.slice(
-    index * itemsPerSlide,
-    index * itemsPerSlide + itemsPerSlide
-  );
+  const animationDuration = logos.length * 0.75;
 
   return (
     <div
-      className=" bg-gradient-to-r from-white via-[#fff1eb] to-white
- py-12 px-4 overflow-hidden"
+      className={cn(
+        "relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden",
+        className
+      )}
     >
-      <div className="text-center mb-8">
-        <h2 className="text-2xl sm:text-3xl font-bold text-black">
-          Our Valuable Clients
-        </h2>
-        <div className="w-16 h-1 bg-pink-500 mx-auto mt-2 rounded" />
+      {/* Header */}
+      <div className="text-center mb-16 max-w-7xl mx-auto">
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight"
+        >
+          Our Valued Partners
+        </motion.h2>
+        <motion.div
+          className="w-32 h-1 bg-[#ffbb9f] mx-auto mt-4 rounded-full"
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        />
       </div>
 
-      <div className="relative h-32 sm:h-36 max-w-7xl mx-auto px-2">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={index}
-            className="flex justify-center gap-4 sm:gap-6 absolute w-full"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-          >
-            {visibleLogos.map((logo, idx) => (
-              <div
-                key={idx}
-                className="bg-white p-3 sm:p-4 rounded-lg shadow-md flex items-center justify-center w-32 h-20 sm:w-40 sm:h-24 overflow-hidden"
-              >
-                <Image
-                  src={logo}
-                  alt={`Client logo ${idx}`}
-                  width={120}
-                  height={80}
-                  className="object-contain max-h-full max-w-full"
-                />
-              </div>
-            ))}
-          </motion.div>
-        </AnimatePresence>
+      {/* Marquee Container */}
+      <div className="relative w-full h-48 sm:h-60 lg:h-72 overflow-hidden">
+        <motion.div
+          className="flex flex-nowrap gap-6 sm:gap-8 lg:gap-10"
+          animate={{
+            x: ["0%", "-50%"],
+          }}
+          transition={{
+            x: {
+              repeat: Infinity,
+              repeatType: "loop",
+              duration: animationDuration,
+              ease: "linear",
+            },
+          }}
+        >
+          {duplicatedLogos.map((logo: string, idx: number) => (
+            <div
+              key={idx}
+              className="flex-shrink-0 bg-white p-5 sm:p-6 rounded-2xl shadow-xl hover:shadow-2xl 
+                transition-shadow duration-300 flex items-center justify-center 
+                w-36 h-28 sm:w-48 sm:h-36 lg:w-60 lg:h-44"
+            >
+              <Image
+                src={logo}
+                alt={`Client logo ${idx + 1}`}
+                width={180}
+                height={120}
+                className="object-contain max-h-full max-w-full"
+                onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
+                  e.currentTarget.src = "/placeholder-logo.png";
+                }}
+                priority={idx < logos.length}
+              />
+            </div>
+          ))}
+        </motion.div>
       </div>
     </div>
   );

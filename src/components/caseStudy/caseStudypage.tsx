@@ -126,11 +126,11 @@ const CaseStudyCard = ({
 }: CaseStudyCardProps) => (
   <div className="bg-white rounded-xl shadow p-4 w-full max-w-sm">
     <Image
-      height={100}
-      width={100}
       src={image}
       alt={title}
       className="rounded-xl h-48 object-cover w-full"
+      height={192}
+      width={0}
     />
     <h3 className="mt-4 text-lg font-semibold">{title}</h3>
     <p className="text-sm text-gray-500">

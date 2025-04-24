@@ -1,19 +1,6 @@
 import React from "react";
-import Link from "next/link"; // only if you're using Next.js
-
-const techTags = [
-  { label: "Programming Languages", color: "border-blue-500" ,href: "#ai"},
-  { label: "Front-End", color: "border-pink-500" ,href: "#"},
-  { label: "Back-End", color: "border-red-500" ,href: "#"},
-  { label: "Platforms", color: "border-green-500" ,href: "#"},
-  { label: "CMS & E-Commerce Platforms", color: "border-indigo-500" ,href: "#"},
-  { label: "Cloud & Containerization", color: "border-purple-500" ,href: "#"},
-  { label: "AI, ML & GenAI", color: "border-cyan-500" ,href: "#"},
-  { label: "Data Science & Analytics", color: "border-pink-400" ,href: "#"},
-  { label: "Web Development", color: "border-lime-500" ,href: "#"},
-  { label: "UI/UX", color: "border-blue-500" ,href: "#"},
-  { label: "Quality Assurance", color: "border-orange-500" ,href: "#"},
-];
+import Link from "next/link"; 
+import { techTags } from "@/src/json/languageSection";
 
 export const TechnologySection = () => {
   return (
@@ -31,7 +18,7 @@ export const TechnologySection = () => {
           {techTags.map((tag, index) => (
             <Link
               key={index}
-              href={tag?.href}
+              href="#technologies"
               className={`px-6 py-3 border-l-4 ${tag.color} text-gray-800 font-medium hover:bg-slate-100 rounded-lg transition-colors duration-200`}
             >
               {tag.label}

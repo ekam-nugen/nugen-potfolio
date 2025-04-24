@@ -12,7 +12,7 @@ export default function CompanyStatsSection({
   title,
   subTitle,
 }: {
-  data: Stat[]; // Specify the type as Stat[]
+  data: Stat[];
   title: string;
   subTitle: string;
 }) {
@@ -27,7 +27,7 @@ export default function CompanyStatsSection({
         {data?.map((stat: Stat, index: number) => (
           <div
             key={index}
-            className="group bg-white border border-gray-200 cursor-pointer rounded-xl p-5 shadow transition-all duration-300 hover:-translate-y-1 hover:border-[#ff6b3d]/50 hover:bg-[#fff5f0]"
+            className="group bg-white border border-gray-200 cursor-pointer rounded-xl p-5 shadow transition-all duration-300 hovered:-translate-y-1 hovered:border-[#ff6b3d]/50 hovered:bg-[#fff5f0]"
           >
             {stat?.link && (
               <Link href={stat.link}>
@@ -35,7 +35,7 @@ export default function CompanyStatsSection({
               </Link>
             )}
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-[#ffbb9f]/30 text-[#ff6b3d] shrink-0 transition-all duration-300 group-hover:scale-110 group-hover:ring-2 group-hover:ring-[#ffbb9f]/50">
+              <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-[#ffbb9f]/30 text-[#ff6b3d] shrink-0 transition-all duration-300 group-hovered:scale-110 group-hovered:ring-2 group-hovered:ring-[#ffbb9f]/50">
                 {stat?.icon}
               </div>
               <div className="text-left">

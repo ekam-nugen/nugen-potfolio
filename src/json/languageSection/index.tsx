@@ -203,3 +203,17 @@ export const data = {
       ],
     },
   };
+
+  export const techTags = [
+    { label: "Programming Languages", color: "border-blue-500" },
+    { label: "Front-End", color: "border-pink-500" },
+    { label: "Back-End", color: "border-red-500" },
+    { label: "Platforms", color: "border-green-500" },
+    { label: "CMS & E-Commerce Platforms", color: "border-indigo-500" },
+    { label: "Cloud & Containerization", color: "border-purple-500" },
+    { label: "AI, ML & GenAI", color: "border-cyan-500" },
+    { label: "Data Science & Analytics", color: "border-pink-400" },
+    { label: "Web Development", color: "border-lime-500" },
+    { label: "UI/UX", color: "border-blue-500" },
+    { label: "Quality Assurance", color: "border-orange-500" },
+  ];
