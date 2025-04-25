@@ -31,6 +31,20 @@ import {
   FaProjectDiagram,
   FaRecycle,
   FaTerminal,
+  FaAward,
+  FaChartLine,
+  FaCube,
+  FaDatabase,
+  FaLeaf,
+  FaPython,
+  FaTachometerAlt,
+  FaTree,
+  FaLanguage,
+  FaChess,
+  FaShapes,
+  FaToriiGate,
+  FaUniversity,
+  FaUserAlt,
 } from "react-icons/fa";
 
 interface Feature {
@@ -2933,6 +2947,286 @@ export const technologyStack = [
       "Radically simple IT automation for repetitive tasks, app deployment, and cloud provisioning.",
     imageSrc: "/clients/technologies/ansible.png",
   },
+  {
+    name: "Scikit-learn",
+    features: [
+      {
+        icon: <FaRobot />,
+        title: "Comprehensive ML Toolkit",
+        desc: "Simple and efficient tools for predictive data analysis, covering classification, regression, clustering, and more.",
+      },
+      {
+        icon: <FaPython />,
+        title: "Python Ecosystem",
+        desc: "Seamlessly integrates with NumPy, SciPy, Pandas, and Matplotlib for end-to-end data workflows.",
+      },
+      {
+        icon: <FaBalanceScale />,
+        title: "Model Evaluation",
+        desc: "Built-in metrics (accuracy, F1, ROC-AUC) and cross-validation tools for robust model validation.",
+      },
+      {
+        icon: <FaCube />,
+        title: "Preprocessing Pipelines",
+        desc: "StandardScaler, OneHotEncoder, and Pipeline APIs for reproducible data transformations.",
+      },
+      {
+        icon: <FaBook />,
+        title: "Beginner-Friendly",
+        desc: "Well-documented with beginner-friendly APIs and extensive community tutorials.",
+      },
+    ],
+    useCases: [
+      { name: "Prototyping ML Models", image: "/clients/illustration1.svg" },
+      { name: "Academic Research", image: "/clients/illustration2.svg" },
+      { name: "Feature Engineering", image: "/clients/illustration3.svg" },
+      { name: "Small-to-Medium Datasets", image: "/clients/illustration4.svg" },
+      {
+        name: "Explainable AI (Linear Models)",
+        image: "/clients/illustration5.svg",
+      },
+    ],
+    tagline:
+      "The go-to Python library for classical machine learning with a unified API for all algorithms.",
+    imageSrc: "/clients/technologies/scikitLearn.png",
+  },
+  {
+    name: "XGBoost",
+    features: [
+      {
+        icon: <FaTree />,
+        title: "Gradient Boosting",
+        desc: "Optimized implementation of gradient-boosted decision trees with regularization (L1/L2) to prevent overfitting.",
+      },
+      {
+        icon: <FaTachometerAlt />,
+        title: "Blazing Fast Performance",
+        desc: "Parallel processing, out-of-core computation, and hardware optimization for large datasets.",
+      },
+      {
+        icon: <FaAward />,
+        title: "Competition Proven",
+        desc: "Dominates Kaggle and ML competitions due to its predictive accuracy and flexibility.",
+      },
+      {
+        icon: <FaProjectDiagram />,
+        title: "Cross-Platform",
+        desc: "Supports Python, R, Java, Scala, and deployment in production environments.",
+      },
+      {
+        icon: <FaChartLine />,
+        title: "Feature Importance",
+        desc: "Built-in tools (SHAP, gain-based) to interpret model decisions.",
+      },
+    ],
+    useCases: [
+      { name: "Structured/Tabular Data", image: "/clients/illustration1.svg" },
+      { name: "Kaggle Competitions", image: "/clients/illustration2.svg" },
+      { name: "Financial Risk Modeling", image: "/clients/illustration3.svg" },
+      {
+        name: "High-Performance Inference",
+        image: "/clients/illustration4.svg",
+      },
+      { name: "Ranking Algorithms", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "The gold-standard library for winning machine learning competitions and enterprise-grade tabular data modeling.",
+    imageSrc: "/clients/technologies/xgboost.png",
+  },
+  {
+    name: "LightGBM",
+    features: [
+      {
+        icon: <FaLeaf />,
+        title: "Lightweight & Efficient",
+        desc: "Uses histogram-based algorithms and leaf-wise growth for faster training with lower memory usage.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "GPU Acceleration",
+        desc: "Supports GPU training for 10x speedups compared to CPU-only libraries.",
+      },
+      {
+        icon: <FaDatabase />,
+        title: "Big Data Ready",
+        desc: "Handles large-scale datasets (millions of rows) with distributed learning.",
+      },
+      {
+        icon: <FaCode />,
+        title: "Minimal Hyperparameter Tuning",
+        desc: "Works well with default settings, reducing configuration overhead.",
+      },
+      {
+        icon: <FaNetworkWired />,
+        title: "Microsoft Ecosystem",
+        desc: "Integrates with Azure ML, .NET, and other Microsoft tools.",
+      },
+    ],
+    useCases: [
+      { name: "Real-Time Predictions", image: "/clients/illustration1.svg" },
+      { name: "Recommendation Systems", image: "/clients/illustration2.svg" },
+      { name: "Anomaly Detection", image: "/clients/illustration3.svg" },
+      { name: "IoT Data Processing", image: "/clients/illustration4.svg" },
+      { name: "Embedded ML", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "A high-performance gradient boosting framework designed for speed and scalability with minimal resources.",
+    imageSrc: "/clients/technologies/lightGBM.png",
+  },
+  {
+    name: "TensorFlow",
+    features: [
+      {
+        icon: <FaNetworkWired />,
+        title: "Production-Grade ML",
+        desc: "End-to-end platform for building, training, and deploying models at scale with TensorFlow Extended (TFX).",
+      },
+      {
+        icon: <FaMobile />,
+        title: "Cross-Platform Deployment",
+        desc: "Run models on CPUs, GPUs, TPUs, mobile (TFLite), and web (TensorFlow.js).",
+      },
+      {
+        icon: <FaProjectDiagram />,
+        title: "Flexible Architecture",
+        desc: "High-level (Keras) and low-level APIs for custom model building and control.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Pre-Trained Models",
+        desc: "Access TF Hub for models like BERT, ResNet, and EfficientNet for transfer learning.",
+      },
+      {
+        icon: <FaCloud />,
+        title: "Google Cloud Integration",
+        desc: "Optimized for Google TPUs and AI Platform for distributed training.",
+      },
+    ],
+    useCases: [
+      { name: "Enterprise ML Pipelines", image: "/clients/illustration1.svg" },
+      { name: "Computer Vision (CV)", image: "/clients/illustration2.svg" },
+      { name: "Natural Language Processing (NLP)", image: "/clients/illustration3.svg" },
+      { name: "Edge AI (TFLite)", image: "/clients/illustration4.svg" },
+      { name: "Recommender Systems", image: "/clients/illustration5.svg" },
+    ],
+    tagline: "Google’s battle-tested framework for scalable machine learning from research to production.",
+    imageSrc: "/clients/technologies/tensorflow.png",
+  },{
+    name: "PyTorch",
+    features: [
+      {
+        icon: <FaCode />,
+        title: "Pythonic & Dynamic",
+        desc: "Imperative programming with eager execution for intuitive debugging and prototyping.",
+      },
+      {
+        icon: <FaUniversity />,
+        title: "Academic Dominance",
+        desc: "Preferred by researchers for its flexibility and rich ecosystem (e.g., Hugging Face, Detectron2).",
+      },
+      {
+        icon: <FaBolt />,
+        title: "GPU Acceleration",
+        desc: "Seamless CUDA integration for fast tensor computations on NVIDIA GPUs.",
+      },
+      {
+        icon: <FaToriiGate />,
+        title: "TorchScript",
+        desc: "Export models to production with JIT compilation for C++/mobile deployment.",
+      },
+      {
+        icon: <FaShapes />,
+        title: "Autograd",
+        desc: "Automatic differentiation for gradient-based optimization (e.g., custom loss functions).",
+      },
+    ],
+    useCases: [
+      { name: "Research & Experimentation", image: "/clients/illustration1.svg" },
+      { name: "Deep Learning (DL) Papers", image: "/clients/illustration2.svg" },
+      { name: "Generative AI (GANs, Diffusion)", image: "/clients/illustration3.svg" },
+      { name: "Reinforcement Learning", image: "/clients/illustration4.svg" },
+      { name: "Quantized Models (Torch.quantize)", image: "/clients/illustration5.svg" },
+    ],
+    tagline: "Facebook’s research-first framework that balances flexibility and performance for cutting-edge AI.",
+    imageSrc: "/clients/technologies/PyTorch.png",
+  },{
+    name: "Keras",
+    features: [
+      {
+        icon: <FaUserAlt />,
+        title: "Beginner-Friendly",
+        desc: "High-level API with intuitive abstractions for rapid model building (now part of TensorFlow).",
+      },
+      {
+        icon: <FaPlug />,
+        title: "Backend Agnostic",
+        desc: "Runs on TensorFlow, Theano, or CNTK (though TF is now the primary backend).",
+      },
+      {
+        icon: <FaChess />,
+        title: "Modular Design",
+        desc: "Layer-centric API for stacking Dense, Conv2D, LSTM, etc., with minimal code.",
+      },
+      {
+        icon: <FaRocket />,
+        title: "Fast Prototyping",
+        desc: "Build and train models in minutes with built-in optimizers and callbacks.",
+      },
+      {
+        icon: <FaMobile />,
+        title: "Deployment Ready",
+        desc: "Export models to TFLite, ONNX, or web formats for edge/cloud deployment.",
+      },
+    ],
+    useCases: [
+      { name: "Educational Projects", image: "/clients/illustration1.svg" },
+      { name: "Quick Proof-of-Concepts", image: "/clients/illustration2.svg" },
+      { name: "Startup MVPs", image: "/clients/illustration3.svg" },
+      { name: "Standard DL Models (CNNs/RNNs)", image: "/clients/illustration4.svg" },
+      { name: "Transfer Learning", image: "/clients/illustration5.svg" },
+    ],
+    tagline: "The Python deep learning API for humans, emphasizing simplicity and speed over low-level control.",
+    imageSrc: "/clients/technologies/Keras.png",
+  },
+  {
+    name: "MXNet",
+    features: [
+      {
+        icon: <FaLanguage />,
+        title: "Multi-Language Support",
+        desc: "APIs for Python, R, Julia, Scala, and C++ for diverse developer needs.",
+      },
+      {
+        icon: <FaExpandArrowsAlt />,
+        title: "Scalability",
+        desc: "Optimized for distributed training across multiple GPUs/CPUs with Gluon API.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Cloud Native",
+        desc: "AWS’s preferred framework (SageMaker) with optimized EC2/GPU instances.",
+      },
+      {
+        icon: <FaLeaf />,
+        title: "Hybrid Programming",
+        desc: "Mix imperative and symbolic execution for flexibility and performance.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Computer Vision Focus",
+        desc: "Strong toolkit for CV (GluonCV) and NLP (GluonNLP) with pre-trained models.",
+      },
+    ],
+    useCases: [
+      { name: "AWS-Based ML Workloads", image: "/clients/illustration1.svg" },
+      { name: "Multi-Language Teams", image: "/clients/illustration2.svg" },
+      { name: "High-Performance Inference", image: "/clients/illustration3.svg" },
+      { name: "Embedded Devices (AWS IoT)", image: "/clients/illustration4.svg" },
+      { name: "Symbolic-Neural Hybrids", image: "/clients/illustration5.svg" },
+    ],
+    tagline: "Apache’s scalable and portable framework favored for cloud-native and multi-language AI solutions.",
+    imageSrc: "/clients/technologies/mxnet.png",
+  }
 ];
 
 export const reviewPlatforms = [
