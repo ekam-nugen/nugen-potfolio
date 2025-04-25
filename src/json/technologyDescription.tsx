@@ -748,6 +748,248 @@ export const technologyStack = [
       "A powerful, object-oriented programming language used for building native iOS and macOS applications.",
     imageSrc: "/clients/technologies/objective-c.svg",
   },
+  {
+    name: "React",
+    features: [
+      {
+        icon: <FaCode />,
+        title: "Component-Based",
+        desc: "Build user interfaces using reusable, isolated components for better maintainability and scalability.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Virtual DOM",
+        desc: "React optimizes rendering by using a virtual DOM to efficiently update the user interface.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Fast Performance",
+        desc: "React uses a virtual DOM to minimize direct manipulation of the actual DOM, boosting performance.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Declarative Syntax",
+        desc: "React lets you describe how the UI should look, and it will automatically handle updates when the state changes.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Extensive Ecosystem",
+        desc: "A rich ecosystem of libraries and tools, including React Router, Redux, and Next.js, to help build robust applications.",
+      },
+    ],
+    useCases: [
+      {
+        name: "Single Page Applications (SPA)",
+        image: "/clients/illustration1.svg",
+      },
+      {
+        name: "Interactive User Interfaces",
+        image: "/clients/illustration2.svg",
+      },
+      {
+        name: "Progressive Web Apps (PWA)",
+        image: "/clients/illustration3.svg",
+      },
+      {
+        name: "Mobile Apps with React Native",
+        image: "/clients/illustration4.svg",
+      },
+      { name: "Component Libraries", image: "/clients/illustration5.svg" },
+      {
+        name: "Server-Side Rendering (Next.js)",
+        image: "/clients/illustration6.svg",
+      },
+    ],
+    tagline:
+      "A declarative, efficient, and flexible JavaScript library for building user interfaces, especially for dynamic and interactive web applications.",
+    imageSrc: "/clients/technologies/react.png",
+  },
+  {
+    name: "Vue.js",
+    features: [
+      {
+        icon: <FaCode />,
+        title: "Reactive Data Binding",
+        desc: "Vue provides a reactive and declarative approach to data binding, ensuring automatic UI updates.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Component-Based Architecture",
+        desc: "Build applications with reusable components for better organization and maintainability.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Performance Optimized",
+        desc: "Vue.js is designed for high performance with a lightweight core and efficient reactivity system.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Flexible & Progressive",
+        desc: "Vue can scale from simple, small applications to complex, large-scale ones, and is easy to integrate into existing projects.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Strong Ecosystem",
+        desc: "A rich ecosystem of libraries and tools, such as Vue Router, Vuex, and Vue CLI, for full-stack development.",
+      },
+    ],
+    useCases: [
+      {
+        name: "Single Page Applications (SPA)",
+        image: "/clients/illustration1.svg",
+      },
+      {
+        name: "Interactive User Interfaces",
+        image: "/clients/illustration2.svg",
+      },
+      { name: "Real-time Web Apps", image: "/clients/illustration3.svg" },
+      {
+        name: "Progressive Web Apps (PWA)",
+        image: "/clients/illustration4.svg",
+      },
+      { name: "Component Libraries", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "A progressive JavaScript framework for building user interfaces and single-page applications, focusing on simplicity and ease of integration.",
+    imageSrc: "/clients/technologies/vue.png",
+  },
+  {
+    name: "Angular",
+    features: [
+      {
+        icon: <FaCode />,
+        title: "Two-Way Data Binding",
+        desc: "Angular offers two-way data binding, automatically synchronizing the model and view.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Component-Based Architecture",
+        desc: "Angular allows you to build complex applications using reusable components, leading to better maintainability.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "RxJS Integration",
+        desc: "Angular has deep integration with RxJS for reactive programming, making it easy to handle asynchronous operations.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Powerful CLI",
+        desc: "Angular CLI offers a powerful development environment with automated tools for building, testing, and deploying applications.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Comprehensive Framework",
+        desc: "Angular provides a complete solution with built-in tools for routing, form handling, HTTP requests, and more.",
+      },
+    ],
+    useCases: [
+      {
+        name: "Enterprise Web Applications",
+        image: "/clients/illustration1.svg",
+      },
+      {
+        name: "Single Page Applications (SPA)",
+        image: "/clients/illustration2.svg",
+      },
+      { name: "Mobile Web Apps", image: "/clients/illustration3.svg" },
+      { name: "Real-time Applications", image: "/clients/illustration4.svg" },
+      { name: "Complex Data-Driven Apps", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "A powerful, full-featured framework for building dynamic, enterprise-level web applications with a focus on scalability and performance.",
+    imageSrc: "/clients/technologies/angular.png",
+  },
+  {
+    name: "Django",
+    features: [
+      {
+        icon: <FaCode />,
+        title: "Batteries Included",
+        desc: "Django provides an extensive set of built-in tools and libraries to help with common web development tasks.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Rapid Development",
+        desc: "Django emphasizes fast development and clean, pragmatic design to help developers get applications up quickly.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Secure",
+        desc: "Django comes with built-in protection against many security threats, such as SQL injection, cross-site scripting (XSS), and cross-site request forgery (CSRF).",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Scalable",
+        desc: "Django is highly scalable, allowing you to build complex, data-driven websites and applications.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Robust ORM",
+        desc: "Django’s Object-Relational Mapping (ORM) system simplifies database management and interactions with the database.",
+      },
+    ],
+    useCases: [
+      {
+        name: "Content Management Systems",
+        image: "/clients/illustration1.svg",
+      },
+      { name: "Data-Driven Websites", image: "/clients/illustration2.svg" },
+      { name: "E-commerce Platforms", image: "/clients/illustration3.svg" },
+      { name: "APIs & Backend Systems", image: "/clients/illustration4.svg" },
+      { name: "Social Networks", image: "/clients/illustration5.svg" },
+      {
+        name: "Scientific Computing Platforms",
+        image: "/clients/illustration6.svg",
+      },
+    ],
+    tagline:
+      "A high-level Python web framework that encourages rapid development and clean, pragmatic design, focused on scalability and security.",
+    imageSrc: "/clients/technologies/django.svg",
+  },
+  {
+    name: "Laravel",
+    features: [
+      {
+        icon: <FaCode />,
+        title: "Elegant Syntax",
+        desc: "Laravel’s syntax is designed to be expressive and simple to use, making it easy to build robust applications.",
+      },
+      {
+        icon: <FaServer />,
+        title: "MVC Architecture",
+        desc: "Laravel follows the Model-View-Controller (MVC) architectural pattern for better organization and maintainability.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Routing & Middleware",
+        desc: "Laravel’s routing system is intuitive and supports middleware for controlling the flow of HTTP requests.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Eloquent ORM",
+        desc: "Laravel’s built-in Eloquent ORM makes database management and interactions more intuitive and less error-prone.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Task Scheduling",
+        desc: "Laravel provides a clean, fluent interface for defining scheduled tasks and automating repetitive tasks.",
+      },
+    ],
+    useCases: [
+      {
+        name: "Content Management Systems",
+        image: "/clients/illustration1.svg",
+      },
+      { name: "E-commerce Platforms", image: "/clients/illustration2.svg" },
+      { name: "APIs & Backend Systems", image: "/clients/illustration3.svg" },
+      { name: "Real-time Web Apps", image: "/clients/illustration4.svg" },
+      { name: "Social Networks", image: "/clients/illustration5.svg" },
+      { name: "Enterprise Software", image: "/clients/illustration6.svg" },
+    ],
+    tagline:
+      "A PHP web framework that simplifies common tasks, such as routing, authentication, and caching, while offering elegant and expressive syntax for building modern web applications.",
+    imageSrc: "/clients/technologies/laravel.png",
+  },
 ];
 
 export const reviewPlatforms = [
