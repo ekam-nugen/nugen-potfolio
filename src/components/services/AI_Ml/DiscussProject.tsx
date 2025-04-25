@@ -7,26 +7,31 @@ import { ArrowRight } from "lucide-react";
 
 interface DiscussProjectProps {
   className?: string;
+  imageSrc: string;
 }
 
-const DiscussProject: React.FC<DiscussProjectProps> = ({ className}) => {
+const DiscussProject: React.FC<DiscussProjectProps> = ({
+  className,
+  imageSrc,
+}) => {
   return (
     <div className={`py-12 px-4 sm:px-6 lg:px-8 ${className}`}>
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-center">
-          {/* Image Section */}
           <div className="w-full md:w-1/2 flex justify-center mb-8 md:mb-0">
             <Image
-              src="https://img.freepik.com/free-vector/cartoon-style-robot-vectorart_78370-4103.jpg?semt=ais_hybrid&w=740"
+              src={imageSrc}
               alt="Let's Discuss Your Project"
               width={300}
-              height={150}
-              className="object-contain  rounded-full"
+              height={200}
+              className="object-contain rounded-full w-3/5"
               priority
+              onError={(e) => {
+                e.currentTarget.src = "/fallback-image.jpg";
+              }}
             />
           </div>
 
-          {/* Text and Button Section */}
           <div className="w-full md:w-1/2">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 text-center md:text-left">
               Let&apos;s Discuss Your Project
@@ -51,7 +56,7 @@ const DiscussProject: React.FC<DiscussProjectProps> = ({ className}) => {
               className="inline-flex items-center px-6 py-3 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-colors duration-300"
             >
               Schedule a discovery call
-              <ArrowRight />
+              <ArrowRight className="ml-2" />
             </Link>
           </div>
         </div>
