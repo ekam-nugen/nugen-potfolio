@@ -12,7 +12,6 @@ interface ClientSliderProps {
 
 const ClientSlider: React.FC<ClientSliderProps> = ({ className }) => {
   const duplicatedLogos = [...logos, ...logos];
-
   const animationDuration = logos.length * 0.75;
 
   return (
@@ -41,7 +40,13 @@ const ClientSlider: React.FC<ClientSliderProps> = ({ className }) => {
       </div>
 
       {/* Marquee Container */}
-      <div className="relative w-full h-48 sm:h-60 lg:h-72 overflow-hidden">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+        className="relative w-full h-48 sm:h-60 lg:h-72 overflow-hidden"
+      >
         <motion.div
           className="flex flex-nowrap gap-6 sm:gap-8 lg:gap-10"
           animate={{
@@ -57,11 +62,18 @@ const ClientSlider: React.FC<ClientSliderProps> = ({ className }) => {
           }}
         >
           {duplicatedLogos.map((logo: string, idx: number) => (
-            <div
+            <motion.div
               key={idx}
               className="flex-shrink-0 bg-white p-5 sm:p-6 rounded-2xl shadow-xl hover:shadow-2xl 
                 transition-shadow duration-300 flex items-center justify-center 
                 w-36 h-28 sm:w-48 sm:h-36 lg:w-60 lg:h-44"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              whileHover={{ scale: 1.05 }}
+              transition={{
+                duration: 0.6,
+                delay: (idx % logos.length) * 0.15,
+              }}
             >
               <Image
                 src={logo}
@@ -74,10 +86,10 @@ const ClientSlider: React.FC<ClientSliderProps> = ({ className }) => {
                 }}
                 priority={idx < logos.length}
               />
-            </div>
+            </motion.div>
           ))}
         </motion.div>
-      </div>
+      </motion.div>
     </div>
   );
 };
