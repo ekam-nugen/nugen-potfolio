@@ -1,45 +1,6 @@
+import { reviewPlatforms, TechDescriptionProps } from "@/src/json/technologyDescription";
 import Image from "next/image";
-import React, { JSX, useEffect, useState } from "react";
-
-const reviewPlatforms = [
-  {
-    name: "clutch",
-    imageSrc:
-      "https://megasite.ua/cache/cache_image/d/d60aaf99feb42195ced60bde22d590fc.webp",
-    alt: "Clutch Reviews",
-  },
-  {
-    name: "goodfirm",
-    imageSrc:
-      "https://www.g2.com/products/g2-seller-solutions/widgets/stars?color=white&type=read",
-    alt: "GoodFirms Reviews",
-  },
-  {
-    name: "g2",
-    imageSrc: "https://i.ytimg.com/vi/f8vrTlBe0sc/maxresdefault.jpg",
-    alt: "G2 Reviews",
-  },
-  {
-    name: "google",
-    imageSrc:
-      "https://studio.made2grow.de/hs-fs/hubfs/made2GROW%20Studio/Tools%20and%20Certification%20Logos/Google%20Ads%20BootCamp%20-%20Partners%20-%20HubSpot%20Platinum-horizontal-color.png?width=1456&height=500&name=Google%20Ads%20BootCamp%20-%20Partners%20-%20HubSpot%20Platinum-horizontal-color.png",
-    alt: "Google Reviews",
-  },
-];
-
-interface Feature {
-  icon: JSX.Element;
-  title: string;
-  desc: string;
-}
-
-interface TechDescriptionProps {
-  techName: string;
-  tagline: string;
-  imageSrc: string;
-  features: Feature[];
-  useCases: { name: string; image: string }[];
-}
+import React, { useEffect, useState } from "react";
 
 const TechDescription: React.FC<TechDescriptionProps> = ({
   techName,
