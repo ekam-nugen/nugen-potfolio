@@ -46,12 +46,18 @@ export const technologyStack = [
       },
     ],
     useCases: [
-      { name: "Data Analysis & Visualization", image: "/clients/web.webp" },
-      { name: "Machine Learning & AI", image: "/clients/data.webp" },
-      { name: "Web App Development", image: "/clients/web.webp" },
-      { name: "APIs & Backend Systems", image: "/clients/data.webp" },
-      { name: "Automation & Scripting", image: "/clients/web.webp" },
-      { name: "Cybersecurity & Penetration Testing", image: "/clients/data.webp" },
+      {
+        name: "Data Analysis & Visualization",
+        image: "/clients/illustration1.svg",
+      },
+      { name: "Machine Learning & AI", image: "/clients/illustration3.svg" },
+      { name: "Web App Development", image: "/clients/illustration2.svg" },
+      { name: "APIs & Backend Systems", image: "/clients/illustration4.svg" },
+      { name: "Automation & Scripting", image: "/clients/illustration5.svg" },
+      {
+        name: "Cybersecurity & Penetration Testing",
+        image: "/clients/illustration6.svg",
+      },
     ],
     tagline:
       "The Swiss Army knife of programming—powerful, elegant, and built for everything from web apps to AI.",
@@ -87,12 +93,24 @@ export const technologyStack = [
       },
     ],
     useCases: [
-      { name: "Frontend Development (React, Vue, Angular)", image: "/clients/data.webp" },
-      { name: "Backend APIs (Node.js, Express)", image: "/clients/web.webp" },
-      { name: "Real-time Apps (Chat, Games)", image: "/clients/data.webp" },
-      { name: "Serverless Functions", image: "/clients/web.webp" },
-      { name: "Browser Extensions", image: "/clients/data.webp" },
-      { name: "Cross-platform Mobile Apps", image: "/clients/web.webp" },
+      {
+        name: "Frontend Development (React, Vue, Angular)",
+        image: "/clients/illustration1.svg",
+      },
+      {
+        name: "Backend APIs (Node.js, Express)",
+        image: "/clients/illustration2.svg",
+      },
+      {
+        name: "Real-time Apps (Chat, Games)",
+        image: "/clients/illustration3.svg",
+      },
+      { name: "Serverless Functions", image: "/clients/illustration4.svg" },
+      { name: "Browser Extensions", image: "/clients/illustration5.svg" },
+      {
+        name: "Cross-platform Mobile Apps",
+        image: "/clients/illustration6.svg",
+      },
     ],
     tagline:
       "The language of the web—everywhere from browsers to servers, powering modern apps.",
@@ -128,16 +146,75 @@ export const technologyStack = [
       },
     ],
     useCases: [
-      { name: "Enterprise Software", image: "/clients/data.webp" },
-      { name: "Android App Development", image: "/clients/web.webp" },
-      { name: "Web Applications (Spring Boot)", image: "/clients/data.webp" },
-      { name: "Microservices Architecture", image: "/clients/web.webp" },
-      { name: "Big Data (Hadoop, Spark)", image: "/clients/data.webp" },
-      { name: "Banking & Financial Systems", image: "/clients/web.webp" },
+      { name: "Enterprise Software", image: "/clients/illustration1.svg" },
+      { name: "Android App Development", image: "/clients/illustration2.svg" },
+      {
+        name: "Web Applications (Spring Boot)",
+        image: "/clients/illustration3.svg",
+      },
+      {
+        name: "Microservices Architecture",
+        image: "/clients/illustration4.svg",
+      },
+      { name: "Big Data (Hadoop, Spark)", image: "/clients/illustration5.svg" },
+      {
+        name: "Banking & Financial Systems",
+        image: "/clients/illustration6.svg",
+      },
     ],
     tagline:
       "A battle-tested language for building secure, scalable, and high-performance enterprise applications.",
     imageSrc: "/clients/technologies/java.png",
+  },
+  {
+    name: "Node.js",
+    features: [
+      {
+        icon: <FaCode />,
+        title: "Non-blocking I/O",
+        desc: "Node.js uses asynchronous event-driven architecture for scalable applications.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Full-stack JavaScript",
+        desc: "Build both the frontend and backend using JavaScript.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "High Performance",
+        desc: "Node.js provides fast, scalable network applications due to its non-blocking I/O.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Real-time Apps",
+        desc: "Easily handle real-time features like chat, notifications, and data updates.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Expanding Ecosystem",
+        desc: "Large collection of packages available via npm for almost any task.",
+      },
+    ],
+    useCases: [
+      {
+        name: "Backend APIs (Express, Koa)",
+        image: "/clients/illustration1.svg",
+      },
+      { name: "Real-time Applications", image: "/clients/illustration2.svg" },
+      {
+        name: "Microservices Architecture",
+        image: "/clients/illustration3.svg",
+      },
+      {
+        name: "Web Scraping & Automation",
+        image: "/clients/illustration4.svg",
+      },
+      { name: "Serverless Functions", image: "/clients/illustration5.svg" },
+      { name: "IoT Applications", image: "/clients/illustration6.svg" },
+    ],
+    tagline:
+      "JavaScript runtime built on Chrome's V8 engine, designed for building fast and scalable applications.",
+    imageSrc: "/clients/technologies/node-js.svg",
   },
 ];
 

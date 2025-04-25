@@ -168,12 +168,12 @@ const TechDescription: React.FC<TechDescriptionProps> = ({
             </div>
 
             {/* Right - Single Image with fade */}
-            <div className="relative h-80 md:h-[22rem] w-full">
+            <div className="relative h-80 md:h-[28rem] w-full">
               <img
                 key={activeIndex}
                 src={useCases[activeIndex]?.image}
                 alt={`Use case ${activeIndex + 1}`}
-                className={`w-full h-full object-cover rounded-xl transition-opacity duration-500 ease-in-out ${
+                className={`w-full h-full object-contain rounded-xl transition-opacity duration-500 ease-in-out ${
                   fade ? "opacity-0" : "opacity-100"
                 }`}
               />
