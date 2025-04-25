@@ -22,6 +22,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.nugeninfo.com"), // Replace with your actual domain
   title: "Nugen IT Services - Innovative IT Solutions",
   description:
     "Nugen IT Services offers cutting-edge IT solutions, including web development, cloud services, and IT consulting.",
@@ -43,6 +44,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased`}
+        suppressHydrationWarning // Added here
       >
         <Header />
         {children}

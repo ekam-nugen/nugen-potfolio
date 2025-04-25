@@ -25,7 +25,7 @@ const testimonials = [
     rating: 5,
     testimonial:
       "The team at Nugen delivered our project on time with clean code and great performance optimizations. Highly recommended!",
-    avatar: "/user4.png",
+    avatar: "/user1.png",
     name: "Priya Verma",
     role: "Founder, HealthTech Startup",
   },
@@ -33,7 +33,7 @@ const testimonials = [
     rating: 4,
     testimonial:
       "Great collaboration experience with Nugen IT Services. Their understanding of modern frontend architecture is top-notch.",
-    avatar: "/user5.png",
+    avatar: "/user2.png",
     name: "Rahul Singh",
     role: "CTO, Logistics Tech Firm",
   },

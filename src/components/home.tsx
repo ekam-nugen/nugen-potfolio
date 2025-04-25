@@ -7,8 +7,16 @@ import "swiper/css";
 import { FC } from "react";
 import { ArrowRight } from "lucide-react";
 import { slides } from "../json/homePage";
+// import ComputerIcon from "../../public/computer-icon.png";
+// import ToolIcon from "../../public/mobile.png";
+// import hash from "../../public/hash-icon.png";
+// import settings from "../../public/setting-icon.webp";
 
 const HomePage: FC = () => {
+  // const iconRef = useRef(null);
+  // const computerRef = useRef(null);
+  // const hashRef = useRef(null);
+  // const toolRef = useRef(null);
   return (
     <div className="min-h-[600px] w-full">
       <Swiper
@@ -22,6 +30,48 @@ const HomePage: FC = () => {
             <div
               className={`flex items-center justify-center h-full ${slide.background}`}
             >
+              {/* <div className="w-full relative h-[350px] md:h-[500px] lg:h-[600px]">
+                <div className="absolute -top-[8%] left-[-2%] md:left-[-64px]">
+                  <Image
+                    src={ComputerIcon}
+                    alt="computer"
+                    height={160}
+                    width={130}
+                    ref={computerRef}
+                    className="h-[80px] w-[80px] sm:h-[100px] sm:w-[100px] object-contain"
+                  />
+                </div>
+                <div className="absolute top-[74%] left-[-2%] md:left-[-64px] md:top-[56%] ">
+                  <Image
+                    src={hash}
+                    alt="hash"
+                    height={120}
+                    width={120}
+                    ref={hashRef}
+                    className="h-[80px] w-[80px] sm:h-[100px] sm:w-[100px] object-contain"
+                  />
+                </div>
+                <div className="absolute -top-[8%] left-[85%] md:-top-[5%] lg:left-[65%] ">
+                  <Image
+                    src={ToolIcon}
+                    alt="mobile"
+                    height={150}
+                    width={150}
+                    ref={toolRef}
+                    className="h-[80px] w-[80px] sm:h-[100px] sm:w-[100px] object-contain"
+                  />
+                </div>
+                <div className="absolute top-[74%] left-[85%] md:top-[55%] lg:left-[65%]">
+                  <Image
+                    src={settings}
+                    alt="tool"
+                    height={120}
+                    width={160}
+                    ref={iconRef}
+                    className="h-[80px] w-[80px] sm:h-[100px] sm:w-[100px] object-contain"
+                  />
+                </div>
+              </div> */}
               <div className="w-full max-w-[1400px] mx-auto flex flex-col lg:flex-row gap-6 px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
                 {/* LEFT: Text Content */}
                 <motion.div
