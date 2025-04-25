@@ -51,7 +51,7 @@ export const technologyStack = [
       { name: "Web App Development", image: "/clients/web.webp" },
       { name: "APIs & Backend Systems", image: "/clients/data.webp" },
       { name: "Automation & Scripting", image: "/clients/web.webp" },
-      { name: "Cybersecurity & Penetration Testing", image: "clients/data.webp" },
+      { name: "Cybersecurity & Penetration Testing", image: "/clients/data.webp" },
     ],
     tagline:
       "The Swiss Army knife of programming—powerful, elegant, and built for everything from web apps to AI.",
