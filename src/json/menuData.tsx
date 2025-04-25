@@ -20,12 +20,19 @@ export const headerData = [
   {
     label: "Services",
     submenu: [
-      { label: "AI/ML/GenAI", href: "/intelligence" },
+      { label: "AI/ML/GenAI", href: "/services/intelligence" },
       {
         label: "Data Engineering and Analytics",
-        href: "/services/data-engineering",
+        href: "/services/data-analytics",
       },
       { label: "Cloud Engineering", href: "/services/cloud-engineering" },
+      { label: "Blockchain", href: "/services/blockchain" },
+      { label: "WordPress Maintenance", href: "/services/wordpress" },
+      { label: "Web Development", href: "/services/webdevelopment" },
+      { label: "CMS", href: "/services/cms" },
+      { label: "UI & UX Design", href: "/services/uiux" },
+      { label: "Customized App Development", href: "/services/appdevelopment" },
+      { label: "Optimize Your Website", href: "/services/seo" },
     ],
   },
   { label: "Technologies", href: "/technologies" },

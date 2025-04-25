@@ -29,6 +29,7 @@ export const FAQSection: React.FC = () => {
       y: 0,
       transition: { duration: 0.4, ease: "easeOut", bounce: 0.3 },
     },
+    
     exit: {
       opacity: 0,
       height: 0,
@@ -101,19 +102,22 @@ export const FAQSection: React.FC = () => {
                   )}
                 </motion.div>
               </div>
+              <div className="mt-2.5">
+
               <AnimatePresence>
                 {openIndex === index && (
                   <motion.p
-                    className="mt-3 text-xs sm:text-sm text-gray-600"
-                    variants={answerVariants}
-                    initial="hidden"
-                    animate="visible"
-                    exit="exit"
+                  className="text-xs sm:text-sm text-gray-600"
+                  variants={answerVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
                   >
                     {faq?.answer}
                   </motion.p>
                 )}
               </AnimatePresence>
+                </div>
             </motion.div>
           ))}
         </div>

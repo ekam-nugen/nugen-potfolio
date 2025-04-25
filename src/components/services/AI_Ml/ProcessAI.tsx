@@ -1,29 +1,60 @@
 "use client";
-import { processItems } from "@/src/json";
-import { ArrowRight } from "lucide-react";
-import Link from "next/link";
-import { FC } from "react";
 
-const DevelopmentProcess: FC = () => {
+import { FC } from "react";
+import Link from "next/link";
+import { ArrowRight, LucideIcon } from "lucide-react";
+import * as LucideIcons from "lucide-react";
+
+export interface ProcessItem {
+  number: number;
+  title: string;
+  description: string;
+  icon: keyof typeof LucideIcons;
+}
+
+interface DevelopmentProcessProps {
+  title: string;
+  subtitle: string;
+  highlightedText: string;
+  processItems: ProcessItem[];
+  ctaText: string;
+  ctaLink: string;
+  ctaDataAttribute: string;
+}
+
+const DevelopmentProcess: FC<DevelopmentProcessProps> = ({
+  title,
+  subtitle,
+  highlightedText,
+  processItems,
+  ctaText,
+  ctaLink,
+  ctaDataAttribute,
+}) => {
+  const getIconComponent = (iconName: keyof typeof LucideIcons): LucideIcon => {
+    return LucideIcons[iconName] as LucideIcon;
+  };
+
   return (
     <section className="py-16 bg-gradient-to-r from-white via-[#fff1eb] to-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4 text-center">
-            Our AI Software Development Process
+            {title}
           </h2>
           <p className="text-xl text-gray-600 mb-8 text-center max-w-6xl">
-            Our AI{" "}
-            <span className="font-semibold">software development process</span>{" "}
-            is thorough and client-focused, ensuring every AI project is
-            tailored to meet specific business objectives and deliver tangible
-            value. From AI product discovery and data cleaning to model training
-            and deployment, our rigorous process ensures that every AI solution
-            is built with precision and efficiency.
+            {subtitle.split(highlightedText).map((part, index, array) => (
+              <span key={index}>
+                {part}
+                {index < array.length - 1 && (
+                  <span className="font-semibold">{highlightedText}</span>
+                )}
+              </span>
+            ))}
           </p>
           <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
             {processItems.map((item) => {
-              const Icon = item.icon;
+              const Icon = getIconComponent(item.icon);
               return (
                 <li
                   key={item.number}
@@ -46,11 +77,11 @@ const DevelopmentProcess: FC = () => {
             })}
           </ul>
           <Link
-            href="/book-an-appointment"
+            href={ctaLink}
             className="mt-8 inline-flex items-center bg-orange-500 text-white font-semibold py-3 px-6 rounded-full hover:bg-orange-600 transition-colors"
-            data-bookctablock="Hire an AI Developer - AI ML Development"
+            data-bookctablock={ctaDataAttribute}
           >
-            Get in Touch with Us
+            {ctaText}
             <ArrowRight className="ml-2" />
           </Link>
         </div>
