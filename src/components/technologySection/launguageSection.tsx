@@ -3,9 +3,11 @@ import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { data } from "@/src/json/languageSection";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 
 export default function TechnologyShowcase() {
+  const router = useRouter();
   const [selectedCategory, setSelectedCategory] = useState<keyof typeof data>(
     "Programming Languages"
   );
@@ -159,6 +161,9 @@ export default function TechnologyShowcase() {
                   <div
                     key={name}
                     className="bg-white border p-4 rounded-lg shadow-sm flex items-center gap-3"
+                    onClick={() => {
+                      router.push(`/technologies/${name.trim().toLowerCase()}`);
+                    }}
                   >
                     <Image
                       height={100}

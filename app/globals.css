@@ -24,3 +24,86 @@ body {
   color: var(--foreground);
   font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
 }
+
+/* Technoplogy Description Animations */
+.card-border-animation::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid #f59e0b;
+  border-radius: 0.5rem;
+  pointer-events: none;
+  clip-path: polygon(
+    0% 100%, 0% 100%, 0% 100%, 0% 100% 
+  );
+  animation: revealBorder 1.2s ease-in-out forwards;
+}
+@keyframes revealBorder {
+  0% {
+    clip-path: polygon(
+      0% 100%, 0% 100%, 0% 100%, 0% 100%
+    );
+  }
+  25% {
+    clip-path: polygon(
+      0% 100%, 100% 100%, 100% 100%, 100% 100%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      0% 100%, 100% 100%, 100% 0%, 100% 0%
+    );
+  }
+  75% {
+    clip-path: polygon(
+      0% 100%, 100% 100%, 100% 0%, 0% 0%
+    );
+  }
+  100% {
+    clip-path: polygon(
+      0% 100%, 100% 100%, 100% 0%, 0% 0%
+    );
+  }
+}
+.animated-border-hover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid #f4a180;
+  border-radius: 1rem;
+  pointer-events: none;
+  clip-path: polygon(0% 100%, 0% 100%, 0% 100%, 0% 100%);
+  animation: none;
+  z-index: 1;
+}
+.group:hover .animated-border-hover::before {
+  animation: drawBorderHover 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+.group:not(:hover) .animated-border-hover::before {
+  animation: removeBorderHover 0.5s ease-in-out forwards;
+}
+@keyframes drawBorderHover {
+  0% {
+    clip-path: polygon(0% 100%, 0% 100%, 0% 100%, 0% 100%);
+  }
+  25% {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 100% 100%);
+  }
+  50% {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 100% 0%);
+  }
+  75% {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+  100% {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+}
+@keyframes removeBorderHover {
+  0% {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+  100% {
+    clip-path: polygon(0% 100%, 0% 100%, 0% 100%, 0% 100%);
+  }
+}
