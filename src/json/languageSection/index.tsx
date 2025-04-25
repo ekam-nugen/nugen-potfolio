@@ -33,10 +33,10 @@ export const data = {
         { name: "Angular", icon: "/angular.png" },
       ],
       "UI Libraries": [
-        { name: "Material UI", icon: "/icons/react.png" },
+        { name: "MaterialUI", icon: "/icons/react.png" },
         { name: "Bootstrap", icon: "/icons/vue.png" },
-        { name: "Ant Design", icon: "/icons/angular.png" },
-        { name: "Tailwind CSS", icon: "/icons/vue.png" },
+        { name: "AntDesign", icon: "/icons/angular.png" },
+        { name: "TailwindCSS", icon: "/icons/vue.png" },
         { name: "Blazor", icon: "/icons/angular.png" },
       ],
       "Markup Essentials": [

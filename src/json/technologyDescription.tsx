@@ -990,6 +990,644 @@ export const technologyStack = [
       "A PHP web framework that simplifies common tasks, such as routing, authentication, and caching, while offering elegant and expressive syntax for building modern web applications.",
     imageSrc: "/clients/technologies/laravel.png",
   },
+  {
+    name: "MaterialUI",
+    features: [
+      {
+        icon: <FaCode />,
+        title: "Component Library",
+        desc: "Material-UI offers a comprehensive set of pre-built React components following Material Design principles.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Customizable Themes",
+        desc: "MUI allows for deep customization of components and themes, enabling developers to align with brand guidelines.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Responsive Design",
+        desc: "Material-UI components are designed to work seamlessly across devices, offering responsive layouts and controls.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Accessibility",
+        desc: "MUI prioritizes accessibility, making it easier to build applications that are usable by people with disabilities.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Built-in Animations",
+        desc: "MUI supports built-in animations and transitions, enhancing the visual experience of your web applications.",
+      },
+    ],
+    useCases: [
+      { name: "Admin Dashboards", image: "/clients/illustration1.svg" },
+      { name: "E-commerce Platforms", image: "/clients/illustration2.svg" },
+      { name: "Mobile Web Applications", image: "/clients/illustration3.svg" },
+      {
+        name: "User Interface Components",
+        image: "/clients/illustration4.svg",
+      },
+      {
+        name: "Content Management Systems",
+        image: "/clients/illustration5.svg",
+      },
+      { name: "Data Visualization", image: "/clients/illustration6.svg" },
+    ],
+    tagline:
+      "A popular React UI framework that implements Material Design principles, providing a set of customizable and accessible components for modern web development.",
+    imageSrc: "/clients/technologies/material-ui.svg",
+  },
+  {
+    name: "Bootstrap",
+    features: [
+      {
+        icon: <FaCode />,
+        title: "Responsive Grid System",
+        desc: "Bootstrap includes a flexible grid system to create responsive layouts for any device or screen size.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Pre-styled Components",
+        desc: "Provides a rich set of pre-designed components like buttons, modals, forms, and navbars, speeding up development.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Mobile-first Design",
+        desc: "Bootstrap’s mobile-first approach ensures your websites are optimized for mobile devices first, with scalability for larger screens.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Customizable Themes",
+        desc: "Bootstrap allows developers to easily customize its design and components with built-in Sass variables or themes.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Cross-browser Compatibility",
+        desc: "Ensures that your site looks great on all major browsers with minimal effort, reducing the need for browser-specific fixes.",
+      },
+    ],
+    useCases: [
+      { name: "Landing Pages", image: "/clients/illustration1.svg" },
+      { name: "Corporate Websites", image: "/clients/illustration2.svg" },
+      { name: "Admin Dashboards", image: "/clients/illustration3.svg" },
+      { name: "E-commerce Sites", image: "/clients/illustration4.svg" },
+      { name: "Blog Websites", image: "/clients/illustration5.svg" },
+      { name: "Portfolio Sites", image: "/clients/illustration6.svg" },
+    ],
+    tagline:
+      "The most popular front-end framework for building responsive, mobile-first websites with ease. Comes with a collection of pre-built components and utilities.",
+    imageSrc: "/clients/technologies/bootstrap.svg",
+  },
+  {
+    name: "AntDesign",
+    features: [
+      {
+        icon: <FaCode />,
+        title: "Rich UI Components",
+        desc: "Ant Design provides a comprehensive set of high-quality components to build rich and interactive UIs.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Customizable Themes",
+        desc: "Easily customize themes and styles using Ant Design’s powerful theming system.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Enterprise-level Solutions",
+        desc: "Built for enterprise applications, offering robust features like forms, tables, modals, and more.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Internationalization Support",
+        desc: "Provides built-in support for multiple languages, making it easy to build apps for different regions.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "High-Quality Design",
+        desc: "Ant Design follows the principles of good design, providing clean, modern UI elements with a consistent look.",
+      },
+    ],
+    useCases: [
+      { name: "Admin Dashboards", image: "/clients/illustration1.svg" },
+      { name: "Enterprise Applications", image: "/clients/illustration2.svg" },
+      { name: "E-commerce Platforms", image: "/clients/illustration3.svg" },
+      { name: "CRM Software", image: "/clients/illustration4.svg" },
+      { name: "SaaS Products", image: "/clients/illustration5.svg" },
+      { name: "Data Visualization Apps", image: "/clients/illustration6.svg" },
+    ],
+    tagline:
+      "A design system with a set of high-quality React components, following Ant Design principles. Ideal for building enterprise-level applications.",
+    imageSrc: "/clients/technologies/ant-design.svg",
+  },
+  {
+    name: "TailwindCSS",
+    features: [
+      {
+        icon: <FaCode />,
+        title: "Utility-first Approach",
+        desc: "Tailwind CSS enables rapid UI design by using utility classes, offering full control over styling without writing custom CSS.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Highly Customizable",
+        desc: "With its configuration file, Tailwind CSS allows you to customize colors, spacing, breakpoints, and more to suit your needs.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Responsive Design",
+        desc: "Tailwind’s mobile-first approach includes responsive utilities, making it easy to design for multiple screen sizes.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Component-based Design",
+        desc: "Tailwind CSS enables component-based development, allowing you to build reusable UI elements easily.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Built for Performance",
+        desc: "Tailwind CSS promotes minimal CSS output, helping improve load times and overall performance by only including the classes you use.",
+      },
+    ],
+    useCases: [
+      { name: "Landing Pages", image: "/clients/illustration1.svg" },
+      { name: "Web Applications", image: "/clients/illustration2.svg" },
+      { name: "E-commerce Sites", image: "/clients/illustration3.svg" },
+      { name: "Dashboards", image: "/clients/illustration4.svg" },
+      { name: "Blogs & Portfolios", image: "/clients/illustration5.svg" },
+      { name: "Admin Panels", image: "/clients/illustration6.svg" },
+    ],
+    tagline:
+      "A utility-first CSS framework for rapidly building custom designs without ever having to leave your HTML. Tailwind CSS is all about control, flexibility, and productivity.",
+    imageSrc: "/clients/technologies/tailwind-css.svg",
+  },
+  {
+    name: "Blazor",
+    features: [
+      {
+        icon: <FaCode />,
+        title: "WebAssembly Powered",
+        desc: "Blazor allows you to build interactive web applications using C# and WebAssembly, without needing JavaScript.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Component-based Architecture",
+        desc: "Blazor uses a component-based architecture, enabling you to build reusable UI components for your applications.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Full-stack .NET Development",
+        desc: "Build both client-side and server-side applications with C# and .NET, leveraging the same codebase for both front-end and back-end.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Real-time Web Applications",
+        desc: "Blazor supports real-time web features using SignalR, making it easy to build interactive web applications.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Rich Ecosystem",
+        desc: "With .NET's extensive ecosystem, you have access to a wide range of libraries, tools, and resources for building powerful applications.",
+      },
+    ],
+    useCases: [
+      {
+        name: "Single-page Applications (SPA)",
+        image: "/clients/illustration1.svg",
+      },
+      { name: "Real-time Web Apps", image: "/clients/illustration2.svg" },
+      { name: "Enterprise Applications", image: "/clients/illustration3.svg" },
+      { name: "Data Dashboards", image: "/clients/illustration4.svg" },
+      { name: "Interactive Forms", image: "/clients/illustration5.svg" },
+      { name: "Internal Tools", image: "/clients/illustration6.svg" },
+    ],
+    tagline:
+      "A .NET-based framework for building client-side web applications using C#, allowing developers to write full-stack web applications in a single language.",
+    imageSrc: "/clients/technologies/blazor.png",
+  },
+  {
+    name: "HTML",
+    features: [
+      {
+        icon: <FaCode />,
+        title: "Structured Content",
+        desc: "HTML provides the basic structure for web content, allowing you to define text, images, links, and other elements.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Web Foundation",
+        desc: "HTML is the backbone of the web, and all websites rely on it to display content on browsers.",
+      },
+      {
+        icon: <FaServer />,
+        title: "SEO Friendly",
+        desc: "HTML allows you to organize content in a structured way, which is essential for search engine optimization (SEO).",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Responsive Design",
+        desc: "With HTML5, you can use responsive design techniques to ensure your content works across devices and screen sizes.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Integration with Other Technologies",
+        desc: "HTML integrates seamlessly with CSS, JavaScript, and other web technologies to enhance your web pages and applications.",
+      },
+    ],
+    useCases: [
+      { name: "Web Page Structure", image: "/clients/illustration1.svg" },
+      { name: "Forms and Inputs", image: "/clients/illustration2.svg" },
+      { name: "Media Embedding", image: "/clients/illustration3.svg" },
+      { name: "Navigation Menus", image: "/clients/illustration4.svg" },
+      { name: "SEO Optimization", image: "/clients/illustration5.svg" },
+      { name: "Web Accessibility", image: "/clients/illustration6.svg" },
+    ],
+    tagline:
+      "HTML (HyperText Markup Language) is the foundation of web content, providing the structure and layout for all web pages.",
+    imageSrc: "/clients/technologies/html.png",
+  },
+  {
+    name: "CSS",
+    features: [
+      {
+        icon: <FaCode />,
+        title: "Styling & Layout",
+        desc: "CSS controls the appearance of elements on a page, including layout, colors, fonts, and spacing.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Responsive Design",
+        desc: "CSS enables responsive design techniques, ensuring your site works on all screen sizes using media queries and flexible layouts.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Animations & Transitions",
+        desc: "CSS allows you to create smooth animations and transitions to enhance user interactions.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Cross-browser Compatibility",
+        desc: "CSS ensures that your styles are rendered consistently across different browsers, giving your site a consistent look.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Flexbox & Grid Layouts",
+        desc: "CSS offers advanced layout systems like Flexbox and Grid for building complex, responsive layouts easily.",
+      },
+    ],
+    useCases: [
+      { name: "Page Styling", image: "/clients/illustration1.svg" },
+      { name: "Responsive Layouts", image: "/clients/illustration2.svg" },
+      { name: "Typography & Fonts", image: "/clients/illustration3.svg" },
+      { name: "Animations & Effects", image: "/clients/illustration4.svg" },
+      { name: "Forms Styling", image: "/clients/illustration5.svg" },
+      { name: "Accessibility Styling", image: "/clients/illustration6.svg" },
+    ],
+    tagline:
+      "CSS (Cascading Style Sheets) is the style language used to define the presentation and layout of web content.",
+    imageSrc: "/clients/technologies/css.png",
+  },
+  {
+    name: "MongoDB",
+    features: [
+      {
+        icon: <FaServer />,
+        title: "NoSQL Database",
+        desc: "MongoDB is a NoSQL, document-oriented database designed to store unstructured or semi-structured data in JSON-like format.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Scalable",
+        desc: "MongoDB offers built-in scalability with horizontal scaling, enabling distributed data architecture across multiple machines.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Flexible Schema",
+        desc: "MongoDB allows schema flexibility, which makes it ideal for handling evolving and dynamic data structures.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "High Availability",
+        desc: "With automatic failover and replication, MongoDB ensures high availability of your data and services.",
+      },
+      {
+        icon: <FaCode />,
+        title: "Aggregation Framework",
+        desc: "MongoDB offers powerful aggregation capabilities, enabling complex data processing and transformation directly within the database.",
+      },
+    ],
+    useCases: [
+      {
+        name: "Content Management Systems",
+        image: "/clients/illustration1.svg",
+      },
+      { name: "Real-time Analytics", image: "/clients/illustration2.svg" },
+      { name: "Big Data & IoT", image: "/clients/illustration3.svg" },
+      { name: "Mobile Applications", image: "/clients/illustration4.svg" },
+      {
+        name: "Catalogs & Product Databases",
+        image: "/clients/illustration5.svg",
+      },
+      { name: "Social Networks", image: "/clients/illustration6.svg" },
+    ],
+    tagline:
+      "MongoDB is a flexible, scalable NoSQL database ideal for managing large volumes of unstructured or semi-structured data.",
+    imageSrc: "/clients/technologies/mongoDB.png",
+  },
+  {
+    name: "PostgreSQL",
+    features: [
+      {
+        icon: <FaServer />,
+        title: "Relational Database",
+        desc: "PostgreSQL is an advanced open-source relational database system known for its extensibility and standards compliance.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "ACID Compliant",
+        desc: "PostgreSQL provides full compliance with ACID principles, ensuring data integrity and reliable transactions.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Extensibility",
+        desc: "PostgreSQL supports custom data types, functions, and indexes, offering high flexibility for complex applications.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Advanced Features",
+        desc: "It supports advanced features like full-text search, JSONB, and geospatial data with PostGIS.",
+      },
+      {
+        icon: <FaCode />,
+        title: "Concurrency",
+        desc: "PostgreSQL uses Multi-Version Concurrency Control (MVCC) for high concurrency, ensuring smooth transactions under heavy load.",
+      },
+    ],
+    useCases: [
+      { name: "Web Applications", image: "/clients/illustration1.svg" },
+      { name: "Geospatial Applications", image: "/clients/illustration2.svg" },
+      { name: "Data Warehousing", image: "/clients/illustration3.svg" },
+      { name: "Analytics & Reporting", image: "/clients/illustration4.svg" },
+      { name: "Enterprise Applications", image: "/clients/illustration5.svg" },
+      { name: "Financial Systems", image: "/clients/illustration6.svg" },
+    ],
+    tagline:
+      "PostgreSQL is a powerful, open-source relational database system designed for reliability, extensibility, and complex applications.",
+    imageSrc: "/clients/technologies/postgre-sql.png",
+  },
+  {
+    name: "MySQL",
+    features: [
+      {
+        icon: <FaServer />,
+        title: "Relational Database",
+        desc: "MySQL is a popular relational database management system that uses structured query language (SQL) for managing and querying data.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Open Source",
+        desc: "MySQL is open-source and widely used for web applications, with a large community and extensive documentation.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "High Performance",
+        desc: "MySQL is optimized for performance, providing fast data access, indexing, and query execution.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "ACID Compliant",
+        desc: "MySQL supports ACID (Atomicity, Consistency, Isolation, Durability) transactions to ensure data integrity.",
+      },
+      {
+        icon: <FaCode />,
+        title: "Scalability",
+        desc: "MySQL supports scalability and high availability through replication and clustering, ideal for large-scale applications.",
+      },
+    ],
+    useCases: [
+      { name: "Web Applications", image: "/clients/illustration1.svg" },
+      { name: "E-commerce Platforms", image: "/clients/illustration2.svg" },
+      {
+        name: "Content Management Systems",
+        image: "/clients/illustration3.svg",
+      },
+      { name: "Data Warehousing", image: "/clients/illustration4.svg" },
+      {
+        name: "Customer Relationship Management",
+        image: "/clients/illustration5.svg",
+      },
+      { name: "Financial Systems", image: "/clients/illustration6.svg" },
+    ],
+    tagline:
+      "MySQL is a fast, reliable, and open-source relational database management system, ideal for high-performance web applications.",
+    imageSrc: "/clients/technologies/my-sql.png",
+  },
+  {
+    name: "Redis",
+    features: [
+      {
+        icon: <FaServer />,
+        title: "In-memory Data Store",
+        desc: "Redis is an in-memory key-value store, often used as a cache to speed up data retrieval in high-performance applications.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Persistence Options",
+        desc: "Redis supports persistence by saving data to disk, making it durable while maintaining the speed of an in-memory store.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "High Performance",
+        desc: "Redis provides sub-millisecond response times for read and write operations, making it suitable for high-throughput workloads.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Pub/Sub Messaging",
+        desc: "Redis supports publish/subscribe messaging patterns, enabling real-time communication between services.",
+      },
+      {
+        icon: <FaCode />,
+        title: "Data Structures",
+        desc: "Redis offers a wide range of advanced data structures like strings, lists, sets, sorted sets, hashes, bitmaps, and hyperloglogs.",
+      },
+    ],
+    useCases: [
+      { name: "Caching", image: "/clients/illustration1.svg" },
+      { name: "Session Management", image: "/clients/illustration2.svg" },
+      { name: "Real-time Analytics", image: "/clients/illustration3.svg" },
+      { name: "Queue Management", image: "/clients/illustration4.svg" },
+      { name: "Message Brokering", image: "/clients/illustration5.svg" },
+      {
+        name: "Leaderboard & Counting Systems",
+        image: "/clients/illustration6.svg",
+      },
+    ],
+    tagline:
+      "Redis is an in-memory data store that provides high-speed, low-latency performance for caching, message brokering, and real-time applications.",
+    imageSrc: "/clients/technologies/redis.png",
+  },
+  {
+    name: "SQLite",
+    features: [
+      {
+        icon: <FaServer />,
+        title: "Serverless Database",
+        desc: "SQLite is a serverless, self-contained, zero-configuration database engine designed for embedded applications.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Lightweight",
+        desc: "SQLite is compact and has minimal overhead, making it ideal for mobile apps, IoT devices, and lightweight applications.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Fast Performance",
+        desc: "SQLite provides fast read and write operations, making it suitable for local data storage and small-to-medium scale applications.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Cross-Platform",
+        desc: "SQLite runs on all major operating systems and is commonly used in embedded systems and mobile apps.",
+      },
+      {
+        icon: <FaCode />,
+        title: "SQL Support",
+        desc: "SQLite supports full SQL queries, providing developers with the power of relational databases in a lightweight format.",
+      },
+    ],
+    useCases: [
+      { name: "Mobile Applications", image: "/clients/illustration1.svg" },
+      { name: "Embedded Systems", image: "/clients/illustration2.svg" },
+      { name: "Web Browser Storage", image: "/clients/illustration3.svg" },
+      { name: "Desktop Applications", image: "/clients/illustration4.svg" },
+      { name: "Prototyping", image: "/clients/illustration5.svg" },
+      { name: "Local Data Storage", image: "/clients/illustration6.svg" },
+    ],
+    tagline:
+      "SQLite is a lightweight, serverless, self-contained database that is perfect for local data storage in embedded systems and mobile apps.",
+    imageSrc: "/clients/technologies/sqlite.png",
+  },
+  {
+    name: "Oracle",
+    features: [
+      {
+        icon: <FaServer />,
+        title: "Enterprise-Grade",
+        desc: "Oracle Database is designed for enterprise-level applications, offering scalability, reliability, and high performance.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Advanced Security",
+        desc: "Oracle Database provides comprehensive security features like encryption, data masking, and auditing to protect sensitive information.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "High Availability",
+        desc: "Oracle offers advanced features like Real Application Clusters (RAC) for high availability and disaster recovery.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Automated Management",
+        desc: "Oracle provides automated database management with features like self-tuning, automatic indexing, and AI-powered optimizations.",
+      },
+      {
+        icon: <FaCode />,
+        title: "Support for Big Data",
+        desc: "Oracle supports big data workloads, allowing businesses to store, analyze, and retrieve data at scale.",
+      },
+    ],
+    useCases: [
+      { name: "Enterprise Applications", image: "/clients/illustration1.svg" },
+      { name: "Data Warehousing", image: "/clients/illustration2.svg" },
+      { name: "CRM & ERP Systems", image: "/clients/illustration3.svg" },
+      { name: "E-commerce Platforms", image: "/clients/illustration4.svg" },
+      { name: "Financial Systems", image: "/clients/illustration5.svg" },
+      { name: "Healthcare Applications", image: "/clients/illustration6.svg" },
+    ],
+    tagline:
+      "Oracle Database is a powerful, enterprise-grade relational database offering unmatched scalability, security, and availability.",
+    imageSrc: "/clients/technologies/oracle.svg",
+  },
+  {
+    name: "MariaDB",
+    features: [
+      {
+        icon: <FaServer />,
+        title: "Open-Source Database",
+        desc: "MariaDB is an open-source, community-driven relational database that is fully compatible with MySQL.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "High Performance",
+        desc: "MariaDB offers high performance with features like query optimization, advanced indexing, and parallel replication.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Scalability",
+        desc: "MariaDB scales well from small applications to large-scale enterprise environments, supporting sharding and clustering.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Full Compatibility",
+        desc: "MariaDB is designed to be a drop-in replacement for MySQL, ensuring compatibility with MySQL-based applications.",
+      },
+      {
+        icon: <FaCode />,
+        title: "Security Features",
+        desc: "MariaDB provides robust security features, including encryption, authentication, and user roles.",
+      },
+    ],
+    useCases: [
+      { name: "Web Applications", image: "/clients/illustration1.svg" },
+      { name: "E-commerce Platforms", image: "/clients/illustration2.svg" },
+      { name: "Content Management Systems", image: "/clients/illustration3.svg" },
+      { name: "Data Warehousing", image: "/clients/illustration4.svg" },
+      { name: "Business Intelligence", image: "/clients/illustration5.svg" },
+      { name: "Financial Systems", image: "/clients/illustration6.svg" },
+    ],
+    tagline:
+      "MariaDB is a powerful, open-source relational database designed for high performance, scalability, and full MySQL compatibility.",
+    imageSrc: "/clients/technologies/mariadb.svg",
+  },{
+    name: "GraphQL",
+    features: [
+      {
+        icon: <FaServer />,
+        title: "Flexible Queries",
+        desc: "With GraphQL, clients can request only the data they need, reducing over-fetching and under-fetching.",
+      },
+      {
+        icon: <FaCode />,
+        title: "Strongly Typed Schema",
+        desc: "GraphQL is strongly typed, ensuring that both clients and servers know exactly what data is available and how to interact with it.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Single Endpoint",
+        desc: "GraphQL allows clients to interact with the API through a single endpoint, streamlining data fetching and improving performance.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Real-time Updates",
+        desc: "GraphQL supports real-time data fetching via subscriptions, allowing clients to get updates as soon as data changes.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Introspective",
+        desc: "GraphQL APIs are introspective, meaning they allow clients to query the API schema itself for available operations and data.",
+      },
+    ],
+    useCases: [
+      { name: "Frontend Development", image: "/clients/illustration1.svg" },
+      { name: "Real-time Applications", image: "/clients/illustration2.svg" },
+      { name: "Mobile Apps", image: "/clients/illustration3.svg" },
+      { name: "Single Page Applications (SPA)", image: "/clients/illustration4.svg" },
+      { name: "Microservices Communication", image: "/clients/illustration5.svg" },
+      { name: "Data Aggregation", image: "/clients/illustration6.svg" },
+    ],
+    tagline:
+      "GraphQL is a query language and runtime for APIs, providing a flexible and efficient way to interact with data, supporting real-time updates and reducing data over-fetching.",
+    imageSrc: "/clients/technologies/graphQL.png",
+  }  
 ];
 
 export const reviewPlatforms = [

@@ -117,7 +117,7 @@ const TechDescription: React.FC<TechDescriptionProps> = ({
       <section className="py-20 bg-white px-4">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-12">
-            Why Developers Love {techName}
+            Why {techName}?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-left">
             {features.map((item, idx) => (
