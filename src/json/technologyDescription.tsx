@@ -1579,7 +1579,10 @@ export const technologyStack = [
     useCases: [
       { name: "Web Applications", image: "/clients/illustration1.svg" },
       { name: "E-commerce Platforms", image: "/clients/illustration2.svg" },
-      { name: "Content Management Systems", image: "/clients/illustration3.svg" },
+      {
+        name: "Content Management Systems",
+        image: "/clients/illustration3.svg",
+      },
       { name: "Data Warehousing", image: "/clients/illustration4.svg" },
       { name: "Business Intelligence", image: "/clients/illustration5.svg" },
       { name: "Financial Systems", image: "/clients/illustration6.svg" },
@@ -1587,7 +1590,8 @@ export const technologyStack = [
     tagline:
       "MariaDB is a powerful, open-source relational database designed for high performance, scalability, and full MySQL compatibility.",
     imageSrc: "/clients/technologies/mariadb.svg",
-  },{
+  },
+  {
     name: "GraphQL",
     features: [
       {
@@ -1620,14 +1624,832 @@ export const technologyStack = [
       { name: "Frontend Development", image: "/clients/illustration1.svg" },
       { name: "Real-time Applications", image: "/clients/illustration2.svg" },
       { name: "Mobile Apps", image: "/clients/illustration3.svg" },
-      { name: "Single Page Applications (SPA)", image: "/clients/illustration4.svg" },
-      { name: "Microservices Communication", image: "/clients/illustration5.svg" },
+      {
+        name: "Single Page Applications (SPA)",
+        image: "/clients/illustration4.svg",
+      },
+      {
+        name: "Microservices Communication",
+        image: "/clients/illustration5.svg",
+      },
       { name: "Data Aggregation", image: "/clients/illustration6.svg" },
     ],
     tagline:
       "GraphQL is a query language and runtime for APIs, providing a flexible and efficient way to interact with data, supporting real-time updates and reducing data over-fetching.",
     imageSrc: "/clients/technologies/graphQL.png",
-  }  
+  },
+  {
+    name: "Salesforce",
+    features: [
+      {
+        icon: <FaCode />,
+        title: "CRM Platform",
+        desc: "A cloud-based CRM for managing customer relationships, sales, and marketing.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Sales Cloud",
+        desc: "Manage sales processes, leads, and opportunities in a unified platform.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Marketing Cloud",
+        desc: "Automate marketing campaigns and engage customers across various channels.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Service Cloud",
+        desc: "Provide customer service and support with integrated case management and automation.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "AppExchange",
+        desc: "Access a marketplace of third-party apps and integrations to extend Salesforce functionality.",
+      },
+    ],
+    useCases: [
+      {
+        name: "Customer Relationship Management (CRM)",
+        image: "/clients/illustration1.svg",
+      },
+      { name: "Sales & Lead Management", image: "/clients/illustration2.svg" },
+      {
+        name: "Customer Support Automation",
+        image: "/clients/illustration3.svg",
+      },
+      { name: "Marketing Automation", image: "/clients/illustration4.svg" },
+      {
+        name: "Enterprise App Integration",
+        image: "/clients/illustration5.svg",
+      },
+    ],
+    tagline:
+      "A cloud-based CRM platform for managing customer relationships and driving business growth.",
+    imageSrc: "/clients/technologies/salesforce.png",
+  },
+  {
+    name: "ServiceNow",
+    features: [
+      {
+        icon: <FaCode />,
+        title: "IT Service Management (ITSM)",
+        desc: "Automates IT service workflows, from incident management to change management.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Knowledge Management",
+        desc: "Centralized repository for IT knowledge and information sharing.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Service Catalog",
+        desc: "Provides a self-service portal for employees and customers to request services.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Automation",
+        desc: "Automates routine tasks and business processes for improved efficiency.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Performance Analytics",
+        desc: "Real-time insights into service performance and operations.",
+      },
+    ],
+    useCases: [
+      { name: "IT Service Management", image: "/clients/illustration1.svg" },
+      { name: "Workflow Automation", image: "/clients/illustration2.svg" },
+      {
+        name: "Incident & Change Management",
+        image: "/clients/illustration3.svg",
+      },
+      {
+        name: "Service Catalog Management",
+        image: "/clients/illustration4.svg",
+      },
+      {
+        name: "Knowledge Base Management",
+        image: "/clients/illustration5.svg",
+      },
+    ],
+    tagline:
+      "A platform for automating and streamlining IT service management and business workflows.",
+    imageSrc: "/clients/technologies/service-now.png",
+  },
+  {
+    name: "Apigee",
+    features: [
+      {
+        icon: <FaCode />,
+        title: "API Design & Development",
+        desc: "Tools for designing, testing, and deploying APIs.",
+      },
+      {
+        icon: <FaServer />,
+        title: "API Security",
+        desc: "Secure APIs using OAuth, API keys, and JWT (JSON Web Tokens).",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Traffic Management",
+        desc: "Manage API traffic and set up rate limits and quotas.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "API Analytics",
+        desc: "Monitor API performance and gather insights on usage and issues.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Developer Portal",
+        desc: "A portal for developers to access API documentation, test APIs, and get API keys.",
+      },
+    ],
+    useCases: [
+      { name: "API Management", image: "/clients/illustration1.svg" },
+      { name: "API Security", image: "/clients/illustration2.svg" },
+      {
+        name: "API Monitoring & Analytics",
+        image: "/clients/illustration3.svg",
+      },
+      { name: "API Traffic Management", image: "/clients/illustration4.svg" },
+      { name: "API Gateway", image: "/clients/illustration5.svg" },
+    ],
+    tagline: "A platform for building, securing, managing, and scaling APIs.",
+    imageSrc: "/clients/technologies/apigee.svg",
+  },
+  {
+    name: "AdobeCommerce",
+    features: [
+      {
+        icon: <FaCode />,
+        title: "Customizable E-commerce",
+        desc: "Build scalable, customizable e-commerce websites with rich features.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Product & Inventory Management",
+        desc: "Manage product catalogs, inventory, pricing, and promotions.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Omni-channel Selling",
+        desc: "Sell across multiple channels, including web, mobile, and in-store.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Personalization",
+        desc: "Deliver personalized shopping experiences to your customers.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Built-in Analytics",
+        desc: "Use real-time analytics to optimize sales and improve customer experiences.",
+      },
+    ],
+    useCases: [
+      { name: "E-commerce Websites", image: "/clients/illustration1.svg" },
+      { name: "B2B & B2C Online Stores", image: "/clients/illustration2.svg" },
+      {
+        name: "Inventory & Order Management",
+        image: "/clients/illustration3.svg",
+      },
+      { name: "Multi-channel Commerce", image: "/clients/illustration4.svg" },
+      { name: "Custom Storefronts", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "A leading e-commerce platform for building and managing online stores and digital experiences.",
+    imageSrc: "/clients/technologies/adobe-commerce.png",
+  },
+  {
+    name: "PowerBI",
+    features: [
+      {
+        icon: <FaCode />,
+        title: "Interactive Dashboards",
+        desc: "Create visually interactive reports and dashboards with easy-to-use drag-and-drop tools.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Data Connectivity",
+        desc: "Connect to a wide range of data sources like Excel, SQL, and cloud services.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Real-Time Data",
+        desc: "Visualize and analyze real-time data for timely decision-making.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "AI-Powered Insights",
+        desc: "Use machine learning and AI-driven insights to detect trends and anomalies.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Customizable Visuals",
+        desc: "Create custom visualizations to meet specific business needs.",
+      },
+    ],
+    useCases: [
+      {
+        name: "Business Intelligence & Analytics",
+        image: "/clients/illustration1.svg",
+      },
+      { name: "Financial Reporting", image: "/clients/illustration2.svg" },
+      {
+        name: "Sales & Marketing Analytics",
+        image: "/clients/illustration3.svg",
+      },
+      {
+        name: "Real-Time Data Visualization",
+        image: "/clients/illustration4.svg",
+      },
+      {
+        name: "AI & Machine Learning Insights",
+        image: "/clients/illustration5.svg",
+      },
+    ],
+    tagline:
+      "A powerful business analytics tool to help organizations visualize and analyze their data.",
+    imageSrc: "/clients/technologies/powerbi.png",
+  },
+  {
+    name: "MuleSoft",
+    features: [
+      {
+        icon: <FaCode />,
+        title: "API Management",
+        desc: "Manage the entire API lifecycle from creation to deployment.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Integration Platform",
+        desc: "Connect and integrate applications, data, and devices with ease.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Cloud & On-prem Integration",
+        desc: "Seamlessly integrate on-premises and cloud-based systems.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Pre-built Connectors",
+        desc: "Leverage pre-built connectors to integrate with various platforms like Salesforce, SAP, and more.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Data Transformation",
+        desc: "Transform data formats for smooth interoperability between systems.",
+      },
+    ],
+    useCases: [
+      { name: "API Integration", image: "/clients/illustration1.svg" },
+      { name: "Cloud Integration", image: "/clients/illustration2.svg" },
+      {
+        name: "Data & System Integration",
+        image: "/clients/illustration3.svg",
+      },
+      {
+        name: "Automation & Orchestration",
+        image: "/clients/illustration4.svg",
+      },
+      {
+        name: "Microservices Architecture",
+        image: "/clients/illustration5.svg",
+      },
+    ],
+    tagline:
+      "An integration platform for connecting apps, data, and devices with APIs.",
+    imageSrc: "/clients/technologies/mulesoft.png",
+  },
+  {
+    name: "Dynamic365",
+    features: [
+      {
+        icon: <FaCode />,
+        title: "CRM & ERP",
+        desc: "Combine CRM and ERP functionalities to manage sales, finance, customer service, and operations.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Cloud-Based",
+        desc: "Cloud-based solution with flexibility to scale as needed.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "AI & Insights",
+        desc: "Incorporate artificial intelligence to drive better customer insights and decisions.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Customizable Workflows",
+        desc: "Create customizable workflows for various business processes.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Integrated Applications",
+        desc: "Out-of-the-box integration with Office 365, Power BI, and other Microsoft products.",
+      },
+    ],
+    useCases: [
+      {
+        name: "Customer Relationship Management",
+        image: "/clients/illustration1.svg",
+      },
+      {
+        name: "Enterprise Resource Planning",
+        image: "/clients/illustration2.svg",
+      },
+      {
+        name: "Sales & Marketing Automation",
+        image: "/clients/illustration3.svg",
+      },
+      { name: "AI-Driven Insights", image: "/clients/illustration4.svg" },
+      { name: "Financial Management", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "A suite of business applications to streamline operations, sales, and customer service.",
+    imageSrc: "/clients/technologies/dynamic365.png",
+  },
+  {
+    name: "Workday",
+    features: [
+      {
+        icon: <FaCode />,
+        title: "Human Capital Management (HCM)",
+        desc: "Manage your organization's workforce, from recruitment to retirement.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Financial Management",
+        desc: "Integrate and manage your finance operations with real-time insights.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Cloud-Based",
+        desc: "All-in-one cloud solution with mobile access for a connected workforce.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Analytics & Reporting",
+        desc: "Advanced analytics and reporting for HR and finance insights.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Payroll & Talent Management",
+        desc: "Manage payroll, compensation, and talent development seamlessly.",
+      },
+    ],
+    useCases: [
+      {
+        name: "Human Resources Management",
+        image: "/clients/illustration1.svg",
+      },
+      { name: "Payroll Management", image: "/clients/illustration2.svg" },
+      {
+        name: "Financial & Operational Insights",
+        image: "/clients/illustration3.svg",
+      },
+      {
+        name: "Talent & Workforce Planning",
+        image: "/clients/illustration4.svg",
+      },
+      { name: "Performance Management", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "A cloud-based solution for human resources, finance, and analytics.",
+    imageSrc: "/clients/technologies/workday.png",
+  },
+  {
+    name: "WordPress",
+    features: [
+      {
+        icon: <FaCode />,
+        title: "Open Source CMS",
+        desc: "Free and open-source content management system with a massive community and plugin ecosystem.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Themes & Plugins",
+        desc: "Thousands of themes and plugins allow for easy customization and feature expansion.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Quick Deployment",
+        desc: "Launch blogs, websites, or even e-commerce stores in minutes.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "SEO Friendly",
+        desc: "Built-in tools and plugins help optimize your site for search engines.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Flexible Content Types",
+        desc: "Supports custom post types, media, user roles, and more for any kind of website.",
+      },
+    ],
+    useCases: [
+      { name: "Blogging Platforms", image: "/clients/illustration1.svg" },
+      { name: "Business Websites", image: "/clients/illustration2.svg" },
+      {
+        name: "E-commerce Stores (WooCommerce)",
+        image: "/clients/illustration3.svg",
+      },
+      { name: "Landing Pages", image: "/clients/illustration4.svg" },
+      { name: "Membership Sites", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "The world’s most popular CMS—powerful, flexible, and easy to use for websites of all sizes.",
+    imageSrc: "/clients/technologies/wordpress.png",
+  },
+  {
+    name: "Drupal",
+    features: [
+      {
+        icon: <FaCode />,
+        title: "Enterprise-grade CMS",
+        desc: "Robust content management framework trusted by government, education, and enterprise organizations.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Custom Content Structures",
+        desc: "Highly flexible with content types, taxonomies, views, and user permissions.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Multilingual Support",
+        desc: "Native support for multilingual content and translation workflows.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "API-First Architecture",
+        desc: "Ideal for decoupled/headless applications using REST, JSON:API, or GraphQL.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Security & Performance",
+        desc: "Strong focus on security, caching, and performance optimization.",
+      },
+    ],
+    useCases: [
+      { name: "Enterprise Websites", image: "/clients/illustration1.svg" },
+      { name: "Government & NGO Portals", image: "/clients/illustration2.svg" },
+      { name: "Educational Platforms", image: "/clients/illustration3.svg" },
+      { name: "Publishing & Media Sites", image: "/clients/illustration4.svg" },
+      {
+        name: "Headless CMS Applications",
+        image: "/clients/illustration5.svg",
+      },
+    ],
+    tagline:
+      "A powerful, secure, and flexible CMS framework built for ambitious digital experiences.",
+    imageSrc: "/clients/technologies/drupal.png",
+  },
+  {
+    name: "Contentful",
+    features: [
+      {
+        icon: <FaCode />,
+        title: "Headless CMS",
+        desc: "Decouples content from presentation, enabling flexible frontend frameworks.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Content Modeling",
+        desc: "Define content structures with custom fields, references, and relationships.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Omnichannel Delivery",
+        desc: "Distribute content to websites, apps, devices, and digital platforms.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Powerful API",
+        desc: "Access and manage content via RESTful and GraphQL APIs.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Scalable & Cloud-Native",
+        desc: "Designed for speed, uptime, and enterprise-level scalability.",
+      },
+    ],
+    useCases: [
+      {
+        name: "Headless Web Applications",
+        image: "/clients/illustration1.svg",
+      },
+      { name: "Mobile App Content", image: "/clients/illustration2.svg" },
+      { name: "Multilingual Platforms", image: "/clients/illustration3.svg" },
+      { name: "E-commerce Catalogs", image: "/clients/illustration4.svg" },
+      { name: "Digital Experiences", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "A headless CMS built for structured content and seamless multichannel publishing.",
+    imageSrc: "/clients/technologies/contentful.png",
+  },
+  {
+    name: "Joomla",
+    features: [
+      {
+        icon: <FaCode />,
+        title: "Open Source CMS",
+        desc: "Flexible and community-driven CMS for a wide range of website types.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Multilingual Capabilities",
+        desc: "Built-in language support for creating multilingual websites out of the box.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Extensibility",
+        desc: "Thousands of extensions and templates for customization and functionality.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Advanced User Management",
+        desc: "Granular control over user roles, permissions, and access levels.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Content & Media Management",
+        desc: "Robust tools to manage content, images, and documents easily.",
+      },
+    ],
+    useCases: [
+      { name: "Corporate Websites", image: "/clients/illustration1.svg" },
+      { name: "Government Portals", image: "/clients/illustration2.svg" },
+      { name: "Online Communities", image: "/clients/illustration3.svg" },
+      { name: "E-commerce Sites", image: "/clients/illustration4.svg" },
+      { name: "Multilingual Platforms", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "A powerful open-source CMS with built-in multilingual support and extensive customization.",
+    imageSrc: "/clients/technologies/joomla.png",
+  },
+  {
+    name: "Sitecore",
+    features: [
+      {
+        icon: <FaCode />,
+        title: "Enterprise CMS",
+        desc: "Enterprise-level digital experience platform for content management and personalization.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Digital Experience Platform",
+        desc: "Combine CMS, personalization, analytics, and marketing automation in one suite.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Omnichannel Delivery",
+        desc: "Deliver consistent experiences across web, mobile, email, and IoT.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Personalization Engine",
+        desc: "Deliver personalized content to users based on behavior and segmentation.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Marketing Automation",
+        desc: "Integrated tools to design and execute automated customer journeys.",
+      },
+    ],
+    useCases: [
+      { name: "Enterprise Portals", image: "/clients/illustration1.svg" },
+      {
+        name: "Personalized Marketing Platforms",
+        image: "/clients/illustration2.svg",
+      },
+      {
+        name: "Multi-brand Web Management",
+        image: "/clients/illustration3.svg",
+      },
+      {
+        name: "E-commerce with Experience",
+        image: "/clients/illustration4.svg",
+      },
+      {
+        name: "Global Digital Experiences",
+        image: "/clients/illustration5.svg",
+      },
+    ],
+    tagline:
+      "A leading digital experience platform to deliver personalized, scalable, and integrated customer experiences.",
+    imageSrc: "/clients/technologies/sitecore.png",
+  },
+  {
+    name: "Shopify",
+    features: [
+      {
+        icon: <FaCode />,
+        title: "Hosted Platform",
+        desc: "All-in-one e-commerce platform with hosting, payments, and security built-in.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Storefront Customization",
+        desc: "Themes, templates, and Liquid templating language for design flexibility.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "App Ecosystem",
+        desc: "Thousands of apps available to extend functionality for shipping, analytics, and more.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Multichannel Selling",
+        desc: "Sell across web, mobile, social media, and marketplaces like Amazon.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Secure & Scalable",
+        desc: "Handles scaling, PCI compliance, and global infrastructure for your online store.",
+      },
+    ],
+    useCases: [
+      { name: "Online Stores", image: "/clients/illustration1.svg" },
+      { name: "Dropshipping Businesses", image: "/clients/illustration2.svg" },
+      { name: "Mobile Shopping Apps", image: "/clients/illustration3.svg" },
+      { name: "Subscription Services", image: "/clients/illustration4.svg" },
+      { name: "Social Media Commerce", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "A complete e-commerce platform that makes it easy to start, grow, and manage a business online.",
+    imageSrc: "/clients/technologies/shopify.png",
+  },
+  {
+    name: "Magento",
+    features: [
+      {
+        icon: <FaCode />,
+        title: "Highly Customizable",
+        desc: "Open-source platform with deep customization and integration flexibility.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Scalable Architecture",
+        desc: "Supports large inventories, multi-store management, and international selling.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Advanced Features",
+        desc: "Built-in support for B2B, product recommendations, and customer segmentation.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Global Commerce",
+        desc: "Multi-language, multi-currency, and regional tax support for global operations.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Robust Community",
+        desc: "Extensive ecosystem of developers, plugins, and resources.",
+      },
+    ],
+    useCases: [
+      { name: "Large E-commerce Stores", image: "/clients/illustration1.svg" },
+      { name: "Multi-store Retailers", image: "/clients/illustration2.svg" },
+      { name: "Global Brands", image: "/clients/illustration3.svg" },
+      { name: "B2B Marketplaces", image: "/clients/illustration4.svg" },
+      {
+        name: "Custom Commerce Solutions",
+        image: "/clients/illustration5.svg",
+      },
+    ],
+    tagline:
+      "An open-source e-commerce platform that powers complex, customizable online stores at scale.",
+    imageSrc: "/clients/technologies/magento.png",
+  },
+  {
+    name: "WooCommerce",
+    features: [
+      {
+        icon: <FaCode />,
+        title: "WordPress Integration",
+        desc: "Built on top of WordPress, making it ideal for content-driven online stores.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Open-source Flexibility",
+        desc: "Fully customizable with themes, extensions, and developer hooks.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Plugin Ecosystem",
+        desc: "Leverage a wide range of plugins for payment gateways, marketing, shipping, and more.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Scalable & Modular",
+        desc: "Ideal for small to medium stores, with options to scale as needed.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Community Support",
+        desc: "Extensive documentation and active global community.",
+      },
+    ],
+    useCases: [
+      {
+        name: "Small Business E-commerce",
+        image: "/clients/illustration1.svg",
+      },
+      { name: "Content & Product Sites", image: "/clients/illustration2.svg" },
+      { name: "Subscription Products", image: "/clients/illustration3.svg" },
+      { name: "Local & Regional Sellers", image: "/clients/illustration4.svg" },
+      { name: "Digital Downloads", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "A flexible WordPress-based e-commerce solution that puts you in complete control of your store.",
+    imageSrc: "/clients/technologies/woo.png",
+  },
+  {
+    name: "BigCommerce",
+    features: [
+      {
+        icon: <FaCode />,
+        title: "Open SaaS Platform",
+        desc: "Combines the flexibility of open architecture with the convenience of SaaS.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Headless Commerce Support",
+        desc: "Use BigCommerce as a backend for modern frontend frameworks like Next.js or Gatsby.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Enterprise-Level Features",
+        desc: "Advanced SEO, faceted search, and performance for high-growth brands.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Cross-Channel Commerce",
+        desc: "Sell across marketplaces, social platforms, and in-person—all from one platform.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Integrated Ecosystem",
+        desc: "Connect seamlessly with apps, payment providers, and shipping solutions.",
+      },
+    ],
+    useCases: [
+      { name: "Enterprise E-commerce", image: "/clients/illustration1.svg" },
+      { name: "B2B & B2C Commerce", image: "/clients/illustration2.svg" },
+      { name: "Multi-channel Selling", image: "/clients/illustration3.svg" },
+      { name: "Headless Storefronts", image: "/clients/illustration4.svg" },
+      { name: "Omnichannel Retail", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "A powerful e-commerce platform for growing businesses and enterprises with modern, flexible solutions.",
+    imageSrc: "/clients/technologies/bigcommerce.png",
+  },
+  {
+    name: "PrestaShop",
+    features: [
+      {
+        icon: <FaCode />,
+        title: "Open-source Flexibility",
+        desc: "Customize and extend every part of your online store with open-source freedom.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Modular Architecture",
+        desc: "Over 6,000 modules and themes to adapt your store to any business need.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Lightweight & Performant",
+        desc: "Efficient performance even on budget-friendly hosting environments.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Internationalization",
+        desc: "Multi-language, multi-currency, and tax rule support for global selling.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Active Community",
+        desc: "Large global user base with extensive documentation and support forums.",
+      },
+    ],
+    useCases: [
+      { name: "SMB Online Stores", image: "/clients/illustration1.svg" },
+      {
+        name: "Custom E-commerce Projects",
+        image: "/clients/illustration2.svg",
+      },
+      { name: "Multilingual Sites", image: "/clients/illustration3.svg" },
+      { name: "Local Retail Businesses", image: "/clients/illustration4.svg" },
+      { name: "Freelancer-built Stores", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "An open-source e-commerce solution built for flexibility, global reach, and community-driven innovation.",
+    imageSrc: "/clients/technologies/prestashop.png",
+  },
 ];
 
 export const reviewPlatforms = [
