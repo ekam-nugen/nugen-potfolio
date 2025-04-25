@@ -100,7 +100,7 @@ export const data = {
     "Cloud Platforms": [
       { name: "AWS", icon: "/icons/aws.png" },
       { name: "Azure", icon: "/icons/azure.png" },
-      { name: "Google Cloud", icon: "/icons/gcp.png" },
+      { name: "GoogleCloud", icon: "/icons/gcp.png" },
     ],
     Containerization: [
       { name: "Docker", icon: "/icons/docker.png" },
@@ -109,7 +109,7 @@ export const data = {
     ],
     "DevOps Tools": [
       { name: "Jenkins", icon: "/icons/jenkins.png" },
-      { name: "GitLab CI/CD", icon: "/icons/gitlab.png" },
+      { name: "GitLabCI/CD", icon: "/icons/gitlab.png" },
       { name: "Terraform", icon: "/icons/terraform.png" },
       { name: "Ansible", icon: "/icons/ansible.png" },
     ],

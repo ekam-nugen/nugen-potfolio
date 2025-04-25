@@ -1,5 +1,37 @@
 import { JSX } from "react";
-import { FaRobot, FaGlobe, FaServer, FaBolt, FaCode } from "react-icons/fa";
+import {
+  FaRobot,
+  FaGlobe,
+  FaServer,
+  FaBolt,
+  FaCode,
+  FaBalanceScale,
+  FaBox,
+  FaCloud,
+  FaCodeBranch,
+  FaCogs,
+  FaExpandArrowsAlt,
+  FaHubspot,
+  FaLock,
+  FaNetworkWired,
+  FaRocket,
+  FaShieldAlt,
+  FaSync,
+  FaTools,
+  FaAws,
+  FaBook,
+  FaBoxOpen,
+  FaEye,
+  FaGitAlt,
+  FaGithub,
+  FaHistory,
+  FaLayerGroup,
+  FaMobile,
+  FaPlug,
+  FaProjectDiagram,
+  FaRecycle,
+  FaTerminal,
+} from "react-icons/fa";
 
 interface Feature {
   icon: JSX.Element;
@@ -2449,6 +2481,457 @@ export const technologyStack = [
     tagline:
       "An open-source e-commerce solution built for flexibility, global reach, and community-driven innovation.",
     imageSrc: "/clients/technologies/prestashop.png",
+  },
+  {
+    name: "AWS",
+    features: [
+      {
+        icon: <FaServer />,
+        title: "Scalable Infrastructure",
+        desc: "On-demand compute, storage, and networking services for any workload size.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Global Reach",
+        desc: "Deploy applications across 30+ regions with low latency and high availability.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Wide Service Portfolio",
+        desc: "Over 200 services including AI, databases, analytics, DevOps, and security.",
+      },
+      {
+        icon: <FaCode />,
+        title: "Developer Friendly",
+        desc: "Full SDKs, APIs, and Infrastructure as Code support (CDK, CloudFormation).",
+      },
+      {
+        icon: <FaRobot />,
+        title: "AI & ML Capabilities",
+        desc: "Advanced machine learning tools like SageMaker, Rekognition, and Comprehend.",
+      },
+    ],
+    useCases: [
+      { name: "Enterprise Applications", image: "/clients/illustration1.svg" },
+      { name: "Cloud-native Apps", image: "/clients/illustration2.svg" },
+      { name: "Big Data & Analytics", image: "/clients/illustration3.svg" },
+      {
+        name: "Machine Learning Workflows",
+        image: "/clients/illustration4.svg",
+      },
+      { name: "Hybrid Cloud", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "The world's most comprehensive and widely adopted cloud platform for building secure, scalable applications.",
+    imageSrc: "/clients/technologies/aws.png",
+  },
+  {
+    name: "Azure",
+    features: [
+      {
+        icon: <FaServer />,
+        title: "Hybrid Cloud Capabilities",
+        desc: "Seamless on-premises and cloud integration with tools like Azure Arc and Stack.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Enterprise Ready",
+        desc: "Trusted by 95% of Fortune 500 companies with strong security and compliance.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Integrated Services",
+        desc: "Deep integration with Microsoft services like Office 365, Dynamics, and Power Platform.",
+      },
+      {
+        icon: <FaCode />,
+        title: "Flexible Development",
+        desc: "Supports multiple languages and frameworks with rich DevOps tooling.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "AI & Analytics",
+        desc: "Powerful cognitive services, ML models, and advanced data analytics tools.",
+      },
+    ],
+    useCases: [
+      { name: "Enterprise Workloads", image: "/clients/illustration1.svg" },
+      { name: "Cloud Migrations", image: "/clients/illustration2.svg" },
+      { name: "AI & Analytics", image: "/clients/illustration3.svg" },
+      { name: "DevOps & CI/CD", image: "/clients/illustration4.svg" },
+      { name: "IoT Applications", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "A flexible and enterprise-focused cloud platform with global scale and deep Microsoft integration.",
+    imageSrc: "/clients/technologies/azure.png",
+  },
+  {
+    name: "GoogleCloud",
+    features: [
+      {
+        icon: <FaServer />,
+        title: "Cloud-Native Infrastructure",
+        desc: "Built for containers and microservices with Kubernetes at its core.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Global Network",
+        desc: "Fast, secure, and reliable global network infrastructure.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Big Data & Analytics",
+        desc: "Powerful tools like BigQuery and Dataflow for real-time insights and analytics.",
+      },
+      {
+        icon: <FaCode />,
+        title: "Developer Tools",
+        desc: "Cloud Functions, Firebase, and serverless platforms for faster app delivery.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "AI & ML Innovation",
+        desc: "World-class models and APIs for vision, speech, NLP, and AutoML.",
+      },
+    ],
+    useCases: [
+      { name: "Modern App Development", image: "/clients/illustration1.svg" },
+      { name: "Data Lakes & Analytics", image: "/clients/illustration2.svg" },
+      { name: "Machine Learning Models", image: "/clients/illustration3.svg" },
+      { name: "Serverless Apps", image: "/clients/illustration4.svg" },
+      { name: "Multi-cloud Deployments", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "A developer-centric cloud platform focused on speed, AI innovation, and powerful data analytics.",
+    imageSrc: "/clients/technologies/google-cloud.svg",
+  },
+  {
+    name: "Docker",
+    features: [
+      {
+        icon: <FaBox />,
+        title: "Containerization",
+        desc: "Package applications and dependencies into lightweight, portable containers for consistency across environments.",
+      },
+      {
+        icon: <FaCogs />,
+        title: "Isolated Environments",
+        desc: "Run apps in isolated user spaces with controlled resource allocation for better security and efficiency.",
+      },
+      {
+        icon: <FaRocket />,
+        title: "Fast Deployment",
+        desc: "Spin up containers in seconds, reducing development and testing overhead.",
+      },
+      {
+        icon: <FaCodeBranch />,
+        title: "DevOps Integration",
+        desc: "Works seamlessly with CI/CD pipelines (e.g., GitHub Actions, Jenkins) for automated workflows.",
+      },
+      {
+        icon: <FaHubspot />,
+        title: "Docker Hub Ecosystem",
+        desc: "Access pre-built images and share containers via Docker Hub for faster development.",
+      },
+    ],
+    useCases: [
+      {
+        name: "Microservices Architecture",
+        image: "/clients/illustration1.svg",
+      },
+      {
+        name: "Local Development Environments",
+        image: "/clients/illustration2.svg",
+      },
+      {
+        name: "CI/CD Pipeline Automation",
+        image: "/clients/illustration3.svg",
+      },
+      { name: "Legacy App Modernization", image: "/clients/illustration4.svg" },
+      { name: "Cloud-Native Deployments", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "The industry-standard platform for building, shipping, and running distributed applications in containers.",
+    imageSrc: "/clients/technologies/docker.png",
+  },
+  {
+    name: "Kubernetes",
+    features: [
+      {
+        icon: <FaNetworkWired />,
+        title: "Container Orchestration",
+        desc: "Automate deployment, scaling, and management of containerized applications across clusters.",
+      },
+      {
+        icon: <FaExpandArrowsAlt />,
+        title: "Horizontal Scaling",
+        desc: "Dynamically scale workloads up or down based on demand with self-healing capabilities.",
+      },
+      {
+        icon: <FaBalanceScale />,
+        title: "Load Balancing",
+        desc: "Distribute traffic efficiently across containers to ensure high availability.",
+      },
+      {
+        icon: <FaCode />,
+        title: "Declarative Configuration",
+        desc: "Define desired states using YAML/JSON manifests for infrastructure-as-code (IaC).",
+      },
+      {
+        icon: <FaCloud />,
+        title: "Multi-Cloud & Hybrid Support",
+        desc: "Run consistently on-premises, AWS, GCP, Azure, or any cloud provider.",
+      },
+    ],
+    useCases: [
+      {
+        name: "Large-Scale Microservices",
+        image: "/clients/illustration1.svg",
+      },
+      {
+        name: "High-Availability Deployments",
+        image: "/clients/illustration2.svg",
+      },
+      {
+        name: "Batch Processing (Jobs/CronJobs)",
+        image: "/clients/illustration3.svg",
+      },
+      {
+        name: "Service Mesh (Istio, Linkerd)",
+        image: "/clients/illustration4.svg",
+      },
+      { name: "Edge Computing", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "The leading open-source platform for automating container operations at scale.",
+    imageSrc: "/clients/technologies/kubernetes.png",
+  },
+  {
+    name: "OpenShift",
+    features: [
+      {
+        icon: <FaShieldAlt />,
+        title: "Enterprise Kubernetes",
+        desc: "Red Hat’s hardened Kubernetes distribution with added security, compliance, and support.",
+      },
+      {
+        icon: <FaTools />,
+        title: "Developer-Friendly Tooling",
+        desc: "Built-in IDE (ODO), Source-to-Image (S2I), and Helm for streamlined app deployment.",
+      },
+      {
+        icon: <FaLock />,
+        title: "Enhanced Security",
+        desc: "Role-based access control (RBAC), SELinux, and automated certificate management.",
+      },
+      {
+        icon: <FaSync />,
+        title: "Integrated CI/CD",
+        desc: "Native pipelines with Tekton, Jenkins, and GitOps (ArgoCD) for DevOps automation.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Hybrid Cloud Flexibility",
+        desc: "Deploy on-premises, public clouds, or edge with consistent management.",
+      },
+    ],
+    useCases: [
+      {
+        name: "Enterprise-Grade Container Platforms",
+        image: "/clients/illustration1.svg",
+      },
+      {
+        name: "Regulated Industries (Finance, Healthcare)",
+        image: "/clients/illustration2.svg",
+      },
+      {
+        name: "AI/ML Workloads with GPUs",
+        image: "/clients/illustration3.svg",
+      },
+      { name: "Multi-Tenant Kubernetes", image: "/clients/illustration4.svg" },
+      {
+        name: "Disaster Recovery Solutions",
+        image: "/clients/illustration5.svg",
+      },
+    ],
+    tagline:
+      "A full-stack Kubernetes platform for mission-critical applications with developer and operational tools.",
+    imageSrc: "/clients/technologies/openshift.svg",
+  },
+  {
+    name: "Jenkins",
+    features: [
+      {
+        icon: <FaPlug />,
+        title: "Extensible Automation",
+        desc: "Open-source automation server with 1,800+ plugins for CI/CD, testing, and deployment.",
+      },
+      {
+        icon: <FaCodeBranch />,
+        title: "Pipeline-as-Code",
+        desc: "Define build/test/deploy workflows using Groovy-based Jenkinsfiles for reproducibility.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Distributed Builds",
+        desc: "Scale workloads across agent nodes (Linux, Windows, Kubernetes) for parallel execution.",
+      },
+      {
+        icon: <FaGithub />,
+        title: "Git Integration",
+        desc: "Seamlessly trigger builds from GitHub, GitLab, Bitbucket, or other SCM tools.",
+      },
+      {
+        icon: <FaShieldAlt />,
+        title: "Access Control",
+        desc: "Role-based permissions and audit logs for enterprise security compliance.",
+      },
+    ],
+    useCases: [
+      { name: "Legacy CI/CD Pipelines", image: "/clients/illustration1.svg" },
+      {
+        name: "Multi-language Builds (Java, Python, etc.)",
+        image: "/clients/illustration2.svg",
+      },
+      { name: "On-Premises Automation", image: "/clients/illustration3.svg" },
+      {
+        name: "Custom Workflow Orchestration",
+        image: "/clients/illustration4.svg",
+      },
+      {
+        name: "Plugin-Based Integrations",
+        image: "/clients/illustration5.svg",
+      },
+    ],
+    tagline:
+      "The most flexible open-source automation server for building, testing, and deploying at scale.",
+    imageSrc: "/clients/technologies/jenkins.png",
+  },
+  {
+    name: "GitLabCI/CD",
+    features: [
+      {
+        icon: <FaGitAlt />,
+        title: "Built-in DevOps",
+        desc: "End-to-end CI/CD pipelines integrated into GitLab’s single application (no plugins needed).",
+      },
+      {
+        icon: <FaLayerGroup />,
+        title: "Multi-Stage Pipelines",
+        desc: "Define build, test, security scan, and deploy stages in a single `.gitlab-ci.yml` file.",
+      },
+      {
+        icon: <FaCloud />,
+        title: "Auto-Scaling Runners",
+        desc: "Run jobs on ephemeral cloud or Kubernetes runners for cost efficiency.",
+      },
+      {
+        icon: <FaEye />,
+        title: "Security Scanning",
+        desc: "Built-in SAST, DAST, dependency scanning, and license compliance checks.",
+      },
+      {
+        icon: <FaMobile />,
+        title: "GitOps Ready",
+        desc: "Native support for Kubernetes deployments with Auto DevOps and Helm.",
+      },
+    ],
+    useCases: [
+      { name: "Cloud-Native CI/CD", image: "/clients/illustration1.svg" },
+      { name: "DevSecOps Pipelines", image: "/clients/illustration2.svg" },
+      { name: "Monorepo Management", image: "/clients/illustration3.svg" },
+      { name: "Kubernetes Deployments", image: "/clients/illustration4.svg" },
+      {
+        name: "Collaborative Development",
+        image: "/clients/illustration5.svg",
+      },
+    ],
+    tagline:
+      "A unified platform for code collaboration, CI/CD, and security—all in one place.",
+    imageSrc: "/clients/technologies/gitlab.png",
+  },
+  {
+    name: "Terraform",
+    features: [
+      {
+        icon: <FaCloud />,
+        title: "Infrastructure-as-Code (IaC)",
+        desc: "Define and provision cloud resources (AWS, GCP, Azure) using declarative HCL or JSON.",
+      },
+      {
+        icon: <FaProjectDiagram />,
+        title: "Multi-Cloud Orchestration",
+        desc: "Manage hybrid or multi-cloud environments with a single workflow.",
+      },
+      {
+        icon: <FaHistory />,
+        title: "State Management",
+        desc: "Track resource dependencies and changes with Terraform state files.",
+      },
+      {
+        icon: <FaLock />,
+        title: "Policy as Code",
+        desc: "Enforce security/compliance rules using Sentinel or OPA (Open Policy Agent).",
+      },
+      {
+        icon: <FaRecycle />,
+        title: "Immutable Infrastructure",
+        desc: "Replace outdated resources instead of modifying them for consistency.",
+      },
+    ],
+    useCases: [
+      { name: "Cloud Provisioning", image: "/clients/illustration1.svg" },
+      {
+        name: "Kubernetes Infrastructure",
+        image: "/clients/illustration2.svg",
+      },
+      { name: "Disaster Recovery Setup", image: "/clients/illustration3.svg" },
+      { name: "Edge Computing", image: "/clients/illustration4.svg" },
+      { name: "Database as a Service", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "Write, plan, and provision infrastructure across clouds with codified best practices.",
+    imageSrc: "/clients/technologies/terraform.svg",
+  },
+  {
+    name: "Ansible",
+    features: [
+      {
+        icon: <FaTerminal />,
+        title: "Agentless Automation",
+        desc: "Configure systems using SSH/WinRM—no need to install client software.",
+      },
+      {
+        icon: <FaBook />,
+        title: "YAML Playbooks",
+        desc: "Simple, human-readable automation scripts for configuration management.",
+      },
+      {
+        icon: <FaNetworkWired />,
+        title: "Multi-Node Orchestration",
+        desc: "Execute tasks across thousands of servers in parallel.",
+      },
+      {
+        icon: <FaBoxOpen />,
+        title: "Idempotent Operations",
+        desc: "Ensure desired state without duplicate changes or side effects.",
+      },
+      {
+        icon: <FaAws />,
+        title: "Cloud Module Library",
+        desc: "Pre-built modules for AWS, Azure, GCP, and on-premises systems.",
+      },
+    ],
+    useCases: [
+      { name: "Configuration Management", image: "/clients/illustration1.svg" },
+      { name: "Patch Management", image: "/clients/illustration2.svg" },
+      { name: "Network Automation", image: "/clients/illustration3.svg" },
+      { name: "Application Deployment", image: "/clients/illustration4.svg" },
+      { name: "Security Compliance", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "Radically simple IT automation for repetitive tasks, app deployment, and cloud provisioning.",
+    imageSrc: "/clients/technologies/ansible.png",
   },
 ];
 
