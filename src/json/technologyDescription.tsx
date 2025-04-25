@@ -560,6 +560,194 @@ export const technologyStack = [
       "A classic language designed for simplicity and productivity—perfect for Windows apps, automation, and legacy enterprise solutions.",
     imageSrc: "/clients/technologies/vb.svg",
   },
+  {
+    name: "R",
+    features: [
+      {
+        icon: <FaCode />,
+        title: "Statistical Computing",
+        desc: "Built specifically for statistics, data analysis, and scientific research.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Data Visualization",
+        desc: "Powerful libraries like ggplot2 and plotly for beautiful and insightful visualizations.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Rich Package Ecosystem",
+        desc: "Thousands of packages available through CRAN for specialized tasks.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Data Manipulation",
+        desc: "Tidyverse tools like dplyr and tidyr make data wrangling efficient.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Machine Learning Ready",
+        desc: "Supports a variety of machine learning techniques and statistical modeling tools.",
+      },
+    ],
+    useCases: [
+      {
+        name: "Data Analysis & Reporting",
+        image: "/clients/illustration1.svg",
+      },
+      { name: "Statistical Modeling", image: "/clients/illustration2.svg" },
+      { name: "Data Visualization", image: "/clients/illustration3.svg" },
+      { name: "Machine Learning", image: "/clients/illustration4.svg" },
+      { name: "Bioinformatics", image: "/clients/illustration5.svg" },
+      { name: "Academic Research", image: "/clients/illustration6.svg" },
+    ],
+    tagline:
+      "A language built for statistics and data science—empowering analysts and researchers with precision and powerful visualizations.",
+    imageSrc: "/clients/technologies/R.png",
+  },
+  {
+    name: "Julia",
+    features: [
+      {
+        icon: <FaBolt />,
+        title: "High Performance",
+        desc: "Designed for speed with performance close to C thanks to LLVM-based JIT compilation.",
+      },
+      {
+        icon: <FaCode />,
+        title: "Simple Syntax",
+        desc: "Clean, expressive syntax that's easy to write and read—perfect for rapid prototyping.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Scientific & Numerical Computing",
+        desc: "Built-in support for linear algebra, statistics, and distributed computing.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Parallelism & Multithreading",
+        desc: "Write concurrent and distributed programs easily with native features.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Growing Ecosystem",
+        desc: "An expanding ecosystem of packages in machine learning, data science, and optimization.",
+      },
+    ],
+    useCases: [
+      { name: "Scientific Computing", image: "/clients/illustration1.svg" },
+      { name: "Numerical Analysis", image: "/clients/illustration2.svg" },
+      { name: "Machine Learning", image: "/clients/illustration3.svg" },
+      { name: "Optimization Problems", image: "/clients/illustration4.svg" },
+      { name: "Data Science", image: "/clients/illustration5.svg" },
+      {
+        name: "High-performance Simulations",
+        image: "/clients/illustration6.svg",
+      },
+    ],
+    tagline:
+      "A fast, dynamic language for technical computing—combining the speed of C with the simplicity of Python.",
+    imageSrc: "/clients/technologies/julia.png",
+  },
+  {
+    name: "Dart",
+    features: [
+      {
+        icon: <FaCode />,
+        title: "Optimized for UI",
+        desc: "Dart is designed to build expressive and high-performance user interfaces, especially with Flutter.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Fast Execution",
+        desc: "Compiled to ARM and x64 machine code or JavaScript for fast mobile, desktop, and web performance.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Backend Support",
+        desc: "Can also be used to write server-side applications and APIs.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Cross-platform Development",
+        desc: "Single codebase can target mobile, web, and desktop platforms.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Growing Ecosystem",
+        desc: "Backed by Google and growing rapidly with packages for almost every need.",
+      },
+    ],
+    useCases: [
+      {
+        name: "Mobile App Development (Flutter)",
+        image: "/clients/illustration1.svg",
+      },
+      {
+        name: "Cross-platform Applications",
+        image: "/clients/illustration2.svg",
+      },
+      { name: "Web Applications", image: "/clients/illustration3.svg" },
+      { name: "Desktop Applications", image: "/clients/illustration4.svg" },
+      { name: "Server-side APIs", image: "/clients/illustration5.svg" },
+      { name: "IoT and Embedded Systems", image: "/clients/illustration6.svg" },
+    ],
+    tagline:
+      "A modern, object-oriented language optimized for building fast, multi-platform applications with Flutter.",
+    imageSrc: "/clients/technologies/dart.svg",
+  },
+  {
+    name: "Objective-C",
+    features: [
+      {
+        icon: <FaCode />,
+        title: "Object-Oriented",
+        desc: "Combines the power of C with the flexibility of Smalltalk, providing object-oriented programming features.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Native iOS/macOS Development",
+        desc: "Primarily used for iOS and macOS applications before Swift's emergence.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Dynamic Runtime",
+        desc: "Supports dynamic method resolution and message forwarding, allowing for more flexibility.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "Interoperability with C/C++",
+        desc: "Easily integrates with C and C++ code, allowing the reuse of legacy code.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Mature Ecosystem",
+        desc: "Part of Apple's ecosystem with robust frameworks like Cocoa and Cocoa Touch.",
+      },
+    ],
+    useCases: [
+      {
+        name: "iOS Application Development",
+        image: "/clients/illustration1.svg",
+      },
+      {
+        name: "macOS Software Development",
+        image: "/clients/illustration2.svg",
+      },
+      { name: "Objective-C Frameworks", image: "/clients/illustration3.svg" },
+      {
+        name: "Legacy Codebase Maintenance",
+        image: "/clients/illustration4.svg",
+      },
+      { name: "System-Level Programming", image: "/clients/illustration5.svg" },
+      {
+        name: "Embedded Software Development",
+        image: "/clients/illustration6.svg",
+      },
+    ],
+    tagline:
+      "A powerful, object-oriented programming language used for building native iOS and macOS applications.",
+    imageSrc: "/clients/technologies/objective-c.svg",
+  },
 ];
 
 export const reviewPlatforms = [
