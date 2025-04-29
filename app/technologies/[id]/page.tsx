@@ -8,7 +8,8 @@ export default function TechnologyPage() {
   const { id } = useParams();
   const tech = technologyStack.find(
     (t) =>
-      t.name.toLowerCase() === (typeof id === "string" && id?.trim().toLowerCase())
+      t.value.toLowerCase() ===
+      (typeof id === "string" && id?.trim().toLowerCase())
   );
 
   if (!tech) {
@@ -21,11 +22,12 @@ export default function TechnologyPage() {
 
   return (
     <TechDescription
-      techName={tech.name}
+      label={tech.label}
+      value={tech.value}
+      highlights={tech.highlights}
       tagline={tech.tagline}
       imageSrc={tech.imageSrc}
       features={tech.features}
-      useCases={tech.useCases}
     />
   );
 }
