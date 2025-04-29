@@ -9,6 +9,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import Link from "next/link";
 
 export default function TestimonialSection() {
   return (
@@ -40,9 +41,12 @@ export default function TestimonialSection() {
               className="grayscale-0 hover:grayscale transition w-auto h-6 sm:h-8"
             />
           </div>
-          <button className="bg-black text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-[#ff6b3d] hover:text-white transition duration-300">
+          <Link
+            href="/review"
+            className="bg-black text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-[#ff6b3d] hover:text-white transition duration-300"
+          >
             Explore Us More →
-          </button>
+          </Link>
         </div>
 
         {/* Testimonial Swiper */}
@@ -50,7 +54,7 @@ export default function TestimonialSection() {
           <Swiper
             modules={[Pagination, Autoplay]}
             pagination={{ clickable: true }}
-            autoplay={{ delay: 5000 }}
+            autoplay={{ delay: 2000 }}
             loop={true}
             className="w-full rounded-2xl"
           >

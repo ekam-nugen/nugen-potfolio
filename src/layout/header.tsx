@@ -87,7 +87,8 @@ export default function Header() {
               <div key={index} className={item.submenu ? "relative group" : ""}>
                 {item.submenu ? (
                   <>
-                    <button
+                    <Link
+                      href={item?.href || "#"}
                       className={`font-medium flex items-center ${
                         item.submenu.some(
                           (s) =>
@@ -100,7 +101,7 @@ export default function Header() {
                     >
                       {item.label}
                       <ChevronDown className="w-4 h-4 ml-1" />
-                    </button>
+                    </Link>
                     {renderDesktopDropdown(item.submenu)}
                   </>
                 ) : (

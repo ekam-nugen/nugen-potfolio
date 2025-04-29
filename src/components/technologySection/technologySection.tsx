@@ -1,21 +1,29 @@
-import React from "react";
-import Link from "next/link"; 
-import { techTags } from "@/src/json/languageSection";
+import React, { ReactNode } from "react";
+import Link from "next/link";
 
-export const TechnologySection = () => {
+interface TechnologySectionProps {
+  subheading: ReactNode;
+  heading: string;
+  tags: { label: string; color: string }[];
+}
+
+export const TechnologySection: React.FC<TechnologySectionProps> = ({
+  subheading,
+  heading,
+  tags,
+}) => {
   return (
     <div className="bg-white px-4 py-10 flex flex-col items-center mt-4">
       <div className="w-full max-w-6xl text-center">
         <h2 className="text-lg sm:text-xl md:text-2xl text-[#ffbb9f] font-semibold mb-2">
-          Nugen I.T Services
+          {heading}
         </h2>
         <h1 className="text-3xl sm:text-4xl md:text-5xl text-black font-extrabold leading-tight">
-          Power Your Business with <br />
-          Cutting-Edge Solutions
+          {subheading}
         </h1>
 
         <div className="flex flex-wrap justify-center gap-4 mt-10">
-          {techTags.map((tag, index) => (
+          {tags.map((tag, index) => (
             <Link
               key={index}
               href="#technologies"

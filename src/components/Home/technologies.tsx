@@ -22,113 +22,113 @@ import {
 const technologies = [
   {
     name: "Full-stack",
-    href: "/technologies/full-stack",
+    href: "/services/webdevelopment",
     icon: <FaCube color="#ff6b3d" />,
   },
   {
     name: "Web",
-    href: "/technologies/web",
+    href: "/services/webdevelopment",
     icon: <FaFileCode color="#ff6b3d" />,
   },
   {
     name: "Cloud",
-    href: "/technologies/cloud",
+    href: "/services/cloud-engineering",
     icon: <FaCloud color="#ff6b3d" />,
   },
   {
     name: "Frontend",
-    href: "/technologies/frontend",
+    href: "/services/uiux",
     icon: <FaReact color="#ff6b3d" />,
   },
   {
     name: "Mobile",
-    href: "/technologies/mobile",
+    href: "/services/appdevelopment",
     icon: <FaMobileAlt color="#ff6b3d" />,
   },
   {
     name: "Shopify",
-    href: "/technologies/shopify",
+    href: "/services/cms",
     icon: <FaSearch color="#ff6b3d" />,
   },
   {
     name: "ReactJS",
-    href: "/technologies/reactjs",
+    href: "/technologies/react",
     icon: <FaReact color="#ff6b3d" />,
   },
   {
     name: "WordPress",
-    href: "/technologies/wordpress",
+    href: "/services/wordpress",
     icon: <FaWordpress color="#ff6b3d" />,
   },
   {
     name: "Backend",
-    href: "/technologies/backend",
+    href: "/services/backend",
     icon: <FaPencilAlt color="#ff6b3d" />,
   },
   {
     name: "BI",
-    href: "/technologies/bi",
+    href: "/services/bi",
     icon: <FaFileCode color="#ff6b3d" />,
   },
   {
     name: "Java",
-    href: "/technologies/java",
+    href: "/services/java",
     icon: <FaJava color="#ff6b3d" />,
   },
   {
     name: ".NET",
-    href: "/technologies/dotnet",
+    href: "/services/dotnet",
     icon: <FaCube color="#ff6b3d" />,
   },
   {
     name: "Python",
-    href: "/technologies/python",
+    href: "/services/python",
     icon: <FaPython color="#ff6b3d" />,
   },
   {
     name: "UI/UX",
-    href: "/technologies/ui-ux",
+    href: "/services/ui-ux",
     icon: <FaPencilAlt color="#ff6b3d" />,
   },
   {
     name: "AI/ML",
-    href: "/technologies/ai-ml",
+    href: "services/intelligence",
     icon: <FaBrain color="#ff6b3d" />,
   },
   {
     name: "Open AI",
-    href: "/technologies/openai",
+    href: "/services/intelligence",
     icon: <FaBrain color="#ff6b3d" />,
   },
   {
     name: "Data Engineering",
-    href: "/technologies/data-engineering",
+    href: "/services/data-engineering",
     icon: <FaDatabase color="#ff6b3d" />,
   },
-  { name: "AWS", href: "/technologies/aws", icon: <FaAws color="#ff6b3d" /> },
+  { name: "AWS", href: "/services/aws", icon: <FaAws color="#ff6b3d" /> },
   {
     name: "Magento",
-    href: "/technologies/magento",
+    href: "/services/magento",
     icon: <FaMagento color="#ff6b3d" />,
   },
   {
     name: "Flutter",
-    href: "/technologies/flutter",
+    href: "/services/flutter",
     icon: <FaCube color="#ff6b3d" />,
   },
   {
     name: "PHP",
-    href: "/technologies/php",
+    href: "/services/php",
     icon: <FaFileCode color="#ff6b3d" />,
   },
   {
     name: "AR/VR",
-    href: "/technologies/ar-vr",
+    href: "/services/ar-vr",
     icon: <FaCube color="#ff6b3d" />,
   },
   {
     name: "QA",
-    href: "/technologies/qa",
+    href: "/services/qa",
     icon: <FaFileCode color="#ff6b3d" />,
   },
 ];
@@ -238,20 +238,20 @@ export default function TechnologySection() {
         variants={buttonVariants}
         className="flex flex-col sm:flex-row justify-center items-center gap-4"
       >
-        <motion.button
+        <motion.div
           whileHover="hover"
           variants={buttonVariants}
           className="cursor-pointer bg-gradient-to-r from-orange-400 to-pink-500 hover:from-orange-500 hover:to-pink-600 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 shadow-md"
         >
-          Get A Quote →
-        </motion.button>
-        <motion.button
+          <Link href="/contact-us">Get A Quote →</Link>
+        </motion.div>
+        <motion.div
           whileHover="hover"
           variants={buttonVariants}
           className="cursor-pointer border border-gray-300 hover:bg-gray-100 text-gray-800 font-medium px-6 py-3 rounded-full transition-all duration-300 shadow-md"
         >
-          See All Technologies →
-        </motion.button>
+          <Link href="/technologies">See All Technologies →</Link>
+        </motion.div>
       </motion.div>
     </section>
   );

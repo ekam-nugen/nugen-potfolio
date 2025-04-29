@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import { Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import Image from "next/image";
 
 export default function CaseStudyHero() {
@@ -17,8 +17,10 @@ export default function CaseStudyHero() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-20">
         <Swiper
           pagination={{ clickable: true }}
-          modules={[Pagination]}
+          modules={[Pagination, Autoplay]}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
           loop={true}
+          speed={1000} // smoother slide transition (default is 300ms)
           className="w-full"
         >
           {caseStudies.map((study, index) => (

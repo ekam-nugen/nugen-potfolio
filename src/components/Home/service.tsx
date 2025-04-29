@@ -12,6 +12,7 @@ import webApp from "../../../public/mobile-app-development.png";
 const services = [
   {
     id: 1,
+    href: "/services/webdevelopment",
     title: "Web & Mobile Development",
     description:
       "We create, products, brands, apps & websites for companies all around the world class digital products",
@@ -19,6 +20,7 @@ const services = [
   },
   {
     id: 2,
+    href: "/services/uiux",
     title: "Interaction Design",
     description:
       "Metameet combines the idea of a 3D virtual environment with companies growing need for more personalised",
@@ -26,6 +28,7 @@ const services = [
   },
   {
     id: 3,
+    href: "/services/seo",
     title: "Digital Marketing",
     description:
       "We partnered digital marketing to create an interactive video tool that will change the way businesses.",
@@ -33,6 +36,7 @@ const services = [
   },
   {
     id: 4,
+    href: "/about",
     title: "Branding and Strategy",
     description:
       "Funnels that increase response rates is just the first step for them and we can’t wait to see where it takes them!",
