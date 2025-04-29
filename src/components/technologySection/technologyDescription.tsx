@@ -174,7 +174,6 @@ const TechDescription: React.FC<TechDescriptionProps> = ({
               <Image
                 key={activeIndex}
                 src={highlights[activeIndex]?.image}
-                src={useCases[activeIndex]?.image}
                 height={100}
                 width={100}
                 alt={`Use case ${activeIndex + 1}`}
