@@ -105,16 +105,18 @@ interface Feature {
 }
 
 export interface TechDescriptionProps {
-  techName: string;
+  value: string;
+  label: string;
   tagline: string;
   imageSrc: string;
   features: Feature[];
-  useCases: { name: string; image: string }[];
+  highlights: { name: string; image: string }[];
 }
 
-export const technologyStack = [
+export const technologyStack: TechDescriptionProps[] = [
   {
-    name: "Python",
+    value: "python",
+    label: "Python",
     features: [
       {
         icon: <FaCode />,
@@ -142,7 +144,7 @@ export const technologyStack = [
         desc: "Fewer lines of code, faster results.",
       },
     ],
-    useCases: [
+    highlights: [
       {
         name: "Data Analysis & Visualization",
         image: "/clients/illustration1.svg",
@@ -161,7 +163,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/python.png",
   },
   {
-    name: "JavaScript",
+    value: "javascript",
+    label: "JavaScript",
     features: [
       {
         icon: <FaCode />,
@@ -189,7 +192,7 @@ export const technologyStack = [
         desc: "Great support for AI, automation, tooling, and more.",
       },
     ],
-    useCases: [
+    highlights: [
       {
         name: "Frontend Development (React, Vue, Angular)",
         image: "/clients/illustration1.svg",
@@ -214,7 +217,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/javascript.png",
   },
   {
-    name: "Java",
+    value: "java",
+    label: "Java",
     features: [
       {
         icon: <FaCode />,
@@ -242,7 +246,7 @@ export const technologyStack = [
         desc: "Mature libraries and frameworks like Spring, Hibernate, and Jakarta EE.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Enterprise Software", image: "/clients/illustration1.svg" },
       { name: "Android App Development", image: "/clients/illustration2.svg" },
       {
@@ -264,7 +268,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/java.png",
   },
   {
-    name: "Node.js",
+    value: "nodeJs",
+    label: "NodeJS",
     features: [
       {
         icon: <FaCode />,
@@ -292,7 +297,7 @@ export const technologyStack = [
         desc: "Large collection of packages available via npm for almost any task.",
       },
     ],
-    useCases: [
+    highlights: [
       {
         name: "Backend APIs (Express, Koa)",
         image: "/clients/illustration1.svg",
@@ -314,7 +319,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/node-js.svg",
   },
   {
-    name: "TypeScript",
+    value: "typescript",
+    label: "TypeScript",
     features: [
       {
         icon: <FaCode />,
@@ -342,7 +348,7 @@ export const technologyStack = [
         desc: "Works seamlessly with React, Node.js, Vue, and all major libraries.",
       },
     ],
-    useCases: [
+    highlights: [
       {
         name: "Large-scale Web Applications",
         image: "/clients/illustration1.svg",
@@ -364,7 +370,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/typescript.svg",
   },
   {
-    name: "Go",
+    value: "go",
+    label: "Go",
     features: [
       {
         icon: <FaBolt />,
@@ -392,7 +399,7 @@ export const technologyStack = [
         desc: "Robust tools for networking, testing, and more—right out of the box.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Backend Systems & APIs", image: "/clients/illustration1.svg" },
       {
         name: "Cloud-Native Microservices",
@@ -411,7 +418,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/Go-Logo.png",
   },
   {
-    name: "PHP",
+    value: "php",
+    label: "PHP",
     features: [
       {
         icon: <FaGlobe />,
@@ -439,7 +447,7 @@ export const technologyStack = [
         desc: "Tons of libraries, frameworks, and CMSs like WordPress and Drupal.",
       },
     ],
-    useCases: [
+    highlights: [
       {
         name: "CMS Development (WordPress, Joomla)",
         image: "/clients/illustration1.svg",
@@ -461,7 +469,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/php.png",
   },
   {
-    name: "Kotlin",
+    value: "kotlin",
+    label: "Kotlin",
     features: [
       {
         icon: <FaCode />,
@@ -489,7 +498,7 @@ export const technologyStack = [
         desc: "First-class support in IntelliJ IDEA and a growing set of official tools.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Android App Development", image: "/clients/illustration1.svg" },
       {
         name: "Backend Development (Ktor, Spring)",
@@ -514,7 +523,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/kotlin.png",
   },
   {
-    name: "Swift",
+    value: "swift",
+    label: "Swift",
     features: [
       {
         icon: <FaCode />,
@@ -542,7 +552,7 @@ export const technologyStack = [
         desc: "Tight integration with Xcode, SwiftUI, and Apple’s developer ecosystem.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "iOS & macOS Development", image: "/clients/illustration1.svg" },
       {
         name: "Cross-platform UI (SwiftUI)",
@@ -564,7 +574,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/swift.svg",
   },
   {
-    name: "Ruby",
+    value: "ruby",
+    label: "Ruby",
     features: [
       {
         icon: <FaCode />,
@@ -592,7 +603,7 @@ export const technologyStack = [
         desc: "Popular for scripting tasks and DevOps tooling.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Web Applications (Rails)", image: "/clients/illustration1.svg" },
       { name: "Scripting & Automation", image: "/clients/illustration2.svg" },
       { name: "MVP Prototyping", image: "/clients/illustration3.svg" },
@@ -608,7 +619,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/ruby.png",
   },
   {
-    name: "VB",
+    value: "vb",
+    label: "VB",
     features: [
       {
         icon: <FaCode />,
@@ -636,7 +648,7 @@ export const technologyStack = [
         desc: "Used in Office automation and legacy enterprise systems.",
       },
     ],
-    useCases: [
+    highlights: [
       {
         name: "Windows Desktop Applications",
         image: "/clients/illustration1.svg",
@@ -658,7 +670,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/vb.svg",
   },
   {
-    name: "R",
+    value: "r",
+    label: "R",
     features: [
       {
         icon: <FaCode />,
@@ -686,7 +699,7 @@ export const technologyStack = [
         desc: "Supports a variety of machine learning techniques and statistical modeling tools.",
       },
     ],
-    useCases: [
+    highlights: [
       {
         name: "Data Analysis & Reporting",
         image: "/clients/illustration1.svg",
@@ -702,7 +715,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/R.png",
   },
   {
-    name: "Julia",
+    value: "julia",
+    label: "Julia",
     features: [
       {
         icon: <FaBolt />,
@@ -730,7 +744,7 @@ export const technologyStack = [
         desc: "An expanding ecosystem of packages in machine learning, data science, and optimization.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Scientific Computing", image: "/clients/illustration1.svg" },
       { name: "Numerical Analysis", image: "/clients/illustration2.svg" },
       { name: "Machine Learning", image: "/clients/illustration3.svg" },
@@ -746,7 +760,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/julia.png",
   },
   {
-    name: "Dart",
+    value: "dart",
+    label: "Dart",
     features: [
       {
         icon: <FaCode />,
@@ -774,7 +789,7 @@ export const technologyStack = [
         desc: "Backed by Google and growing rapidly with packages for almost every need.",
       },
     ],
-    useCases: [
+    highlights: [
       {
         name: "Mobile App Development (Flutter)",
         image: "/clients/illustration1.svg",
@@ -793,7 +808,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/dart.svg",
   },
   {
-    name: "Objective-C",
+    value: "objectiveC",
+    label: "Objective-C",
     features: [
       {
         icon: <FaCode />,
@@ -821,7 +837,7 @@ export const technologyStack = [
         desc: "Part of Apple's ecosystem with robust frameworks like Cocoa and Cocoa Touch.",
       },
     ],
-    useCases: [
+    highlights: [
       {
         name: "iOS Application Development",
         image: "/clients/illustration1.svg",
@@ -846,7 +862,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/objective-c.svg",
   },
   {
-    name: "React",
+    value: "react",
+    label: "React",
     features: [
       {
         icon: <FaCode />,
@@ -874,7 +891,7 @@ export const technologyStack = [
         desc: "A rich ecosystem of libraries and tools, including React Router, Redux, and Next.js, to help build robust applications.",
       },
     ],
-    useCases: [
+    highlights: [
       {
         name: "Single Page Applications (SPA)",
         image: "/clients/illustration1.svg",
@@ -902,7 +919,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/react.png",
   },
   {
-    name: "Vue.js",
+    value: "vueJs",
+    label: "Vue.JS",
     features: [
       {
         icon: <FaCode />,
@@ -930,7 +948,7 @@ export const technologyStack = [
         desc: "A rich ecosystem of libraries and tools, such as Vue Router, Vuex, and Vue CLI, for full-stack development.",
       },
     ],
-    useCases: [
+    highlights: [
       {
         name: "Single Page Applications (SPA)",
         image: "/clients/illustration1.svg",
@@ -951,7 +969,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/vue.png",
   },
   {
-    name: "Angular",
+    value: "angular",
+    label: "Angular",
     features: [
       {
         icon: <FaCode />,
@@ -979,7 +998,7 @@ export const technologyStack = [
         desc: "Angular provides a complete solution with built-in tools for routing, form handling, HTTP requests, and more.",
       },
     ],
-    useCases: [
+    highlights: [
       {
         name: "Enterprise Web Applications",
         image: "/clients/illustration1.svg",
@@ -997,7 +1016,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/angular.png",
   },
   {
-    name: "Django",
+    value: "django",
+    label: "Django",
     features: [
       {
         icon: <FaCode />,
@@ -1025,7 +1045,7 @@ export const technologyStack = [
         desc: "Django’s Object-Relational Mapping (ORM) system simplifies database management and interactions with the database.",
       },
     ],
-    useCases: [
+    highlights: [
       {
         name: "Content Management Systems",
         image: "/clients/illustration1.svg",
@@ -1044,7 +1064,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/django.svg",
   },
   {
-    name: "Laravel",
+    value: "laravel",
+    label: "Laravel",
     features: [
       {
         icon: <FaCode />,
@@ -1072,7 +1093,7 @@ export const technologyStack = [
         desc: "Laravel provides a clean, fluent interface for defining scheduled tasks and automating repetitive tasks.",
       },
     ],
-    useCases: [
+    highlights: [
       {
         name: "Content Management Systems",
         image: "/clients/illustration1.svg",
@@ -1088,7 +1109,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/laravel.png",
   },
   {
-    name: "MaterialUI",
+    value: "materialUi",
+    label: "Material UI",
     features: [
       {
         icon: <FaCode />,
@@ -1116,7 +1138,7 @@ export const technologyStack = [
         desc: "MUI supports built-in animations and transitions, enhancing the visual experience of your web applications.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Admin Dashboards", image: "/clients/illustration1.svg" },
       { name: "E-commerce Platforms", image: "/clients/illustration2.svg" },
       { name: "Mobile Web Applications", image: "/clients/illustration3.svg" },
@@ -1135,7 +1157,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/material-ui.svg",
   },
   {
-    name: "Bootstrap",
+    value: "bootstrap",
+    label: "Bootstrap",
     features: [
       {
         icon: <FaCode />,
@@ -1163,7 +1186,7 @@ export const technologyStack = [
         desc: "Ensures that your site looks great on all major browsers with minimal effort, reducing the need for browser-specific fixes.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Landing Pages", image: "/clients/illustration1.svg" },
       { name: "Corporate Websites", image: "/clients/illustration2.svg" },
       { name: "Admin Dashboards", image: "/clients/illustration3.svg" },
@@ -1176,7 +1199,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/bootstrap.svg",
   },
   {
-    name: "AntDesign",
+    value: "antDesign",
+    label: "Ant Design",
     features: [
       {
         icon: <FaCode />,
@@ -1204,7 +1228,7 @@ export const technologyStack = [
         desc: "Ant Design follows the principles of good design, providing clean, modern UI elements with a consistent look.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Admin Dashboards", image: "/clients/illustration1.svg" },
       { name: "Enterprise Applications", image: "/clients/illustration2.svg" },
       { name: "E-commerce Platforms", image: "/clients/illustration3.svg" },
@@ -1217,7 +1241,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/ant-design.svg",
   },
   {
-    name: "TailwindCSS",
+    value: "tailwindCss",
+    label: "Tailwind CSS",
     features: [
       {
         icon: <FaCode />,
@@ -1245,7 +1270,7 @@ export const technologyStack = [
         desc: "Tailwind CSS promotes minimal CSS output, helping improve load times and overall performance by only including the classes you use.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Landing Pages", image: "/clients/illustration1.svg" },
       { name: "Web Applications", image: "/clients/illustration2.svg" },
       { name: "E-commerce Sites", image: "/clients/illustration3.svg" },
@@ -1258,7 +1283,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/tailwind-css.svg",
   },
   {
-    name: "Blazor",
+    value: "blazor",
+    label: "Blazor",
     features: [
       {
         icon: <FaCode />,
@@ -1286,7 +1312,7 @@ export const technologyStack = [
         desc: "With .NET's extensive ecosystem, you have access to a wide range of libraries, tools, and resources for building powerful applications.",
       },
     ],
-    useCases: [
+    highlights: [
       {
         name: "Single-page Applications (SPA)",
         image: "/clients/illustration1.svg",
@@ -1302,7 +1328,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/blazor.png",
   },
   {
-    name: "HTML",
+    value: "html",
+    label: "HMTL",
     features: [
       {
         icon: <FaCode />,
@@ -1330,7 +1357,7 @@ export const technologyStack = [
         desc: "HTML integrates seamlessly with CSS, JavaScript, and other web technologies to enhance your web pages and applications.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Web Page Structure", image: "/clients/illustration1.svg" },
       { name: "Forms and Inputs", image: "/clients/illustration2.svg" },
       { name: "Media Embedding", image: "/clients/illustration3.svg" },
@@ -1343,7 +1370,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/html.png",
   },
   {
-    name: "CSS",
+    value: "css",
+    label: "CSS",
     features: [
       {
         icon: <FaCode />,
@@ -1371,7 +1399,7 @@ export const technologyStack = [
         desc: "CSS offers advanced layout systems like Flexbox and Grid for building complex, responsive layouts easily.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Page Styling", image: "/clients/illustration1.svg" },
       { name: "Responsive Layouts", image: "/clients/illustration2.svg" },
       { name: "Typography & Fonts", image: "/clients/illustration3.svg" },
@@ -1384,7 +1412,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/css.png",
   },
   {
-    name: "MongoDB",
+    value: "mongoDb",
+    label: "MongoDB",
     features: [
       {
         icon: <FaServer />,
@@ -1412,7 +1441,7 @@ export const technologyStack = [
         desc: "MongoDB offers powerful aggregation capabilities, enabling complex data processing and transformation directly within the database.",
       },
     ],
-    useCases: [
+    highlights: [
       {
         name: "Content Management Systems",
         image: "/clients/illustration1.svg",
@@ -1431,7 +1460,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/mongoDB.png",
   },
   {
-    name: "PostgreSQL",
+    value: "postgreSql",
+    label: "PostgreSQL",
     features: [
       {
         icon: <FaServer />,
@@ -1459,7 +1489,7 @@ export const technologyStack = [
         desc: "PostgreSQL uses Multi-Version Concurrency Control (MVCC) for high concurrency, ensuring smooth transactions under heavy load.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Web Applications", image: "/clients/illustration1.svg" },
       { name: "Geospatial Applications", image: "/clients/illustration2.svg" },
       { name: "Data Warehousing", image: "/clients/illustration3.svg" },
@@ -1472,7 +1502,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/postgre-sql.png",
   },
   {
-    name: "MySQL",
+    value: "mySql",
+    label: "MySQL",
     features: [
       {
         icon: <FaServer />,
@@ -1500,7 +1531,7 @@ export const technologyStack = [
         desc: "MySQL supports scalability and high availability through replication and clustering, ideal for large-scale applications.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Web Applications", image: "/clients/illustration1.svg" },
       { name: "E-commerce Platforms", image: "/clients/illustration2.svg" },
       {
@@ -1519,7 +1550,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/my-sql.png",
   },
   {
-    name: "Redis",
+    value: "redis",
+    label: "Redis",
     features: [
       {
         icon: <FaServer />,
@@ -1547,7 +1579,7 @@ export const technologyStack = [
         desc: "Redis offers a wide range of advanced data structures like strings, lists, sets, sorted sets, hashes, bitmaps, and hyperloglogs.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Caching", image: "/clients/illustration1.svg" },
       { name: "Session Management", image: "/clients/illustration2.svg" },
       { name: "Real-time Analytics", image: "/clients/illustration3.svg" },
@@ -1563,7 +1595,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/redis.png",
   },
   {
-    name: "SQLite",
+    value: "sqlite",
+    label: "SQLite",
     features: [
       {
         icon: <FaServer />,
@@ -1591,7 +1624,7 @@ export const technologyStack = [
         desc: "SQLite supports full SQL queries, providing developers with the power of relational databases in a lightweight format.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Mobile Applications", image: "/clients/illustration1.svg" },
       { name: "Embedded Systems", image: "/clients/illustration2.svg" },
       { name: "Web Browser Storage", image: "/clients/illustration3.svg" },
@@ -1604,7 +1637,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/sqlite.png",
   },
   {
-    name: "Oracle",
+    value: "oracle",
+    label: "Oracle",
     features: [
       {
         icon: <FaServer />,
@@ -1632,7 +1666,7 @@ export const technologyStack = [
         desc: "Oracle supports big data workloads, allowing businesses to store, analyze, and retrieve data at scale.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Enterprise Applications", image: "/clients/illustration1.svg" },
       { name: "Data Warehousing", image: "/clients/illustration2.svg" },
       { name: "CRM & ERP Systems", image: "/clients/illustration3.svg" },
@@ -1645,7 +1679,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/oracle.svg",
   },
   {
-    name: "MariaDB",
+    value: "mariadb",
+    label: "MariaDB",
     features: [
       {
         icon: <FaServer />,
@@ -1673,7 +1708,7 @@ export const technologyStack = [
         desc: "MariaDB provides robust security features, including encryption, authentication, and user roles.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Web Applications", image: "/clients/illustration1.svg" },
       { name: "E-commerce Platforms", image: "/clients/illustration2.svg" },
       {
@@ -1689,7 +1724,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/mariadb.svg",
   },
   {
-    name: "GraphQL",
+    value: "graphql",
+    label: "GraphQL",
     features: [
       {
         icon: <FaServer />,
@@ -1717,7 +1753,7 @@ export const technologyStack = [
         desc: "GraphQL APIs are introspective, meaning they allow clients to query the API schema itself for available operations and data.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Frontend Development", image: "/clients/illustration1.svg" },
       { name: "Real-time Applications", image: "/clients/illustration2.svg" },
       { name: "Mobile Apps", image: "/clients/illustration3.svg" },
@@ -1736,7 +1772,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/graphQL.png",
   },
   {
-    name: "Salesforce",
+    value: "salesforce",
+    label: "Salesforce",
     features: [
       {
         icon: <FaCode />,
@@ -1764,7 +1801,7 @@ export const technologyStack = [
         desc: "Access a marketplace of third-party apps and integrations to extend Salesforce functionality.",
       },
     ],
-    useCases: [
+    highlights: [
       {
         name: "Customer Relationship Management (CRM)",
         image: "/clients/illustration1.svg",
@@ -1785,7 +1822,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/salesforce.png",
   },
   {
-    name: "ServiceNow",
+    value: "serviceNow",
+    label: "ServiceNow",
     features: [
       {
         icon: <FaCode />,
@@ -1813,7 +1851,7 @@ export const technologyStack = [
         desc: "Real-time insights into service performance and operations.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "IT Service Management", image: "/clients/illustration1.svg" },
       { name: "Workflow Automation", image: "/clients/illustration2.svg" },
       {
@@ -1834,7 +1872,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/service-now.png",
   },
   {
-    name: "Apigee",
+    value: "apigee",
+    label: "Apigee",
     features: [
       {
         icon: <FaCode />,
@@ -1862,7 +1901,7 @@ export const technologyStack = [
         desc: "A portal for developers to access API documentation, test APIs, and get API keys.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "API Management", image: "/clients/illustration1.svg" },
       { name: "API Security", image: "/clients/illustration2.svg" },
       {
@@ -1876,7 +1915,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/apigee.svg",
   },
   {
-    name: "AdobeCommerce",
+    value: "adobeCommerce",
+    label: "Adobe Commerce",
     features: [
       {
         icon: <FaCode />,
@@ -1904,7 +1944,7 @@ export const technologyStack = [
         desc: "Use real-time analytics to optimize sales and improve customer experiences.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "E-commerce Websites", image: "/clients/illustration1.svg" },
       { name: "B2B & B2C Online Stores", image: "/clients/illustration2.svg" },
       {
@@ -1919,7 +1959,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/adobe-commerce.png",
   },
   {
-    name: "PowerBI",
+    value: "powerBi",
+    label: "Power BI",
     features: [
       {
         icon: <FaCode />,
@@ -1947,7 +1988,7 @@ export const technologyStack = [
         desc: "Create custom visualizations to meet specific business needs.",
       },
     ],
-    useCases: [
+    highlights: [
       {
         name: "Business Intelligence & Analytics",
         image: "/clients/illustration1.svg",
@@ -1971,7 +2012,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/powerbi.png",
   },
   {
-    name: "MuleSoft",
+    value: "muleSoft",
+    label: "MuleSoft",
     features: [
       {
         icon: <FaCode />,
@@ -1999,7 +2041,7 @@ export const technologyStack = [
         desc: "Transform data formats for smooth interoperability between systems.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "API Integration", image: "/clients/illustration1.svg" },
       { name: "Cloud Integration", image: "/clients/illustration2.svg" },
       {
@@ -2020,7 +2062,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/mulesoft.png",
   },
   {
-    name: "Dynamic365",
+    value: "dynamics365",
+    label: "Dynamics 365",
     features: [
       {
         icon: <FaCode />,
@@ -2048,7 +2091,7 @@ export const technologyStack = [
         desc: "Out-of-the-box integration with Office 365, Power BI, and other Microsoft products.",
       },
     ],
-    useCases: [
+    highlights: [
       {
         name: "Customer Relationship Management",
         image: "/clients/illustration1.svg",
@@ -2069,7 +2112,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/dynamic365.png",
   },
   {
-    name: "Workday",
+    value: "workday",
+    label: "Workday",
     features: [
       {
         icon: <FaCode />,
@@ -2097,7 +2141,7 @@ export const technologyStack = [
         desc: "Manage payroll, compensation, and talent development seamlessly.",
       },
     ],
-    useCases: [
+    highlights: [
       {
         name: "Human Resources Management",
         image: "/clients/illustration1.svg",
@@ -2118,7 +2162,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/workday.png",
   },
   {
-    name: "WordPress",
+    value: "wordPress",
+    label: "Wordpress",
     features: [
       {
         icon: <FaCode />,
@@ -2146,7 +2191,7 @@ export const technologyStack = [
         desc: "Supports custom post types, media, user roles, and more for any kind of website.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Blogging Platforms", image: "/clients/illustration1.svg" },
       { name: "Business Websites", image: "/clients/illustration2.svg" },
       {
@@ -2161,7 +2206,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/wordpress.png",
   },
   {
-    name: "Drupal",
+    value: "drupal",
+    label: "Drupal",
     features: [
       {
         icon: <FaCode />,
@@ -2189,7 +2235,7 @@ export const technologyStack = [
         desc: "Strong focus on security, caching, and performance optimization.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Enterprise Websites", image: "/clients/illustration1.svg" },
       { name: "Government & NGO Portals", image: "/clients/illustration2.svg" },
       { name: "Educational Platforms", image: "/clients/illustration3.svg" },
@@ -2204,7 +2250,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/drupal.png",
   },
   {
-    name: "Contentful",
+    value: "contentful",
+    label: "Contentful",
     features: [
       {
         icon: <FaCode />,
@@ -2232,7 +2279,7 @@ export const technologyStack = [
         desc: "Designed for speed, uptime, and enterprise-level scalability.",
       },
     ],
-    useCases: [
+    highlights: [
       {
         name: "Headless Web Applications",
         image: "/clients/illustration1.svg",
@@ -2247,7 +2294,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/contentful.png",
   },
   {
-    name: "Joomla",
+    value: "joomla",
+    label: "Joomla",
     features: [
       {
         icon: <FaCode />,
@@ -2275,7 +2323,7 @@ export const technologyStack = [
         desc: "Robust tools to manage content, images, and documents easily.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Corporate Websites", image: "/clients/illustration1.svg" },
       { name: "Government Portals", image: "/clients/illustration2.svg" },
       { name: "Online Communities", image: "/clients/illustration3.svg" },
@@ -2287,7 +2335,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/joomla.png",
   },
   {
-    name: "Sitecore",
+    value: "sitecore",
+    label: "Sitecore",
     features: [
       {
         icon: <FaCode />,
@@ -2315,7 +2364,7 @@ export const technologyStack = [
         desc: "Integrated tools to design and execute automated customer journeys.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Enterprise Portals", image: "/clients/illustration1.svg" },
       {
         name: "Personalized Marketing Platforms",
@@ -2339,7 +2388,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/sitecore.png",
   },
   {
-    name: "Shopify",
+    value: "shopify",
+    label: "Shopify",
     features: [
       {
         icon: <FaCode />,
@@ -2367,7 +2417,7 @@ export const technologyStack = [
         desc: "Handles scaling, PCI compliance, and global infrastructure for your online store.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Online Stores", image: "/clients/illustration1.svg" },
       { name: "Dropshipping Businesses", image: "/clients/illustration2.svg" },
       { name: "Mobile Shopping Apps", image: "/clients/illustration3.svg" },
@@ -2379,7 +2429,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/shopify.png",
   },
   {
-    name: "Magento",
+    value: "magento",
+    label: "Magneto",
     features: [
       {
         icon: <FaCode />,
@@ -2407,7 +2458,7 @@ export const technologyStack = [
         desc: "Extensive ecosystem of developers, plugins, and resources.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Large E-commerce Stores", image: "/clients/illustration1.svg" },
       { name: "Multi-store Retailers", image: "/clients/illustration2.svg" },
       { name: "Global Brands", image: "/clients/illustration3.svg" },
@@ -2422,7 +2473,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/magento.png",
   },
   {
-    name: "WooCommerce",
+    value: "wooCommerce",
+    label: "WooCommerce",
     features: [
       {
         icon: <FaCode />,
@@ -2450,7 +2502,7 @@ export const technologyStack = [
         desc: "Extensive documentation and active global community.",
       },
     ],
-    useCases: [
+    highlights: [
       {
         name: "Small Business E-commerce",
         image: "/clients/illustration1.svg",
@@ -2465,7 +2517,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/woo.png",
   },
   {
-    name: "BigCommerce",
+    value: "bigCommerce",
+    label: "BigCommerce",
     features: [
       {
         icon: <FaCode />,
@@ -2493,7 +2546,7 @@ export const technologyStack = [
         desc: "Connect seamlessly with apps, payment providers, and shipping solutions.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Enterprise E-commerce", image: "/clients/illustration1.svg" },
       { name: "B2B & B2C Commerce", image: "/clients/illustration2.svg" },
       { name: "Multi-channel Selling", image: "/clients/illustration3.svg" },
@@ -2505,7 +2558,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/bigcommerce.png",
   },
   {
-    name: "PrestaShop",
+    value: "prestaShop",
+    label: "PrestaShop",
     features: [
       {
         icon: <FaCode />,
@@ -2533,7 +2587,7 @@ export const technologyStack = [
         desc: "Large global user base with extensive documentation and support forums.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "SMB Online Stores", image: "/clients/illustration1.svg" },
       {
         name: "Custom E-commerce Projects",
@@ -2548,7 +2602,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/prestashop.png",
   },
   {
-    name: "AWS",
+    value: "aws",
+    label: "aws",
     features: [
       {
         icon: <FaServer />,
@@ -2576,7 +2631,7 @@ export const technologyStack = [
         desc: "Advanced machine learning tools like SageMaker, Rekognition, and Comprehend.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Enterprise Applications", image: "/clients/illustration1.svg" },
       { name: "Cloud-native Apps", image: "/clients/illustration2.svg" },
       { name: "Big Data & Analytics", image: "/clients/illustration3.svg" },
@@ -2591,7 +2646,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/aws.png",
   },
   {
-    name: "Azure",
+    value: "azure",
+    label: "Azure",
     features: [
       {
         icon: <FaServer />,
@@ -2619,7 +2675,7 @@ export const technologyStack = [
         desc: "Powerful cognitive services, ML models, and advanced data analytics tools.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Enterprise Workloads", image: "/clients/illustration1.svg" },
       { name: "Cloud Migrations", image: "/clients/illustration2.svg" },
       { name: "AI & Analytics", image: "/clients/illustration3.svg" },
@@ -2631,7 +2687,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/azure.png",
   },
   {
-    name: "GoogleCloud",
+    value: "googleCloud",
+    label: "Google Cloud",
     features: [
       {
         icon: <FaServer />,
@@ -2659,7 +2716,7 @@ export const technologyStack = [
         desc: "World-class models and APIs for vision, speech, NLP, and AutoML.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Modern App Development", image: "/clients/illustration1.svg" },
       { name: "Data Lakes & Analytics", image: "/clients/illustration2.svg" },
       { name: "Machine Learning Models", image: "/clients/illustration3.svg" },
@@ -2671,7 +2728,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/google-cloud.svg",
   },
   {
-    name: "Docker",
+    value: "docker",
+    label: "Docker",
     features: [
       {
         icon: <FaBox />,
@@ -2699,7 +2757,7 @@ export const technologyStack = [
         desc: "Access pre-built images and share containers via Docker Hub for faster development.",
       },
     ],
-    useCases: [
+    highlights: [
       {
         name: "Microservices Architecture",
         image: "/clients/illustration1.svg",
@@ -2720,7 +2778,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/docker.png",
   },
   {
-    name: "Kubernetes",
+    value: "kubernetes",
+    label: "Kubernetes",
     features: [
       {
         icon: <FaNetworkWired />,
@@ -2748,7 +2807,7 @@ export const technologyStack = [
         desc: "Run consistently on-premises, AWS, GCP, Azure, or any cloud provider.",
       },
     ],
-    useCases: [
+    highlights: [
       {
         name: "Large-Scale Microservices",
         image: "/clients/illustration1.svg",
@@ -2772,7 +2831,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/kubernetes.png",
   },
   {
-    name: "OpenShift",
+    value: "openShift",
+    label: "OpenShift",
     features: [
       {
         icon: <FaShieldAlt />,
@@ -2800,7 +2860,7 @@ export const technologyStack = [
         desc: "Deploy on-premises, public clouds, or edge with consistent management.",
       },
     ],
-    useCases: [
+    highlights: [
       {
         name: "Enterprise-Grade Container Platforms",
         image: "/clients/illustration1.svg",
@@ -2824,7 +2884,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/openshift.svg",
   },
   {
-    name: "Jenkins",
+    value: "jenkins",
+    label: "Jenkins",
     features: [
       {
         icon: <FaPlug />,
@@ -2852,7 +2913,7 @@ export const technologyStack = [
         desc: "Role-based permissions and audit logs for enterprise security compliance.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Legacy CI/CD Pipelines", image: "/clients/illustration1.svg" },
       {
         name: "Multi-language Builds (Java, Python, etc.)",
@@ -2873,7 +2934,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/jenkins.png",
   },
   {
-    name: "GitLabCI/CD",
+    value: "gitlab",
+    label: "GitLabCI/CD",
     features: [
       {
         icon: <FaGitAlt />,
@@ -2901,7 +2963,7 @@ export const technologyStack = [
         desc: "Native support for Kubernetes deployments with Auto DevOps and Helm.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Cloud-Native CI/CD", image: "/clients/illustration1.svg" },
       { name: "DevSecOps Pipelines", image: "/clients/illustration2.svg" },
       { name: "Monorepo Management", image: "/clients/illustration3.svg" },
@@ -2916,7 +2978,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/gitlab.png",
   },
   {
-    name: "Terraform",
+    value: "terraform",
+    label: "Terraform",
     features: [
       {
         icon: <FaCloud />,
@@ -2944,7 +3007,7 @@ export const technologyStack = [
         desc: "Replace outdated resources instead of modifying them for consistency.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Cloud Provisioning", image: "/clients/illustration1.svg" },
       {
         name: "Kubernetes Infrastructure",
@@ -2959,7 +3022,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/terraform.svg",
   },
   {
-    name: "Ansible",
+    value: "ansible",
+    label: "Ansible",
     features: [
       {
         icon: <FaTerminal />,
@@ -2987,7 +3051,7 @@ export const technologyStack = [
         desc: "Pre-built modules for AWS, Azure, GCP, and on-premises systems.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Configuration Management", image: "/clients/illustration1.svg" },
       { name: "Patch Management", image: "/clients/illustration2.svg" },
       { name: "Network Automation", image: "/clients/illustration3.svg" },
@@ -2999,7 +3063,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/ansible.png",
   },
   {
-    name: "Scikit-learn",
+    value: "scikitLearn",
+    label: "Scikit-learn",
     features: [
       {
         icon: <FaRobot />,
@@ -3027,7 +3092,7 @@ export const technologyStack = [
         desc: "Well-documented with beginner-friendly APIs and extensive community tutorials.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Prototyping ML Models", image: "/clients/illustration1.svg" },
       { name: "Academic Research", image: "/clients/illustration2.svg" },
       { name: "Feature Engineering", image: "/clients/illustration3.svg" },
@@ -3042,7 +3107,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/scikitLearn.png",
   },
   {
-    name: "XGBoost",
+    value: "xgboost",
+    label: "XGBoost",
     features: [
       {
         icon: <FaTree />,
@@ -3070,7 +3136,7 @@ export const technologyStack = [
         desc: "Built-in tools (SHAP, gain-based) to interpret model decisions.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Structured/Tabular Data", image: "/clients/illustration1.svg" },
       { name: "Kaggle Competitions", image: "/clients/illustration2.svg" },
       { name: "Financial Risk Modeling", image: "/clients/illustration3.svg" },
@@ -3085,7 +3151,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/xgboost.png",
   },
   {
-    name: "LightGBM",
+    value: "lightgbm",
+    label: "LightGBM",
     features: [
       {
         icon: <FaLeaf />,
@@ -3113,7 +3180,7 @@ export const technologyStack = [
         desc: "Integrates with Azure ML, .NET, and other Microsoft tools.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Real-Time Predictions", image: "/clients/illustration1.svg" },
       { name: "Recommendation Systems", image: "/clients/illustration2.svg" },
       { name: "Anomaly Detection", image: "/clients/illustration3.svg" },
@@ -3125,7 +3192,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/lightGBM.png",
   },
   {
-    name: "TensorFlow",
+    value: "tensorflow",
+    label: "TensorFlow",
     features: [
       {
         icon: <FaNetworkWired />,
@@ -3153,7 +3221,7 @@ export const technologyStack = [
         desc: "Optimized for Google TPUs and AI Platform for distributed training.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Enterprise ML Pipelines", image: "/clients/illustration1.svg" },
       { name: "Computer Vision (CV)", image: "/clients/illustration2.svg" },
       {
@@ -3168,7 +3236,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/tensorflow.png",
   },
   {
-    name: "PyTorch",
+    value: "pytorch",
+    label: "PyTorch",
     features: [
       {
         icon: <FaCode />,
@@ -3196,7 +3265,7 @@ export const technologyStack = [
         desc: "Automatic differentiation for gradient-based optimization (e.g., custom loss functions).",
       },
     ],
-    useCases: [
+    highlights: [
       {
         name: "Research & Experimentation",
         image: "/clients/illustration1.svg",
@@ -3220,7 +3289,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/PyTorch.png`",
   },
   {
-    name: "Keras",
+    value: "keras",
+    label: "Keras",
     features: [
       {
         icon: <FaUserAlt />,
@@ -3248,7 +3318,7 @@ export const technologyStack = [
         desc: "Export models to TFLite, ONNX, or web formats for edge/cloud deployment.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Educational Projects", image: "/clients/illustration1.svg" },
       { name: "Quick Proof-of-Concepts", image: "/clients/illustration2.svg" },
       { name: "Startup MVPs", image: "/clients/illustration3.svg" },
@@ -3263,7 +3333,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/Keras.png",
   },
   {
-    name: "MXNet",
+    value: "mxnet",
+    label: "MXNet",
     features: [
       {
         icon: <FaLanguage />,
@@ -3291,7 +3362,7 @@ export const technologyStack = [
         desc: "Strong toolkit for CV (GluonCV) and NLP (GluonNLP) with pre-trained models.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "AWS-Based ML Workloads", image: "/clients/illustration1.svg" },
       { name: "Multi-Language Teams", image: "/clients/illustration2.svg" },
       {
@@ -3309,7 +3380,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/mxnet.png",
   },
   {
-    name: "Pandas",
+    value: "pandas",
+    label: "Pandas",
     features: [
       {
         icon: <FaTable />,
@@ -3337,7 +3409,7 @@ export const technologyStack = [
         desc: "Read/write CSV, Excel, SQL, JSON, and Parquet files with minimal code.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Data Wrangling", image: "/clients/illustration1.svg" },
       {
         name: "Exploratory Data Analysis (EDA)",
@@ -3352,7 +3424,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/pandas.svg",
   },
   {
-    name: "NumPy",
+    value: "numpy",
+    label: "NumPy",
     features: [
       {
         icon: <FaCube />,
@@ -3380,7 +3453,7 @@ export const technologyStack = [
         desc: "Core dependency for Pandas, SciPy, and deep learning frameworks.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Scientific Computing", image: "/clients/illustration1.svg" },
       { name: "Image Processing", image: "/clients/illustration2.svg" },
       { name: "Simulations & Modeling", image: "/clients/illustration3.svg" },
@@ -3391,7 +3464,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/numpy.png",
   },
   {
-    name: "Matplotlib",
+    value: "matplotlib",
+    label: "Matplotlib",
     features: [
       {
         icon: <FaChartLine />,
@@ -3419,7 +3493,7 @@ export const technologyStack = [
         desc: "Base library for Seaborn, Pandas plotting, and other visualization tools.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Academic Papers", image: "/clients/illustration1.svg" },
       {
         name: "Exploratory Data Analysis",
@@ -3434,7 +3508,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/matplotlib.png",
   },
   {
-    name: "Seaborn",
+    value: "seaborn",
+    label: "Seaborn",
     features: [
       {
         icon: <FaPalette />,
@@ -3462,7 +3537,7 @@ export const technologyStack = [
         desc: "Specialized tools for bar plots, box plots, and swarm plots by category.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Statistical EDA", image: "/clients/illustration1.svg" },
       { name: "Correlation Analysis", image: "/clients/illustration2.svg" },
       {
@@ -3477,7 +3552,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/seaborn.png",
   },
   {
-    name: "Tableau",
+    value: "tableau",
+    label: "Tableau",
     features: [
       {
         icon: <FaEye />,
@@ -3505,7 +3581,7 @@ export const technologyStack = [
         desc: "Clean and transform data visually before analysis (ETL without code).",
       },
     ],
-    useCases: [
+    highlights: [
       {
         name: "Exploratory Data Analysis",
         image: "/clients/illustration1.svg",
@@ -3520,7 +3596,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/Tableau.png",
   },
   {
-    name: "Excel",
+    value: "excel",
+    label: "Excel",
     features: [
       {
         icon: <FaTable />,
@@ -3548,7 +3625,7 @@ export const technologyStack = [
         desc: "Optimization and scenario modeling for business decisions.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Financial Modeling", image: "/clients/illustration1.svg" },
       { name: "Ad-Hoc Data Analysis", image: "/clients/illustration2.svg" },
       { name: "Budgeting & Forecasting", image: "/clients/illustration3.svg" },
@@ -3560,7 +3637,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/excel.png",
   },
   {
-    name: "Looker",
+    value: "looker",
+    label: "Looker",
     features: [
       {
         icon: <FaCodeBranch />,
@@ -3588,7 +3666,7 @@ export const technologyStack = [
         desc: "Direct querying of databases without pre-aggregation or extracts.",
       },
     ],
-    useCases: [
+    highlights: [
       {
         name: "Centralized Data Modeling",
         image: "/clients/illustration1.svg",
@@ -3606,7 +3684,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/Looker.png",
   },
   {
-    name: "ApacheSpark",
+    value: "apacheSpark",
+    label: "Apache Spark",
     features: [
       {
         icon: <FaBolt />,
@@ -3634,7 +3713,7 @@ export const technologyStack = [
         desc: "Connect to HDFS, S3, Cassandra, Kafka, and more.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Large-Scale ETL", image: "/clients/illustration1.svg" },
       {
         name: "Real-Time Stream Processing",
@@ -3652,7 +3731,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/spark.png",
   },
   {
-    name: "ApacheAirflow",
+    value: "apacheAirflow",
+    label: "Apache Airflow",
     features: [
       {
         icon: <FaProjectDiagram />,
@@ -3680,7 +3760,7 @@ export const technologyStack = [
         desc: "Cron-like syntax for time-based or event-triggered executions.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Data Pipeline Automation", image: "/clients/illustration1.svg" },
       { name: "ETL/ELT Workflows", image: "/clients/illustration2.svg" },
       { name: "MLOps Orchestration", image: "/clients/illustration3.svg" },
@@ -3698,7 +3778,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/airflow.png",
   },
   {
-    name: "Kafka",
+    value: "kafka",
+    label: "Kafka",
     features: [
       {
         icon: <FaStream />,
@@ -3726,7 +3807,7 @@ export const technologyStack = [
         desc: "SSL, SASL, ACLs, and role-based access control (RBAC).",
       },
     ],
-    useCases: [
+    highlights: [
       {
         name: "Real-Time Event Processing",
         image: "/clients/illustration1.svg",
@@ -3741,7 +3822,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/kafka.png",
   },
   {
-    name: "Next.js",
+    value: "nextJs",
+    label: "Next.JS",
     features: [
       {
         icon: <FaReact />,
@@ -3769,7 +3851,7 @@ export const technologyStack = [
         desc: "Support for CSS Modules, Sass, and styled-jsx out of the box for seamless styling.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "SEO-Friendly Web Apps", image: "/clients/illustration1.svg" },
       { name: "E-Commerce Sites", image: "/clients/illustration2.svg" },
       { name: "Marketing Websites", image: "/clients/illustration3.svg" },
@@ -3781,7 +3863,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/nextjs.svg",
   },
   {
-    name: "Gatsby",
+    value: "gatsby",
+    label: "Gatsby",
     features: [
       {
         icon: <FaReact />,
@@ -3809,7 +3892,7 @@ export const technologyStack = [
         desc: "Offline support, service workers, and web app manifests built-in.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Content-Rich Websites", image: "/clients/illustration1.svg" },
       {
         name: "Marketing & Landing Pages",
@@ -3827,7 +3910,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/gatsby.svg",
   },
   {
-    name: "Hugo",
+    value: "hugo",
+    label: "Hugo",
     features: [
       {
         icon: <FaTachometerAlt />,
@@ -3855,7 +3939,7 @@ export const technologyStack = [
         desc: "Deploy to Netlify, GitHub Pages, or any web server with minimal configuration.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Blogs & Personal Sites", image: "/clients/illustration1.svg" },
       { name: "Documentation Portals", image: "/clients/illustration2.svg" },
       {
@@ -3870,7 +3954,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/hugo.svg",
   },
   {
-    name: "Figma",
+    value: "figma",
+    label: "Figma",
     features: [
       {
         icon: <FaGlobe />,
@@ -3898,7 +3983,7 @@ export const technologyStack = [
         desc: "1,000+ plugins for icons, charts, accessibility checks, and more.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Team-Based UI/UX Design", image: "/clients/illustration1.svg" },
       { name: "Design Systems", image: "/clients/illustration2.svg" },
       { name: "Remote Collaboration", image: "/clients/illustration3.svg" },
@@ -3913,7 +3998,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/figma.svg",
   },
   {
-    name: "AdobeXD",
+    value: "adobeXd",
+    label: "Adobe XD",
     features: [
       {
         icon: <FaMagic />,
@@ -3941,7 +4027,7 @@ export const technologyStack = [
         desc: "Test prototypes live on iOS/Android devices via the Adobe XD app.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "High-Fidelity Prototypes", image: "/clients/illustration1.svg" },
       { name: "Adobe-Centric Workflows", image: "/clients/illustration2.svg" },
       { name: "Voice & Game Design", image: "/clients/illustration3.svg" },
@@ -3953,7 +4039,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/adobeXd.png",
   },
   {
-    name: "Sketch",
+    value: "sketch",
+    label: "Sketch",
     features: [
       {
         icon: <FaApple />,
@@ -3981,7 +4068,7 @@ export const technologyStack = [
         desc: "Extend functionality with plugins for data merging, accessibility, and more.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Mac-Based UI Design", image: "/clients/illustration1.svg" },
       { name: "Design System Creation", image: "/clients/illustration2.svg" },
       { name: "High-Fidelity Mockups", image: "/clients/illustration3.svg" },
@@ -3993,7 +4080,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/sketch.svg",
   },
   {
-    name: "InVision",
+    value: "inVision",
+    label: "InVision",
     features: [
       {
         icon: <FaHandshake />,
@@ -4021,7 +4109,7 @@ export const technologyStack = [
         desc: "Import designs from other tools for prototyping and collaboration.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Enterprise Design Ops", image: "/clients/illustration1.svg" },
       { name: "Client Presentations", image: "/clients/illustration2.svg" },
       { name: "User Testing & Feedback", image: "/clients/illustration3.svg" },
@@ -4033,7 +4121,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/invision.png",
   },
   {
-    name: "Selenium",
+    value: "selenium",
+    label: "Selenium",
     features: [
       {
         icon: <FaGlobe />,
@@ -4061,7 +4150,7 @@ export const technologyStack = [
         desc: "Backed by a large community, extensive documentation, and wide industry adoption.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Enterprise UI Testing", image: "/clients/illustration1.svg" },
       { name: "Cross-Browser Validation", image: "/clients/illustration2.svg" },
       { name: "CI/CD Integrations", image: "/clients/illustration3.svg" },
@@ -4076,7 +4165,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/Selenium.png",
   },
   {
-    name: "Cypress",
+    value: "cypress",
+    label: "Cypress",
     features: [
       {
         icon: <FaBolt />,
@@ -4104,7 +4194,7 @@ export const technologyStack = [
         desc: "Custom commands, reporting, code coverage, and visual testing via plugins.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Modern Web App Testing", image: "/clients/illustration1.svg" },
       { name: "CI-Friendly Automation", image: "/clients/illustration2.svg" },
       {
@@ -4119,7 +4209,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/cypress.svg",
   },
   {
-    name: "Playwright",
+    value: "playwright",
+    label: "Playwright",
     features: [
       {
         icon: <FaLaptopCode />,
@@ -4147,7 +4238,7 @@ export const technologyStack = [
         desc: "Supports testing modern web apps including SPAs, PWAs, and server-rendered apps.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Headless Automation", image: "/clients/illustration1.svg" },
       { name: "CI/CD Test Pipelines", image: "/clients/illustration2.svg" },
       { name: "Multi-Browser Coverage", image: "/clients/illustration3.svg" },
@@ -4159,7 +4250,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/Playwright.svg",
   },
   {
-    name: "JUnit",
+    value: "junit",
+    label: "JUnit",
     features: [
       {
         icon: <FaJava />,
@@ -4187,7 +4279,7 @@ export const technologyStack = [
         desc: "Long-standing support, tooling, IDE integration, and community resources.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Java Backend Testing", image: "/clients/illustration1.svg" },
       {
         name: "Spring Application Testing",
@@ -4202,7 +4294,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/Junit.png",
   },
   {
-    name: "TestNG",
+    value: "testNg",
+    label: "TestNG",
     features: [
       {
         icon: <FaToolbox />,
@@ -4230,7 +4323,7 @@ export const technologyStack = [
         desc: "Generates detailed HTML reports and integrates with CI tools.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Complex Test Suites", image: "/clients/illustration1.svg" },
       { name: "Parallel Test Execution", image: "/clients/illustration2.svg" },
       { name: "Enterprise Java Projects", image: "/clients/illustration3.svg" },
@@ -4242,7 +4335,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/test-ng.png",
   },
   {
-    name: "Mocha",
+    value: "mocha",
+    label: "Mocha",
     features: [
       {
         icon: <FaJsSquare />,
@@ -4270,7 +4364,7 @@ export const technologyStack = [
         desc: "Supports integrations like Chai, Sinon, Istanbul, and more.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Node.js API Testing", image: "/clients/illustration1.svg" },
       { name: "Modular Microservices", image: "/clients/illustration2.svg" },
       { name: "Custom Assertion Logic", image: "/clients/illustration3.svg" },
@@ -4285,7 +4379,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/mocha.svg",
   },
   {
-    name: "Jest",
+    value: "jest",
+    label: "Jest",
     features: [
       {
         icon: <FaReact />,
@@ -4313,7 +4408,7 @@ export const technologyStack = [
         desc: "Easily manage tests for monorepos or large-scale apps with multiple configs.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "React App Testing", image: "/clients/illustration1.svg" },
       {
         name: "Snapshot Regression Checks",
@@ -4328,7 +4423,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/jest.svg",
   },
   {
-    name: "Postman",
+    value: "postman",
+    label: "Postman",
     features: [
       {
         icon: <FaPaperPlane />,
@@ -4356,7 +4452,7 @@ export const technologyStack = [
         desc: "Integrate with pipelines using Newman CLI or API monitoring tools.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Manual API Testing", image: "/clients/illustration1.svg" },
       {
         name: "Automated Regression Testing",
@@ -4374,7 +4470,8 @@ export const technologyStack = [
     imageSrc: "/clients/technologies/postman.svg",
   },
   {
-    name: "SoapUI",
+    value: "soapui",
+    label: "SoapUI",
     features: [
       {
         icon: <FaSoap />,
@@ -4402,7 +4499,7 @@ export const technologyStack = [
         desc: "Supports Groovy scripting for advanced test logic and custom workflows.",
       },
     ],
-    useCases: [
+    highlights: [
       { name: "Enterprise SOAP APIs", image: "/clients/illustration1.svg" },
       {
         name: "Legacy System Integration",

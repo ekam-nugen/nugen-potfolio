@@ -1,13 +1,17 @@
-import { reviewPlatforms, TechDescriptionProps } from "@/src/json/technologyDescription";
+import {
+  reviewPlatforms,
+  TechDescriptionProps,
+} from "@/src/json/technologyDescription";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 const TechDescription: React.FC<TechDescriptionProps> = ({
-  techName,
+  value,
+  label,
   tagline,
   imageSrc,
   features,
-  useCases,
+  highlights,
 }) => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const [fade, setFade] = useState(false);
@@ -26,7 +30,7 @@ const TechDescription: React.FC<TechDescriptionProps> = ({
           {/* Left Side: Title and Description */}
           <div className="lg:w-3/5 text-center lg:text-left">
             <h1 className="text-4xl md:text-5xl font-extrabold text-black drop-shadow-md mb-4">
-              {techName}
+              {label}
             </h1>
             <p className="text-lg md:text-xl text-[#ef8961] font-bold max-w-2xl mx-auto lg:mx-0">
               {tagline}
@@ -59,7 +63,7 @@ const TechDescription: React.FC<TechDescriptionProps> = ({
                 <div className="mx-auto mb-4 w-24 h-24 relative">
                   <Image
                     src={imageSrc}
-                    alt={`${techName} Logo`}
+                    alt={`${value} Logo`}
                     layout="fill"
                     objectFit="contain"
                     className="animate-bounce"
@@ -116,9 +120,7 @@ const TechDescription: React.FC<TechDescriptionProps> = ({
       {/* Features */}
       <section className="py-20 bg-white px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12">
-            Why {techName}?
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-12">Why {label}?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-left">
             {features.map((item, idx) => (
               <div
@@ -141,12 +143,12 @@ const TechDescription: React.FC<TechDescriptionProps> = ({
       <section className="py-20 bg-[#fdf4ee] px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Where {techName} Shines
+            Where {label} Shines
           </h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left - List */}
             <div className="space-y-6">
-              {useCases.map((item, idx) => (
+              {highlights.map((item, idx) => (
                 <div
                   key={idx}
                   onMouseEnter={() => setActiveIndex(idx)}
@@ -171,7 +173,7 @@ const TechDescription: React.FC<TechDescriptionProps> = ({
             <div className="relative h-80 md:h-[28rem] w-full">
               <img
                 key={activeIndex}
-                src={useCases[activeIndex]?.image}
+                src={highlights[activeIndex]?.image}
                 alt={`Use case ${activeIndex + 1}`}
                 className={`w-full h-full object-contain rounded-xl transition-opacity duration-500 ease-in-out ${
                   fade ? "opacity-0" : "opacity-100"
@@ -186,7 +188,7 @@ const TechDescription: React.FC<TechDescriptionProps> = ({
       <section className="bg-gradient-to-r from-[#ff7e5f] to-[#feb47b] py-16 px-6 text-white text-center shadow-inner">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to build something with {techName}?
+            Ready to build something with {label}?
           </h2>
           <p className="text-lg md:text-xl mb-6">
             Let’s help you create robust, scalable, and intelligent solutions.

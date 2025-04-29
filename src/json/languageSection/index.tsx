@@ -1,212 +1,589 @@
 export const data = {
   "Programming Languages": {
     "General-purpose": [
-      { name: "Python", icon: "/clients/technologies/python.png" },
-      { name: "Java", icon: "/clients/technologies/java.png" },
-      { name: "JavaScript", icon: "/clients/technologies/javascript.png" },
-      { name: "C#", icon: "/clients/technologies/csharp.png" },
-      { name: "C++", icon: "/clients/technologies/cpp.png" },
-      { name: "TypeScript", icon: "/clients/technologies/typescript.svg" },
-      { name: "Node.js", icon: "/clients/technologies/node-js.svg" },
-      { name: "Go", icon: "/clients/technologies/GO-Logo.png" },
-      { name: "PHP", icon: "/clients/technologies/php.png" },
-      { name: "Kotlin", icon: "/clients/technologies/kotlin.png" },
-      { name: "Swift", icon: "/clients/technologies/swift.svg" },
-      { name: "Ruby", icon: "/clients/technologies/ruby.png" },
-      { name: "VB", icon: "/clients/technologies/vb.svg" },
+      {
+        value: "python",
+        label: "Python",
+        icon: "/clients/technologies/python.png",
+      },
+      { value: "java", label: "Java", icon: "/clients/technologies/java.png" },
+      {
+        value: "javascript",
+        label: "JavaScript",
+        icon: "/clients/technologies/javascript.png",
+      },
+      {
+        value: "c-Sharp",
+        label: "C#",
+        icon: "/clients/technologies/csharp.png",
+      },
+      { value: "cpp", label: "C++", icon: "/clients/technologies/cpp.png" },
+      {
+        value: "typescript",
+        label: "TypeScript",
+        icon: "/clients/technologies/typescript.svg",
+      },
+      {
+        value: "nodeJs",
+        label: "Node.js",
+        icon: "/clients/technologies/node-js.svg",
+      },
+      { value: "go", label: "Go", icon: "/clients/technologies/GO-Logo.png" },
+      { value: "php", label: "PHP", icon: "/clients/technologies/php.png" },
+      {
+        value: "kotlin",
+        label: "Kotlin",
+        icon: "/clients/technologies/kotlin.png",
+      },
+      {
+        value: "swift",
+        label: "Swift",
+        icon: "/clients/technologies/swift.svg",
+      },
+      { value: "ruby", label: "Ruby", icon: "/clients/technologies/ruby.png" },
+      { value: "vb", label: "VB", icon: "/clients/technologies/vb.svg" },
     ],
     "Data Science": [
-      { name: "R", icon: "/clients/technologies/r.png" },
-      { name: "Julia", icon: "/clients/technologies/julia.png" },
+      { value: "r", label: "R", icon: "/clients/technologies/r.png" },
+      {
+        value: "julia",
+        label: "Julia",
+        icon: "/clients/technologies/julia.png",
+      },
     ],
     "Mobile App": [
-      { name: "Dart", icon: "/clients/technologies/dart.svg" },
-      { name: "Objective-C", icon: "/clients/technologies/objective-c.svg" },
+      { value: "dart", label: "Dart", icon: "/clients/technologies/dart.svg" },
+      {
+        value: "objectiveC",
+        label: "Objective-C",
+        icon: "/clients/technologies/objective-c.svg",
+      },
     ],
   },
   "Front-End": {
     javascript: [
-      { name: "React", icon: "/clients/technologies/react.png" },
-      { name: "JavaScript", icon: "/clients/technologies/javascript.png" },
-      { name: "TypeScript", icon: "/clients/technologies/typescript.svg" },
-      { name: "Vue.js", icon: "/clients/technologies/vue.png" },
-      { name: "Angular", icon: "/clients/technologies/angular.png" },
+      {
+        value: "react",
+        label: "React",
+        icon: "/clients/technologies/react.png",
+      },
+      {
+        value: "javascript",
+        label: "JavaScript",
+        icon: "/clients/technologies/javascript.png",
+      },
+      {
+        value: "typescript",
+        label: "TypeScript",
+        icon: "/clients/technologies/typescript.svg",
+      },
+      {
+        value: "vueJs",
+        label: "Vue.js",
+        icon: "/clients/technologies/vue.png",
+      },
+      {
+        value: "angular",
+        label: "Angular",
+        icon: "/clients/technologies/angular.png",
+      },
     ],
     "UI Libraries": [
-      { name: "MaterialUI", icon: "/clients/technologies/react.png" },
-      { name: "Bootstrap", icon: "/clients/technologies/vue.png" },
-      { name: "AntDesign", icon: "/clients/technologies/ant-design.svg" },
-      { name: "TailwindCSS", icon: "/clients/technologies/vue.png" },
-      { name: "Blazor", icon: "/clients/technologies/blazor.png" },
+      {
+        value: "materialUi",
+        label: "Material UI",
+        icon: "/clients/technologies/react.png",
+      },
+      {
+        value: "bootstrap",
+        label: "Bootstrap",
+        icon: "/clients/technologies/vue.png",
+      },
+      {
+        value: "antDesign",
+        label: "Ant Design",
+        icon: "/clients/technologies/ant-design.svg",
+      },
+      {
+        value: "tailwindCss",
+        label: "Tailwind CSS",
+        icon: "/clients/technologies/vue.png",
+      },
+      {
+        value: "blazor",
+        label: "Blazor",
+        icon: "/clients/technologies/blazor.png",
+      },
     ],
     "Markup Essentials": [
-      { name: "HTML", icon: "/clients/technologies/html.png" },
-      { name: "CSS", icon: "/clients/technologies/css.png" },
+      { value: "html", label: "HTML", icon: "/clients/technologies/html.png" },
+      { value: "css", label: "CSS", icon: "/clients/technologies/css.png" },
     ],
   },
-
   "Back-End": {
     Frameworks: [
-      { name: "Node.js", icon: "/clients/technologies/node-js.svg" },
-      { name: "Django", icon: "/clients/technologies/django.svg" },
-      { name: "Laravel", icon: "/clients/technologies/laravel.png" },
+      {
+        value: "nodeJs",
+        label: "Node.js",
+        icon: "/clients/technologies/node-js.svg",
+      },
+      {
+        value: "django",
+        label: "Django",
+        icon: "/clients/technologies/django.svg",
+      },
+      {
+        value: "laravel",
+        label: "Laravel",
+        icon: "/clients/technologies/laravel.png",
+      },
     ],
     Databases: [
-      { name: "MySQL", icon: "/clients/technologies/my-sql.png" },
-      { name: "PostgreSQL", icon: "/clients/technologies/postgre-sql.png" },
-      { name: "MongoDB", icon: "/clients/technologies/mongodb.png" },
-      { name: "Redis", icon: "/clients/technologies/redis.png" },
-      { name: "SQLite", icon: "/clients/technologies/sqlite.png" },
-      { name: "Oracle", icon: "/clients/technologies/oracle.svg" },
-      { name: "MariaDB", icon: "/clients/technologies/mariadb.svg" },
+      {
+        value: "mySql",
+        label: "MySQL",
+        icon: "/clients/technologies/my-sql.png",
+      },
+      {
+        value: "postgreSql",
+        label: "PostgreSQL",
+        icon: "/clients/technologies/postgre-sql.png",
+      },
+      {
+        value: "mongoDb",
+        label: "MongoDB",
+        icon: "/clients/technologies/mongodb.png",
+      },
+      {
+        value: "redis",
+        label: "Redis",
+        icon: "/clients/technologies/redis.png",
+      },
+      {
+        value: "sqlite",
+        label: "SQLite",
+        icon: "/clients/technologies/sqlite.png",
+      },
+      {
+        value: "oracle",
+        label: "Oracle",
+        icon: "/clients/technologies/oracle.svg",
+      },
+      {
+        value: "mariadb",
+        label: "MariaDB",
+        icon: "/clients/technologies/mariadb.svg",
+      },
     ],
     "API Development": [
-      { name: "REST", icon: "/clients/technologies/rest.png" },
-      { name: "GraphQL", icon: "/clients/technologies/graphql.png" },
-      { name: "gRPC", icon: "/clients/technologies/grpc.png" },
-      { name: "SOAP", icon: "/clients/technologies/soap.png" },
+      { value: "rest", label: "REST", icon: "/clients/technologies/rest.png" },
+      {
+        value: "graphql",
+        label: "GraphQL",
+        icon: "/clients/technologies/graphql.png",
+      },
+      { value: "grpc", label: "gRPC", icon: "/clients/technologies/grpc.png" },
+      { value: "soap", label: "SOAP", icon: "/clients/technologies/soap.png" },
     ],
   },
   Platforms: {
     "Solution & Resources": [
-      { name: "Salesforce", icon: "/clients/technologies/salesforce.png" },
       {
-        name: "AdobeCommerce",
+        value: "salesforce",
+        label: "Salesforce",
+        icon: "/clients/technologies/salesforce.png",
+      },
+      {
+        value: "adobeCommerce",
+        label: "Adobe Commerce",
         icon: "/clients/technologies/adobe-commerce.png",
       },
-      { name: "PowerBI", icon: "/clients/technologies/powerbi.png" },
-      { name: "ServiceNow", icon: "/clients/technologies/service-now.png" },
-      { name: "Apigee", icon: "/clients/technologies/apigee.svg" },
-      { name: "MuleSoft", icon: "/clients/technologies/mulesoft.png" },
-      { name: "Dynamic365", icon: "/clients/technologies/dynamic365.png" },
-      { name: "Workday", icon: "/clients/technologies/workday.png" },
+      {
+        value: "powerBi",
+        label: "Power BI",
+        icon: "/clients/technologies/powerbi.png",
+      },
+      {
+        value: "serviceNow",
+        label: "ServiceNow",
+        icon: "/clients/technologies/service-now.png",
+      },
+      {
+        value: "apigee",
+        label: "Apigee",
+        icon: "/clients/technologies/apigee.svg",
+      },
+      {
+        value: "muleSoft",
+        label: "MuleSoft",
+        icon: "/clients/technologies/mulesoft.png",
+      },
+      {
+        value: "dynamics365",
+        label: "Dynamics 365",
+        icon: "/clients/technologies/dynamic365.png",
+      },
+      {
+        value: "workday",
+        label: "Workday",
+        icon: "/clients/technologies/workday.png",
+      },
     ],
   },
   "CMS & E-Commerce Platforms": {
     CMS: [
-      { name: "WordPress", icon: "/clients/technologies/wordpress.png" },
-      { name: "Drupal", icon: "/clients/technologies/drupal.png" },
-      { name: "Contentful", icon: "/clients/technologies/contentful.png" },
-      { name: "Joomla", icon: "/clients/technologies/joomla.png" },
-      { name: "Sitecore", icon: "/clients/technologies/sitecore.png" },
+      {
+        value: "wordPress",
+        label: "WordPress",
+        icon: "/clients/technologies/wordpress.png",
+      },
+      {
+        value: "drupal",
+        label: "Drupal",
+        icon: "/clients/technologies/drupal.png",
+      },
+      {
+        value: "contentful",
+        label: "Contentful",
+        icon: "/clients/technologies/contentful.png",
+      },
+      {
+        value: "joomla",
+        label: "Joomla",
+        icon: "/clients/technologies/joomla.png",
+      },
+      {
+        value: "sitecore",
+        label: "Sitecore",
+        icon: "/clients/technologies/sitecore.png",
+      },
     ],
     "E-Commerce": [
-      { name: "Shopify", icon: "/clients/technologies/shopify.png" },
-      { name: "Magento", icon: "/clients/technologies/magento.png" },
-      { name: "WooCommerce", icon: "/clients/technologies/woo.png" },
-      { name: "BigCommerce", icon: "/clients/technologies/bigcommerce.png" },
-      { name: "PrestaShop", icon: "/clients/technologies/prestashop.png" },
+      {
+        value: "shopify",
+        label: "Shopify",
+        icon: "/clients/technologies/shopify.png",
+      },
+      {
+        value: "magento",
+        label: "Magento",
+        icon: "/clients/technologies/magento.png",
+      },
+      {
+        value: "wooCommerce",
+        label: "WooCommerce",
+        icon: "/clients/technologies/woo.png",
+      },
+      {
+        value: "bigCommerce",
+        label: "BigCommerce",
+        icon: "/clients/technologies/bigcommerce.png",
+      },
+      {
+        value: "prestaShop",
+        label: "PrestaShop",
+        icon: "/clients/technologies/prestashop.png",
+      },
     ],
   },
-
   "Cloud & Containerization": {
     "Cloud Platforms": [
-      { name: "AWS", icon: "/clients/technologies/aws.png" },
-      { name: "Azure", icon: "/clients/technologies/azure.png" },
-      { name: "GoogleCloud", icon: "/clients/technologies/google-cloud.svg" },
+      { value: "aws", label: "AWS", icon: "/clients/technologies/aws.png" },
+      {
+        value: "azure",
+        label: "Azure",
+        icon: "/clients/technologies/azure.png",
+      },
+      {
+        value: "googleCloud",
+        label: "Google Cloud",
+        icon: "/clients/technologies/google-cloud.svg",
+      },
     ],
     Containerization: [
-      { name: "Docker", icon: "/clients/technologies/docker.png" },
-      { name: "Kubernetes", icon: "/clients/technologies/kubernetes.png" },
-      { name: "OpenShift", icon: "/clients/technologies/openshift.svg" },
+      {
+        value: "docker",
+        label: "Docker",
+        icon: "/clients/technologies/docker.png",
+      },
+      {
+        value: "kubernetes",
+        label: "Kubernetes",
+        icon: "/clients/technologies/kubernetes.png",
+      },
+      {
+        value: "openShift",
+        label: "OpenShift",
+        icon: "/clients/technologies/openshift.svg",
+      },
     ],
     "DevOps Tools": [
-      { name: "Jenkins", icon: "/clients/technologies/jenkins.png" },
-      { name: "GitLabCI/CD", icon: "/clients/technologies/gitlab.png" },
-      { name: "Terraform", icon: "/clients/technologies/terraform.svg" },
-      { name: "Ansible", icon: "/clients/technologies/ansible.png" },
+      {
+        value: "jenkins",
+        label: "Jenkins",
+        icon: "/clients/technologies/jenkins.png",
+      },
+      {
+        value: "gitlabCiCd",
+        label: "GitLabCI/CD",
+        icon: "/clients/technologies/gitlab.png",
+      },
+      {
+        value: "terraform",
+        label: "Terraform",
+        icon: "/clients/technologies/terraform.svg",
+      },
+      {
+        value: "ansible",
+        label: "Ansible",
+        icon: "/clients/technologies/ansible.png",
+      },
     ],
   },
-
   "AI, ML & GenAI": {
     "Machine Learning": [
-      { name: "Scikit-learn", icon: "/clients/technologies/scikitLearn.png" },
-      { name: "XGBoost", icon: "/clients/technologies/xgboost.png" },
-      { name: "LightGBM", icon: "/clients/technologies/lightgbm.png" },
+      {
+        value: "scikitLearn",
+        label: "Scikit-learn",
+        icon: "/clients/technologies/scikitLearn.png",
+      },
+      {
+        value: "xgboost",
+        label: "XGBoost",
+        icon: "/clients/technologies/xgboost.png",
+      },
+      {
+        value: "lightgbm",
+        label: "LightGBM",
+        icon: "/clients/technologies/lightgbm.png",
+      },
     ],
     "Deep Learning": [
-      { name: "TensorFlow", icon: "/clients/technologies/tensorflow.png" },
-      { name: "PyTorch", icon: "/clients/technologies/pytorch.png" },
-      { name: "Keras", icon: "/clients/technologies/keras.png" },
-      { name: "MXNet", icon: "/clients/technologies/mxnet.png" },
+      {
+        value: "tensorflow",
+        label: "TensorFlow",
+        icon: "/clients/technologies/tensorflow.png",
+      },
+      {
+        value: "pytorch",
+        label: "PyTorch",
+        icon: "/clients/technologies/pytorch.png",
+      },
+      {
+        value: "keras",
+        label: "Keras",
+        icon: "/clients/technologies/keras.png",
+      },
+      {
+        value: "mxnet",
+        label: "MXNet",
+        icon: "/clients/technologies/mxnet.png",
+      },
     ],
     "Generative AI": [
-      { name: "Generative AI", icon: "/clients/technologies/genai.png" },
-      { name: "LLMs", icon: "/clients/technologies/llm.png" },
-      { name: "Multimodal AI", icon: "/clients/technologies/multimodal.png" },
+      {
+        value: "generativeAi",
+        label: "Generative AI",
+        icon: "/clients/technologies/genai.png",
+      },
+      { value: "llms", label: "LLMs", icon: "/clients/technologies/llm.png" },
+      {
+        value: "multimodalAi",
+        label: "Multimodal AI",
+        icon: "/clients/technologies/multimodal.png",
+      },
     ],
   },
-
   "Data Science & Analytics": {
     "Libraries & Tools": [
-      { name: "Pandas", icon: "/clients/technologies/pandas.svg" },
-      { name: "NumPy", icon: "/clients/technologies/numpy.png" },
-      { name: "Matplotlib", icon: "/clients/technologies/matplotlib.png" },
-      { name: "Seaborn", icon: "/clients/technologies/seaborn.png" },
+      {
+        value: "pandas",
+        label: "Pandas",
+        icon: "/clients/technologies/pandas.svg",
+      },
+      {
+        value: "numpy",
+        label: "NumPy",
+        icon: "/clients/technologies/numpy.png",
+      },
+      {
+        value: "matplotlib",
+        label: "Matplotlib",
+        icon: "/clients/technologies/matplotlib.png",
+      },
+      {
+        value: "seaborn",
+        label: "Seaborn",
+        icon: "/clients/technologies/seaborn.png",
+      },
     ],
     "BI & Visualization": [
-      { name: "PowerBI", icon: "/clients/technologies/powerbi.png" },
-      { name: "Tableau", icon: "/clients/technologies/tableau.png" },
-      { name: "Excel", icon: "/clients/technologies/excel.png" },
-      { name: "Looker", icon: "/clients/technologies/looker.png" },
+      {
+        value: "powerBi",
+        label: "Power BI",
+        icon: "/clients/technologies/powerbi.png",
+      },
+      {
+        value: "tableau",
+        label: "Tableau",
+        icon: "/clients/technologies/tableau.png",
+      },
+      {
+        value: "excel",
+        label: "Excel",
+        icon: "/clients/technologies/excel.png",
+      },
+      {
+        value: "looker",
+        label: "Looker",
+        icon: "/clients/technologies/looker.png",
+      },
     ],
     "Data Engineering": [
-      { name: "ApacheSpark", icon: "/clients/technologies/spark.png" },
-      { name: "ApacheAirflow", icon: "/clients/technologies/airflow.png" },
-      { name: "Kafka", icon: "/clients/technologies/kafka.png" },
+      {
+        value: "apacheSpark",
+        label: "Apache Spark",
+        icon: "/clients/technologies/spark.png",
+      },
+      {
+        value: "apacheAirflow",
+        label: "Apache Airflow",
+        icon: "/clients/technologies/airflow.png",
+      },
+      {
+        value: "kafka",
+        label: "Kafka",
+        icon: "/clients/technologies/kafka.png",
+      },
     ],
   },
-
   "Web Development": {
     "Core Technologies": [
-      { name: "HTML", icon: "/clients/technologies/html.png" },
-      { name: "CSS", icon: "/clients/technologies/css.png" },
-      { name: "JavaScript", icon: "/clients/technologies/javascript.png" },
+      { value: "html", label: "HTML", icon: "/clients/technologies/html.png" },
+      { value: "css", label: "CSS", icon: "/clients/technologies/css.png" },
+      {
+        value: "javascript",
+        label: "JavaScript",
+        icon: "/clients/technologies/javascript.png",
+      },
     ],
     Frameworks: [
-      { name: "React", icon: "/clients/technologies/react.png" },
-      { name: "Next.js", icon: "/clients/technologies/nextjs.svg" },
-      { name: "Vue.js", icon: "/clients/technologies/vue.png" },
-      { name: "Angular", icon: "/clients/technologies/angular.png" },
+      {
+        value: "react",
+        label: "React",
+        icon: "/clients/technologies/react.png",
+      },
+      {
+        value: "nextJs",
+        label: "Next.js",
+        icon: "/clients/technologies/nextjs.svg",
+      },
+      {
+        value: "vueJs",
+        label: "Vue.js",
+        icon: "/clients/technologies/vue.png",
+      },
+      {
+        value: "angular",
+        label: "Angular",
+        icon: "/clients/technologies/angular.png",
+      },
     ],
     "Static Site Generators": [
-      { name: "Gatsby", icon: "/clients/technologies/gatsby.svg" },
-      { name: "Hugo", icon: "/clients/technologies/hugo.svg" },
+      {
+        value: "gatsby",
+        label: "Gatsby",
+        icon: "/clients/technologies/gatsby.svg",
+      },
+      { value: "hugo", label: "Hugo", icon: "/clients/technologies/hugo.svg" },
     ],
   },
-
   "UI/UX": {
     "Design Tools": [
-      { name: "Figma", icon: "/clients/technologies/figma.svg" },
-      { name: "AdobeXD", icon: "/clients/technologies/adobexd.png" },
-      { name: "Sketch", icon: "/clients/technologies/sketch.svg" },
-      { name: "InVision", icon: "/clients/technologies/invision.png" },
+      {
+        value: "figma",
+        label: "Figma",
+        icon: "/clients/technologies/figma.svg",
+      },
+      {
+        value: "adobeXd",
+        label: "Adobe XD",
+        icon: "/clients/technologies/adobexd.png",
+      },
+      {
+        value: "sketch",
+        label: "Sketch",
+        icon: "/clients/technologies/sketch.svg",
+      },
+      {
+        value: "inVision",
+        label: "InVision",
+        icon: "/clients/technologies/invision.png",
+      },
     ],
     "Design Systems": [
-      { name: "MaterialUI", icon: "/clients/technologies/material-ui.svg" },
-      { name: "AntDesign", icon: "/clients/technologies/ant-design.svg" },
+      {
+        value: "materialUi",
+        label: "Material UI",
+        icon: "/clients/technologies/material-ui.svg",
+      },
+      {
+        value: "antDesign",
+        label: "Ant Design",
+        icon: "/clients/technologies/ant-design.svg",
+      },
     ],
   },
-
   "Quality Assurance": {
     "Automation Tools": [
-      { name: "Selenium", icon: "/clients/technologies/selenium.png" },
-      { name: "Cypress", icon: "/clients/technologies/cypress.svg" },
-      { name: "Playwright", icon: "/clients/technologies/playwright.svg" },
+      {
+        value: "selenium",
+        label: "Selenium",
+        icon: "/clients/technologies/selenium.png",
+      },
+      {
+        value: "cypress",
+        label: "Cypress",
+        icon: "/clients/technologies/cypress.svg",
+      },
+      {
+        value: "playwright",
+        label: "Playwright",
+        icon: "/clients/technologies/playwright.svg",
+      },
     ],
     "Testing Frameworks": [
-      { name: "JUnit", icon: "/clients/technologies/junit.png" },
-      { name: "TestNG", icon: "/clients/technologies/test-ng.png" },
-      { name: "Mocha", icon: "/clients/technologies/mocha.svg" },
-      { name: "Jest", icon: "/clients/technologies/jest.svg" },
+      {
+        value: "junit",
+        label: "JUnit",
+        icon: "/clients/technologies/junit.png",
+      },
+      {
+        value: "testNg",
+        label: "TestNG",
+        icon: "/clients/technologies/test-ng.png",
+      },
+      {
+        value: "mocha",
+        label: "Mocha",
+        icon: "/clients/technologies/mocha.svg",
+      },
+      { value: "jest", label: "Jest", icon: "/clients/technologies/jest.svg" },
     ],
     "API Testing": [
-      { name: "Postman", icon: "/clients/technologies/postman.svg" },
-      { name: "SoapUI", icon: "/clients/technologies/soapui.png" },
+      {
+        value: "postman",
+        label: "Postman",
+        icon: "/clients/technologies/postman.svg",
+      },
+      {
+        value: "soapui",
+        label: "SoapUI",
+        icon: "/clients/technologies/soapui.png",
+      },
     ],
   },
 };
-
 export const techTags = [
   { label: "Programming Languages", color: "border-blue-500" },
   { label: "Front-End", color: "border-pink-500" },

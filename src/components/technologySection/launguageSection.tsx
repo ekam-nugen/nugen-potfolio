@@ -24,12 +24,12 @@ export default function TechnologyShowcase() {
     if (isExpandable(selectedCategory)) {
       const subSection = section as Record<
         string,
-        { name: string; icon: string }[]
+        { label: string; icon: string; value: string }[]
       >;
       return subSection[selectedSubcategory] || [];
     }
     if (Array.isArray(section)) {
-      return section as { name: string; icon: string }[];
+      return section as { label: string; icon: string; value: string }[];
     }
     return [];
   };
@@ -42,7 +42,7 @@ export default function TechnologyShowcase() {
       const firstSub = Object.keys(
         data[category as keyof typeof data] as Record<
           string,
-          { name: string; icon: string }[]
+          { label: string; icon: string; value: string }[]
         >
       )[0];
       setSelectedSubcategory(firstSub);
@@ -111,7 +111,7 @@ export default function TechnologyShowcase() {
                     {Object.keys(
                       data[category as keyof typeof data] as Record<
                         string,
-                        { name: string; icon: string }[]
+                        { label: string; icon: string; value: string }[]
                       >
                     ).map((sub) => (
                       <div
@@ -157,22 +157,24 @@ export default function TechnologyShowcase() {
                 viewport={{ once: true }}
                 transition={{ staggerChildren: 0.05 }}
               >
-                {getActiveItems().map(({ name, icon }) => (
+                {getActiveItems().map(({ value, label, icon }) => (
                   <div
-                    key={name}
+                    key={value}
                     className="bg-white border p-4 rounded-lg shadow-sm flex items-center gap-3 cursor-pointer"
                     onClick={() => {
-                      router.push(`/technologies/${name.trim().toLowerCase()}`);
+                      router.push(
+                        `/technologies/${value.trim().toLowerCase()}`
+                      );
                     }}
                   >
                     <Image
                       height={100}
                       width={100}
                       src={icon}
-                      alt={name}
+                      alt={label}
                       className="w-8 h-8 object-contain"
                     />
-                    <span>{name}</span>
+                    <span>{label}</span>
                   </div>
                 ))}
               </motion.div>
