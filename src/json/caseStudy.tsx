@@ -28,7 +28,7 @@ const caseStudies = [
     tags: ["NextJS", "Web App", "Web Admin", "React", "Node.js", "MongoDB"],
     buttonText: "Read More",
     image: CloudWays,
-    link: "/case-studies/data-engineering-nonprofit",
+    link: "/case-study-single?id=1&title=cloud-ways",
   },
   {
     id: 2,
@@ -39,7 +39,7 @@ const caseStudies = [
     tags: ["NextJS", "Web App", "Web Admin", "React", "Node.js", "MongoDB"],
     buttonText: "Read More",
     image: optum,
-    link: "/case-studies/ai-chatbot-fintech",
+    link: "/case-study-single?id=2&title=optum",
   },
   {
     id: 3,
@@ -50,7 +50,7 @@ const caseStudies = [
     tags: ["NextJS", "Web App", "Web Admin", "React", "Node.js", "MongoDB"],
     buttonText: "Read More",
     image: blinlPayment,
-    link: "/case-studies/ecommerce-platform",
+    link: "/case-study-single?id=3&title=blink-payment",
   },
   {
     id: 4,
@@ -61,7 +61,7 @@ const caseStudies = [
     tags: ["React", "Web App", "Web Admin", "Node.js", "MongoDB"],
     buttonText: "Read More",
     image: InsideInjuries,
-    link: "/case-studies/inside-injuries",
+    link: "/case-study-single?id=4&title=inside-injuries",
   },
   {
     id: 5,
@@ -72,7 +72,7 @@ const caseStudies = [
     tags: ["NextJS", "Web App", "Web Admin", "React", "Node.js"],
     buttonText: "Read More",
     image: Qudos,
-    link: "/case-studies/qudos",
+    link: "/case-study-single?id=5&title=qudos",
   },
   {
     id: 6,
@@ -83,7 +83,7 @@ const caseStudies = [
     tags: ["NextJS", "Web App", "Web Admin", "React", "Node.js"],
     buttonText: "Read More",
     image: LuckyRhino,
-    link: "/case-studies/lucky-rhino",
+    link: "/case-study-single?id=6&title=lucky-rhino",
   },
   // {
   //   id: 7,

@@ -1,4 +1,7 @@
-import { reviewPlatforms, TechDescriptionProps } from "@/src/json/technologyDescription";
+import {
+  reviewPlatforms,
+  TechDescriptionProps,
+} from "@/src/json/technologyDescription";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
@@ -169,9 +172,11 @@ const TechDescription: React.FC<TechDescriptionProps> = ({
 
             {/* Right - Single Image with fade */}
             <div className="relative h-80 md:h-[28rem] w-full">
-              <img
+              <Image
                 key={activeIndex}
                 src={useCases[activeIndex]?.image}
+                height={100}
+                width={100}
                 alt={`Use case ${activeIndex + 1}`}
                 className={`w-full h-full object-contain rounded-xl transition-opacity duration-500 ease-in-out ${
                   fade ? "opacity-0" : "opacity-100"

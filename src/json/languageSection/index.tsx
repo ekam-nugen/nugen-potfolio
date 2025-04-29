@@ -220,3 +220,9 @@ export const techTags = [
   { label: "UI/UX", color: "border-blue-500" },
   { label: "Quality Assurance", color: "border-orange-500" },
 ];
+export const platformTags = [
+  { label: "MICROSOFT", color: "border-blue-500" },
+  { label: "AWS", color: "border-pink-500" },
+  { label: "GOOGLE", color: "border-red-500" },
+];
+

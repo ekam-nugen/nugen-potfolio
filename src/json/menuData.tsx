@@ -19,6 +19,7 @@ export const headerData = [
   },
   {
     label: "Services",
+    href: "/services",
     submenu: [
       { label: "AI/ML/GenAI", href: "/services/intelligence" },
       {
@@ -36,6 +37,6 @@ export const headerData = [
     ],
   },
   { label: "Technologies", href: "/technologies" },
-  { label: "Case Study", href: "/case-studys" },
+  { label: "Case Study", href: "/case-study" },
   { label: "Contact Us", href: "/contact-us" },
 ];
