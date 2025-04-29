@@ -1,30 +1,27 @@
 import React from "react";
 import Image from "next/image";
-
+import salesforce from "../../../public/salesforce.svg";
+import microsoft from "../../../public/microsoft-partner.svg";
+import adobe from "../../../public/adobe.svg";
 const platforms = [
   {
     name: "Salesforce",
-    logo: "/platforms/salesforce.png",
+    logo: salesforce,
     description:
-      "We specialize in Salesforce development, offering custom solutions to enhance your CRM processes and drive business growth. Our experienced developers tailor Salesforce to your needs, ensuring seamless integration and improved efficiency.",
+      "At Nugen, we deliver tailored Salesforce solutions that transform your CRM capabilities. Our certified experts help you streamline operations, improve customer engagement, and unlock business growth through seamless integrations and automation.",
   },
   {
     name: "Adobe Commerce",
-    logo: "/platforms/adobe.png",
+    logo: adobe,
     description:
-      "With our expertise in Magento and Adobe Commerce, we deliver robust E-commerce solutions tailored to your business needs. From initial design to deployment, we ensure high performance, security, and scalability.",
+      "Nugen empowers businesses with scalable Adobe Commerce (Magento) solutions, delivering high-performing, user-focused online stores. From UX to backend architecture, our team ensures secure, feature-rich E-commerce experiences built for growth.",
   },
+
   {
-    name: "Power BI",
-    logo: "/platforms/powerbi.png",
+    name: "Microsoft",
+    logo: microsoft,
     description:
-      "Power BI helps you turn data into smart decisions. We help implement, customize, and visualize your business metrics using Microsoft's leading BI tools.",
-  },
-  {
-    name: "ServiceNow",
-    logo: "/platforms/servicenow.png",
-    description:
-      "From ITSM to HR workflows, ServiceNow empowers digital transformation. Our solutions ensure seamless integration and automation.",
+      "At Nugen, we leverage Microsoft's ecosystem—including Azure, .NET, and Power Platform—to build scalable, secure, and enterprise-grade solutions. Whether it's cloud infrastructure, business analytics, or custom development, our Microsoft experts deliver results aligned with your business goals.",
   },
 ];
 
@@ -35,7 +32,7 @@ export const TopPlatformsSection = () => {
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-12">
           We Work With The <br className="sm:hidden" /> Top-rated Platforms
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6">
           {platforms.map((platform, index) => (
             <div
               key={index}
@@ -44,16 +41,18 @@ export const TopPlatformsSection = () => {
               <Image
                 src={platform.logo}
                 alt={platform.name}
-                width={60}
-                height={60}
+                width={100}
+                height={100}
                 className="mb-4"
               />
               <h3 className="text-lg font-semibold text-gray-800 mb-3">
                 {platform.name}
               </h3>
-              <p className="text-sm text-gray-600 mb-4">{platform.description}</p>
+              <p className="text-sm text-gray-600 mb-4">
+                {platform.description}
+              </p>
               <a
-                href="#"
+                href="/contact-us"
                 className="text-sm font-medium text-black hover:text-[#ff896b] transition-colors"
               >
                 Know More →

@@ -11,14 +11,17 @@ const partners = [
   {
     title: "Salesforce Partner",
     icon: salesforce,
+    href: "/platforms",
   },
   {
     title: "Microsoft Solutions Partner",
     icon: microsoft,
+    href: "/platforms",
   },
   {
     title: "Adobe Solution Partner",
     icon: adobe,
+    href: "/platforms",
   },
 ];
 
@@ -92,27 +95,28 @@ export default function PlatformSolutions() {
           {/* Partner Cards */}
           <div className="mt-16 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
             {partners.map((partner, index) => (
-              <motion.div
-                key={index}
-                custom={index}
-                initial="hidden"
-                whileInView="visible"
-                whileHover="hover"
-                viewport={{ once: true }}
-                variants={cardVariants}
-                className="bg-white/80 backdrop-blur-sm cursor-pointer rounded-2xl p-6 border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-4"
-              >
-                <Image
-                  src={partner.icon}
-                  alt={partner.title}
-                  width={100}
-                  height={100}
-                  className="object-contain"
-                />
-                <span className="text-base font-semibold text-gray-900">
-                  {partner.title}
-                </span>
-              </motion.div>
+              <Link key={index} href={partner.href} className="group">
+                <motion.div
+                  custom={index}
+                  initial="hidden"
+                  whileInView="visible"
+                  whileHover="hover"
+                  viewport={{ once: true }}
+                  variants={cardVariants}
+                  className="bg-white/80 backdrop-blur-sm cursor-pointer rounded-2xl p-6 border border-gray-100 shadow-md group-hover:shadow-lg transition-all duration-300 transform group-hover:-translate-y-1 flex items-center justify-center gap-4"
+                >
+                  <Image
+                    src={partner.icon}
+                    alt={partner.title}
+                    width={100}
+                    height={100}
+                    className="object-contain"
+                  />
+                  <span className="text-base font-semibold text-gray-900">
+                    {partner.title}
+                  </span>
+                </motion.div>
+              </Link>
             ))}
           </div>
 
@@ -125,13 +129,13 @@ export default function PlatformSolutions() {
             className="mt-12 flex flex-col sm:flex-row justify-center gap-5"
           >
             <Link
-              href="#"
+              href="/contact-us"
               className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300 flex items-center gap-2"
             >
               Share Your Requirements →
             </Link>
             <Link
-              href="#"
+              href="/platforms"
               className="border-2 border-gray-900 text-gray-900 px-6 py-3 rounded-full font-semibold text-sm hover:bg-gray-900 hover:text-white transition-all duration-300 flex items-center gap-2"
             >
               Explore More →
