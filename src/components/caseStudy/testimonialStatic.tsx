@@ -4,6 +4,7 @@ import trustpilot from "../../../public/trustpilot-logo.png";
 import user1 from "../../../public/user1.png";
 import user2 from "../../../public/user2.png";
 import user3 from "../../../public/user3.png";
+import Link from "next/link";
 
 const testimonials = [
   {
@@ -58,9 +59,7 @@ export default function TestimonialStatic({
   className,
 }: TestimonialStaticProps) {
   return (
-    <section
-      className={`py-16  text-black ${className}`}
-    >
+    <section className={`py-16  text-black ${className}`}>
       <div className="text-center mb-10">
         <div className="text-yellow-400 text-3xl mb-2">★★★★★</div>
         <h2 className="text-3xl font-semibold">What Our Clients Say</h2>
@@ -98,8 +97,13 @@ export default function TestimonialStatic({
 
       {/* Review Logos */}
       <div className="text-center mt-10">
-        <p className="text-sm font-medium text-black">Read More Reviews</p>
-        <div className="flex justify-center items-center gap-6 mt-6 flex-wrap">
+        <Link
+          href="/review"
+          className="bg-gradient-to-r from-pink-500 to-orange-500 hover:from-pink-600 hover:to-orange-600 text-white px-10 py-4 rounded-full shadow-xl transform transition-transform duration-300 hover:scale-105 text-sm font-medium"
+        >
+          Read More Reviews
+        </Link>
+        <div className="flex justify-center items-center gap-6 mt-10 flex-wrap">
           <Image src={google} alt="Google" width={100} height={35} />
           <Image src={trustpilot} alt="Trustpilot" width={100} height={35} />
         </div>

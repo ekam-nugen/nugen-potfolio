@@ -7,11 +7,21 @@ import CompanyStatsSection from "../contactUs/highlightsSection";
 import { services } from "@/src/json/technologycardData";
 import ClientSlider from "../technologySection/clientSection";
 import TestimonialStatic from "../caseStudy/testimonialStatic";
+import { techTags } from "@/src/json/languageSection";
 
 const Services = () => {
   return (
     <>
-      <TechnologySection />
+      <TechnologySection
+        heading={"Nugen I.T Services"}
+        subheading={
+          <>
+            Power Your Business with <br />
+            Cutting-Edge Solutions
+          </>
+        }
+        tags={techTags}
+      />
       <ClientSlider className="bg-gradient-to-r from-white via-[#fff1eb] to-white" />
       <CompanyStatsSection
         data={services}

@@ -1,84 +1,83 @@
 import {
-    Cloud,
-    Code,
-    ShoppingCart,
-    Paintbrush,
-    Globe,
-    Smartphone,
-    Users,
-    FlaskRound,
-  } from "lucide-react";
-  import { BsRobot } from "react-icons/bs";
-  
-  export const services = [
-    {
-      title: "AI/ML/GenAI",
-      icon: <BsRobot color="#ff6b3d" />,
-      subtitle:
-        "Gain a competitive edge with AI-powered insights and automation.",
-      linkTitle: "Explore AI Solutions",
-      link: "#",
-    },
-    {
-      title: "Cloud Engineering",
-      icon: <Cloud color="#ff6b3d" />,
-      subtitle:
-        "Design, deploy, and manage scalable cloud infrastructure for performance & cost efficiency.",
-      linkTitle: "Explore Cloud Services",
-      link: "#",
-    },
-    {
-      title: "Software Development",
-      icon: <Code color="#ff6b3d" />,
-      subtitle:
-        "Custom software solutions tailored to your unique business needs.",
-      linkTitle: "Discover Software Development",
-      link: "#",
-    },
-    {
-      title: "E-commerce",
-      icon: <ShoppingCart color="#ff6b3d" />,
-      subtitle:
-        "Build scalable, secure, and user-friendly e-commerce platforms.",
-      linkTitle: "Explore E-commerce Solutions",
-      link: "#",
-    },
-    {
-      title: "UI/UX",
-      icon: <Paintbrush color="#ff6b3d" />,
-      subtitle:
-        "Craft intuitive and engaging digital experiences with user-centered design.",
-      linkTitle: "Learn About UI/UX",
-      link: "#",
-    },
-    {
-      title: "QA",
-      icon: <FlaskRound color="#ff6b3d" />,
-      subtitle:
-        "Ensure software reliability through thorough testing and quality assurance.",
-      linkTitle: "Explore QA Services",
-      link: "#",
-    },
-    {
-      title: "Web Development",
-      icon: <Globe color="#ff6b3d" />,
-      subtitle:
-        "Develop high-performance, SEO-optimized, and responsive websites.",
-      linkTitle: "Learn Web Development",
-      link: "#",
-    },
-    {
-      title: "Mobile App Development",
-      icon: <Smartphone color="#ff6b3d" />,
-      subtitle: "Native & cross-platform mobile apps for iOS and Android.",
-      linkTitle: "Explore Mobile Development",
-      link: "#",
-    },
-    {
-      title: "Dedicated Teams",
-      icon: <Users color="#ff6b3d" />,
-      subtitle: "Build your remote dream team with our vetted tech talent.",
-      linkTitle: "Hire Dedicated Teams",
-      link: "#",
-    },
-  ];
+  Cloud,
+  Code,
+  ShoppingCart,
+  Paintbrush,
+  Globe,
+  Smartphone,
+  Users,
+  FlaskRound,
+} from "lucide-react";
+import { BsRobot } from "react-icons/bs";
+
+export const services = [
+  {
+    title: "AI/ML/GenAI",
+    icon: <BsRobot color="#ff6b3d" />,
+    subtitle:
+      "Gain a competitive edge with AI-powered insights and automation.",
+    linkTitle: "Explore AI Solutions",
+    link: "/services/intelligence",
+  },
+  {
+    title: "Cloud Engineering",
+    icon: <Cloud color="#ff6b3d" />,
+    subtitle:
+      "Design, deploy, and manage scalable cloud infrastructure for performance & cost efficiency.",
+    linkTitle: "Explore Cloud Services",
+    link: "/services/cloud-engineering",
+  },
+  {
+    title: "Software Development",
+    icon: <Code color="#ff6b3d" />,
+    subtitle:
+      "Custom software solutions tailored to your unique business needs.",
+    linkTitle: "Discover Software Development",
+    link: "/services/cms",
+  },
+  {
+    title: "E-commerce",
+    icon: <ShoppingCart color="#ff6b3d" />,
+    subtitle: "Build scalable, secure, and user-friendly e-commerce platforms.",
+    linkTitle: "Explore E-commerce Solutions",
+    link: "/services/cms",
+  },
+  {
+    title: "UI/UX",
+    icon: <Paintbrush color="#ff6b3d" />,
+    subtitle:
+      "Craft intuitive and engaging digital experiences with user-centered design.",
+    linkTitle: "Learn About UI/UX",
+    link: "/services/uiux",
+  },
+  {
+    title: "QA",
+    icon: <FlaskRound color="#ff6b3d" />,
+    subtitle:
+      "Ensure software reliability through thorough testing and quality assurance.",
+    linkTitle: "Explore QA Services",
+    link: "#",
+  },
+  {
+    title: "Web Development",
+    icon: <Globe color="#ff6b3d" />,
+    subtitle:
+      "Develop high-performance, SEO-optimized, and responsive websites.",
+    linkTitle: "Learn Web Development",
+    link: "/services/webdevelopment",
+  },
+  {
+    title: "Mobile App Development",
+    icon: <Smartphone color="#ff6b3d" />,
+    subtitle: "Native & cross-platform mobile apps for iOS and Android.",
+    linkTitle: "Explore Mobile Development",
+    link: "/services/appdevelopment",
+  },
+  {
+    title: "Dedicated Teams",
+    icon: <Users color="#ff6b3d" />,
+    subtitle: "Build your remote dream team with our vetted tech talent.",
+    linkTitle: "Hire Dedicated Teams",
+    link: "/book-an-appointmen",
+  },
+];
