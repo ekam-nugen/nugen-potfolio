@@ -45,6 +45,57 @@ import {
   FaToriiGate,
   FaUniversity,
   FaUserAlt,
+  FaChartBar,
+  FaChessBoard,
+  FaClock,
+  FaFileCsv,
+  FaFilter,
+  FaMagic,
+  FaPaintBrush,
+  FaPalette,
+  FaPuzzlePiece,
+  FaRandom,
+  FaSave,
+  FaSeedling,
+  FaSubscript,
+  FaTable,
+  FaThermometerHalf,
+  FaChessKnight,
+  FaGoogle,
+  FaMapMarkedAlt,
+  FaSyncAlt,
+  FaUsersCog,
+  FaUserShield,
+  FaStream,
+  FaCalendarAlt,
+  FaReact,
+  FaFileAlt,
+  FaTheaterMasks,
+  FaApple,
+  FaFilm,
+  FaHandshake,
+  FaMicrophoneAlt,
+  FaMobileAlt,
+  FaPenFancy,
+  FaRulerCombined,
+  FaUserCheck,
+  FaUserFriends,
+  FaVectorSquare,
+  FaBug,
+  FaLaptopCode,
+  FaBoxes,
+  FaCubes,
+  FaFlask,
+  FaJava,
+  FaJsSquare,
+  FaRoute,
+  FaTasks,
+  FaToolbox,
+  FaChartPie,
+  FaClipboardCheck,
+  FaFileCode,
+  FaPaperPlane,
+  FaSoap,
 } from "react-icons/fa";
 
 interface Feature {
@@ -3105,13 +3156,18 @@ export const technologyStack = [
     useCases: [
       { name: "Enterprise ML Pipelines", image: "/clients/illustration1.svg" },
       { name: "Computer Vision (CV)", image: "/clients/illustration2.svg" },
-      { name: "Natural Language Processing (NLP)", image: "/clients/illustration3.svg" },
+      {
+        name: "Natural Language Processing (NLP)",
+        image: "/clients/illustration3.svg",
+      },
       { name: "Edge AI (TFLite)", image: "/clients/illustration4.svg" },
       { name: "Recommender Systems", image: "/clients/illustration5.svg" },
     ],
-    tagline: "Google’s battle-tested framework for scalable machine learning from research to production.",
+    tagline:
+      "Google’s battle-tested framework for scalable machine learning from research to production.",
     imageSrc: "/clients/technologies/tensorflow.png",
-  },{
+  },
+  {
     name: "PyTorch",
     features: [
       {
@@ -3141,15 +3197,29 @@ export const technologyStack = [
       },
     ],
     useCases: [
-      { name: "Research & Experimentation", image: "/clients/illustration1.svg" },
-      { name: "Deep Learning (DL) Papers", image: "/clients/illustration2.svg" },
-      { name: "Generative AI (GANs, Diffusion)", image: "/clients/illustration3.svg" },
+      {
+        name: "Research & Experimentation",
+        image: "/clients/illustration1.svg",
+      },
+      {
+        name: "Deep Learning (DL) Papers",
+        image: "/clients/illustration2.svg",
+      },
+      {
+        name: "Generative AI (GANs, Diffusion)",
+        image: "/clients/illustration3.svg",
+      },
       { name: "Reinforcement Learning", image: "/clients/illustration4.svg" },
-      { name: "Quantized Models (Torch.quantize)", image: "/clients/illustration5.svg" },
+      {
+        name: "Quantized Models (Torch.quantize)",
+        image: "/clients/illustration5.svg",
+      },
     ],
-    tagline: "Facebook’s research-first framework that balances flexibility and performance for cutting-edge AI.",
-    imageSrc: "/clients/technologies/PyTorch.png",
-  },{
+    tagline:
+      "Facebook’s research-first framework that balances flexibility and performance for cutting-edge AI.",
+    imageSrc: "/clients/technologies/PyTorch.png`",
+  },
+  {
     name: "Keras",
     features: [
       {
@@ -3182,10 +3252,14 @@ export const technologyStack = [
       { name: "Educational Projects", image: "/clients/illustration1.svg" },
       { name: "Quick Proof-of-Concepts", image: "/clients/illustration2.svg" },
       { name: "Startup MVPs", image: "/clients/illustration3.svg" },
-      { name: "Standard DL Models (CNNs/RNNs)", image: "/clients/illustration4.svg" },
+      {
+        name: "Standard DL Models (CNNs/RNNs)",
+        image: "/clients/illustration4.svg",
+      },
       { name: "Transfer Learning", image: "/clients/illustration5.svg" },
     ],
-    tagline: "The Python deep learning API for humans, emphasizing simplicity and speed over low-level control.",
+    tagline:
+      "The Python deep learning API for humans, emphasizing simplicity and speed over low-level control.",
     imageSrc: "/clients/technologies/Keras.png",
   },
   {
@@ -3220,13 +3294,1134 @@ export const technologyStack = [
     useCases: [
       { name: "AWS-Based ML Workloads", image: "/clients/illustration1.svg" },
       { name: "Multi-Language Teams", image: "/clients/illustration2.svg" },
-      { name: "High-Performance Inference", image: "/clients/illustration3.svg" },
-      { name: "Embedded Devices (AWS IoT)", image: "/clients/illustration4.svg" },
+      {
+        name: "High-Performance Inference",
+        image: "/clients/illustration3.svg",
+      },
+      {
+        name: "Embedded Devices (AWS IoT)",
+        image: "/clients/illustration4.svg",
+      },
       { name: "Symbolic-Neural Hybrids", image: "/clients/illustration5.svg" },
     ],
-    tagline: "Apache’s scalable and portable framework favored for cloud-native and multi-language AI solutions.",
+    tagline:
+      "Apache’s scalable and portable framework favored for cloud-native and multi-language AI solutions.",
     imageSrc: "/clients/technologies/mxnet.png",
-  }
+  },
+  {
+    name: "Pandas",
+    features: [
+      {
+        icon: <FaTable />,
+        title: "DataFrames & Series",
+        desc: "Powerful tabular data structures for efficient manipulation of structured data.",
+      },
+      {
+        icon: <FaFilter />,
+        title: "Data Cleaning",
+        desc: "Handle missing data, filter rows/columns, and merge datasets with intuitive methods.",
+      },
+      {
+        icon: <FaChartBar />,
+        title: "Aggregation & Pivoting",
+        desc: "GroupBy, pivot tables, and cross-tabulations for quick data summarization.",
+      },
+      {
+        icon: <FaClock />,
+        title: "Time Series Support",
+        desc: "Built-in tools for date ranges, resampling, and time-zone handling.",
+      },
+      {
+        icon: <FaFileCsv />,
+        title: "I/O Versatility",
+        desc: "Read/write CSV, Excel, SQL, JSON, and Parquet files with minimal code.",
+      },
+    ],
+    useCases: [
+      { name: "Data Wrangling", image: "/clients/illustration1.svg" },
+      {
+        name: "Exploratory Data Analysis (EDA)",
+        image: "/clients/illustration2.svg",
+      },
+      { name: "Feature Engineering", image: "/clients/illustration3.svg" },
+      { name: "Financial Data Analysis", image: "/clients/illustration4.svg" },
+      { name: "Preprocessing for ML", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "The essential Python library for structured data manipulation and analysis.",
+    imageSrc: "/clients/technologies/pandas.svg",
+  },
+  {
+    name: "NumPy",
+    features: [
+      {
+        icon: <FaCube />,
+        title: "Multidimensional Arrays",
+        desc: "Efficient ndarrays for numerical computations with fixed-size elements.",
+      },
+      {
+        icon: <FaRocket />,
+        title: "Vectorized Operations",
+        desc: "Fast element-wise calculations without Python loops, enabled by C-based backend.",
+      },
+      {
+        icon: <FaShapes />,
+        title: "Linear Algebra",
+        desc: "Built-in functions for matrix multiplication, SVD, eigenvalues, and more.",
+      },
+      {
+        icon: <FaRandom />,
+        title: "Random Sampling",
+        desc: "Generate distributions (normal, uniform, etc.) for simulations and modeling.",
+      },
+      {
+        icon: <FaPuzzlePiece />,
+        title: "Foundation for ML",
+        desc: "Core dependency for Pandas, SciPy, and deep learning frameworks.",
+      },
+    ],
+    useCases: [
+      { name: "Scientific Computing", image: "/clients/illustration1.svg" },
+      { name: "Image Processing", image: "/clients/illustration2.svg" },
+      { name: "Simulations & Modeling", image: "/clients/illustration3.svg" },
+      { name: "Signal Processing", image: "/clients/illustration4.svg" },
+      { name: "Neural Network Math", image: "/clients/illustration5.svg" },
+    ],
+    tagline: "The fundamental package for numerical computing in Python.",
+    imageSrc: "/clients/technologies/numpy.png",
+  },
+  {
+    name: "Matplotlib",
+    features: [
+      {
+        icon: <FaChartLine />,
+        title: "Publication-Quality Plots",
+        desc: "Customizable line plots, histograms, scatter plots, and more for any use case.",
+      },
+      {
+        icon: <FaPaintBrush />,
+        title: "Fine-Grained Control",
+        desc: "Adjust every element (axes, ticks, legends) with object-oriented or MATLAB-style syntax.",
+      },
+      {
+        icon: <FaSubscript />,
+        title: "LaTeX Integration",
+        desc: "Render mathematical symbols and equations in labels/titles.",
+      },
+      {
+        icon: <FaSave />,
+        title: "Export Flexibility",
+        desc: "Save visuals as PNG, PDF, SVG, or interactive web formats.",
+      },
+      {
+        icon: <FaSeedling />,
+        title: "Ecosystem Foundation",
+        desc: "Base library for Seaborn, Pandas plotting, and other visualization tools.",
+      },
+    ],
+    useCases: [
+      { name: "Academic Papers", image: "/clients/illustration1.svg" },
+      {
+        name: "Exploratory Data Analysis",
+        image: "/clients/illustration2.svg",
+      },
+      { name: "Dashboard Visualizations", image: "/clients/illustration3.svg" },
+      { name: "Time Series Trends", image: "/clients/illustration4.svg" },
+      { name: "Custom Infographics", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "The foundational plotting library for static, interactive, and animated visualizations in Python.",
+    imageSrc: "/clients/technologies/matplotlib.png",
+  },
+  {
+    name: "Seaborn",
+    features: [
+      {
+        icon: <FaPalette />,
+        title: "Statistical Visualizations",
+        desc: "High-level API for violin plots, regression lines, and distribution comparisons.",
+      },
+      {
+        icon: <FaMagic />,
+        title: "Aesthetic Defaults",
+        desc: "Attractive themes and color palettes for polished visuals with minimal code.",
+      },
+      {
+        icon: <FaTable />,
+        title: "Pandas Integration",
+        desc: "Directly plot DataFrames with automatic axis labeling and grouping.",
+      },
+      {
+        icon: <FaChessBoard />,
+        title: "Multivariate Analysis",
+        desc: "Facet grids and pair plots to explore relationships across many variables.",
+      },
+      {
+        icon: <FaThermometerHalf />,
+        title: "Categorical Data",
+        desc: "Specialized tools for bar plots, box plots, and swarm plots by category.",
+      },
+    ],
+    useCases: [
+      { name: "Statistical EDA", image: "/clients/illustration1.svg" },
+      { name: "Correlation Analysis", image: "/clients/illustration2.svg" },
+      {
+        name: "Machine Learning Insights",
+        image: "/clients/illustration3.svg",
+      },
+      { name: "Quick Prototyping", image: "/clients/illustration4.svg" },
+      { name: "Publication-Ready Plots", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "A high-level interface for drawing statistical graphics with elegance and simplicity.",
+    imageSrc: "/clients/technologies/seaborn.png",
+  },
+  {
+    name: "Tableau",
+    features: [
+      {
+        icon: <FaEye />,
+        title: "Visual Discovery",
+        desc: "Intuitive drag-and-drop interface for ad-hoc exploration and advanced visual analytics.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Big Data Ready",
+        desc: "Optimized connectors for Hadoop, Snowflake, AWS, and live querying without extracts.",
+      },
+      {
+        icon: <FaMapMarkedAlt />,
+        title: "Geospatial Analytics",
+        desc: "Built-in mapping tools with auto-geocoding and custom territory layers.",
+      },
+      {
+        icon: <FaUsersCog />,
+        title: "Collaboration",
+        desc: "Tableau Server/Cloud for sharing, subscriptions, and data-driven storytelling.",
+      },
+      {
+        icon: <FaMagic />,
+        title: "Tableau Prep",
+        desc: "Clean and transform data visually before analysis (ETL without code).",
+      },
+    ],
+    useCases: [
+      {
+        name: "Exploratory Data Analysis",
+        image: "/clients/illustration1.svg",
+      },
+      { name: "Executive Dashboards", image: "/clients/illustration2.svg" },
+      { name: "Real-Time Monitoring", image: "/clients/illustration3.svg" },
+      { name: "Supply Chain Analytics", image: "/clients/illustration4.svg" },
+      { name: "Public Data Storytelling", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "The gold-standard in self-service analytics for turning raw data into interactive, actionable insights.",
+    imageSrc: "/clients/technologies/Tableau.png",
+  },
+  {
+    name: "Excel",
+    features: [
+      {
+        icon: <FaTable />,
+        title: "Universal Spreadsheets",
+        desc: "Grid-based calculations, pivot tables, and formulas (VLOOKUP, XLOOKUP, Power Pivot).",
+      },
+      {
+        icon: <FaChartBar />,
+        title: "Basic Visualizations",
+        desc: "Bar/line charts, sparklines, and conditional formatting for quick analysis.",
+      },
+      {
+        icon: <FaCode />,
+        title: "Automation (VBA)",
+        desc: "Custom macros and scripting with Visual Basic for Applications.",
+      },
+      {
+        icon: <FaCloud />,
+        title: "Collaboration",
+        desc: "Co-authoring in real-time via Excel Online and Microsoft 365.",
+      },
+      {
+        icon: <FaChessKnight />,
+        title: "Solver & What-If Analysis",
+        desc: "Optimization and scenario modeling for business decisions.",
+      },
+    ],
+    useCases: [
+      { name: "Financial Modeling", image: "/clients/illustration1.svg" },
+      { name: "Ad-Hoc Data Analysis", image: "/clients/illustration2.svg" },
+      { name: "Budgeting & Forecasting", image: "/clients/illustration3.svg" },
+      { name: "Small Datasets", image: "/clients/illustration4.svg" },
+      { name: "Quick Prototyping", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "The ubiquitous spreadsheet tool for everyday data organization, analysis, and lightweight automation.",
+    imageSrc: "/clients/technologies/excel.png",
+  },
+  {
+    name: "Looker",
+    features: [
+      {
+        icon: <FaCodeBranch />,
+        title: "Model-Centric (LookML)",
+        desc: "Define metrics and relationships in SQL-based LookML for consistent reporting.",
+      },
+      {
+        icon: <FaGoogle />,
+        title: "Google Cloud Native",
+        desc: "Built for BigQuery, integrated with Google Sheets, and part of Google Cloud Platform.",
+      },
+      {
+        icon: <FaNetworkWired />,
+        title: "Embedded Analytics",
+        desc: "White-label dashboards and APIs to embed analytics into customer-facing apps.",
+      },
+      {
+        icon: <FaUserShield />,
+        title: "Enterprise Governance",
+        desc: "Row-level security, centralized modeling, and version control (Git).",
+      },
+      {
+        icon: <FaSyncAlt />,
+        title: "Real-Time Data",
+        desc: "Direct querying of databases without pre-aggregation or extracts.",
+      },
+    ],
+    useCases: [
+      {
+        name: "Centralized Data Modeling",
+        image: "/clients/illustration1.svg",
+      },
+      {
+        name: "Embedded Business Intelligence",
+        image: "/clients/illustration2.svg",
+      },
+      { name: "Data Product Development", image: "/clients/illustration3.svg" },
+      { name: "Scalable SaaS Analytics", image: "/clients/illustration4.svg" },
+      { name: "Governed Self-Service BI", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "A modern BI platform that combines SQL-powered analytics with embedded data experiences.",
+    imageSrc: "/clients/technologies/Looker.png",
+  },
+  {
+    name: "ApacheSpark",
+    features: [
+      {
+        icon: <FaBolt />,
+        title: "In-Memory Processing",
+        desc: "100x faster than Hadoop by caching data in RAM for iterative algorithms.",
+      },
+      {
+        icon: <FaNetworkWired />,
+        title: "Unified Engine",
+        desc: "Batch (Spark SQL), streaming (Structured Streaming), ML (MLlib), and graph processing (GraphX).",
+      },
+      {
+        icon: <FaLanguage />,
+        title: "Multi-Language Support",
+        desc: "APIs for Python (PySpark), Scala, Java, R, and SQL.",
+      },
+      {
+        icon: <FaExpandArrowsAlt />,
+        title: "Distributed Computing",
+        desc: "Horizontal scaling across thousands of nodes with fault tolerance.",
+      },
+      {
+        icon: <FaDatabase />,
+        title: "Data Source Integration",
+        desc: "Connect to HDFS, S3, Cassandra, Kafka, and more.",
+      },
+    ],
+    useCases: [
+      { name: "Large-Scale ETL", image: "/clients/illustration1.svg" },
+      {
+        name: "Real-Time Stream Processing",
+        image: "/clients/illustration2.svg",
+      },
+      {
+        name: "Machine Learning Pipelines",
+        image: "/clients/illustration3.svg",
+      },
+      { name: "Data Lake Analytics", image: "/clients/illustration4.svg" },
+      { name: "Interactive Queries", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "The lightning-fast unified analytics engine for big data and machine learning.",
+    imageSrc: "/clients/technologies/spark.png",
+  },
+  {
+    name: "ApacheAirflow",
+    features: [
+      {
+        icon: <FaProjectDiagram />,
+        title: "Workflow Orchestration",
+        desc: "Define, schedule, and monitor complex pipelines as directed acyclic graphs (DAGs).",
+      },
+      {
+        icon: <FaCode />,
+        title: "Python Native",
+        desc: "Programmatically author workflows with dynamic pipeline generation.",
+      },
+      {
+        icon: <FaEye />,
+        title: "UI & Monitoring",
+        desc: "Built-in web UI for visualizing pipelines, logs, and task dependencies.",
+      },
+      {
+        icon: <FaPlug />,
+        title: "Extensible Operators",
+        desc: "1,000+ pre-built connectors (Kubernetes, Snowflake, AWS, etc.).",
+      },
+      {
+        icon: <FaCalendarAlt />,
+        title: "Scheduling",
+        desc: "Cron-like syntax for time-based or event-triggered executions.",
+      },
+    ],
+    useCases: [
+      { name: "Data Pipeline Automation", image: "/clients/illustration1.svg" },
+      { name: "ETL/ELT Workflows", image: "/clients/illustration2.svg" },
+      { name: "MLOps Orchestration", image: "/clients/illustration3.svg" },
+      {
+        name: "Cloud Infrastructure Mgmt",
+        image: "/clients/illustration4.svg",
+      },
+      {
+        name: "Business Process Automation",
+        image: "/clients/illustration5.svg",
+      },
+    ],
+    tagline:
+      "The platform to programmatically author, schedule, and monitor workflows.",
+    imageSrc: "/clients/technologies/airflow.png",
+  },
+  {
+    name: "Kafka",
+    features: [
+      {
+        icon: <FaStream />,
+        title: "Distributed Streaming",
+        desc: "Publish-subscribe messaging with fault-tolerant, partitioned logs.",
+      },
+      {
+        icon: <FaTachometerAlt />,
+        title: "High Throughput",
+        desc: "Handle millions of messages per second with low latency.",
+      },
+      {
+        icon: <FaDatabase />,
+        title: "Durable Storage",
+        desc: "Retain streams with configurable retention policies (time/size-based).",
+      },
+      {
+        icon: <FaNetworkWired />,
+        title: "Event-Driven Architecture",
+        desc: "Backbone for microservices, CDC, and real-time analytics.",
+      },
+      {
+        icon: <FaShieldAlt />,
+        title: "Enterprise Security",
+        desc: "SSL, SASL, ACLs, and role-based access control (RBAC).",
+      },
+    ],
+    useCases: [
+      {
+        name: "Real-Time Event Processing",
+        image: "/clients/illustration1.svg",
+      },
+      { name: "Log Aggregation", image: "/clients/illustration2.svg" },
+      { name: "IoT Data Pipelines", image: "/clients/illustration3.svg" },
+      { name: "Financial Transactions", image: "/clients/illustration4.svg" },
+      { name: "Activity Tracking", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "The distributed event streaming platform for building real-time data pipelines.",
+    imageSrc: "/clients/technologies/kafka.png",
+  },
+  {
+    name: "Next.js",
+    features: [
+      {
+        icon: <FaReact />,
+        title: "React Framework",
+        desc: "Production-ready React framework with server-side rendering (SSR), static site generation (SSG), and incremental static regeneration (ISR).",
+      },
+      {
+        icon: <FaServer />,
+        title: "Hybrid Rendering",
+        desc: "Choose between static generation, server-side rendering, or client-side rendering on a per-page basis.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Performance Optimized",
+        desc: "Automatic code splitting, image optimization, and prefetching for blazing-fast page loads.",
+      },
+      {
+        icon: <FaGlobe />,
+        title: "API Routes",
+        desc: "Build serverless API endpoints directly within your Next.js project with Node.js.",
+      },
+      {
+        icon: <FaMobile />,
+        title: "Built-in CSS & Sass",
+        desc: "Support for CSS Modules, Sass, and styled-jsx out of the box for seamless styling.",
+      },
+    ],
+    useCases: [
+      { name: "SEO-Friendly Web Apps", image: "/clients/illustration1.svg" },
+      { name: "E-Commerce Sites", image: "/clients/illustration2.svg" },
+      { name: "Marketing Websites", image: "/clients/illustration3.svg" },
+      { name: "Jamstack Architecture", image: "/clients/illustration4.svg" },
+      { name: "Full-Stack Applications", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "The React framework for production—combining the best of static and dynamic web development.",
+    imageSrc: "/clients/technologies/nextjs.svg",
+  },
+  {
+    name: "Gatsby",
+    features: [
+      {
+        icon: <FaReact />,
+        title: "React-Based Static Site Generator",
+        desc: "Build blazing-fast websites and apps using React, GraphQL, and modern JavaScript.",
+      },
+      {
+        icon: <FaPlug />,
+        title: "Rich Plugin Ecosystem",
+        desc: "1,000+ plugins for CMSs (Contentful, WordPress), analytics, and image optimization.",
+      },
+      {
+        icon: <FaDatabase />,
+        title: "Headless CMS Integration",
+        desc: "Pull data from any CMS or API with GraphQL and pre-render it at build time.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Performance Optimized",
+        desc: "Automatic code splitting, lazy loading, and pre-fetching for near-instant page loads.",
+      },
+      {
+        icon: <FaMobile />,
+        title: "Progressive Web App (PWA) Ready",
+        desc: "Offline support, service workers, and web app manifests built-in.",
+      },
+    ],
+    useCases: [
+      { name: "Content-Rich Websites", image: "/clients/illustration1.svg" },
+      {
+        name: "Marketing & Landing Pages",
+        image: "/clients/illustration2.svg",
+      },
+      {
+        name: "E-Commerce (with Shopify)",
+        image: "/clients/illustration3.svg",
+      },
+      { name: "Documentation Sites", image: "/clients/illustration4.svg" },
+      { name: "Portfolio & Blog Sites", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "The React-powered static site generator for content-driven websites with unmatched performance.",
+    imageSrc: "/clients/technologies/gatsby.svg",
+  },
+  {
+    name: "Hugo",
+    features: [
+      {
+        icon: <FaTachometerAlt />,
+        title: "Blazing Fast Builds",
+        desc: "World’s fastest static site generator (millisecond builds) thanks to Go’s efficiency.",
+      },
+      {
+        icon: <FaFileAlt />,
+        title: "Markdown-Centric",
+        desc: "Content authored in Markdown with front matter for metadata and templates.",
+      },
+      {
+        icon: <FaTheaterMasks />,
+        title: "Flexible Templating",
+        desc: "Go’s templating language for dynamic layouts and shortcodes.",
+      },
+      {
+        icon: <FaServer />,
+        title: "No Dependencies",
+        desc: "Single binary—no Node.js, databases, or complex toolchains required.",
+      },
+      {
+        icon: <FaCloud />,
+        title: "Host Anywhere",
+        desc: "Deploy to Netlify, GitHub Pages, or any web server with minimal configuration.",
+      },
+    ],
+    useCases: [
+      { name: "Blogs & Personal Sites", image: "/clients/illustration1.svg" },
+      { name: "Documentation Portals", image: "/clients/illustration2.svg" },
+      {
+        name: "High-Traffic Brochure Sites",
+        image: "/clients/illustration3.svg",
+      },
+      { name: "Multi-Language Content", image: "/clients/illustration4.svg" },
+      { name: "Minimalist Web Projects", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "The lightning-fast static site generator for developers who value simplicity and speed.",
+    imageSrc: "/clients/technologies/hugo.svg",
+  },
+  {
+    name: "Figma",
+    features: [
+      {
+        icon: <FaGlobe />,
+        title: "Cloud-Based Collaboration",
+        desc: "Real-time multi-user editing with comments and version history, accessible from any OS.",
+      },
+      {
+        icon: <FaPenFancy />,
+        title: "Vector Networks",
+        desc: "Advanced pen tool and flexible vector editing for precise design control.",
+      },
+      {
+        icon: <FaCode />,
+        title: "Dev Handoff",
+        desc: "Auto-generated CSS, iOS, and Android code snippets for seamless developer collaboration.",
+      },
+      {
+        icon: <FaMobile />,
+        title: "Interactive Prototyping",
+        desc: "Create clickable prototypes with animations, transitions, and dynamic overlays.",
+      },
+      {
+        icon: <FaPuzzlePiece />,
+        title: "Plugin Ecosystem",
+        desc: "1,000+ plugins for icons, charts, accessibility checks, and more.",
+      },
+    ],
+    useCases: [
+      { name: "Team-Based UI/UX Design", image: "/clients/illustration1.svg" },
+      { name: "Design Systems", image: "/clients/illustration2.svg" },
+      { name: "Remote Collaboration", image: "/clients/illustration3.svg" },
+      {
+        name: "Wireframing & Prototyping",
+        image: "/clients/illustration4.svg",
+      },
+      { name: "Design-Dev Workflow", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "The collaborative interface design tool that works in your browser and unites teams.",
+    imageSrc: "/clients/technologies/figma.svg",
+  },
+  {
+    name: "AdobeXD",
+    features: [
+      {
+        icon: <FaMagic />,
+        title: "Adobe Ecosystem",
+        desc: "Integrates with Photoshop, Illustrator, and Creative Cloud Libraries for asset reuse.",
+      },
+      {
+        icon: <FaMicrophoneAlt />,
+        title: "Voice Prototyping",
+        desc: "Design voice interactions and audio playback for conversational UI.",
+      },
+      {
+        icon: <FaMagic />,
+        title: "Auto-Animate",
+        desc: "Create micro-interactions and animations between artboards with one click.",
+      },
+      {
+        icon: <FaUserFriends />,
+        title: "Coediting (Beta)",
+        desc: "Real-time collaboration similar to Figma, but with Adobe’s security backbone.",
+      },
+      {
+        icon: <FaMobileAlt />,
+        title: "Mobile Preview",
+        desc: "Test prototypes live on iOS/Android devices via the Adobe XD app.",
+      },
+    ],
+    useCases: [
+      { name: "High-Fidelity Prototypes", image: "/clients/illustration1.svg" },
+      { name: "Adobe-Centric Workflows", image: "/clients/illustration2.svg" },
+      { name: "Voice & Game Design", image: "/clients/illustration3.svg" },
+      { name: "Design Sprints", image: "/clients/illustration4.svg" },
+      { name: "Responsive Resizing", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "Adobe’s all-in-one UX/UI solution for designing, prototyping, and sharing interactive experiences.",
+    imageSrc: "/clients/technologies/adobeXd.png",
+  },
+  {
+    name: "Sketch",
+    features: [
+      {
+        icon: <FaApple />,
+        title: "Mac-First Design",
+        desc: "Native macOS app with optimized performance for Apple hardware.",
+      },
+      {
+        icon: <FaVectorSquare />,
+        title: "Symbols & Libraries",
+        desc: "Reusable components and shared libraries for consistent design systems.",
+      },
+      {
+        icon: <FaRulerCombined />,
+        title: "Pixel Precision",
+        desc: "Pixel-perfect vector editing with grid snapping and export presets.",
+      },
+      {
+        icon: <FaCloud />,
+        title: "Cloud Collaboration",
+        desc: "Share documents and libraries via Sketch Cloud (limited real-time features).",
+      },
+      {
+        icon: <FaTerminal />,
+        title: "Developer Plugins",
+        desc: "Extend functionality with plugins for data merging, accessibility, and more.",
+      },
+    ],
+    useCases: [
+      { name: "Mac-Based UI Design", image: "/clients/illustration1.svg" },
+      { name: "Design System Creation", image: "/clients/illustration2.svg" },
+      { name: "High-Fidelity Mockups", image: "/clients/illustration3.svg" },
+      { name: "Icon & Asset Design", image: "/clients/illustration4.svg" },
+      { name: "Plugin-Powered Workflows", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "The digital design toolkit for macOS that revolutionized interface design with simplicity and power.",
+    imageSrc: "/clients/technologies/sketch.svg",
+  },
+  {
+    name: "InVision",
+    features: [
+      {
+        icon: <FaHandshake />,
+        title: "Design Collaboration",
+        desc: "Cloud platform for feedback, user testing, and stakeholder reviews.",
+      },
+      {
+        icon: <FaFilm />,
+        title: "Advanced Prototyping",
+        desc: "Create interactive animations and transitions with timeline-based editing.",
+      },
+      {
+        icon: <FaBook />,
+        title: "Design System Manager",
+        desc: "Centralize UI components, docs, and guidelines for teams (DSM).",
+      },
+      {
+        icon: <FaUserCheck />,
+        title: "User Testing",
+        desc: "Record feedback and heatmaps from real users via InVision Inspect.",
+      },
+      {
+        icon: <FaSync />,
+        title: "Sketch/Figma Sync",
+        desc: "Import designs from other tools for prototyping and collaboration.",
+      },
+    ],
+    useCases: [
+      { name: "Enterprise Design Ops", image: "/clients/illustration1.svg" },
+      { name: "Client Presentations", image: "/clients/illustration2.svg" },
+      { name: "User Testing & Feedback", image: "/clients/illustration3.svg" },
+      { name: "Design System Governance", image: "/clients/illustration4.svg" },
+      { name: "Animation Prototyping", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "The collaborative platform for design-driven teams to prototype, manage, and test digital products.",
+    imageSrc: "/clients/technologies/invision.png",
+  },
+  {
+    name: "Selenium",
+    features: [
+      {
+        icon: <FaGlobe />,
+        title: "Cross-Browser Support",
+        desc: "Automates browsers like Chrome, Firefox, Safari, and Edge for broad compatibility.",
+      },
+      {
+        icon: <FaProjectDiagram />,
+        title: "Language Agnostic",
+        desc: "Supports Java, Python, C#, Ruby, JavaScript, and Kotlin for flexible integrations.",
+      },
+      {
+        icon: <FaNetworkWired />,
+        title: "Grid & Parallel Testing",
+        desc: "Selenium Grid enables distributed and parallel test execution across machines.",
+      },
+      {
+        icon: <FaPuzzlePiece />,
+        title: "Extensible Architecture",
+        desc: "Supports third-party integrations, plugins, and custom frameworks.",
+      },
+      {
+        icon: <FaCogs />,
+        title: "Mature Ecosystem",
+        desc: "Backed by a large community, extensive documentation, and wide industry adoption.",
+      },
+    ],
+    useCases: [
+      { name: "Enterprise UI Testing", image: "/clients/illustration1.svg" },
+      { name: "Cross-Browser Validation", image: "/clients/illustration2.svg" },
+      { name: "CI/CD Integrations", image: "/clients/illustration3.svg" },
+      {
+        name: "Legacy Web App Automation",
+        image: "/clients/illustration4.svg",
+      },
+      { name: "Custom Test Frameworks", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "The de facto standard for browser automation with deep language and browser support.",
+    imageSrc: "/clients/technologies/Selenium.png",
+  },
+  {
+    name: "Cypress",
+    features: [
+      {
+        icon: <FaBolt />,
+        title: "Fast & Reliable",
+        desc: "Runs directly in the browser for faster and more consistent end-to-end tests.",
+      },
+      {
+        icon: <FaBug />,
+        title: "Debuggable",
+        desc: "Real-time reloading, time-travel debugging, and readable errors enhance developer productivity.",
+      },
+      {
+        icon: <FaCodeBranch />,
+        title: "All-in-One Testing",
+        desc: "Supports unit, integration, and E2E testing out of the box.",
+      },
+      {
+        icon: <FaSyncAlt />,
+        title: "Automatic Waiting",
+        desc: "No need for manual `waits` — Cypress waits for commands and assertions to complete.",
+      },
+      {
+        icon: <FaPlug />,
+        title: "Rich Plugin Ecosystem",
+        desc: "Custom commands, reporting, code coverage, and visual testing via plugins.",
+      },
+    ],
+    useCases: [
+      { name: "Modern Web App Testing", image: "/clients/illustration1.svg" },
+      { name: "CI-Friendly Automation", image: "/clients/illustration2.svg" },
+      {
+        name: "Developer-Centric Testing",
+        image: "/clients/illustration3.svg",
+      },
+      { name: "Component Testing", image: "/clients/illustration4.svg" },
+      { name: "Agile Teams & QA", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "Modern testing for modern web applications — fast, debuggable, and developer-first.",
+    imageSrc: "/clients/technologies/cypress.svg",
+  },
+  {
+    name: "Playwright",
+    features: [
+      {
+        icon: <FaLaptopCode />,
+        title: "Cross-Browser Automation",
+        desc: "Automates Chromium, Firefox, and WebKit with a single API.",
+      },
+      {
+        icon: <FaSync />,
+        title: "Auto-Wait & Retries",
+        desc: "Smart waiting and retries for actions ensure reliable tests by default.",
+      },
+      {
+        icon: <FaLock />,
+        title: "Secure Context Isolation",
+        desc: "Runs tests in isolated browser contexts for cleaner, parallel execution.",
+      },
+      {
+        icon: <FaTools />,
+        title: "Powerful CLI & Debugging",
+        desc: "Code generation, screenshot tracing, and step-by-step debugging tools built-in.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Full Stack Support",
+        desc: "Supports testing modern web apps including SPAs, PWAs, and server-rendered apps.",
+      },
+    ],
+    useCases: [
+      { name: "Headless Automation", image: "/clients/illustration1.svg" },
+      { name: "CI/CD Test Pipelines", image: "/clients/illustration2.svg" },
+      { name: "Multi-Browser Coverage", image: "/clients/illustration3.svg" },
+      { name: "High-Fidelity Test Runs", image: "/clients/illustration4.svg" },
+      { name: "JavaScript-First Testing", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "End-to-end testing across modern browsers with speed, power, and precision.",
+    imageSrc: "/clients/technologies/Playwright.svg",
+  },
+  {
+    name: "JUnit",
+    features: [
+      {
+        icon: <FaJava />,
+        title: "Java Native",
+        desc: "The default unit testing framework for Java with deep JVM integration.",
+      },
+      {
+        icon: <FaFlask />,
+        title: "Annotation-Driven",
+        desc: "Simplifies test lifecycle control with rich annotations like @Test, @BeforeEach, etc.",
+      },
+      {
+        icon: <FaProjectDiagram />,
+        title: "Framework Integration",
+        desc: "Works seamlessly with Maven, Gradle, Spring, and other Java ecosystems.",
+      },
+      {
+        icon: <FaTasks />,
+        title: "Parameterized Tests",
+        desc: "Run the same test logic against different inputs with minimal boilerplate.",
+      },
+      {
+        icon: <FaCogs />,
+        title: "Mature Ecosystem",
+        desc: "Long-standing support, tooling, IDE integration, and community resources.",
+      },
+    ],
+    useCases: [
+      { name: "Java Backend Testing", image: "/clients/illustration1.svg" },
+      {
+        name: "Spring Application Testing",
+        image: "/clients/illustration2.svg",
+      },
+      { name: "CI with Gradle/Maven", image: "/clients/illustration3.svg" },
+      { name: "Test-Driven Development", image: "/clients/illustration4.svg" },
+      { name: "Legacy Code Refactoring", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "A staple of Java testing — simple, extensible, and battle-tested.",
+    imageSrc: "/clients/technologies/Junit.png",
+  },
+  {
+    name: "TestNG",
+    features: [
+      {
+        icon: <FaToolbox />,
+        title: "Advanced Testing Features",
+        desc: "Supports data-driven, parallel, and group-based testing out of the box.",
+      },
+      {
+        icon: <FaBoxes />,
+        title: "Flexible Configuration",
+        desc: "XML-based configurations for suites, dependencies, and parameters.",
+      },
+      {
+        icon: <FaLayerGroup />,
+        title: "Multiple Test Types",
+        desc: "Built for unit, integration, functional, and end-to-end tests.",
+      },
+      {
+        icon: <FaRoute />,
+        title: "Method Dependency Control",
+        desc: "Execute test methods based on configurable dependencies.",
+      },
+      {
+        icon: <FaChartBar />,
+        title: "Rich Reporting",
+        desc: "Generates detailed HTML reports and integrates with CI tools.",
+      },
+    ],
+    useCases: [
+      { name: "Complex Test Suites", image: "/clients/illustration1.svg" },
+      { name: "Parallel Test Execution", image: "/clients/illustration2.svg" },
+      { name: "Enterprise Java Projects", image: "/clients/illustration3.svg" },
+      { name: "Parameterized Tests", image: "/clients/illustration4.svg" },
+      { name: "Custom Test Workflows", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "Powerful Java testing with enhanced control, configuration, and reporting.",
+    imageSrc: "/clients/technologies/test-ng.png",
+  },
+  {
+    name: "Mocha",
+    features: [
+      {
+        icon: <FaJsSquare />,
+        title: "JavaScript Simplicity",
+        desc: "A flexible, lightweight test runner for Node.js and browser environments.",
+      },
+      {
+        icon: <FaPuzzlePiece />,
+        title: "Customizable Framework",
+        desc: "Choose your own assertion library, reporter, and mocking tools.",
+      },
+      {
+        icon: <FaClock />,
+        title: "Asynchronous Support",
+        desc: "Natively handles async tests with `done()` and promises.",
+      },
+      {
+        icon: <FaCode />,
+        title: "Readable Test Syntax",
+        desc: "Describes test cases with natural `describe` and `it` blocks.",
+      },
+      {
+        icon: <FaCubes />,
+        title: "Plugin Friendly",
+        desc: "Supports integrations like Chai, Sinon, Istanbul, and more.",
+      },
+    ],
+    useCases: [
+      { name: "Node.js API Testing", image: "/clients/illustration1.svg" },
+      { name: "Modular Microservices", image: "/clients/illustration2.svg" },
+      { name: "Custom Assertion Logic", image: "/clients/illustration3.svg" },
+      { name: "TDD for JavaScript", image: "/clients/illustration4.svg" },
+      {
+        name: "Integration with Chai/Sinon",
+        image: "/clients/illustration5.svg",
+      },
+    ],
+    tagline:
+      "A minimalist JavaScript test runner with complete flexibility and ecosystem support.",
+    imageSrc: "/clients/technologies/mocha.svg",
+  },
+  {
+    name: "Jest",
+    features: [
+      {
+        icon: <FaReact />,
+        title: "Zero Config",
+        desc: "Works out of the box with Babel, TypeScript, and most frontend frameworks.",
+      },
+      {
+        icon: <FaMagic />,
+        title: "Snapshot Testing",
+        desc: "Capture component output and detect unintended changes with snapshots.",
+      },
+      {
+        icon: <FaTools />,
+        title: "Built-in Mocking",
+        desc: "Mock modules, timers, and functions without external dependencies.",
+      },
+      {
+        icon: <FaChartLine />,
+        title: "Code Coverage",
+        desc: "Integrated Istanbul support for detailed coverage reports.",
+      },
+      {
+        icon: <FaLayerGroup />,
+        title: "Multi-Project Runner",
+        desc: "Easily manage tests for monorepos or large-scale apps with multiple configs.",
+      },
+    ],
+    useCases: [
+      { name: "React App Testing", image: "/clients/illustration1.svg" },
+      {
+        name: "Snapshot Regression Checks",
+        image: "/clients/illustration2.svg",
+      },
+      { name: "Mock-Heavy Testing", image: "/clients/illustration3.svg" },
+      { name: "CI/CD Friendly", image: "/clients/illustration4.svg" },
+      { name: "TypeScript Projects", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "Delightful JavaScript testing with speed, coverage, and simplicity built-in.",
+    imageSrc: "/clients/technologies/jest.svg",
+  },
+  {
+    name: "Postman",
+    features: [
+      {
+        icon: <FaPaperPlane />,
+        title: "API Request Builder",
+        desc: "Easily create, send, and test REST, GraphQL, and WebSocket requests.",
+      },
+      {
+        icon: <FaFileCode />,
+        title: "Automated Testing",
+        desc: "Write test scripts using JavaScript to validate API responses with ease.",
+      },
+      {
+        icon: <FaProjectDiagram />,
+        title: "Collections & Workspaces",
+        desc: "Organize APIs, tests, environments, and documentation in shareable collections.",
+      },
+      {
+        icon: <FaUsersCog />,
+        title: "Team Collaboration",
+        desc: "Enable API-first workflows with versioning, comments, and role-based access.",
+      },
+      {
+        icon: <FaSyncAlt />,
+        title: "CI/CD Integrations",
+        desc: "Integrate with pipelines using Newman CLI or API monitoring tools.",
+      },
+    ],
+    useCases: [
+      { name: "Manual API Testing", image: "/clients/illustration1.svg" },
+      {
+        name: "Automated Regression Testing",
+        image: "/clients/illustration2.svg",
+      },
+      { name: "Mock Server Creation", image: "/clients/illustration3.svg" },
+      { name: "API Documentation", image: "/clients/illustration4.svg" },
+      {
+        name: "Team-Based API Development",
+        image: "/clients/illustration5.svg",
+      },
+    ],
+    tagline:
+      "A complete API development platform for testing, documentation, and collaboration.",
+    imageSrc: "/clients/technologies/postman.svg",
+  },
+  {
+    name: "SoapUI",
+    features: [
+      {
+        icon: <FaSoap />,
+        title: "SOAP & REST Testing",
+        desc: "Robust support for testing both SOAP-based and RESTful web services.",
+      },
+      {
+        icon: <FaChartPie />,
+        title: "Data-Driven Testing",
+        desc: "Run test cases with multiple inputs using external data sources like Excel or databases.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Automated Test Execution",
+        desc: "Schedule and run test suites automatically or through CI/CD tools.",
+      },
+      {
+        icon: <FaClipboardCheck />,
+        title: "Advanced Assertions",
+        desc: "Use XPath, JSONPath, and scripting for powerful response validations.",
+      },
+      {
+        icon: <FaTools />,
+        title: "Extensibility",
+        desc: "Supports Groovy scripting for advanced test logic and custom workflows.",
+      },
+    ],
+    useCases: [
+      { name: "Enterprise SOAP APIs", image: "/clients/illustration1.svg" },
+      {
+        name: "Legacy System Integration",
+        image: "/clients/illustration2.svg",
+      },
+      {
+        name: "Data-Driven Test Scenarios",
+        image: "/clients/illustration3.svg",
+      },
+      {
+        name: "Regression Testing for APIs",
+        image: "/clients/illustration4.svg",
+      },
+      { name: "Secure Service Testing", image: "/clients/illustration5.svg" },
+    ],
+    tagline:
+      "The industry standard for functional and security testing of SOAP and REST APIs.",
+    imageSrc: "/clients/technologies/soapui.png",
+  },
 ];
 
 export const reviewPlatforms = [

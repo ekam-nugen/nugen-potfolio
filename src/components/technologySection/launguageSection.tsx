@@ -160,7 +160,7 @@ export default function TechnologyShowcase() {
                 {getActiveItems().map(({ name, icon }) => (
                   <div
                     key={name}
-                    className="bg-white border p-4 rounded-lg shadow-sm flex items-center gap-3"
+                    className="bg-white border p-4 rounded-lg shadow-sm flex items-center gap-3 cursor-pointer"
                     onClick={() => {
                       router.push(`/technologies/${name.trim().toLowerCase()}`);
                     }}
