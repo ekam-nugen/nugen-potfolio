@@ -257,7 +257,7 @@ const HomePage: FC = () => {
                               </span>
                             </a>
                             <span></span>
-                            from India's Highest-rated Company.
+                            from India&apos;s Highest-rated Company.
                           </h2>
                           <a
                             href={slide.rightContent.iconText.button.href}
@@ -272,7 +272,7 @@ const HomePage: FC = () => {
                             Ready to bring your project to life?
                           </h3>
                           <p className="text-sm sm:text-base text-gray-600 mt-2 text-center">
-                            Share your vision, and we'll provide a free
+                            Share your vision, and we&apos;ll provide a free
                             expert consultation within 24 hours, outlining a
                             clear path to success tailored to your project and
                             budget.
