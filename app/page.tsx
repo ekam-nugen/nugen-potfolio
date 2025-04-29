@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useEffect, useState } from "react";
 import Loader from "@/src/components/common/Loader";
 import TestimonialCard from "@/src/components/TestimonialCard";
