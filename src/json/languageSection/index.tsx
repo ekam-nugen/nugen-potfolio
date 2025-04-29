@@ -15,7 +15,7 @@ export const data = {
       {
         value: "c-Sharp",
         label: "C#",
-        icon: "/clients/technologies/csharp.png",
+        icon: "/clients/technologies/c-sharp.svg",
       },
       { value: "cpp", label: "C++", icon: "/clients/technologies/cpp.png" },
       {
@@ -176,14 +176,18 @@ export const data = {
       },
     ],
     "API Development": [
-      { value: "rest", label: "REST", icon: "/clients/technologies/rest.png" },
+      { value: "rest", label: "REST", icon: "/clients/technologies/rest.svg" },
       {
         value: "graphql",
         label: "GraphQL",
         icon: "/clients/technologies/graphql.png",
       },
       { value: "grpc", label: "gRPC", icon: "/clients/technologies/grpc.png" },
-      { value: "soap", label: "SOAP", icon: "/clients/technologies/soap.png" },
+      {
+        value: "soap",
+        label: "SOAP",
+        icon: "/clients/technologies/soapui.png",
+      },
     ],
   },
   Platforms: {
@@ -324,7 +328,7 @@ export const data = {
         icon: "/clients/technologies/jenkins.png",
       },
       {
-        value: "gitlabCiCd",
+        value: "gitlabcicd",
         label: "GitLabCI/CD",
         icon: "/clients/technologies/gitlab.png",
       },
@@ -384,13 +388,13 @@ export const data = {
       {
         value: "generativeAi",
         label: "Generative AI",
-        icon: "/clients/technologies/genai.png",
+        icon: "/clients/technologies/generativeAI.png",
       },
       { value: "llms", label: "LLMs", icon: "/clients/technologies/llm.png" },
       {
         value: "multimodalAi",
         label: "Multimodal AI",
-        icon: "/clients/technologies/multimodal.png",
+        icon: "/clients/technologies/multimodal.jpg",
       },
     ],
   },

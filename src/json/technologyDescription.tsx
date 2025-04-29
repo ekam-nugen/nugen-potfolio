@@ -96,6 +96,20 @@ import {
   FaFileCode,
   FaPaperPlane,
   FaSoap,
+  FaDesktop,
+  FaGamepad,
+  FaMicrochip,
+  FaMicrophone,
+  FaWindows,
+  FaExchangeAlt,
+  FaLink,
+  FaUsers,
+  FaCloudUploadAlt,
+  FaBrain,
+  FaChalkboardTeacher,
+  FaCog,
+  FaComments,
+  FaImages,
 } from "react-icons/fa";
 
 interface Feature {
@@ -4518,6 +4532,429 @@ export const technologyStack: TechDescriptionProps[] = [
     tagline:
       "The industry standard for functional and security testing of SOAP and REST APIs.",
     imageSrc: "/clients/technologies/soapui.png",
+  },
+  {
+    value: "c-Sharp",
+    label: "C#",
+    features: [
+      {
+        icon: <FaCode />,
+        title: "Modern & Versatile",
+        desc: "C# offers modern language features for building everything from web apps to games.",
+      },
+      {
+        icon: <FaWindows />,
+        title: "Seamless .NET Integration",
+        desc: "Powered by the .NET ecosystem for rapid development and cross-platform support.",
+      },
+      {
+        icon: <FaDesktop />,
+        title: "Great for Desktop & Enterprise",
+        desc: "Ideal for building Windows applications, services, and enterprise-grade solutions.",
+      },
+      {
+        icon: <FaGamepad />,
+        title: "Powering Game Development",
+        desc: "Used widely with Unity for 2D/3D games and real-time applications.",
+      },
+      {
+        icon: <FaCloud />,
+        title: "Cloud & Web Ready",
+        desc: "Supports scalable web APIs and Azure-native cloud solutions.",
+      },
+    ],
+    highlights: [
+      {
+        name: "Web & Desktop Applications",
+        image: "/clients/illustration1.svg",
+      },
+      { name: "Enterprise Solutions", image: "/clients/illustration2.svg" },
+      {
+        name: "Game Development with Unity",
+        image: "/clients/illustration3.svg",
+      },
+      {
+        name: "Cloud Services with Azure",
+        image: "/clients/illustration4.svg",
+      },
+      { name: "Cross-platform .NET Apps", image: "/clients/illustration5.svg" },
+      { name: "Windows Services", image: "/clients/illustration6.svg" },
+    ],
+    tagline:
+      "C#, developed by Microsoft, is a powerful, object-oriented language used for building scalable applications across desktop, web, mobile, and cloud platforms.",
+    imageSrc: "/clients/technologies/c-sharp.svg",
+  },
+  {
+    value: "cpp",
+    label: "C++",
+    features: [
+      {
+        icon: <FaMicrochip />,
+        title: "High Performance & Control",
+        desc: "Offers low-level memory manipulation with high efficiency and speed.",
+      },
+      {
+        icon: <FaCogs />,
+        title: "Object-Oriented & Generic",
+        desc: "Supports multiple programming paradigms for complex software architecture.",
+      },
+      {
+        icon: <FaMicrophone />,
+        title: "Widely Used in Systems Programming",
+        desc: "Backbone of operating systems, embedded systems, and real-time applications.",
+      },
+      {
+        icon: <FaRocket />,
+        title: "Critical for Performance-Critical Apps",
+        desc: "Used in finance, gaming, simulations, and more where performance is key.",
+      },
+      {
+        icon: <FaTools />,
+        title: "Rich Ecosystem & Libraries",
+        desc: "Boost, STL, and other libraries enhance development productivity.",
+      },
+    ],
+    highlights: [
+      { name: "Game Engines & Graphics", image: "/clients/illustration1.svg" },
+      { name: "Embedded & IoT Systems", image: "/clients/illustration2.svg" },
+      { name: "High-Frequency Trading", image: "/clients/illustration3.svg" },
+      { name: "Compilers & Interpreters", image: "/clients/illustration4.svg" },
+      { name: "Operating Systems", image: "/clients/illustration5.svg" },
+      { name: "Simulation & Robotics", image: "/clients/illustration6.svg" },
+    ],
+    tagline:
+      "C++ is a powerful systems programming language known for its speed, flexibility, and control, making it ideal for performance-critical applications.",
+    imageSrc: "/clients/technologies/cpp.png",
+  },
+  {
+    value: "rest",
+    label: "REST",
+    features: [
+      {
+        icon: <FaGlobe />,
+        title: "Web-Scale Simplicity",
+        desc: "Built on top of HTTP, REST is easy to understand and widely adopted.",
+      },
+      {
+        icon: <FaLink />,
+        title: "Stateless Architecture",
+        desc: "Each request contains all needed information—ideal for scalable web services.",
+      },
+      {
+        icon: <FaTools />,
+        title: "Flexible Data Formats",
+        desc: "Supports JSON, XML, and other formats, giving flexibility for diverse systems.",
+      },
+      {
+        icon: <FaCubes />,
+        title: "Universal Compatibility",
+        desc: "Works seamlessly across browsers, mobile apps, and backend services.",
+      },
+      {
+        icon: <FaUsers />,
+        title: "Developer-Friendly & Well-Supported",
+        desc: "Mature ecosystem with broad tooling, community support, and documentation.",
+      },
+    ],
+    highlights: [
+      { name: "Public Web APIs", image: "/clients/illustration1.svg" },
+      { name: "Mobile App Backends", image: "/clients/illustration2.svg" },
+      { name: "CRUD-based Services", image: "/clients/illustration3.svg" },
+      {
+        name: "Cross-platform Communication",
+        image: "/clients/illustration4.svg",
+      },
+      { name: "IoT RESTful APIs", image: "/clients/illustration5.svg" },
+      {
+        name: "Cloud & SaaS Integrations",
+        image: "/clients/illustration6.svg",
+      },
+    ],
+    tagline:
+      "REST (Representational State Transfer) is the most widely used architectural style for designing scalable, stateless web services over HTTP.",
+    imageSrc: "/clients/technologies/rest.svg",
+  },
+  {
+    value: "grpc",
+    label: "gRPC",
+    features: [
+      {
+        icon: <FaBolt />,
+        title: "High Performance & Low Latency",
+        desc: "Uses HTTP/2 and binary serialization (Protocol Buffers) for ultra-fast communication.",
+      },
+      {
+        icon: <FaExchangeAlt />,
+        title: "Bi-Directional Streaming",
+        desc: "Supports real-time communication through client, server, and bidirectional streams.",
+      },
+      {
+        icon: <FaCodeBranch />,
+        title: "Strongly Typed Contracts",
+        desc: "IDL (proto files) enforce strict API contracts with auto-generated client/server code.",
+      },
+      {
+        icon: <FaCogs />,
+        title: "Language Agnostic",
+        desc: "Supports multiple languages including Go, C#, Java, Python, Node.js, and more.",
+      },
+      {
+        icon: <FaNetworkWired />,
+        title: "Ideal for Microservices",
+        desc: "Designed for efficient communication between internal services at scale.",
+      },
+    ],
+    highlights: [
+      {
+        name: "Microservices Communication",
+        image: "/clients/illustration1.svg",
+      },
+      { name: "Real-time Streaming APIs", image: "/clients/illustration2.svg" },
+      { name: "Cross-language APIs", image: "/clients/illustration3.svg" },
+      { name: "IoT & Edge Services", image: "/clients/illustration4.svg" },
+      { name: "Cloud-native Backends", image: "/clients/illustration5.svg" },
+      { name: "Protobuf-based Tooling", image: "/clients/illustration6.svg" },
+    ],
+    tagline:
+      "gRPC is a modern open-source RPC framework developed by Google, enabling high-performance, language-neutral communication between distributed services.",
+    imageSrc: "/clients/technologies/grpc.png",
+  },
+  {
+    value: "soap",
+    label: "SOAP",
+    features: [
+      {
+        icon: <FaShieldAlt />,
+        title: "Robust Security Standards",
+        desc: "Supports WS-Security, encryption, and authentication for enterprise-grade protection.",
+      },
+      {
+        icon: <FaSyncAlt />,
+        title: "Strict Protocol & Standards",
+        desc: "Enforces a formal contract using XML and WSDL for predictable and reliable APIs.",
+      },
+      {
+        icon: <FaBalanceScale />,
+        title: "Transactional Reliability",
+        desc: "Supports ACID-compliant transactions and reliable messaging via WS-ReliableMessaging.",
+      },
+      {
+        icon: <FaServer />,
+        title: "Platform & Language Independent",
+        desc: "Interoperable across diverse systems and technologies—ideal for legacy integration.",
+      },
+      {
+        icon: <FaUniversity />,
+        title: "Enterprise & Government Ready",
+        desc: "Widely used in banking, telecom, and government systems where formality is critical.",
+      },
+    ],
+    highlights: [
+      { name: "Enterprise B2B Systems", image: "/clients/illustration1.svg" },
+      {
+        name: "Legacy System Integration",
+        image: "/clients/illustration2.svg",
+      },
+      { name: "Financial Services APIs", image: "/clients/illustration3.svg" },
+      { name: "Telecom Platforms", image: "/clients/illustration4.svg" },
+      {
+        name: "Healthcare HL7 Integrations",
+        image: "/clients/illustration5.svg",
+      },
+      { name: "Government Web Services", image: "/clients/illustration6.svg" },
+    ],
+    tagline:
+      "SOAP is a protocol-based messaging standard that enables structured, secure, and extensible communication between enterprise systems, especially in regulated industries.",
+    imageSrc: "/clients/technologies/soapui.png",
+  },
+  {
+    value: "gitlabcicd",
+    label: "GitLab CI/CD",
+    features: [
+      {
+        icon: <FaCodeBranch />,
+        title: "Integrated CI/CD Pipeline",
+        desc: "Built directly into GitLab for streamlined code-to-deployment workflows.",
+      },
+      {
+        icon: <FaRocket />,
+        title: "Fast & Scalable Automation",
+        desc: "Automate builds, tests, and deployments across multiple environments.",
+      },
+      {
+        icon: <FaLock />,
+        title: "Security & Compliance First",
+        desc: "Includes built-in code scanning, secrets detection, and compliance tracking.",
+      },
+      {
+        icon: <FaProjectDiagram />,
+        title: "End-to-End DevOps Platform",
+        desc: "Plan, build, test, deploy, and monitor—all within a single application.",
+      },
+      {
+        icon: <FaCloudUploadAlt />,
+        title: "Flexible Deployment Options",
+        desc: "Supports Kubernetes, serverless, multi-cloud, and on-premise deployments.",
+      },
+    ],
+    highlights: [
+      { name: "Full DevOps Lifecycle", image: "/clients/illustration1.svg" },
+      { name: "CI/CD for Microservices", image: "/clients/illustration2.svg" },
+      { name: "Kubernetes Deployments", image: "/clients/illustration3.svg" },
+      { name: "Secure Code Delivery", image: "/clients/illustration4.svg" },
+      { name: "Infrastructure as Code", image: "/clients/illustration5.svg" },
+      { name: "Scalable Automation", image: "/clients/illustration6.svg" },
+    ],
+    tagline:
+      "GitLab CI/CD is a powerful, integrated DevOps solution that automates your entire software delivery pipeline with efficiency, security, and visibility.",
+    imageSrc: "/clients/technologies/gitlab.png",
+  },
+  {
+    value: "generativeAi",
+    label: "Generative AI",
+    features: [
+      {
+        icon: <FaBrain />,
+        title: "Content Creation at Scale",
+        desc: "Generates text, images, music, and more—transforming creative and business workflows.",
+      },
+      {
+        icon: <FaRobot />,
+        title: "Automates Human-like Tasks",
+        desc: "Mimics human creativity for writing, designing, coding, and customer engagement.",
+      },
+      {
+        icon: <FaChartLine />,
+        title: "Boosts Productivity & Innovation",
+        desc: "Accelerates ideation, prototyping, and personalized experiences across industries.",
+      },
+      {
+        icon: <FaMagic />,
+        title: "Custom Model Fine-Tuning",
+        desc: "Adaptable to niche domains and use cases with transfer learning and prompt engineering.",
+      },
+      {
+        icon: <FaCog />,
+        title: "Real-time Applications",
+        desc: "Powering chatbots, assistants, creative tools, and decision-support systems.",
+      },
+    ],
+    highlights: [
+      {
+        name: "AI Writing & Content Tools",
+        image: "/clients/illustration1.svg",
+      },
+      {
+        name: "Synthetic Media Generation",
+        image: "/clients/illustration2.svg",
+      },
+      { name: "AI Coding Assistants", image: "/clients/illustration3.svg" },
+      {
+        name: "Customer Support Automation",
+        image: "/clients/illustration4.svg",
+      },
+      { name: "Digital Marketing", image: "/clients/illustration5.svg" },
+      {
+        name: "Data-to-Insight Generation",
+        image: "/clients/illustration6.svg",
+      },
+    ],
+    tagline:
+      "Generative AI refers to models that can produce new content—text, code, images, and more—by learning from massive datasets and mimicking human creativity.",
+    imageSrc: "/clients/technologies/generativeAI.png",
+  },
+  {
+    value: "llms",
+    label: "Large Language Models (LLMs)",
+    features: [
+      {
+        icon: <FaLanguage />,
+        title: "Natural Language Understanding",
+        desc: "LLMs comprehend and generate human language across many tasks and domains.",
+      },
+      {
+        icon: <FaPenFancy />,
+        title: "Context-Aware Text Generation",
+        desc: "Produces coherent, context-rich responses, articles, summaries, and code.",
+      },
+      {
+        icon: <FaChartPie />,
+        title: "Versatile Use Cases",
+        desc: "Applied in chatbots, search, translation, analysis, and knowledge extraction.",
+      },
+      {
+        icon: <FaTools />,
+        title: "Customizable via APIs & Fine-Tuning",
+        desc: "Easily integrated and tuned for specific industry workflows or apps.",
+      },
+      {
+        icon: <FaCube />,
+        title: "Foundation for Multimodal AI",
+        desc: "Powers next-gen AI models capable of processing language with vision and audio.",
+      },
+    ],
+    highlights: [
+      { name: "Chatbots & Assistants", image: "/clients/illustration1.svg" },
+      { name: "Search & Recommendation", image: "/clients/illustration2.svg" },
+      {
+        name: "Enterprise Knowledge Systems",
+        image: "/clients/illustration3.svg",
+      },
+      { name: "AI Coding Support", image: "/clients/illustration4.svg" },
+      { name: "Language Translation", image: "/clients/illustration5.svg" },
+      {
+        name: "Text Classification & Analysis",
+        image: "/clients/illustration6.svg",
+      },
+    ],
+    tagline:
+      "LLMs are advanced AI models trained on massive text data to understand and generate human language, enabling powerful tools for communication, analysis, and automation.",
+    imageSrc: "/clients/technologies/llm.png",
+  },
+  {
+    value: "multimodalAi",
+    label: "Multimodal AI",
+    features: [
+      {
+        icon: <FaImages />,
+        title: "Processes Multiple Input Types",
+        desc: "Combines text, images, video, audio, and other data types for richer context.",
+      },
+      {
+        icon: <FaEye />,
+        title: "Enhanced Understanding",
+        desc: "Integrates sensory data to perceive, reason, and generate human-like responses.",
+      },
+      {
+        icon: <FaComments />,
+        title: "Advanced Interaction Capabilities",
+        desc: "Enables smarter virtual assistants, content generators, and support agents.",
+      },
+      {
+        icon: <FaChalkboardTeacher />,
+        title: "Cross-Domain Intelligence",
+        desc: "Solves complex tasks like visual question answering, captioning, and voice-command interfaces.",
+      },
+      {
+        icon: <FaBrain />,
+        title: "State-of-the-Art AI Evolution",
+        desc: "At the cutting edge of AI—blending modalities for more intuitive, human-like interaction.",
+      },
+    ],
+    highlights: [
+      { name: "AI Visual Assistants", image: "/clients/illustration1.svg" },
+      { name: "Image & Video Captioning", image: "/clients/illustration2.svg" },
+      { name: "Voice-to-Action Systems", image: "/clients/illustration3.svg" },
+      { name: "AI-Powered Design Tools", image: "/clients/illustration4.svg" },
+      {
+        name: "Multimodal Search Engines",
+        image: "/clients/illustration5.svg",
+      },
+      { name: "Healthcare Diagnostics", image: "/clients/illustration6.svg" },
+    ],
+    tagline:
+      "Multimodal AI refers to systems that combine and interpret different types of data—text, vision, audio—to interact with the world more like humans do.",
+    imageSrc: "/clients/technologies/multimodal.jpg",
   },
 ];
 
