@@ -67,7 +67,7 @@ const Intelligence = () => {
       icon: "Sparkles",
       title: "Generative AI",
       content:
-        'Our AI developers explore limitless opportunities with <a href="/generative-ai-development" class="text-blue-600 hover:underline">Generative AI</a>, using strong technical knowledge around foundational models like GPT-4. We create high-quality applications, code, images, content, and other innovative solutions, delivering exceptional results for your business.',
+        'Our AI developers explore limitless opportunities with <a href="/technologies/generative%20ai" class="text-orange-600 font-semibold hover:underline">Generative AI</a>, using strong technical knowledge around foundational models like GPT-4. We create high-quality applications, code, images, content, and other innovative solutions, delivering exceptional results for your business.',
     },
     {
       icon: "BarChart2",
@@ -132,11 +132,11 @@ const Intelligence = () => {
             alt: "Google Reviews",
           },
         ]}
-        projectLink="#how-we-help-you"
-        teamLink="#how-we-help-you"
+        projectLink="/case-studys"
+        teamLink="/dedicated-team"
         companyRatingText="from India's Highest-rated Company"
         ctaText="Discuss Your Requirements"
-        ctaLink="#"
+        ctaLink="/contact-us"
         consultationTitle="Ready to bring your project to life?"
         consultationDescription="Share your vision, and we'll provide a free expert consultation within 24 hours, outlining a clear path to success tailored to your project and budget."
         icons={aimlIcons}
@@ -147,7 +147,7 @@ const Intelligence = () => {
         highlightedText="software development process"
         processItems={aimlProcessItems}
         ctaText="Get in Touch with Us"
-        ctaLink="/book-an-appointment"
+        ctaLink="/contact-us"
         ctaDataAttribute="Hire an AI Developer - AI ML Development"
       />
       <ClientSlider />
@@ -161,7 +161,7 @@ const Intelligence = () => {
         subtitle="Our AI developers excel in cutting-edge technologies like generative AI, Natural Language Processing, deep learning, and more. We build innovative solutions that drive progress, enhance automation, and deliver actionable insights tailored to your business goals."
         competencies={aimlCompetencies}
         ctaText="Start Your Project Today"
-        ctaLink="/book-an-appointment"
+        ctaLink="/contact-us"
         ctaDataAttribute="Hire Top AI Developers - AI"
       />
       <TechnologyShowcase />

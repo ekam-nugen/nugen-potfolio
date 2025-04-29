@@ -41,7 +41,7 @@ const IndustriesWeEmpower = () => {
             data-bookctablock="Get In Touch With Us - Industries We Empower"
           >
             Get In Touch With Us
-<ArrowRight className="ml-2"/>
+            <ArrowRight className="ml-2" />
           </Link>
         </div>
       </div>

@@ -11,8 +11,12 @@ import DevelopmentProcess, { ProcessItem } from "../AI_Ml/ProcessAI";
 import * as LucideIcons from "lucide-react";
 
 const WordPressMaintenance = () => {
-  const wordpressIcons: (keyof typeof LucideIcons)[] = ["Globe","Monitor", "Shield"];
-  const wordpressProcessItems:ProcessItem[] = [
+  const wordpressIcons: (keyof typeof LucideIcons)[] = [
+    "Globe",
+    "Monitor",
+    "Shield",
+  ];
+  const wordpressProcessItems: ProcessItem[] = [
     {
       number: 1,
       title: "Website Assessment",
@@ -56,7 +60,7 @@ const WordPressMaintenance = () => {
       icon: "Monitor",
     },
   ];
-  const wordpressCompetencies:Competency[] = [
+  const wordpressCompetencies: Competency[] = [
     {
       icon: "Globe",
       title: "WordPress Expertise",
@@ -126,11 +130,11 @@ const WordPressMaintenance = () => {
             alt: "Google Reviews",
           },
         ]}
-        projectLink="#how-we-help-you"
-        teamLink="#how-we-help-you"
+        projectLink="/case-studys"
+        teamLink="/dedicated-team"
         companyRatingText="from India's Top WordPress Maintenance Provider"
         ctaText="Discuss Your Maintenance Needs"
-        ctaLink="#"
+        ctaLink="/contact-us"
         consultationTitle="Ready to optimize your WordPress site?"
         consultationDescription="Share your needs, and we’ll provide a free expert consultation within 24 hours, delivering a tailored maintenance plan to keep your WordPress site secure and high-performing."
         icons={wordpressIcons}
@@ -141,18 +145,21 @@ const WordPressMaintenance = () => {
         highlightedText="maintenance process"
         processItems={wordpressProcessItems}
         ctaText="Get in Touch with Us"
-        ctaLink="/book-an-appointment"
+        ctaLink="/contact-us"
         ctaDataAttribute="Hire a WordPress Expert - WordPress Maintenance"
       />
       <ClientSlider />
-      <DiscussProject className="bg-gradient-to-r from-white via-[#f0f4f8] to-white" imageSrc="https://www.dynamicdreamz.com/wp-content/uploads/2024/08/wordpress-white-label-img.svg" />
+      <DiscussProject
+        className="bg-gradient-to-r from-white via-[#f0f4f8] to-white"
+        imageSrc="https://www.dynamicdreamz.com/wp-content/uploads/2024/08/wordpress-white-label-img.svg"
+      />
       <CoreCompetencies
         className=""
         title="Technological Expertise of Our WordPress Experts"
         subtitle="Our WordPress experts deliver comprehensive maintenance services, ensuring your site is secure, optimized, and up-to-date. From performance tuning to proactive monitoring, we keep your site running smoothly."
         competencies={wordpressCompetencies}
         ctaText="Start Your Maintenance Plan"
-        ctaLink="/book-an-appointment"
+        ctaLink="/contact-us"
         ctaDataAttribute="Hire Top WordPress Experts - WordPress Maintenance"
       />
       <TechnologyShowcase />

@@ -11,10 +11,13 @@ import ContactUsSection from "../../technologySection/contactSection";
 import { FAQSection } from "../../technologySection/questionSection";
 import * as LucideIcons from "lucide-react";
 
-
 const DataAnalytics = () => {
-  const dataAnalyticsIcons: (keyof typeof LucideIcons)[] = ["BarChart", "PieChart", "Database"];
-  const dataAnalyticsProcessItems:ProcessItem[] = [
+  const dataAnalyticsIcons: (keyof typeof LucideIcons)[] = [
+    "BarChart",
+    "PieChart",
+    "Database",
+  ];
+  const dataAnalyticsProcessItems: ProcessItem[] = [
     {
       number: 1,
       title: "Data Requirements Gathering",
@@ -58,7 +61,7 @@ const DataAnalytics = () => {
       icon: "Monitor",
     },
   ];
-  const dataAnalyticsCompetencies:Competency[] = [
+  const dataAnalyticsCompetencies: Competency[] = [
     {
       icon: "BarChart2",
       title: "Data Analysis",
@@ -93,7 +96,7 @@ const DataAnalytics = () => {
       icon: "Search",
       title: "Business Intelligence",
       content:
-        'We provide comprehensive <a href="/business-intelligence" class="text-blue-600 hover:underline">business intelligence</a> solutions, integrating data from multiple sources to deliver strategic insights that empower your organization.',
+        'We provide comprehensive <a href="/technologies/scikit-learn" class="text-orange-600 font-semibold hover:underline">business intelligence</a> solutions, integrating data from multiple sources to deliver strategic insights that empower your organization.',
     },
   ];
   return (
@@ -127,11 +130,11 @@ const DataAnalytics = () => {
             alt: "Google Reviews",
           },
         ]}
-        projectLink="#how-we-help-you"
-        teamLink="#how-we-help-you"
+        projectLink="/case-studys"
+        teamLink="/dedicated-team"
         companyRatingText="from India's Highest-rated Company"
         ctaText="Discuss Your Data Needs"
-        ctaLink="#"
+        ctaLink="/contact-us"
         consultationTitle="Ready to unlock your data’s potential?"
         consultationDescription="Share your goals, and we’ll offer a free expert consultation within 24 hours, providing a tailored roadmap to leverage data analytics for your business success."
         icons={dataAnalyticsIcons}
@@ -142,7 +145,7 @@ const DataAnalytics = () => {
         highlightedText="development process"
         processItems={dataAnalyticsProcessItems}
         ctaText="Get in Touch with Us"
-        ctaLink="/book-an-appointment"
+        ctaLink="/contact-us"
         ctaDataAttribute="Hire a Data Analyst - Data Analytics Development"
       />
       <ClientSlider />
@@ -156,7 +159,7 @@ const DataAnalytics = () => {
         subtitle="Our data analysts specialize in transforming raw data into strategic insights through advanced analytics, visualization, and engineering. We deliver solutions that empower data-driven decisions and fuel business success."
         competencies={dataAnalyticsCompetencies}
         ctaText="Start Your Analytics Project"
-        ctaLink="/book-an-appointment"
+        ctaLink="/contact-us"
         ctaDataAttribute="Hire Top Data Analysts - Data Analytics"
       />
       <TechnologyShowcase />

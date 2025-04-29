@@ -11,10 +11,13 @@ import ContactUsSection from "../../technologySection/contactSection";
 import { FAQSection } from "../../technologySection/questionSection";
 import * as LucideIcons from "lucide-react";
 
-
 const CMSEngineering = () => {
-  const cmsIcons: (keyof typeof LucideIcons)[] = ["FileText", "Database", "Edit"];
-  const cmsProcessItems:ProcessItem[] = [
+  const cmsIcons: (keyof typeof LucideIcons)[] = [
+    "FileText",
+    "Database",
+    "Edit",
+  ];
+  const cmsProcessItems: ProcessItem[] = [
     {
       number: 1,
       title: "Requirement Analysis",
@@ -58,7 +61,7 @@ const CMSEngineering = () => {
       icon: "LifeBuoy",
     },
   ];
-  const cmsCompetencies:Competency[] = [
+  const cmsCompetencies: Competency[] = [
     {
       icon: "FileText",
       title: "Headless CMS Development",
@@ -81,7 +84,7 @@ const CMSEngineering = () => {
       icon: "CloudUpload",
       title: "Content Migration",
       content:
-        'Our team ensures seamless <a href="/cms-migration-services" class="text-blue-600 hover:underline">content migration</a> to your new CMS, preserving SEO and data integrity.',
+        'Our team ensures seamless <a href="/technologies/wordpress" class="text-orange-600 font-semibold hover:underline">content migration</a> to your new CMS, preserving SEO and data integrity.',
     },
     {
       icon: "Puzzle",
@@ -127,11 +130,11 @@ const CMSEngineering = () => {
             alt: "Google Reviews",
           },
         ]}
-        projectLink="#how-we-help-you"
-        teamLink="#how-we-help-you"
+        projectLink="/case-studys"
+        teamLink="/dedicated-team"
         companyRatingText="from India's Highest-rated CMS Company"
         ctaText="Discuss Your CMS Needs"
-        ctaLink="#"
+        ctaLink="/contact-us"
         consultationTitle="Ready to streamline your content?"
         consultationDescription="Share your vision, and we’ll provide a free expert consultation within 24 hours, delivering a tailored CMS strategy to enhance your content management."
         icons={cmsIcons}
@@ -142,18 +145,21 @@ const CMSEngineering = () => {
         highlightedText="development process"
         processItems={cmsProcessItems}
         ctaText="Get in Touch with Us"
-        ctaLink="/book-an-appointment"
+        ctaLink="/contact-us"
         ctaDataAttribute="Hire a CMS Developer - CMS Development"
       />
       <ClientSlider />
-      <DiscussProject className="bg-gradient-to-r from-white via-[#fff1eb] to-white" imageSrc="https://png.pngtree.com/png-vector/20220724/ourmid/pngtree-vector-cms-icon-site-web-symbol-vector-png-image_14209170.png" />
+      <DiscussProject
+        className="bg-gradient-to-r from-white via-[#fff1eb] to-white"
+        imageSrc="https://png.pngtree.com/png-vector/20220724/ourmid/pngtree-vector-cms-icon-site-web-symbol-vector-png-image_14209170.png"
+      />
       <CoreCompetencies
         className=""
         title="Technological Expertise of Our CMS Developers"
         subtitle="Our CMS developers excel in building flexible, secure, and scalable content management systems. From custom themes to headless CMS, we deliver solutions that empower your business."
         competencies={cmsCompetencies}
         ctaText="Start Your CMS Project"
-        ctaLink="/book-an-appointment"
+        ctaLink="/contact-us"
         ctaDataAttribute="Hire Top CMS Developers - CMS Development"
       />
       <TechnologyShowcase />

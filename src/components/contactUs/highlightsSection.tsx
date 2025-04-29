@@ -44,7 +44,7 @@ export default function CompanyStatsSection({
   };
 
   return (
-    <section className="bg-white px-4 py-20 md:px-20 text-gray-900">
+    <section id="home-hero" className="bg-white px-4 py-20 md:px-20 text-gray-900">
       <motion.div
         className="max-w-6xl mx-auto text-center mb-8"
         initial="hidden"

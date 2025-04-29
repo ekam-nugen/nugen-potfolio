@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { servicesTechData } from "@/src/json";
+import { ChevronDown, ChevronRight } from "lucide-react";
 
 interface Link {
   href: string;
@@ -16,7 +17,7 @@ interface Item {
 interface Tab {
   id: string;
   name: string;
-  icon: React.ComponentType<{ className?: string }>; 
+  icon: React.ComponentType<{ className?: string }>;
   items: Item[];
   link?: Link;
   links?: Link[];
@@ -77,21 +78,11 @@ export default function ServicesSection() {
                 onClick={() => toggleAccordion(service.id)}
               >
                 {service.title}
-                <svg
+                <ChevronDown
                   className={`w-6 h-6 transform transition-transform ${
                     activeService === service.id ? "rotate-180" : ""
                   }`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
+                />
               </button>
 
               {/* Accordion Content */}
@@ -137,28 +128,17 @@ export default function ServicesSection() {
                               </li>
                             ))}
                           </ul>
+
                           <div className="mt-6 flex flex-col sm:flex-row gap-4">
                             {tab.links ? (
                               tab.links.map((link: Link, index: number) => (
                                 <a
                                   key={index}
                                   href={link.href}
-                                  className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+                                  className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-400 text-white rounded-md hover:bg-blue-700"
                                 >
                                   {link.text}
-                                  <svg
-                                    className="ml-2 w-6 h-6"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                  >
-                                    <path
-                                      strokeLinecap="round"
-                                      strokeLinejoin="round"
-                                      strokeWidth="2"
-                                      d="M9 5l7 7-7 7"
-                                    />
-                                  </svg>
+                                  <ChevronRight className="ml-2" />
                                 </a>
                               ))
                             ) : tab.link ? (
@@ -167,19 +147,7 @@ export default function ServicesSection() {
                                 className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-400 text-white rounded-md "
                               >
                                 {tab.link.text}
-                                <svg
-                                  className="ml-2 w-6 h-6"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M9 5l7 7-7 7"
-                                  />
-                                </svg>
+                                <ChevronRight className="ml-2" />
                               </a>
                             ) : null}
                           </div>

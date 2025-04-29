@@ -11,10 +11,13 @@ import ContactUsSection from "../../technologySection/contactSection";
 import { FAQSection } from "../../technologySection/questionSection";
 import * as LucideIcons from "lucide-react";
 
-
 const CloudEngineering = () => {
-  const cloudEngineeringIcons: (keyof typeof LucideIcons)[] = ["Cloud", "Server", "Globe"];
-  const cloudEngineeringProcessItems:ProcessItem[] = [
+  const cloudEngineeringIcons: (keyof typeof LucideIcons)[] = [
+    "Cloud",
+    "Server",
+    "Globe",
+  ];
+  const cloudEngineeringProcessItems: ProcessItem[] = [
     {
       number: 1,
       title: "Cloud Strategy Planning",
@@ -58,7 +61,7 @@ const CloudEngineering = () => {
       icon: "Monitor",
     },
   ];
-  const cloudEngineeringCompetencies:Competency[] = [
+  const cloudEngineeringCompetencies: Competency[] = [
     {
       icon: "Cloud",
       title: "Cloud Architecture",
@@ -81,7 +84,7 @@ const CloudEngineering = () => {
       icon: "CloudUpload",
       title: "Cloud Migration",
       content:
-        'We provide seamless <a href="/cloud-migration-services" class="text-blue-600 hover:underline">cloud migration</a> services, transferring your applications and data to the cloud with minimal downtime and maximum efficiency.',
+        'We provide seamless <a href="/technologies/aws" class="text-orange-600 font-semibold hover:underline">cloud migration</a> services, transferring your applications and data to the cloud with minimal downtime and maximum efficiency.',
     },
     {
       icon: "Server",
@@ -127,11 +130,11 @@ const CloudEngineering = () => {
             alt: "Google Reviews",
           },
         ]}
-        projectLink="#how-we-help-you"
-        teamLink="#how-we-help-you"
+        projectLink="/case-studys"
+        teamLink="/dedicated-team"
         companyRatingText="from India's Highest-rated Company"
         ctaText="Discuss Your Cloud Needs"
-        ctaLink="#"
+        ctaLink="/contact-us"
         consultationTitle="Ready to scale with the cloud?"
         consultationDescription="Share your vision, and we’ll provide a free expert consultation within 24 hours, delivering a tailored strategy to harness cloud engineering for your business success."
         icons={cloudEngineeringIcons}
@@ -142,18 +145,23 @@ const CloudEngineering = () => {
         highlightedText="development process"
         processItems={cloudEngineeringProcessItems}
         ctaText="Get in Touch with Us"
-        ctaLink="/book-an-appointment"
+        ctaLink="/contact-us"
         ctaDataAttribute="Hire a Cloud Engineer - Cloud Engineering Development"
       />
       <ClientSlider />
-      <DiscussProject className="bg-gradient-to-r from-white via-[#fff1eb] to-white" imageSrc={"https://img.freepik.com/premium-photo/vibrant-3d-cartoon-laptop-connected-cloud-computing-icon-white-background_1335075-49068.jpg"} />
+      <DiscussProject
+        className="bg-gradient-to-r from-white via-[#fff1eb] to-white"
+        imageSrc={
+          "https://img.freepik.com/premium-photo/vibrant-3d-cartoon-laptop-connected-cloud-computing-icon-white-background_1335075-49068.jpg"
+        }
+      />
       <CoreCompetencies
         className=""
         title="Technological Expertise of Our Cloud Engineers"
         subtitle="Our cloud engineers excel in building scalable, secure, and efficient cloud solutions. From architecture design to continuous monitoring, we deliver infrastructure that powers your business."
         competencies={cloudEngineeringCompetencies}
         ctaText="Start Your Cloud Project"
-        ctaLink="/book-an-appointment"
+        ctaLink="/contact-us"
         ctaDataAttribute="Hire Top Cloud Engineers - Cloud Engineering"
       />
       <TechnologyShowcase />

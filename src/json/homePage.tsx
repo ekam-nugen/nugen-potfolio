@@ -33,7 +33,7 @@ interface Slide {
     subheading: string;
     subheadingIcon?: { src: string; alt: string; width: number; height: number };
     button1: Button;
-    button2: Button | null;
+    button2?: Button | null;
     rightContent: {
       type: "image" | "services" | "iconText" | "events";
       image?: {
@@ -64,7 +64,7 @@ export const slides: Slide[] = [
       subheading: "Trusted by industry leaders worldwide.",
       button1: {
         text: "Discover Services",
-        href: "#",
+        href: "/services",
         color: "bg-orange-500 hover:bg-orange-600",
       },
       button2: null,
@@ -106,7 +106,7 @@ export const slides: Slide[] = [
           ],
           button: {
             text: "View All Services",
-            href: "#",
+            href: "/services",
             color: "bg-orange-500 hover:bg-orange-600",
           },
         },
@@ -140,7 +140,7 @@ export const slides: Slide[] = [
       subheading: "Stop Outsourcing Fails. Start Fueling Success.",
       button1: {
         text: "Download Free Guide",
-        href: "#",
+        href: "/technologies",
         color: "bg-orange-500 hover:bg-orange-600",
       },
       button2: null,
@@ -167,15 +167,15 @@ export const slides: Slide[] = [
       subheading: "Start building your digital future today.",
       button1: {
         text: "Get Started",
-        href: "#",
+        href: "#home-hero",
         color: "bg-orange-500 hover:bg-orange-600",
       },
-      button2: {
-        text: "Learn More",
-        href: "#",
-        color:
-          "bg-white hover:bg-black text-black hover:text-white border-2 border-gray-200",
-      },
+      // button2: {
+      //   text: "Learn More",
+      //   href: "#",
+      //   color:
+      //     "bg-white hover:bg-black text-black hover:text-white border-2 border-gray-200",
+      // },
       rightContent: {
         type: "image",
         image: {
@@ -195,7 +195,7 @@ export const slides: Slide[] = [
       subheading: "Join us to explore new opportunities.",
       button1: {
         text: "Schedule a Meeting",
-        href: "#",
+        href: "/contact-us",
         color: "bg-orange-500 hover:bg-orange-600",
       },
       button2: null,

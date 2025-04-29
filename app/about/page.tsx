@@ -25,7 +25,7 @@ const AboutPage = () => {
       ) : (
         <>
           <HeroSection />
-          <Services />
+          <Services className={"bg-gradient-to-r from-white via-[#fff1eb] to-white"} />
           <Evolution />
           <CustomerReviews />
           <FAQSection />
