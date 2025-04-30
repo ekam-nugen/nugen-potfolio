@@ -473,7 +473,7 @@ export const servicesTechData: Service[] = [
           },
         ],
         link: {
-          href: "/custom-software-development",
+          href: "/services/cms",
           text: "Explore Custom Software Development",
         },
       },
@@ -499,7 +499,7 @@ export const servicesTechData: Service[] = [
           },
         ],
         link: {
-          href: "/web-development",
+          href: "/services/webdevelopment",
           text: "Discover Our Web Development Services",
         },
       },
@@ -524,7 +524,7 @@ export const servicesTechData: Service[] = [
               "Stay ahead in the app game with our continuous support and updates. Keep your app competitive with the latest features and optimizations.",
           },
         ],
-        link: { href: "/mobile-app", text: "Dive into Mobile App Development" },
+        link: { href: "/services/appdevelopment", text: "Dive into Mobile App Development" },
       },
       {
         id: "qa",
@@ -543,7 +543,7 @@ export const servicesTechData: Service[] = [
           },
         ],
         link: {
-          href: "/testing-qa",
+          href: "/services/cms",
           text: "Ensure Quality with Our Testing Services",
         },
       },
@@ -570,7 +570,7 @@ export const servicesTechData: Service[] = [
           },
         ],
         link: {
-          href: "/cloud-engineering",
+          href: "/services/cloud-engineering",
           text: "Elevate Your Business with Cloud Solutions",
         },
       },
@@ -607,7 +607,7 @@ export const servicesTechData: Service[] = [
           },
         ],
         link: {
-          href: "/data-engineering",
+          href: "/services/data-analytics",
           text: "Unlock Insights with Our Data Services",
         },
       },
@@ -639,7 +639,7 @@ export const servicesTechData: Service[] = [
           },
         ],
         link: {
-          href: "/ai-ml-development",
+          href: "/services/intelligence",
           text: "Innovate with AI and Machine Learning",
         },
       },
@@ -666,7 +666,7 @@ export const servicesTechData: Service[] = [
           },
         ],
         link: {
-          href: "/uiux-design",
+          href: "/services/uiux",
           text: "Design Your Success with Our UI/UX Services",
         },
       },
@@ -693,8 +693,8 @@ export const servicesTechData: Service[] = [
           },
         ],
         links: [
-          { href: "/ar-vr-development", text: "Discover AR/VR Magic" },
-          { href: "/blockchain", text: "Explore Blockchain Solutions" },
+          { href: "/services/blockchain", text: "Discover AR/VR Magic" },
+          { href: "/services/blockchain", text: "Explore Blockchain Solutions" },
         ],
       },
     ],

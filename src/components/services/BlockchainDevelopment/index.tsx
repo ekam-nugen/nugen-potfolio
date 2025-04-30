@@ -12,7 +12,11 @@ import { FAQSection } from "../../technologySection/questionSection";
 import * as LucideIcons from "lucide-react";
 
 const Blockchain = () => {
-  const blockchainIcons: (keyof typeof LucideIcons)[] = ["Link", "Network", "Lock"];
+  const blockchainIcons: (keyof typeof LucideIcons)[] = [
+    "Link",
+    "Network",
+    "Lock",
+  ];
   const blockchainProcessItems: ProcessItem[] = [
     {
       number: 1,
@@ -57,7 +61,7 @@ const Blockchain = () => {
       icon: "Monitor",
     },
   ];
-  const blockchainCompetencies:Competency[] = [
+  const blockchainCompetencies: Competency[] = [
     {
       icon: "Vault",
       title: "Blockchain Architecture",
@@ -126,11 +130,11 @@ const Blockchain = () => {
             alt: "Google Reviews",
           },
         ]}
-        projectLink="#how-we-help-you"
-        teamLink="#how-we-help-you"
+        projectLink="/case-study"
+        teamLink="/dedicated-team"
         companyRatingText="from India's Leading Blockchain Innovator"
         ctaText="Discuss Your Blockchain Needs"
-        ctaLink="#"
+        ctaLink="/contact-us"
         consultationTitle="Ready to innovate with blockchain?"
         consultationDescription="Share your vision, and we’ll provide a free expert consultation within 24 hours, delivering a tailored blockchain strategy to drive your business forward."
         icons={blockchainIcons}
@@ -141,18 +145,21 @@ const Blockchain = () => {
         highlightedText="development process"
         processItems={blockchainProcessItems}
         ctaText="Get in Touch with Us"
-        ctaLink="/book-an-appointment"
+        ctaLink="/contact-us"
         ctaDataAttribute="Hire a Blockchain Developer - Blockchain Development"
       />
       <ClientSlider />
-      <DiscussProject className="bg-gradient-to-r from-white via-[#e6f0fa] to-white" imageSrc="https://static.vecteezy.com/system/resources/previews/016/716/630/non_2x/flat-isometric-3d-illustration-abstract-blockchain-concept-design-free-vector.jpg" />
+      <DiscussProject
+        className="bg-gradient-to-r from-white via-[#e6f0fa] to-white"
+        imageSrc="https://static.vecteezy.com/system/resources/previews/016/716/630/non_2x/flat-isometric-3d-illustration-abstract-blockchain-concept-design-free-vector.jpg"
+      />
       <CoreCompetencies
         className=""
         title="Technological Expertise of Our Blockchain Developers"
         subtitle="Our blockchain developers excel in creating secure, scalable, and innovative decentralized solutions. From smart contracts to DApps, we deliver technology that drives trust and efficiency."
         competencies={blockchainCompetencies}
         ctaText="Start Your Blockchain Project"
-        ctaLink="/book-an-appointment"
+        ctaLink="/contact-us"
         ctaDataAttribute="Hire Top Blockchain Developers - Blockchain Development"
       />
       <TechnologyShowcase />

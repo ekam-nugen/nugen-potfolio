@@ -2,10 +2,14 @@
 import { servicesData } from "@/src/json";
 import React from "react";
 
-const Services = () => {
+interface AboutServices {
+  className?: string;
+}
+
+const Services = ({ className }: AboutServices) => {
   return (
     <>
-      <div className="bg-gradient-to-r from-white via-[#fff1eb] to-white py-12">
+      <div className={`py-12 ${className}`}>
         {/* Header Section */}
         <div className="text-center max-w-4xl mx-auto px-4 mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -17,7 +21,7 @@ const Services = () => {
             success for the best digital marketing agency in India.
           </h3>
           <a
-            href="#"
+            href="/services"
             className="inline-block mt-6  font-medium py-2 px-6 rounded-lg hover:bg-gradient-to-r border border-gray-300 from-orange-400 to-purple-400 hover:text-white bg-white text-gray-800 duration-300"
           >
             See all services
@@ -63,7 +67,9 @@ const Services = () => {
                 {/* Back Face */}
                 <div className="absolute inset-0 bg-gradient-to-br from-white via-[#fff1eb] to-white  text-gray-800 rounded-lg shadow-xl p-6 flex items-center justify-center backface-hidden rotate-y-180">
                   <div className="text-center">
-                    <h3 className="text-xl font-semibold mb-4">Why Choose Us?</h3>
+                    <h3 className="text-xl font-semibold mb-4">
+                      Why Choose Us?
+                    </h3>
                     <ul className="text-base space-y-3 mb-6">
                       {service.benefits.map((benefit, index) => (
                         <li key={index}>{benefit}</li>

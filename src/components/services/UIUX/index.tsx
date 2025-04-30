@@ -13,7 +13,7 @@ import * as LucideIcons from "lucide-react";
 
 const UIUXDesign = () => {
   const uiuxIcons: (keyof typeof LucideIcons)[] = ["Brush", "Eye", "Layout"];
-  const uiuxProcessItems:ProcessItem[] = [
+  const uiuxProcessItems: ProcessItem[] = [
     {
       number: 1,
       title: "User Research",
@@ -57,7 +57,7 @@ const UIUXDesign = () => {
       icon: "Share",
     },
   ];
-  const uiuxCompetencies:Competency[] = [
+  const uiuxCompetencies: Competency[] = [
     {
       icon: "Brush",
       title: "Visual Design",
@@ -126,11 +126,11 @@ const UIUXDesign = () => {
             alt: "Google Reviews",
           },
         ]}
-        projectLink="#how-we-help-you"
-        teamLink="#how-we-help-you"
+        projectLink="/case-study"
+        teamLink="/dedicated-team"
         companyRatingText="from India's Highest-rated Design Agency"
         ctaText="Discuss Your Design Needs"
-        ctaLink="#"
+        ctaLink="/contact-us"
         consultationTitle="Ready to elevate your user experience?"
         consultationDescription="Share your vision, and we’ll provide a free expert consultation within 24 hours, delivering a tailored UI/UX strategy to captivate your users."
         icons={uiuxIcons}
@@ -141,18 +141,21 @@ const UIUXDesign = () => {
         highlightedText="design process"
         processItems={uiuxProcessItems}
         ctaText="Get in Touch with Us"
-        ctaLink="/book-an-appointment"
+        ctaLink="/contact-us"
         ctaDataAttribute="Hire a UI/UX Designer - UI & UX Design"
       />
       <ClientSlider />
-      <DiscussProject className="bg-gradient-to-r from-white via-[#fff1eb] to-white" imageSrc="https://codedthemes.com/wp-content/uploads/2024/09/Figma-UI-Kit.svg" />
+      <DiscussProject
+        className="bg-gradient-to-r from-white via-[#fff1eb] to-white"
+        imageSrc="https://codedthemes.com/wp-content/uploads/2024/09/Figma-UI-Kit.svg"
+      />
       <CoreCompetencies
         className=""
         title="Technological Expertise of Our UI/UX Designers"
         subtitle="Our UI/UX designers excel in crafting intuitive, engaging, and accessible digital experiences. From prototyping to design systems, we deliver solutions that captivate users."
         competencies={uiuxCompetencies}
         ctaText="Start Your Design Project"
-        ctaLink="/book-an-appointment"
+        ctaLink="/contact-us"
         ctaDataAttribute="Hire Top UI/UX Designers - UI & UX Design"
       />
       <TechnologyShowcase />

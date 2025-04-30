@@ -11,8 +11,12 @@ import DevelopmentProcess, { ProcessItem } from "../AI_Ml/ProcessAI";
 import * as LucideIcons from "lucide-react";
 
 const WebDevelopment = () => {
-  const webDevIcons: (keyof typeof LucideIcons)[] = ["Globe", "LaptopMinimalCheck", "Shield"];
-  const webDevProcessItems:ProcessItem[] = [
+  const webDevIcons: (keyof typeof LucideIcons)[] = [
+    "Globe",
+    "LaptopMinimalCheck",
+    "Shield",
+  ];
+  const webDevProcessItems: ProcessItem[] = [
     {
       number: 1,
       title: "Requirement Analysis",
@@ -53,10 +57,10 @@ const WebDevelopment = () => {
       title: "Maintenance & Updates",
       description:
         "We provide ongoing support and updates using modern frameworks, ensuring your website remains secure, fast, and aligned with industry trends.",
-      icon: "RotateCw", 
+      icon: "RotateCw",
     },
   ];
-  const webDevCompetencies:Competency[] = [
+  const webDevCompetencies: Competency[] = [
     {
       icon: "Globe",
       title: "Custom Web Development",
@@ -126,11 +130,11 @@ const WebDevelopment = () => {
             alt: "Google Reviews",
           },
         ]}
-        projectLink="#how-we-help-you"
-        teamLink="#how-we-help-you"
+        projectLink="/case-study"
+        teamLink="/dedicated-team"
         companyRatingText="from India's Premier Web Development Innovator"
         ctaText="Discuss Your Web Development Needs"
-        ctaLink="#"
+        ctaLink="/contact-us"
         consultationTitle="Ready to elevate your website?"
         consultationDescription="Share your vision, and we’ll provide a free expert consultation within 24 hours, delivering a tailored web development strategy to drive your digital success."
         icons={webDevIcons}
@@ -141,18 +145,21 @@ const WebDevelopment = () => {
         highlightedText="development process"
         processItems={webDevProcessItems}
         ctaText="Get in Touch with Us"
-        ctaLink="/book-an-appointment"
+        ctaLink="/contact-us"
         ctaDataAttribute="Hire a Web Development Expert - Web Development"
       />
       <ClientSlider />
-      <DiscussProject className="bg-gradient-to-r from-white via-[#f0f4f8] to-white" imageSrc="https://www.pngitem.com/pimgs/m/531-5312189_web-app-development-free-svg-for-web-design.png" />
+      <DiscussProject
+        className="bg-gradient-to-r from-white via-[#f0f4f8] to-white"
+        imageSrc="https://www.pngitem.com/pimgs/m/531-5312189_web-app-development-free-svg-for-web-design.png"
+      />
       <CoreCompetencies
         className=""
         title="Technological Expertise of Our Web Development Experts"
         subtitle="Our web development experts deliver customized, high-performance websites using modern frameworks and innovative practices, ensuring scalability and user satisfaction."
         competencies={webDevCompetencies}
         ctaText="Start Your Web Project"
-        ctaLink="/book-an-appointment"
+        ctaLink="/contact-us"
         ctaDataAttribute="Hire Top Web Development Experts - Web Development"
       />
       <TechnologyShowcase />

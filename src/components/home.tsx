@@ -11,6 +11,7 @@ import ComputerIcon from "../../public/computer-icon.png";
 import ToolIcon from "../../public/mobile.png";
 import hash from "../../public/hash-icon.png";
 import settings from "../../public/setting-icon.webp";
+import Link from "next/link";
 
 const HomePage: FC = () => {
   const iconRef = useRef(null);
@@ -201,9 +202,12 @@ const HomePage: FC = () => {
                         <h1 className="mt-3 xs:mt-4 sm:mt-5 md:mt-6 text-lg xs:text-xl sm:text-2xl md:text-3xl font-extrabold text-gray-900 text-center">
                           Transform Your Business With Cutting Edge Solutions
                         </h1>
-                        <button className="mt-3 xs:mt-4 sm:mt-5 md:mt-6 px-3 xs:px-4 sm:px-5 md:px-6 py-1 xs:py-1.5 sm:py-2 md:py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-full shadow-md transition-colors duration-300 text-xs xs:text-sm sm:text-base">
+                          <Link href={"/case-studys"}>
+                        <button className="mt-3 flex cursor-pointer xs:mt-4 sm:mt-5 md:mt-6 px-3 xs:px-4 sm:px-5 md:px-6 py-1 xs:py-1.5 sm:py-2 md:py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-full shadow-md transition-colors duration-300 text-xs xs:text-sm sm:text-base">
                           Learn More
+                          <ArrowRight className="ml-2"/>
                         </button>
+                          </Link>
                       </div>
                     )}
                   {slide.rightContent.type === "services" &&
@@ -241,26 +245,25 @@ const HomePage: FC = () => {
                       <div className="flex flex-col p-4 sm:p-6 bg-gradient-to-r from-white to-[#fef3c7] rounded-xl shadow-md max-w-md mx-auto">
                         <div className="flex flex-col items-center space-y-4 sm:space-y-5">
                           <h2 className="text-lg sm:text-2xl md:text-3xl text-gray-800 font-semibold text-center">
-                            Get
-                            <span></span>
-                            <a href="#how-we-help-you">
+                            Get&nbsp; 
+
+
+                            <a href="/case-study">
                               <span className="text-orange-500">
-                                Project-based
+                                Project-based&nbsp;
                               </span>
                             </a>
-                            <span></span>
-                            and
-                            <span></span>
-                            <a href="#how-we-help-you">
+                            and&nbsp;
+                            <a href="/dedicated-team">
                               <span className="text-green-500">
-                                Dedicated Teams
+                                Dedicated Teams&nbsp;
                               </span>
                             </a>
-                            <span></span>
                             from India&apos;s Highest-rated Company.
                           </h2>
                           <a
-                            href={slide.rightContent.iconText.button.href}
+                            // href={slide.rightContent.iconText.button.href}
+                            href="/contact-us"
                             className="bg-orange-500 hover:bg-orange-600 text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-md font-semibold text-sm sm:text-base transition flex items-center gap-2"
                           >
                             Discuss Your Requirements

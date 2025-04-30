@@ -12,8 +12,12 @@ import { FAQSection } from "../../technologySection/questionSection";
 import * as LucideIcons from "lucide-react";
 
 const SEOOptimization = () => {
-  const seoIcons: (keyof typeof LucideIcons)[] = ["Search", "ChartLine", "Globe"];
-  const seoProcessItems:ProcessItem[] = [
+  const seoIcons: (keyof typeof LucideIcons)[] = [
+    "Search",
+    "ChartLine",
+    "Globe",
+  ];
+  const seoProcessItems: ProcessItem[] = [
     {
       number: 1,
       title: "SEO Audit",
@@ -57,7 +61,7 @@ const SEOOptimization = () => {
       icon: "ChartBar",
     },
   ];
-  const seoCompetencies:Competency[] = [
+  const seoCompetencies: Competency[] = [
     {
       icon: "Search",
       title: "Keyword Strategy",
@@ -86,7 +90,7 @@ const SEOOptimization = () => {
       icon: "Link",
       title: "Link Building",
       content:
-        'Our <a href="/link-building-services" class="text-blue-600 hover:underline">link building</a> strategies secure high-quality backlinks to boost your site’s authority and rankings.',
+        'Our <a href="/#" class="text-orange-600 font-sembold hover:underline">link building</a> strategies secure high-quality backlinks to boost your site’s authority and rankings.',
     },
     {
       icon: "ChartLine",
@@ -126,11 +130,11 @@ const SEOOptimization = () => {
             alt: "Google Reviews",
           },
         ]}
-        projectLink="#how-we-help-you"
-        teamLink="#how-we-help-you"
+        projectLink="/case-study"
+        teamLink="/dedicated-team"
         companyRatingText="from India's Highest-rated SEO Agency"
         ctaText="Discuss Your SEO Goals"
-        ctaLink="#"
+        ctaLink="/contact-us"
         consultationTitle="Ready to rank higher?"
         consultationDescription="Share your goals, and we’ll provide a free expert SEO consultation within 24 hours, delivering a tailored strategy to boost your website’s visibility."
         icons={seoIcons}
@@ -141,18 +145,21 @@ const SEOOptimization = () => {
         highlightedText="optimization process"
         processItems={seoProcessItems}
         ctaText="Get in Touch with Us"
-        ctaLink="/book-an-appointment"
+        ctaLink="/contact-us"
         ctaDataAttribute="Hire an SEO Expert - SEO Optimization"
       />
       <ClientSlider />
-      <DiscussProject className="bg-gradient-to-r from-white via-[#fff1eb] to-white" imageSrc="https://static.vecteezy.com/system/resources/previews/026/509/328/non_2x/concept-of-seo-search-engine-optimization-and-web-analytics-elements-interface-element-with-search-button-seo-trend-search-optimization-flat-illustration-on-a-white-background-vector.jpg"/>
+      <DiscussProject
+        className="bg-gradient-to-r from-white via-[#fff1eb] to-white"
+        imageSrc="https://static.vecteezy.com/system/resources/previews/026/509/328/non_2x/concept-of-seo-search-engine-optimization-and-web-analytics-elements-interface-element-with-search-button-seo-trend-search-optimization-flat-illustration-on-a-white-background-vector.jpg"
+      />
       <CoreCompetencies
         className=""
         title="Technological Expertise of Our SEO Experts"
         subtitle="Our SEO experts excel in optimizing websites for search engines, driving traffic, and boosting conversions. From keyword strategies to technical SEO, we deliver results that matter."
         competencies={seoCompetencies}
         ctaText="Start Your SEO Project"
-        ctaLink="/book-an-appointment"
+        ctaLink="/contact-us"
         ctaDataAttribute="Hire Top SEO Experts - SEO Optimization"
       />
       <TechnologyShowcase />

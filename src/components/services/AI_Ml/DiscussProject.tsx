@@ -51,7 +51,7 @@ const DiscussProject: React.FC<DiscussProjectProps> = ({
               </li>
             </ul>
             <Link
-              href="#"
+              href="/contact-us"
               data-bookctablock="Schedule a discovery call - API Development"
               className="inline-flex items-center px-6 py-3 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-colors duration-300"
             >

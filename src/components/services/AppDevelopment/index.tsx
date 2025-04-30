@@ -132,11 +132,11 @@ const CustomizedAppDevelopment = () => {
             alt: "Google Reviews",
           },
         ]}
-        projectLink="#how-we-help-you"
-        teamLink="#how-we-help-you"
+        projectLink="/case-study"
+        teamLink="/dedicated-team"
         companyRatingText="from India's Highest-rated App Development Company"
         ctaText="Discuss Your App Idea"
-        ctaLink="#"
+        ctaLink="/contact-us"
         consultationTitle="Ready to build your custom app?"
         consultationDescription="Share your vision, and we’ll provide a free expert consultation within 24 hours, delivering a tailored strategy to bring your app idea to life."
         icons={appDevelopmentIcons}
@@ -147,7 +147,7 @@ const CustomizedAppDevelopment = () => {
         highlightedText="development process"
         processItems={appDevelopmentProcessItems}
         ctaText="Get in Touch with Us"
-        ctaLink="/book-an-appointment"
+        ctaLink="/contact-us"
         ctaDataAttribute="Hire an App Developer - Customized App Development"
       />
       <ClientSlider />
@@ -161,7 +161,7 @@ const CustomizedAppDevelopment = () => {
         subtitle="Our app developers excel in building scalable, secure, and user-friendly applications. From cross-platform to native development, we deliver solutions that empower your business."
         competencies={appDevelopmentCompetencies}
         ctaText="Start Your App Project"
-        ctaLink="/book-an-appointment"
+        ctaLink="/contact-us"
         ctaDataAttribute="Hire Top App Developers - Customized App Development"
       />
       <TechnologyShowcase />
