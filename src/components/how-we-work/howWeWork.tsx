@@ -140,15 +140,16 @@ export default function HowWeWorkSection() {
           </motion.div>
 
           {/* CTA Button */}
-          <motion.button
+          <motion.a
+            href="/contact-us"
             variants={buttonVariants}
             initial="rest"
             whileHover="hover"
             whileTap={{ scale: 0.95 }}
-            className="bg-gradient-to-r from-[#FF6B00] to-[#FF2FB6] text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 shadow-lg"
+            className="bg-gradient-to-r from-[#FF6B00] to-[#FF2FB6] text-white w-fit px-6 py-3 rounded-full font-semibold flex items-center gap-2 shadow-lg"
           >
             Get A Quote <ArrowRight className="w-4 h-4" />
-          </motion.button>
+          </motion.a>
         </div>
 
         {/* Animated Illustration */}
