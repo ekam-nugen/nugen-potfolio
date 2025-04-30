@@ -78,6 +78,6 @@ export const services = [
     icon: <Users color="#ff6b3d" />,
     subtitle: "Build your remote dream team with our vetted tech talent.",
     linkTitle: "Hire Dedicated Teams",
-    link: "/book-an-appointmen",
+    link: "/book-an-appointment",
   },
 ];

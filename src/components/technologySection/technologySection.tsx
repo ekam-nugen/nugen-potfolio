@@ -4,7 +4,7 @@ import Link from "next/link";
 interface TechnologySectionProps {
   subheading: ReactNode;
   heading: string;
-  tags: { label: string; color: string; href: string }[];
+  tags: { label: string; color: string; href?: string }[];
 }
 
 export const TechnologySection: React.FC<TechnologySectionProps> = ({
@@ -23,15 +23,24 @@ export const TechnologySection: React.FC<TechnologySectionProps> = ({
         </h1>
 
         <div className="flex flex-wrap justify-center gap-4 mt-10">
-          {tags.map((tag, index) => (
-            <Link
-              key={index}
-              href={tag?.href}
-              className={`px-6 py-3 border-l-4 ${tag.color} text-gray-800 font-medium hover:bg-slate-100 rounded-lg transition-colors duration-200`}
-            >
-              {tag.label}
-            </Link>
-          ))}
+          {tags?.map((tag, index) =>
+            tag?.href ? (
+              <Link
+                key={index}
+                href={tag?.href}
+                className={`px-6 py-3 border-l-4 ${tag.color} text-gray-800 font-medium hover:bg-slate-100 rounded-lg transition-colors duration-200`}
+              >
+                {tag.label}
+              </Link>
+            ) : (
+              <div
+                key={index}
+                className={`cursor-pointer px-6 py-3 border-l-4 ${tag.color} text-gray-800 font-medium hover:bg-slate-100 rounded-lg transition-colors duration-200`}
+              >
+                {tag.label}
+              </div>
+            )
+          )}
         </div>
       </div>
     </div>

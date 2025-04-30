@@ -167,7 +167,7 @@ export const slides: Slide[] = [
       subheading: "Start building your digital future today.",
       button1: {
         text: "Get Started",
-        href: "#home-hero",
+        href: "/services",
         color: "bg-orange-500 hover:bg-orange-600",
       },
       // button2: {
