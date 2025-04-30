@@ -20,7 +20,7 @@ export default function TechnologyPage() {
 
   const tech = technologyStack.find(
     (t) =>
-      t.value.toLowerCase() ===
+      t?.value?.toLowerCase() ===
       (typeof id === "string" && id?.trim().toLowerCase())
   );
 

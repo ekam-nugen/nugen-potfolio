@@ -41,11 +41,11 @@ const TechDescription: React.FC<TechDescriptionProps> = ({
                 300+ Glowing 5-Star Reviews
               </h4>
               <div className="flex justify-center lg:justify-start gap-4 flex-wrap">
-                {reviewPlatforms.map((logo, idx) => (
+                {reviewPlatforms?.map((logo, idx) => (
                   <div key={idx} className="w-40">
                     <Image
-                      src={logo.imageSrc}
-                      alt={logo.alt}
+                      src={logo?.imageSrc}
+                      alt={logo?.alt}
                       width={150}
                       height={100}
                       className="object-contain"
@@ -125,14 +125,14 @@ const TechDescription: React.FC<TechDescriptionProps> = ({
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-12">Why {label}?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-left">
-            {features.map((item, idx) => (
+            {features?.map((item, idx) => (
               <div
                 key={idx}
                 className="relative bg-[#fff7f2] rounded-2xl p-6 shadow-md cursor-pointer transform transition-transform duration-300 ease-in-out hover:scale-[1.1] group overflow-hidden"
               >
-                <div className="text-3xl text-[#f4a180] mb-4">{item.icon}</div>
-                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.desc}</p>
+                <div className="text-3xl text-[#f4a180] mb-4">{item?.icon}</div>
+                <h3 className="text-xl font-semibold mb-2">{item?.title}</h3>
+                <p className="text-gray-600">{item?.desc}</p>
 
                 {/* This pseudo-border is animated via CSS below */}
                 <span className="animated-border-hover"></span>
@@ -151,7 +151,7 @@ const TechDescription: React.FC<TechDescriptionProps> = ({
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left - List */}
             <div className="space-y-6">
-              {highlights.map((item, idx) => (
+              {highlights?.map((item, idx) => (
                 <div
                   key={idx}
                   onMouseEnter={() => setActiveIndex(idx)}
@@ -167,7 +167,7 @@ const TechDescription: React.FC<TechDescriptionProps> = ({
                   {activeIndex === idx && (
                     <span className="card-border-animation" />
                   )}
-                  {item.name}
+                  {item?.name}
                 </div>
               ))}
             </div>
