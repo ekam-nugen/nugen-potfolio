@@ -4,7 +4,7 @@ import Link from "next/link";
 interface TechnologySectionProps {
   subheading: ReactNode;
   heading: string;
-  tags: { label: string; color: string }[];
+  tags: { label: string; color: string; href: string }[];
 }
 
 export const TechnologySection: React.FC<TechnologySectionProps> = ({
@@ -26,7 +26,7 @@ export const TechnologySection: React.FC<TechnologySectionProps> = ({
           {tags.map((tag, index) => (
             <Link
               key={index}
-              href="#technologies"
+              href={tag?.href}
               className={`px-6 py-3 border-l-4 ${tag.color} text-gray-800 font-medium hover:bg-slate-100 rounded-lg transition-colors duration-200`}
             >
               {tag.label}

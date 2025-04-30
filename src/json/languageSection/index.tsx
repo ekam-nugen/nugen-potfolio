@@ -589,21 +589,48 @@ export const data = {
   },
 };
 export const techTags = [
-  { label: "Programming Languages", color: "border-blue-500" },
-  { label: "Front-End", color: "border-pink-500" },
-  { label: "Back-End", color: "border-red-500" },
-  { label: "Platforms", color: "border-green-500" },
-  { label: "CMS & E-Commerce Platforms", color: "border-indigo-500" },
-  { label: "Cloud & Containerization", color: "border-purple-500" },
-  { label: "AI, ML & GenAI", color: "border-cyan-500" },
-  { label: "Data Science & Analytics", color: "border-pink-400" },
-  { label: "Web Development", color: "border-lime-500" },
-  { label: "UI/UX", color: "border-blue-500" },
-  { label: "Quality Assurance", color: "border-orange-500" },
+  {
+    label: "Programming Languages",
+    color: "border-blue-500",
+    href: "/technologies",
+  },
+  {
+    label: "Front-End",
+    color: "border-pink-500",
+    href: "/services/webdevelopment",
+  },
+  { label: "Back-End", color: "border-red-500", href: "/services/backend" },
+  // { label: "Platforms", color: "border-green-500" },
+  {
+    label: "CMS & E-Commerce Platforms",
+    color: "border-indigo-500",
+    href: "/services/cms",
+  },
+  {
+    label: "Cloud & Containerization",
+    color: "border-purple-500",
+    href: "/services/cloud-engineering",
+  },
+  {
+    label: "AI, ML & GenAI",
+    color: "border-cyan-500",
+    href: "/services/intelligence",
+  },
+  // { label: "Data Science & Analytics", color: "border-pink-400" },
+  {
+    label: "Web Development",
+    color: "border-lime-500",
+    href: "/services/webdevelopment",
+  },
+  { label: "UI/UX", color: "border-blue-500", href: "/services/uiux" },
+  {
+    label: "Quality Assurance",
+    color: "border-orange-500",
+    href: "/services/qa",
+  },
 ];
 export const platformTags = [
   { label: "MICROSOFT", color: "border-blue-500" },
   { label: "AWS", color: "border-pink-500" },
   { label: "GOOGLE", color: "border-red-500" },
 ];
-

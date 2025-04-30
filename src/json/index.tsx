@@ -703,7 +703,7 @@ export const servicesTechData: Service[] = [
           },
         ],
         links: [
-          { href: "/services/blockchain", text: "Discover AR/VR Magic" },
+          { href: "/services/ar-vr", text: "Discover AR/VR Magic" },
           {
             href: "/services/blockchain",
             text: "Explore Blockchain Solutions",
