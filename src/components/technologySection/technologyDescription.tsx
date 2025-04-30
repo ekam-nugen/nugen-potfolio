@@ -72,21 +72,24 @@ const TechDescription: React.FC<TechDescriptionProps> = ({
                 <h2 className="text-xl font-semibold text-gray-800 mb-4">
                   Get{" "}
                   <a
-                    href="#how-we-help-you"
+                    href="/case-study"
                     className="text-[#f4a180] hover:underline"
                   >
                     Project-based
                   </a>{" "}
                   and{" "}
                   <a
-                    href="#how-we-help-you"
+                    href="/dedicated-team"
                     className="text-[#ff5f6d] hover:underline"
                   >
                     Dedicated Teams
                   </a>{" "}
                   from India’s Highest-rated Company.
                 </h2>
-                <button className="bg-gradient-to-r from-[#ff7e5f] to-[#feb47b] cursor-pointer text-white font-bold py-3 px-6 rounded-full flex items-center justify-center gap-2 mx-auto hover:bg-gradient-to-l transition">
+                <a
+                  href="/contact-us"
+                  className="bg-gradient-to-r from-[#ff7e5f] to-[#feb47b] cursor-pointer text-white font-bold py-3 px-6 rounded-full flex items-center justify-center gap-2 mx-auto hover:bg-gradient-to-l transition"
+                >
                   Discuss Your Requirements
                   <svg
                     width="23"
@@ -100,7 +103,7 @@ const TechDescription: React.FC<TechDescriptionProps> = ({
                       fill="white"
                     />
                   </svg>
-                </button>
+                </a>
               </div>
               <div className="mt-6 text-center">
                 <h3 className="text-lg font-semibold text-gray-800 mb-2">
