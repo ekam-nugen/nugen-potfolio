@@ -5,6 +5,8 @@ import { TechnologySection } from "@/src/components/technologySection/technology
 import ClientSlider from "@/src/components/technologySection/clientSection";
 import { platformTags } from "@/src/json/languageSection";
 import { TopPlatformsSection } from "@/src/components/platforms/platforms";
+import TestimonialStatic from "@/src/components/caseStudy/testimonialStatic";
+import { FAQSection } from "@/src/components/technologySection/questionSection";
 
 export default function Events() {
   const [loading, setLoading] = useState(true);
@@ -34,7 +36,9 @@ export default function Events() {
             tags={platformTags}
           />
           <ClientSlider className="bg-gradient-to-r from-white via-[#fff1eb] to-white" />
-          <TopPlatformsSection/>
+          <TopPlatformsSection />
+          <TestimonialStatic />
+          <FAQSection />
         </>
       )}
     </>

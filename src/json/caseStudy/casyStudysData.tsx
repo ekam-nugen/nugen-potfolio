@@ -1,8 +1,29 @@
+import CloudWays from "../../../public/projects/image-15.webp";
+import optum from "../../../public/projects/image-13.webp";
+import blinlPayment from "../../../public/projects/image-2.webp";
+import InsideInjuries from "../../../public/projects/image-38.webp";
+import Qudos from "../../../public/projects/image-36.webp";
+import LuckyRhino from "../../../public/projects/image-33.webp";
+import magicEdtech from "../../../public/projects/image-31.webp";
+import dapt from "../../../public/projects/image-28.webp";
+import skeep from "../../../public/projects/image-25.webp";
+import Omnumi from "../../../public/projects/image-22.webp";
+import Rize from "../../../public/projects/image-17.webp";
+import madEngine from "../../../public/projects/image-9.webp";
+import ganpatis from "../../../public/projects/image.webp";
+import FarahSanjana from "../../../public/projects/image-7.webp";
+import Scottdunn from "../../../public/projects/image-4.webp";
+import Simply5 from "../../../public/projects/Simply5-1024x1024-1.webp";
+import ick from "../../../public/projects/ick-1024x1024-1.webp";
+import protax from "../../../public/projects/protax-canada-1-1024x1024-1.webp";
+import quay from "../../../public/projects/image-11.webp";
+
 export const caseStudiesData = [
   {
     id: 1,
     title: "cloud-ways",
     industry: "Technology & Cloud Hosting",
+    image: CloudWays,
     skills: ["NextJS", "React.js", "Node.js", "MongoDB", "AWS", "Google Cloud"],
     hero: {
       title: "Cloud Ways",
@@ -29,7 +50,7 @@ export const caseStudiesData = [
           "With the continuous evolution of cloud technologies, Cloudways aims to integrate more features that enhance user experience, security, and performance. The focus remains on providing a seamless hosting experience that caters to the dynamic needs of developers and businesses.",
       },
     ],
-    images: ["/21b1e3a7-abc6-4f97-9929-b85cbe29376b.webp"],
+    images: [CloudWays],
     cta: {
       headline: "Ready to simplify your cloud hosting experience?",
       subtext:
@@ -39,36 +60,39 @@ export const caseStudiesData = [
   },
   {
     id: 2,
-    title: "optum",
+    title: "Optum",
     industry: "Healthcare",
+    image: optum,
     skills: ["NextJS", "React.js", "Node.js", "MongoDB", "GCP", "Java"],
     hero: {
-      title: "optum",
-      subtitle: "Case Studies / Cloudways",
-      backgroundImage: "/21b1e3a7-abc6-4f97-9929-b85cbe29376b.webp",
+      title: "Optum",
+      subtitle: "Case Studies / Optum",
+      backgroundImage: "/optum-background-image.webp",
     },
     summary: {
-      text: "Cloudways is a managed cloud hosting platform offering flexible solutions for developers, businesses, and agencies. It supports major cloud providers like AWS, Google Cloud, and DigitalOcean, enabling users to deploy and scale web applications with ease. Features include one-click application installations, automated backups, robust security, and optimized performance. Cloudways focuses on simplifying hosting while maintaining reliability and performance.",
+      text: "Optum is a healthcare technology company that provides data, technology, and services to improve healthcare delivery and efficiency. They focus on empowering healthcare providers with innovative solutions to help reduce costs, improve outcomes, and streamline operations. With their diverse range of offerings, Optum aims to transform the healthcare system and make it more accessible and effective.",
     },
     sections: [
       {
         title: "The Challenge",
         description:
-          "Developers and businesses often face complexities in deploying and managing web applications across various cloud infrastructures. The need was for a platform that could simplify this process without compromising on performance or security.",
+          "Optum faced challenges in enhancing their healthcare service platform to better support the growing demand for data-driven solutions. The need was for a scalable, secure, and flexible platform to handle large-scale data processing while maintaining privacy and compliance standards in the healthcare industry.",
       },
     ],
-    images: ["/21b1e3a7-abc6-4f97-9929-b85cbe29376b.webp"],
+    images: [optum],
     cta: {
-      headline: "Ready to simplify your cloud hosting experience?",
+      headline: "Ready to transform your healthcare services?",
       subtext:
-        "Discover how Cloudways can transform your web application deployment.",
-      buttonText: "Explore Cloudways",
+        "Discover how Optum's innovative solutions can improve your healthcare system.",
+      buttonText: "Explore Optum",
     },
   },
+
   {
     id: 3,
     title: "blink-payment",
     industry: "Finance & Payments",
+    image: blinlPayment,
     skills: ["NextJS", "React.js", "Node.js", "MongoDB", "Stripe", "AWS"],
     hero: {
       title: "Blink Payment",
@@ -95,7 +119,7 @@ export const caseStudiesData = [
           "Blink Payment plans to integrate AI-driven fraud detection and expand their services globally, aiming to set new standards in the payment processing industry.",
       },
     ],
-    images: ["/blink-payment-case-study-background.webp"],
+    images: [blinlPayment],
     cta: {
       headline: "Revolutionize your payment processing",
       subtext:
@@ -107,6 +131,7 @@ export const caseStudiesData = [
     id: 4,
     title: "inside-injuries",
     industry: "Sports & Healthcare",
+    image: InsideInjuries,
     skills: ["React.js", "Node.js", "MongoDB", "AWS"],
     hero: {
       title: "Inside Injuries",
@@ -133,7 +158,7 @@ export const caseStudiesData = [
           "The company aims to integrate wearable technology data to enhance prediction accuracy and offer real-time monitoring solutions.",
       },
     ],
-    images: ["/inside-injuries-case-study-background.webp"],
+    images: [InsideInjuries],
     cta: {
       headline: "Stay ahead of injuries",
       subtext:
@@ -145,6 +170,7 @@ export const caseStudiesData = [
     id: 5,
     title: "qudos",
     industry: "Transportation & Mobility",
+    image: Qudos,
     skills: ["React.js", "Node.js", "MongoDB", "AWS"],
     hero: {
       title: "Qudos",
@@ -171,7 +197,7 @@ export const caseStudiesData = [
           "Qudos plans to integrate AI-driven dispatching and predictive maintenance tools to further streamline operations and reduce downtime for fleets.",
       },
     ],
-    images: ["/qudos-case-study-background.webp"],
+    images: [Qudos],
     cta: {
       headline: "Drive Service Forward",
       subtext:
@@ -183,6 +209,7 @@ export const caseStudiesData = [
     id: 6,
     title: "lucky-rhino",
     industry: "E-commerce & Employee Rewards",
+    image: LuckyRhino,
     skills: ["Node.js", "Nest.js", "Shopify", "BigCommerce"],
     hero: {
       title: "Lucky Rhino",
@@ -209,7 +236,7 @@ export const caseStudiesData = [
           "Lucky Rhino aims to enhance its platform by introducing advanced analytics and personalized reward recommendations, further optimizing the connection between brands and employee reward programs.",
       },
     ],
-    images: ["/lucky-rhino-case-study-background.webp"],
+    images: [LuckyRhino],
     cta: {
       headline: "Boost Your Sales Through Employee Rewards",
       subtext:
@@ -221,6 +248,7 @@ export const caseStudiesData = [
     id: 7,
     title: "magic-edtech",
     industry: "Education Technology",
+    image: magicEdtech,
     skills: ["Node.js", "Nest.js", "AI", "Accessibility", "Cloud Services"],
     hero: {
       title: "Magic EdTech",
@@ -247,7 +275,7 @@ export const caseStudiesData = [
           "Magic EdTech plans to further enhance its AI capabilities to provide more nuanced personalization in learning experiences and expand its cloud operations and tech support services to help educational systems scale their digital learning solutions.",
       },
     ],
-    images: ["/magic-edtech-case-study-background.webp"],
+    images: [magicEdtech],
     cta: {
       headline: "Transform Education with AI",
       subtext:
@@ -259,6 +287,7 @@ export const caseStudiesData = [
     id: 8,
     title: "dapt",
     industry: "Business Operations & Workforce Management",
+    image: dapt,
     skills: [
       "Node.js",
       "Nest.js",
@@ -292,7 +321,7 @@ export const caseStudiesData = [
           "Dapt aims to further enhance its platform by incorporating advanced analytics and AI-driven insights to provide businesses with predictive cost management and workforce optimization tools.",
       },
     ],
-    images: ["/dapt-case-study-background.webp"],
+    images: [dapt],
     cta: {
       headline: "Optimize Your Job Costing Process",
       subtext:
@@ -304,6 +333,7 @@ export const caseStudiesData = [
     id: 9,
     title: "skeep",
     industry: "E-commerce & AI",
+    image: skeep,
     skills: ["Node.js", "Nest.js", "Web App", "Web Admin"],
     hero: {
       title: "Skeep",
@@ -330,7 +360,7 @@ export const caseStudiesData = [
           "Skeep aims to further refine its AI algorithms to provide even more personalized shopping experiences and expand its integration capabilities with various e-commerce platforms.",
       },
     ],
-    images: ["/skeep-case-study-background.webp"],
+    images: [skeep],
     cta: {
       headline: "Enhance Your E-commerce Experience",
       subtext:
@@ -342,6 +372,7 @@ export const caseStudiesData = [
     id: 10,
     title: "omnumi",
     industry: "Digital Currency & Payments Infrastructure",
+    image: Omnumi,
     skills: [
       "Node.js",
       "Nest.js",
@@ -375,7 +406,7 @@ export const caseStudiesData = [
           "Omnumi aims to further enhance its platform by incorporating advanced analytics, expanding support for various digital currencies, and fostering greater financial inclusion through innovative solutions tailored to the needs of underserved populations.",
       },
     ],
-    images: ["/omnumi-case-study-background.webp"],
+    images: [Omnumi],
     cta: {
       headline: "Modernize Your Payments Infrastructure",
       subtext:
@@ -387,6 +418,7 @@ export const caseStudiesData = [
     id: 11,
     title: "rize",
     industry: "Gaming & Community Engagement",
+    image: Rize,
     skills: ["ReactJS", "NextJS", "Web App", "Web Admin"],
     hero: {
       title: "Rize",
@@ -413,7 +445,7 @@ export const caseStudiesData = [
           "Rize aims to further enhance its platform by introducing personalized recommendations, integrating with more games, and expanding community features to provide a more immersive and connected gaming experience.",
       },
     ],
-    images: ["/rize-case-study-background.webp"],
+    images: [Rize],
     cta: {
       headline: "Elevate Your Gaming Experience",
       subtext:
@@ -425,6 +457,7 @@ export const caseStudiesData = [
     id: 12,
     title: "mad-engine",
     industry: "Consumer Products & Merchandise",
+    image: madEngine,
     skills: ["ReactJS", "NextJS", "Web App", "Web Admin"],
     hero: {
       title: "Mad Engine",
@@ -451,7 +484,7 @@ export const caseStudiesData = [
           "Mad Engine aims to further integrate advanced analytics and personalization features into their platform, enhancing user experience and expanding their global reach.",
       },
     ],
-    images: ["/mad-engine-case-study-background.webp"],
+    images: [madEngine],
     cta: {
       headline: "Elevate Your Brand with Mad Engine",
       subtext:
@@ -463,6 +496,7 @@ export const caseStudiesData = [
     id: 13,
     title: "ganpatis",
     industry: "E-commerce & Fashion",
+    image: ganpatis,
     skills: ["Web App", "Web Admin"],
     hero: {
       title: "Ganpatis",
@@ -489,7 +523,7 @@ export const caseStudiesData = [
           "Ganpatis plans to enhance their platform by integrating advanced analytics, personalized recommendations, and expanding their designer collaborations to cater to a broader audience.",
       },
     ],
-    images: ["/ganpatis-case-study-background.webp"],
+    images: [ganpatis],
     cta: {
       headline: "Discover Traditional & Contemporary Ethnic Fashion",
       subtext:
@@ -501,6 +535,7 @@ export const caseStudiesData = [
     id: 14,
     title: "Farah Sanjana",
     industry: "Fashion & E-commerce",
+    image: FarahSanjana,
     skills: [
       "Web Design",
       "Web Development",
@@ -534,7 +569,7 @@ export const caseStudiesData = [
           "Plans to integrate advanced features such as personalized recommendations, enhanced product visualization, and expanded payment options to further improve the customer shopping experience.",
       },
     ],
-    images: ["/farah-sanjana-case-study-background.webp"],
+    images: [FarahSanjana],
     cta: {
       headline: "Discover Contemporary Fashion",
       subtext:
@@ -546,6 +581,7 @@ export const caseStudiesData = [
     id: 15,
     title: "scott-dunn",
     industry: "Luxury Travel & Hospitality",
+    image: Scottdunn,
     skills: [
       "Web App",
       "Admin Panel",
@@ -578,7 +614,7 @@ export const caseStudiesData = [
           "Plans to integrate advanced features such as personalized travel recommendations, enhanced booking functionalities, and expanded destination content to further improve the customer experience.",
       },
     ],
-    images: ["/scott-dunn-case-study-background.webp"],
+    images: [Scottdunn],
     cta: {
       headline: "Discover Tailored Luxury Travel Experiences",
       subtext:
@@ -590,6 +626,7 @@ export const caseStudiesData = [
     id: 16,
     title: "simply5",
     industry: "Networking & IT Solutions",
+    image: Simply5,
     skills: [
       "Web App",
       "Mobile App",
@@ -622,7 +659,7 @@ export const caseStudiesData = [
           "Simply5 aims to continue enhancing their platform to provide even more scalable and secure networking solutions, catering to the evolving needs of businesses in various industries.",
       },
     ],
-    images: ["/simply5-case-study-background.webp"],
+    images: [Simply5],
     cta: {
       headline: "Simplify Your Networking Solutions",
       subtext:
@@ -634,6 +671,7 @@ export const caseStudiesData = [
     id: 17,
     title: "india-car-kharido",
     industry: "Automotive E-commerce",
+    image: ick,
     skills: ["Web App", "Admin Panel", "E-commerce", "SEO", "UI/UX Design"],
     hero: {
       title: "India Car Kharido",
@@ -660,7 +698,7 @@ export const caseStudiesData = [
           "The platform aims to expand its offerings by integrating advanced features such as personalized recommendations, enhanced user interfaces, and broader financing options to further simplify the car buying experience.",
       },
     ],
-    images: ["/india-car-kharido-case-study-background.webp"],
+    images: [ick],
     cta: {
       headline: "Simplify Your Car Buying Experience",
       subtext:
@@ -672,6 +710,7 @@ export const caseStudiesData = [
     id: 18,
     title: "protax-canada",
     industry: "Finance & Accounting",
+    image: protax,
     skills: [
       "Web App",
       "Mobile App",
@@ -704,7 +743,7 @@ export const caseStudiesData = [
           "Plans to integrate advanced features such as real-time tax calculators, personalized tax advice, and expanded mobile functionalities to further improve client experience and service efficiency.",
       },
     ],
-    images: ["/protax-canada-case-study-background.webp"],
+    images: [protax],
     cta: {
       headline: "Streamline Your Tax Preparation",
       subtext:
@@ -716,6 +755,7 @@ export const caseStudiesData = [
     id: 19,
     title: "quay",
     industry: "Fashion & Eyewear",
+    image: quay,
     skills: ["ReactJS", "NextJS", "Web App", "Web Admin"],
     hero: {
       title: "Quay",
@@ -742,7 +782,7 @@ export const caseStudiesData = [
           "Plans to integrate advanced features such as personalized product recommendations, enhanced virtual try-on capabilities, and expanded payment options to further improve the customer shopping experience.",
       },
     ],
-    images: ["/quay-case-study-background.webp"],
+    images: [quay],
     cta: {
       headline: "Discover Trendy Eyewear Styles",
       subtext:
@@ -750,6 +790,4 @@ export const caseStudiesData = [
       buttonText: "Shop Now",
     },
   },
-
-  // Add more case studies here...
 ];

@@ -1,37 +1,27 @@
+"use client";
+
 import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
-import { caseStudiesData } from "@/src/json/caseStudy/caseStudys";
+import Link from "next/link";
+import { caseStudiesData } from "@/src/json/caseStudy/casyStudysData";
+
+const slugify = (text: string) =>
+  text
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)+/g, "");
 
 const technologies = [
-  "MongoDB",
-  "Next.js",
-  "Node.js",
-  "PHP",
-  "Python",
-  "React.js",
-  "React Native",
-  "Shopify",
-  "Swift",
-  "Vue Js",
-  "Wordpress",
+  "MongoDB", "Next.js", "Node.js", "PHP", "Python", "React.js",
+  "React Native", "Shopify", "Swift", "Vue Js", "Wordpress",
 ];
 
 const industries = [
-  "Finance",
-  "Gaming & Sports",
-  "Healthcare",
-  "Legal Services",
-  "Lifestyle",
-  "Logistics & Transportation",
-  "Manufacturing",
-  "Marketing & Advertising",
-  "Media & Entertainment",
-  "Nonprofit",
-  "Real Estate",
-  "SaaS",
-  "Social",
-  "Technology",
+  "Finance", "Gaming & Sports", "Healthcare", "Legal Services",
+  "Lifestyle", "Logistics & Transportation", "Manufacturing",
+  "Marketing & Advertising", "Media & Entertainment", "Nonprofit",
+  "Real Estate", "SaaS", "Social", "Technology",
 ];
 
 const FilterDropdown = ({
@@ -46,7 +36,6 @@ const FilterDropdown = ({
   onChange: (option: string) => void;
 }) => {
   const [open, setOpen] = useState(false);
-
   return (
     <div className="relative inline-block text-left">
       <button
@@ -81,8 +70,7 @@ type CaseStudyCardProps = {
   title: string;
   industry: string;
   skills: string[];
-  pdfLink?: string;
-  readMoreLink: string;
+  id: number;
 };
 
 const CaseStudyCard = ({
@@ -90,35 +78,36 @@ const CaseStudyCard = ({
   title,
   industry,
   skills,
-  readMoreLink,
-}: CaseStudyCardProps) => (
-  <div className="bg-white rounded-2xl shadow-md p-5 w-full max-w-sm transition hover:shadow-lg hover:-translate-y-1 duration-200">
-    <Image
-      src={image}
-      alt={title}
-      className="rounded-xl h-48 object-cover w-full"
-      height={192}
-      width={0}
-    />
-    <h3 className="mt-4 text-lg font-semibold">{title}</h3>
-    <p className="text-sm text-gray-500">
-      <strong>Industry:</strong> {industry}
-    </p>
-    <p className="text-sm text-gray-500">
-      <strong>Skills:</strong> {skills.join(", ")}
-    </p>
-    <div className="mt-4 flex justify-between">
-      <a></a>
-      <a
-        className="bg-orange-500 hover:bg-orange-600 transition text-white px-4 py-2 rounded text-sm"
-        href={readMoreLink}
-        rel="noopener noreferrer"
-      >
-        READ MORE
-      </a>
+}: CaseStudyCardProps) => {
+  const slug = slugify(title);
+
+  return (
+    <div className="bg-white rounded-2xl shadow-md p-5 w-full max-w-sm transition hover:shadow-lg hover:-translate-y-1 duration-200">
+      <Image
+        src={image}
+        alt={title}
+        className="rounded-xl h-48 object-cover w-full"
+        height={192}
+        width={0}
+      />
+      <h3 className="mt-4 text-lg font-semibold">{title}</h3>
+      <p className="text-sm text-gray-500">
+        <strong>Industry:</strong> {industry}
+      </p>
+      <p className="text-sm text-gray-500">
+        <strong>Skills:</strong> {skills.join(", ")}
+      </p>
+      <div className="mt-4 flex justify-end">
+        <Link
+          className="bg-orange-500 hover:bg-orange-600 transition text-white px-4 py-2 rounded text-sm"
+          href={`/case-study/${slug}`}
+        >
+          READ MORE
+        </Link>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default function CaseStudiesSection() {
   const [selectedTech, setSelectedTech] = useState<string[]>([]);

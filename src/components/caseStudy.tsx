@@ -10,6 +10,11 @@ import { Autoplay, Pagination } from "swiper/modules";
 import Image from "next/image";
 
 export default function CaseStudyHero() {
+  const slugify = (title: string) =>
+    title
+      .toLowerCase()
+      .replace(/\s+/g, "-")
+      .replace(/[^\w-]+/g, "");
   return (
     <section className="relative  text-black overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-[#feddd0] via-[#f9e4da] to-transparent z-0" />
@@ -53,7 +58,7 @@ export default function CaseStudyHero() {
                   </div>
 
                   <a
-                    href={study.link}
+                    href={`/case-study/${slugify(study.title)}`}
                     className="bg-gradient-to-r from-orange-400 to-pink-500 hover:from-orange-500 hover:to-pink-600 text-white font-semibold px-6 py-3 rounded-md inline-flex items-center gap-2 transition"
                   >
                     {study.buttonText} <ArrowRight className="w-5 h-5" />
