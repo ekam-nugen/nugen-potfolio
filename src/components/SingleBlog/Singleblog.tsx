@@ -1,86 +1,62 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import { useParams } from "next/navigation";
+import { useEffect, useState } from "react";
+import Loader from "@/src/components/common/Loader";
+import { blogData, blogSidebar } from "@/src/json/blogData/blogdata";
 
-const blogData = {
-  title: "Flutter Performance Optimization: Building Fast and Efficient Apps",
-  author: "Jane Doe",
-  date: "April 23, 2025",
-  featuredImage: "/21b1e3a7-abc6-4f97-9929-b85cbe29376b.webp",
-  sections: [
-    {
-      heading: null,
-      content: [
-        "In today’s fast-paced digital world, optimizing performance is not just a nice-to-have—it’s a necessity. Flutter offers great tools for building fast apps, but without optimization, performance can suffer.",
-      ],
-    },
-    {
-      heading: "1. Optimize Widget Builds",
-      content: [
-        "Reuse widgets where possible and avoid rebuilding widgets that don’t need updates. Use the `const` keyword whenever possible.",
-      ],
-    },
-    {
-      heading: "2. Efficient State Management",
-      content: [
-        "Use state management solutions like Provider or Riverpod to ensure minimal re-renders and improved performance.",
-      ],
-    },
-    {
-      heading: null,
-      quote: "Performance is a product of mindful design and efficient coding.",
-    },
-    {
-      heading: "3. Monitor and Profile",
-      content: [
-        "Use the Flutter DevTools to analyze performance bottlenecks and memory leaks.",
-      ],
-    },
-  ],
-  authorNote: {
-    text: "Written by ",
-    author: "Jane Doe",
-    description: "Flutter expert at YourCompany.",
-  },
-  sidebar: {
-    categories: ["Flutter", "React", "Performance", "UI/UX"],
-    popularPosts: [
-      "10 Flutter Tips",
-      "Improve React Performance",
-      "Building with Tailwind",
-    ],
-    cta: {
-      title: "Need a Dev Team?",
-      description: "Get expert developers for your next project.",
-      button: {
-        label: "Contact Us →",
-        url: "/contact-us",
-      },
-    },
-  },
-};
+const slugify = (title: string) =>
+  title
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^\w-]+/g, "");
 
 export default function BlogPostPage() {
-  return (
+  const { title } = useParams<{ title: string }>();
+  const [loading, setLoading] = useState(true);
+
+  const post = blogData.find(
+    (b) =>
+      slugify(b.title) ===
+      (typeof title === "string" && title.trim().toLowerCase())
+  );
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 800);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (!post) {
+    return (
+      <div className="p-10 text-center text-xl text-red-500">
+        Blog post <strong>{title}</strong> not found 🚫
+      </div>
+    );
+  }
+
+  return loading ? (
+    <Loader />
+  ) : (
     <div className="bg-white text-gray-800">
       <main className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* Blog Content */}
         <article className="lg:col-span-2 space-y-6">
           <h2 className="text-4xl font-bold leading-tight text-gray-900">
-            {blogData.title}
+            {post.title}
           </h2>
           <p className="text-sm text-gray-500">
-            By {blogData.author} | {blogData.date}
+            By {post.author} | {post.date}
           </p>
           <Image
+            src={post.featuredImage}
+            alt={post.title}
             height={100}
             width={100}
-            src={blogData.featuredImage}
-            alt={blogData.title}
-            className="rounded-lg shadow-md"
+            className="rounded-lg shadow-md w-full h-auto"
           />
-
           <div className="space-y-6 text-base leading-relaxed">
-            {blogData.sections.map((section, index) => (
+            {post.sections.map((section, index) => (
               <div key={index}>
                 {section.heading && (
                   <h3 className="text-2xl font-semibold mt-8">
@@ -102,60 +78,42 @@ export default function BlogPostPage() {
 
           <div className="mt-12 border-t pt-6 text-sm text-gray-500">
             <p>
-              {blogData.authorNote.text}
+              {post.authorNote.text}
               <strong className="text-gray-800">
-                {blogData.authorNote.author}
+                {post.authorNote.author}
               </strong>
-              , {blogData.authorNote.description}
+              , {post.authorNote.description}
             </p>
           </div>
         </article>
 
-        {/* Sticky Sidebar */}
         <aside className="lg:sticky top-20 self-start space-y-8 h-fit">
-          {/* Categories */}
-          <div className="bg-gray-100 rounded-lg p-4 shadow-sm">
-            <h4 className="text-lg font-semibold text-gray-800 mb-2">
-              Categories
-            </h4>
-            <ul className="space-y-1 text-sm text-gray-600">
-              {blogData.sidebar.categories.map((category, index) => (
-                <li key={index}>
-                  <a href="#" className="hover:text-pink-600">
-                    {category}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Popular Posts */}
           <div className="bg-gray-100 rounded-lg p-4 shadow-sm">
             <h4 className="text-lg font-semibold text-gray-800 mb-2">
               Popular Posts
             </h4>
             <ul className="space-y-2 text-sm text-gray-700">
-              {blogData.sidebar.popularPosts.map((post, index) => (
-                <li key={index}>
-                  <a href="#" className="hover:text-pink-600">
-                    {post}
+              {blogData.slice(0, 3).map((post, idx) => (
+                <li key={idx}>
+                  <a
+                    href={`/blog/${slugify(post.title)}`}
+                    className="hover:text-[#ef8961]"
+                  >
+                    {post.title}
                   </a>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Call to Action */}
           <div className="bg-gradient-to-r from-pink-500 to-orange-400 rounded-lg p-4 text-white shadow-lg">
-            <h5 className="text-lg font-semibold">
-              {blogData.sidebar.cta.title}
-            </h5>
-            <p className="text-sm mt-2">{blogData.sidebar.cta.description}</p>
+            <h5 className="text-lg font-semibold">{blogSidebar.cta.title}</h5>
+            <p className="text-sm mt-2">{blogSidebar.cta.description}</p>
             <a
-              href={blogData.sidebar.cta.button.url}
-              className="inline-block mt-3 bg-white text-pink-600 font-semibold text-sm px-4 py-2 rounded hover:bg-gray-100"
+              href={blogSidebar.cta.button.url}
+              className="inline-block mt-3 bg-white text-[#ef8961] font-semibold text-sm px-4 py-2 rounded hover:bg-gray-100"
             >
-              {blogData.sidebar.cta.button.label}
+              {blogSidebar.cta.button.label}
             </a>
           </div>
         </aside>

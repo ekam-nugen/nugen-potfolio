@@ -4,6 +4,7 @@ import {
 } from "@/src/json/technologyDescription";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 const TechDescription: React.FC<TechDescriptionProps> = ({
@@ -70,30 +71,32 @@ const TechDescription: React.FC<TechDescriptionProps> = ({
                     className="animate-bounce"
                   />
                 </div>
+
                 <h2 className="text-xl font-semibold text-gray-800 mb-4">
                   Get{" "}
-                  <a
+                  <Link
                     href="/case-study"
                     className="text-[#f4a180] hover:underline"
                   >
                     Project-based
-                  </a>{" "}
+                  </Link>{" "}
                   and{" "}
-                  <a
+                  <Link
                     href="/dedicated-team"
                     className="text-[#ff5f6d] hover:underline"
                   >
                     Dedicated Teams
-                  </a>{" "}
+                  </Link>{" "}
                   from India’s Highest-rated Company.
                 </h2>
-                <a
+
+                <Link
                   href="/contact-us"
                   className="bg-gradient-to-r from-[#ff7e5f] to-[#feb47b] cursor-pointer text-white font-bold py-3 px-6 rounded-full flex items-center justify-center gap-2 mx-auto hover:bg-gradient-to-l transition"
                 >
                   Discuss Your Requirements
                   <ArrowRight className="ml-2" />
-                </a>
+                </Link>
               </div>
               <div className="mt-6 text-center">
                 <h3 className="text-lg font-semibold text-gray-800 mb-2">
@@ -188,12 +191,12 @@ const TechDescription: React.FC<TechDescriptionProps> = ({
           <p className="text-lg md:text-xl mb-6">
             Let’s help you create robust, scalable, and intelligent solutions.
           </p>
-          <a
+          <Link
             href="/contact-us"
             className="bg-white text-[#ff5f6d] font-bold py-3 px-8 rounded-full hover:bg-gray-100 cursor-pointer transition"
           >
             Get a Free Quote
-          </a>
+          </Link>
         </div>
       </section>
     </div>

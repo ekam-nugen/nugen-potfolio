@@ -202,12 +202,12 @@ const HomePage: FC = () => {
                         <h1 className="mt-3 xs:mt-4 sm:mt-5 md:mt-6 text-lg xs:text-xl sm:text-2xl md:text-3xl font-extrabold text-gray-900 text-center">
                           Transform Your Business With Cutting Edge Solutions
                         </h1>
-                          <Link href={"/case-studys"}>
-                        <button className="mt-3 flex cursor-pointer xs:mt-4 sm:mt-5 md:mt-6 px-3 xs:px-4 sm:px-5 md:px-6 py-1 xs:py-1.5 sm:py-2 md:py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-full shadow-md transition-colors duration-300 text-xs xs:text-sm sm:text-base">
-                          Learn More
-                          <ArrowRight className="ml-2"/>
-                        </button>
-                          </Link>
+                        <Link href={"/case-studys"}>
+                          <button className="mt-3 flex cursor-pointer xs:mt-4 sm:mt-5 md:mt-6 px-3 xs:px-4 sm:px-5 md:px-6 py-1 xs:py-1.5 sm:py-2 md:py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-full shadow-md transition-colors duration-300 text-xs xs:text-sm sm:text-base">
+                            Learn More
+                            <ArrowRight className="ml-2" />
+                          </button>
+                        </Link>
                       </div>
                     )}
                   {slide.rightContent.type === "services" &&
@@ -245,20 +245,18 @@ const HomePage: FC = () => {
                       <div className="flex flex-col p-4 sm:p-6 bg-gradient-to-r from-white to-[#fef3c7] rounded-xl shadow-md max-w-md mx-auto">
                         <div className="flex flex-col items-center space-y-4 sm:space-y-5">
                           <h2 className="text-lg sm:text-2xl md:text-3xl text-gray-800 font-semibold text-center">
-                            Get&nbsp; 
-
-
-                            <a href="/case-study">
+                            Get&nbsp;
+                            <Link href="/case-study">
                               <span className="text-orange-500">
                                 Project-based&nbsp;
                               </span>
-                            </a>
+                            </Link>
                             and&nbsp;
-                            <a href="/dedicated-team">
+                            <Link href="/dedicated-team">
                               <span className="text-green-500">
                                 Dedicated Teams&nbsp;
                               </span>
-                            </a>
+                            </Link>
                             from India&apos;s Highest-rated Company.
                           </h2>
                           <a

@@ -3,78 +3,19 @@
 import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
-const blogData = [
-  {
-    title: "Next.js and React: A Combination for Superior Performance",
-    author: "Subhajit Das",
-    role: "Project Manager",
-    image: "/image.webp",
-    description:
-      "Based on a recent project for a logistics tech firm, Nugen IT Services used Next.js and React to drastically improve page speed and SEO, enhancing user retention and lead conversion.",
-    highlight: false,
-  },
-  {
-    title: "Mastering Server-Side Rendering with Next.js",
-    author: "Pushpal Mazumder",
-    role: "CTO",
-    image: "/image.webp",
-    description:
-      "In modern web development, performance and user experience are key components of building a successful application. One of the best ways to achieve these goals is by implementing Server-Side Rendering (SSR). Next.js, a popular React framework, makes SSR incredibly easy and efficient.",
-    highlight: false,
-  },
-  {
-    title: "Introduction to Functional Programming Concepts in JavaScript",
-    author: "Saumendu Pathak",
-    role: "Senior Business Analyst",
-    image: "/image.webp",
-    description:
-      "Functional Programming (FP) is a paradigm in programming that treats computation as the evaluation of mathematical functions and avoids changing state and mutable data.",
-    highlight: false,
-  },
-  {
-    title: "Introduction to Functional Programming Concepts in JavaScript",
-    author: "Saumendu Pathak",
-    role: "Senior Business Analyst",
-    image: "/image.webp",
-    description:
-      "Functional Programming (FP) is a paradigm in programming that treats computation as the evaluation of mathematical functions and avoids changing state and mutable data.",
-    highlight: false,
-  },
-  {
-    title: "Introduction to Functional Programming Concepts in JavaScript",
-    author: "Saumendu Pathak",
-    role: "Senior Business Analyst",
-    image: "/image.webp",
-    description:
-      "Functional Programming (FP) is a paradigm in programming that treats computation as the evaluation of mathematical functions and avoids changing state and mutable data.",
-    highlight: false,
-  },
-  {
-    title: "Introduction to Functional Programming Concepts in JavaScript",
-    author: "Saumendu Pathak",
-    role: "Senior Business Analyst",
-    image: "/image.webp",
-    description:
-      "Functional Programming (FP) is a paradigm in programming that treats computation as the evaluation of mathematical functions and avoids changing state and mutable data.",
-    highlight: false,
-  },
-  {
-    title: "7 Game-Changing Tips to 10x Your API Performance",
-    author: "Sanjay Singhania",
-    role: "Project Manager",
-    image: "/insight-banner.png",
-    description:
-      "Drawing from a fintech project handled by Nugen, this blog shares 7 actionable tips that helped reduce API latency by 70%, ensuring secure and lightning-fast transactions.",
-    highlight: false,
-  },
-];
+import { blogData } from "@/src/json/blogData/blogdata";
+import { useRouter } from "next/navigation";
 
 export default function BlogSection() {
   const [hoveredPost, setHoveredPost] = useState<
     null | (typeof blogData)[number]
   >(null);
-
+  const router = useRouter();
+  const slugify = (title: string) =>
+    title
+      .toLowerCase()
+      .replace(/\s+/g, "-")
+      .replace(/[^\w-]+/g, "");
   const featuredPost = hoveredPost || blogData[0];
 
   // Animation variants for title and subtitle
@@ -177,11 +118,11 @@ export default function BlogSection() {
                 transition={{ duration: 0.4 }}
               >
                 <Image
-                  src={featuredPost.image}
+                  src={featuredPost.featuredImage}
                   alt={featuredPost.title}
                   width={800}
                   height={600}
-                  className="w-full h-auto object-cover rounded-t-xl"
+                  className="w-full h-64 object-cover rounded-t-xl"
                 />
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 leading-snug">
@@ -200,7 +141,7 @@ export default function BlogSection() {
 
         {/* Side Articles */}
         <div className="col-span-1 lg:col-span-2 flex flex-col gap-8 justify-center">
-          {blogData.map((post, idx) => (
+          {blogData.slice(0, 5).map((post, idx) => (
             <motion.div
               key={idx}
               custom={idx}
@@ -212,6 +153,7 @@ export default function BlogSection() {
               className="border-b pb-4 last:border-b-0 cursor-pointer"
               onMouseEnter={() => setHoveredPost(post)}
               onMouseLeave={() => setHoveredPost(null)}
+              onClick={() => router.push(`/blog/${slugify(post.title)}`)}
             >
               <h4
                 className={`text-lg font-semibold ${

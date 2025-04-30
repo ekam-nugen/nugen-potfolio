@@ -27,22 +27,22 @@ export default function Header() {
     pathname === href || pathname.startsWith(href + "/");
 
   const renderDesktopDropdown = (submenu: MenuItem[]) => (
-    <div className="absolute left-0 top-full w-64 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto pointer-events-none transition z-50">
+    <div className="absolute left-0 top-full w-64 bg-white shadow-xl rounded-xl transform transition-all duration-300 ease-in-out opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto pointer-events-none z-50">
       <div className="divide-y divide-gray-200 divide-dashed">
         {submenu.map((section, index) => (
           <div key={index} className="relative group/sub">
             {section.submenu ? (
               <>
-                <div className="flex items-center justify-between px-4 py-2 hover:bg-gray-100 cursor-pointer text-black font-semibold">
+                <div className="flex items-center justify-between px-4 py-2 hover:bg-gray-100 cursor-pointer text-black font-semibold transition-all duration-200">
                   {section.label}
                   <ChevronRight className="w-4 h-4 text-[#ff6b3d]" />
                 </div>
-                <div className="absolute left-full top-0 w-64 bg-white shadow-lg rounded-md hidden group-hover/sub:block z-50">
+                <div className="absolute left-full top-0 w-64 bg-white shadow-xl rounded-xl transform transition-all duration-300 ease-in-out opacity-0 scale-95 group-hover/sub:opacity-100 group-hover/sub:scale-100 group-hover/sub:pointer-events-auto pointer-events-none z-50">
                   {section.submenu.map((item, idx) => (
                     <Link
                       key={idx}
                       href={item.href!}
-                      className={`block px-4 py-2 hover:bg-gray-100 ${
+                      className={`block px-4 py-2 hover:bg-gray-100 transition ${
                         isActive(item.href!) ? "text-[#ff6b3d]" : "text-black"
                       }`}
                     >
@@ -54,7 +54,7 @@ export default function Header() {
             ) : (
               <Link
                 href={section.href!}
-                className={`block px-4 py-2 hover:bg-gray-100 ${
+                className={`block px-4 py-2 hover:bg-gray-100 transition ${
                   isActive(section.href!) ? "text-[#ff6b3d]" : "text-black"
                 } font-medium`}
               >
@@ -82,49 +82,57 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex space-x-6">
-            {headerData.map((item: MenuItem, index) => (
-              <div key={index} className={item.submenu ? "relative group" : ""}>
-                {item.submenu ? (
-                  <>
+          <nav className="hidden lg:flex items-center justify-center flex-1 mx-8">
+            <div className="flex items-center justify-center space-x-6">
+              {headerData.map((item: MenuItem, index) => (
+                <div
+                  key={index}
+                  className={item.submenu ? "relative group" : ""}
+                >
+                  {item.submenu ? (
+                    <>
+                      <Link
+                        href={item?.href || "#"}
+                        className={`font-medium flex items-center transition-all ${
+                          item.submenu.some(
+                            (s) =>
+                              s.submenu?.some((sub) => isActive(sub.href!)) ||
+                              isActive(s.href!)
+                          )
+                            ? "text-[#ff6b3d]"
+                            : "text-black hover:text-[#ff6b3d]"
+                        }`}
+                      >
+                        {item.label}
+                        <ChevronDown className="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180" />
+                      </Link>
+                      {renderDesktopDropdown(item.submenu)}
+                    </>
+                  ) : (
                     <Link
-                      href={item?.href || "#"}
-                      className={`font-medium flex items-center ${
-                        item.submenu.some(
-                          (s) =>
-                            s.submenu?.some((sub) => isActive(sub.href!)) ||
-                            isActive(s.href!)
-                        )
+                      href={item.href!}
+                      className={`font-medium transition ${
+                        isActive(item.href!)
                           ? "text-[#ff6b3d]"
                           : "text-black hover:text-[#ff6b3d]"
                       }`}
                     >
                       {item.label}
-                      <ChevronDown className="w-4 h-4 ml-1" />
                     </Link>
-                    {renderDesktopDropdown(item.submenu)}
-                  </>
-                ) : (
-                  <Link
-                    href={item.href!}
-                    className={`font-medium ${
-                      isActive(item.href!)
-                        ? "text-[#ff6b3d]"
-                        : "text-black hover:text-[#ff6b3d]"
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                )}
-              </div>
-            ))}
+                  )}
+                </div>
+              ))}
+            </div>
+          </nav>
+
+          <div className="hidden lg:block">
             <Link
               href="/book-an-appointmen"
-              className={`bg-gradient-to-r from-orange-400 to-pink-500 hover:from-orange-500 hover:to-pink-600 text-white px-4 py-2 rounded-md font-medium`}
+              className="bg-gradient-to-r from-orange-400 to-pink-500 hover:from-orange-500 hover:to-pink-600 text-white px-4 py-2 rounded-md font-medium transition-all"
             >
               Hire us
             </Link>
-          </nav>
+          </div>
 
           {/* Mobile Button */}
           <div className="lg:hidden flex items-center">
@@ -139,98 +147,102 @@ export default function Header() {
       </div>
 
       {/* Mobile Navigation */}
-      {isMobileMenuOpen && (
-        <div className="lg:hidden bg-white shadow-md z-50">
-          <div className="space-y-4 py-4 px-4">
-            <Link
-              href="/"
-              className={`block py-2 font-medium ${
-                pathname === "/" ? "text-[#ff6b3d]" : "text-black"
-              }`}
-            >
-              Home
-            </Link>
-            {headerData.map((item: MenuItem, index) => (
-              <div key={index}>
-                {item.submenu ? (
-                  <>
-                    <button
-                      className="flex justify-between w-full text-left py-2 text-black font-medium"
-                      onClick={() => toggleMobileDropdown(item.label)}
-                    >
-                      {item.label}
-                      <ChevronDown
-                        className={`w-4 h-4 transition-transform ${
-                          openMobileDropdown === item.label ? "rotate-180" : ""
-                        }`}
-                      />
-                    </button>
-
-                    {/* Mobile submenu toggle logic */}
-                    {openMobileDropdown === item.label && (
-                      <div className="pl-4 space-y-2">
-                        {item.submenu.map((sub, idx) =>
-                          sub.submenu ? (
-                            <div key={idx}>
-                              <div className="text-sm font-semibold text-black">
-                                {sub.label}
-                              </div>
-                              <div className="ml-4 space-y-1">
-                                {sub.submenu.map((nested, nidx) => (
-                                  <Link
-                                    key={nidx}
-                                    href={nested.href!}
-                                    className={`block text-sm ${
-                                      isActive(nested.href!)
-                                        ? "text-[#ff6b3d]"
-                                        : "text-gray-700 hover:underline"
-                                    }`}
-                                  >
-                                    {nested.label}
-                                  </Link>
-                                ))}
-                              </div>
-                            </div>
-                          ) : (
-                            <Link
-                              key={idx}
-                              href={sub.href!}
-                              className={`block text-sm ${
-                                isActive(sub.href!)
-                                  ? "text-[#ff6b3d]"
-                                  : "text-gray-700 hover:underline"
-                              }`}
-                            >
-                              {sub.label}
-                            </Link>
-                          )
-                        )}
-                      </div>
-                    )}
-                  </>
-                ) : (
-                  <Link
-                    href={item.href!}
-                    className={`block py-2 font-medium ${
-                      isActive(item.href!) ? "text-[#ff6b3d]" : "text-black"
-                    }`}
+      <div
+        className={`lg:hidden bg-white shadow-md z-50 overflow-hidden transition-all duration-300 ${
+          isMobileMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="space-y-4 py-4 px-4">
+          <Link
+            href="/"
+            className={`block py-2 font-medium ${
+              pathname === "/" ? "text-[#ff6b3d]" : "text-black"
+            }`}
+          >
+            Home
+          </Link>
+          {headerData.map((item: MenuItem, index) => (
+            <div key={index}>
+              {item.submenu ? (
+                <>
+                  <button
+                    className="flex justify-between w-full text-left py-2 text-black font-medium"
+                    onClick={() => toggleMobileDropdown(item.label)}
                   >
                     {item.label}
-                  </Link>
-                )}
-              </div>
-            ))}
-            <Link
-              href="/book-an-appointmen"
-              className={`block py-2 font-medium ${
-                pathname === "/contact" ? "text-[#ff6b3d]" : "text-black"
-              }`}
-            >
-              Hire us
-            </Link>
-          </div>
+                    <ChevronDown
+                      className={`w-4 h-4 transition-transform duration-300 ease-in-out ${
+                        openMobileDropdown === item.label
+                          ? "rotate-180 text-[#ff6b3d]"
+                          : ""
+                      }`}
+                    />
+                  </button>
+
+                  {/* Mobile submenu toggle logic */}
+                  {openMobileDropdown === item.label && (
+                    <div className="pl-4 space-y-2">
+                      {item.submenu.map((sub, idx) =>
+                        sub.submenu ? (
+                          <div key={idx}>
+                            <div className="text-sm font-semibold text-black">
+                              {sub.label}
+                            </div>
+                            <div className="ml-4 space-y-1">
+                              {sub.submenu.map((nested, nidx) => (
+                                <Link
+                                  key={nidx}
+                                  href={nested.href!}
+                                  className={`block text-sm ${
+                                    isActive(nested.href!)
+                                      ? "text-[#ff6b3d]"
+                                      : "text-gray-700 hover:underline"
+                                  }`}
+                                >
+                                  {nested.label}
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
+                        ) : (
+                          <Link
+                            key={idx}
+                            href={sub.href!}
+                            className={`block text-sm ${
+                              isActive(sub.href!)
+                                ? "text-[#ff6b3d]"
+                                : "text-gray-700 hover:underline"
+                            }`}
+                          >
+                            {sub.label}
+                          </Link>
+                        )
+                      )}
+                    </div>
+                  )}
+                </>
+              ) : (
+                <Link
+                  href={item.href!}
+                  className={`block py-2 font-medium ${
+                    isActive(item.href!) ? "text-[#ff6b3d]" : "text-black"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              )}
+            </div>
+          ))}
+          <Link
+            href="/book-an-appointmen"
+            className={`block py-2 font-medium ${
+              pathname === "/contact" ? "text-[#ff6b3d]" : "text-black"
+            }`}
+          >
+            Hire us
+          </Link>
         </div>
-      )}
+      </div>
     </header>
   );
 }
