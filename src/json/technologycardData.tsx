@@ -56,7 +56,7 @@ export const services = [
     subtitle:
       "Ensure software reliability through thorough testing and quality assurance.",
     linkTitle: "Explore QA Services",
-    link: "#",
+    link: "/services/qa",
   },
   {
     title: "Web Development",

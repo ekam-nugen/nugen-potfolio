@@ -179,13 +179,14 @@ export default function BlogSection() {
             variants={buttonVariants}
             className="pt-4"
           >
-            <motion.button
+            <motion.a
               whileHover="hover"
+              href="/blog"
               variants={buttonVariants}
-              className="bg-orange-500 hover:bg-orange-600 transition-all duration-300 text-white px-6 py-3 rounded-full font-semibold shadow-md"
+              className="bg-orange-500 cursor-pointer hover:bg-orange-600 transition-all duration-300 text-white px-6 py-3 rounded-full font-semibold shadow-md"
             >
               Read More Blog Post →
-            </motion.button>
+            </motion.a>
           </motion.div>
         </div>
       </div>
