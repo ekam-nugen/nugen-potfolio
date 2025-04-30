@@ -126,7 +126,7 @@ const UIUXDesign = () => {
             alt: "Google Reviews",
           },
         ]}
-        projectLink="/case-studys"
+        projectLink="/case-study"
         teamLink="/dedicated-team"
         companyRatingText="from India's Highest-rated Design Agency"
         ctaText="Discuss Your Design Needs"

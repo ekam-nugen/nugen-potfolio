@@ -248,13 +248,13 @@ const HomePage: FC = () => {
                             Get&nbsp; 
 
 
-                            <a href="#how-we-help-you">
+                            <a href="/case-study">
                               <span className="text-orange-500">
                                 Project-based&nbsp;
                               </span>
                             </a>
                             and&nbsp;
-                            <a href="#how-we-help-you">
+                            <a href="/dedicated-team">
                               <span className="text-green-500">
                                 Dedicated Teams&nbsp;
                               </span>

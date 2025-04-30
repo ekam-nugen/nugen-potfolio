@@ -130,7 +130,7 @@ const CloudEngineering = () => {
             alt: "Google Reviews",
           },
         ]}
-        projectLink="/case-studys"
+        projectLink="/case-study"
         teamLink="/dedicated-team"
         companyRatingText="from India's Highest-rated Company"
         ctaText="Discuss Your Cloud Needs"

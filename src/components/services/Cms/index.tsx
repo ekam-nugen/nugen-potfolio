@@ -130,7 +130,7 @@ const CMSEngineering = () => {
             alt: "Google Reviews",
           },
         ]}
-        projectLink="/case-studys"
+        projectLink="/case-study"
         teamLink="/dedicated-team"
         companyRatingText="from India's Highest-rated CMS Company"
         ctaText="Discuss Your CMS Needs"

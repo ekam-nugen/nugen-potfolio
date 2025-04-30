@@ -130,7 +130,7 @@ const WordPressMaintenance = () => {
             alt: "Google Reviews",
           },
         ]}
-        projectLink="/case-studys"
+        projectLink="/case-study"
         teamLink="/dedicated-team"
         companyRatingText="from India's Top WordPress Maintenance Provider"
         ctaText="Discuss Your Maintenance Needs"

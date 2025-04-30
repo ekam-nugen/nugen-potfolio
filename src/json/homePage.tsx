@@ -75,32 +75,32 @@ export const slides: Slide[] = [
           items: [
             {
               text: "AI/ML & GEN AI",
-              href: "/ai-ml-development",
+              href: "/services/intelligence",
               borderColor: "border-blue-300",
             },
             {
               text: "Cloud",
-              href: "/cloud-engineering",
+              href: "/services/cloud-engineering",
               borderColor: "border-green-300",
             },
             {
               text: "Software Development",
-              href: "/custom-software-development",
+              href: "/services/cms",
               borderColor: "border-yellow-300",
             },
             {
               text: "Quality Assurance",
-              href: "/quality-assurance",
+              href: "/services/cms",
               borderColor: "border-purple-300",
             },
             {
               text: "UI/UX",
-              href: "/uiux-design",
+              href: "/services/uiux",
               borderColor: "border-purple-300",
             },
             {
               text: "Back-End",
-              href: "/back-end",
+              href: "/services/appdevelopment",
               borderColor: "border-purple-300",
             },
           ],

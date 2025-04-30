@@ -130,7 +130,7 @@ const WebDevelopment = () => {
             alt: "Google Reviews",
           },
         ]}
-        projectLink="/case-studys"
+        projectLink="/case-study"
         teamLink="/dedicated-team"
         companyRatingText="from India's Premier Web Development Innovator"
         ctaText="Discuss Your Web Development Needs"

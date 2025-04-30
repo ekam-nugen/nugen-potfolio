@@ -130,7 +130,7 @@ const Blockchain = () => {
             alt: "Google Reviews",
           },
         ]}
-        projectLink="/case-studys"
+        projectLink="/case-study"
         teamLink="/dedicated-team"
         companyRatingText="from India's Leading Blockchain Innovator"
         ctaText="Discuss Your Blockchain Needs"

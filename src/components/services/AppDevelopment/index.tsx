@@ -132,7 +132,7 @@ const CustomizedAppDevelopment = () => {
             alt: "Google Reviews",
           },
         ]}
-        projectLink="/case-studys"
+        projectLink="/case-study"
         teamLink="/dedicated-team"
         companyRatingText="from India's Highest-rated App Development Company"
         ctaText="Discuss Your App Idea"

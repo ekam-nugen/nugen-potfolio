@@ -130,7 +130,7 @@ const SEOOptimization = () => {
             alt: "Google Reviews",
           },
         ]}
-        projectLink="/case-studys"
+        projectLink="/case-study"
         teamLink="/dedicated-team"
         companyRatingText="from India's Highest-rated SEO Agency"
         ctaText="Discuss Your SEO Goals"
