@@ -1,6 +1,6 @@
 "use client";
 
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import testimonials from "../json/testimonials";
 import googleimg from "../../public/award-logo-1.svg";
@@ -13,7 +13,7 @@ import Link from "next/link";
 
 export default function TestimonialSection() {
   return (
-    <section className="py-16 px-4 sm:px-6 bg-gradient-to-br from-[#f9f9f9] via-white to-[#f1f1f1]">
+    <section className="py-16 px-6 sm:px-8 bg-gradient-to-br from-[#f9f9f9] via-white to-[#f1f1f1]">
       <div className="max-w-7xl mx-auto flex flex-col md:grid md:grid-cols-2 gap-12 md:gap-16 items-center">
         {/* Left Content */}
         <div className="text-center md:text-left">
@@ -43,9 +43,10 @@ export default function TestimonialSection() {
           </div>
           <Link
             href="/review"
-            className="bg-black text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-[#ff6b3d] hover:text-white transition duration-300"
+            className="inline-flex items-center group bg-black text-white px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 hover:bg-[#ff6b3d] transform hover:scale-105 hover:-translate-y-1 hover:shadow-lg"
           >
-            Explore Us More →
+            Explore Us More
+            <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
         </div>
 

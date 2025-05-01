@@ -600,7 +600,7 @@ export const techTags = [
     href: "/services/webdevelopment",
   },
   { label: "Back-End", color: "border-red-500", href: "/services/backend" },
-  // { label: "Platforms", color: "border-green-500" },
+  { label: "Platforms", color: "border-green-500" , href: "/technologies/adobecommerce" },
   {
     label: "CMS & E-Commerce Platforms",
     color: "border-indigo-500",
@@ -616,7 +616,7 @@ export const techTags = [
     color: "border-cyan-500",
     href: "/services/intelligence",
   },
-  // { label: "Data Science & Analytics", color: "border-pink-400" },
+  { label: "Data Science & Analytics", color: "border-pink-400" , href: "/services/data-analytics" },
   {
     label: "Web Development",
     color: "border-lime-500",
@@ -630,7 +630,7 @@ export const techTags = [
   },
 ];
 export const platformTags = [
-  { label: "MICROSOFT", color: "border-blue-500" },
-  { label: "AWS", color: "border-pink-500" },
-  { label: "GOOGLE", color: "border-red-500" },
+  { label: "MICROSOFT", color: "border-blue-500" , href: "/platforms" },
+  { label: "SALESFORCE", color: "border-pink-500" , href: "/technologies/salesforce" },
+  { label: "ADOBE", color: "border-red-500" , href: "/technologies/adobecommerce" },
 ];

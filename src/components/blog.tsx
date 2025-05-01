@@ -183,8 +183,8 @@ export default function BlogSection() {
               whileHover="hover"
               href="/blog"
               variants={buttonVariants}
-              className="bg-orange-500 cursor-pointer hover:bg-orange-600 transition-all duration-300 text-white px-6 py-3 rounded-full font-semibold shadow-md"
-            >
+              className="cursor-pointer bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 hover:-translate-y-1"
+              >
               Read More Blog Post →
             </motion.a>
           </motion.div>

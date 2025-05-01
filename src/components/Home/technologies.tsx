@@ -18,6 +18,7 @@ import {
   FaBrain,
   FaDatabase,
 } from "react-icons/fa";
+import { ArrowRight } from "lucide-react";
 
 const technologies = [
   {
@@ -241,16 +242,23 @@ export default function TechnologySection() {
         <motion.div
           whileHover="hover"
           variants={buttonVariants}
-          className="cursor-pointer bg-gradient-to-r from-orange-400 to-pink-500 hover:from-orange-500 hover:to-pink-600 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 shadow-md"
+          className="inline-flex items-center group cursor-pointer bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 hover:-translate-y-1"
         >
-          <Link href="/contact-us">Get A Quote →</Link>
+          <Link href="/contact-us" className="flex items-center">
+            Get A Quote
+            <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+          </Link>
         </motion.div>
+
         <motion.div
           whileHover="hover"
           variants={buttonVariants}
-          className="cursor-pointer border border-gray-300 hover:bg-gray-100 text-gray-800 font-medium px-6 py-3 rounded-full transition-all duration-300 shadow-md"
+          className="inline-flex items-center group cursor-pointer border border-gray-300 hover:bg-gray-100 text-gray-800 font-medium px-6 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 hover:-translate-y-1"
         >
-          <Link href="/technologies">See All Technologies →</Link>
+          <Link href="/technologies" className="flex items-center">
+            See All Technologies
+            <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+          </Link>
         </motion.div>
       </motion.div>
     </section>

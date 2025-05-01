@@ -6,6 +6,8 @@ import HeroSection from "@/src/components/about/Hero";
 import Services from "@/src/components/about/Services";
 import { FAQSection } from "@/src/components/technologySection/questionSection";
 import Loader from "@/src/components/common/Loader";
+import ContactUsSection from "@/src/components/technologySection/contactSection";
+import TeamChoose from "@/src/components/team/teamChoose";
 
 const AboutPage = () => {
   const [loading, setLoading] = useState(true);
@@ -28,6 +30,8 @@ const AboutPage = () => {
           <Services className={"bg-gradient-to-r from-white via-[#fff1eb] to-white"} />
           <Evolution />
           <CustomerReviews />
+          <TeamChoose />
+          <ContactUsSection/>
           <FAQSection />
         </>
       )}

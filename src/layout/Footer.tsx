@@ -65,7 +65,7 @@ export default function Footer() {
 
       {/* Copyright */}
       <div className="text-center md:text-start text-sm text-gray-500 px-5 mt-12">
-        © 2025 Nugen It Service. All Rights Reserved.
+        © 2025 Nugen IT Service. All Rights Reserved.
       </div>
     </footer>
   );

@@ -12,6 +12,7 @@ import CompanyStatsSection from "@/src/components/contactUs/highlightsSection";
 import { services } from "../src/json/technologycardData";
 import { FAQSection } from "@/src/components/technologySection/questionSection";
 import ContactUsSection from "@/src/components/technologySection/contactSection";
+import Head from "next/head";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -26,6 +27,23 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>Nugen IT Services - Leading IT Solutions at NugenInfo.com</title>
+        <meta
+          name="description"
+          content="Nugen IT Services offers cutting-edge IT solutions for businesses. Explore our innovative services and technology expertise at NugenInfo.com."
+        />
+        <meta name="robots" content="index, follow" />
+        <meta
+          property="og:title"
+          content="Nugen IT Services - Leading IT Solutions at NugenInfo.com"
+        />
+        <meta
+          property="og:description"
+          content="Discover Nugen IT Services' transformative IT solutions. Visit NugenInfo.com to learn more about how we empower businesses with technology."
+        />
+        <meta property="og:image" content="/logo.png" />
+      </Head>
       {loading ? (
         <Loader />
       ) : (

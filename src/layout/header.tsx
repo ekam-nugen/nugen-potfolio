@@ -127,8 +127,8 @@ export default function Header() {
 
           <div className="hidden lg:block">
             <Link
-              href="/book-an-appointment"
-              className={`bg-gradient-to-r from-orange-400 to-pink-500 hover:from-orange-500 hover:to-pink-600 text-white px-4 py-2 rounded-md font-medium`}
+              href="/book-an-appointmen"
+              className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-md font-medium transition-all"
             >
               Hire us
             </Link>

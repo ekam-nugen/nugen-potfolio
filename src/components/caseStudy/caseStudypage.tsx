@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { caseStudiesData } from "@/src/json/caseStudy/casyStudysData";
@@ -13,15 +13,34 @@ const slugify = (text: string) =>
     .replace(/(^-|-$)+/g, "");
 
 const technologies = [
-  "MongoDB", "Next.js", "Node.js", "PHP", "Python", "React.js",
-  "React Native", "Shopify", "Swift", "Vue Js", "Wordpress",
+  "MongoDB",
+  "Next.js",
+  "Node.js",
+  "PHP",
+  "Python",
+  "React.js",
+  "React Native",
+  "Shopify",
+  "Swift",
+  "Vue Js",
+  "Wordpress",
 ];
 
 const industries = [
-  "Finance", "Gaming & Sports", "Healthcare", "Legal Services",
-  "Lifestyle", "Logistics & Transportation", "Manufacturing",
-  "Marketing & Advertising", "Media & Entertainment", "Nonprofit",
-  "Real Estate", "SaaS", "Social", "Technology",
+  "Finance",
+  "Gaming & Sports",
+  "Healthcare",
+  "Legal Services",
+  "Lifestyle",
+  "Logistics & Transportation",
+  "Manufacturing",
+  "Marketing & Advertising",
+  "Media & Entertainment",
+  "Nonprofit",
+  "Real Estate",
+  "SaaS",
+  "Social",
+  "Technology",
 ];
 
 const FilterDropdown = ({
@@ -99,10 +118,11 @@ const CaseStudyCard = ({
       </p>
       <div className="mt-4 flex justify-end">
         <Link
-          className="bg-orange-500 hover:bg-orange-600 transition text-white px-4 py-2 rounded text-sm"
           href={`/case-study/${slug}`}
+          className="inline-flex items-center group bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded text-sm font-semibold transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 hover:-translate-y-1"
         >
           READ MORE
+          <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
         </Link>
       </div>
     </div>

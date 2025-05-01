@@ -114,6 +114,7 @@ export const servicesData = [
     title: "WordPress Maintenance",
     description: "Keep your WordPress site secure and up-to-date.",
     iconPath: "M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z",
+    link: "/services/wordpress",
     benefits: [
       "🔒 Security Updates",
       "⚙️ Performance Optimization",
@@ -127,6 +128,7 @@ export const servicesData = [
     description: "Flexible and scalable content management systems.",
     iconPath:
       "M3 3h18v18H3V3zm16 16V5H5v14h14zM7 7h10v2H7V7zm0 4h10v2H7v-2zm0 4h7v2H7v-2z",
+    link: "/services/cms",
     benefits: [
       "📝 Easy Content Editing",
       "🛠️ Custom Workflows",
@@ -139,6 +141,7 @@ export const servicesData = [
     title: "UI & UX Designing",
     description: "Crafting intuitive and engaging interfaces.",
     iconPath: "M4 8h16M4 16h16M12 12h.01M8 12h.01M16 12h.01",
+    link: "/services/uiux",
     benefits: [
       "🎨 User-Centric Design",
       "🖌️ Consistent Aesthetics",
@@ -152,6 +155,7 @@ export const servicesData = [
     description: "Tailored web apps to meet your needs.",
     iconPath:
       "M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9",
+    link: "/services/webdevelopment",
     benefits: [
       "🛠️ Bespoke Solutions",
       "⚡ High Performance",
@@ -165,6 +169,7 @@ export const servicesData = [
     description: "Boost speed and SEO performance.",
     iconPath:
       "M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 16c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6z",
+    link: "/services/seo",
     benefits: [
       "🚀 Faster Load Times",
       "📈 SEO Enhancements",
@@ -178,6 +183,7 @@ export const servicesData = [
     description: "Bespoke mobile apps for your business.",
     iconPath:
       "M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z",
+    link: "/services/appdevelopment",
     benefits: [
       "📱 Native & Cross-Platform",
       "🎨 Modern UI/UX",
@@ -191,6 +197,7 @@ export const servicesData = [
     description: "Stunning and functional websites.",
     iconPath:
       "M4 3h16a2 2 0 012 2v14a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2zm2 4v10h12V7H6z",
+    link: "services/webdevelopment",
     benefits: [
       "🌐 Responsive Design",
       "🖼️ Visually Appealing",

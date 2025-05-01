@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Star, ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HowWeWorkSection() {
   // Animation variants for staggered text content
@@ -139,17 +140,18 @@ export default function HowWeWorkSection() {
             </div>
           </motion.div>
 
-          {/* CTA Button */}
-          <motion.a
-            href="/contact-us"
-            variants={buttonVariants}
-            initial="rest"
-            whileHover="hover"
-            whileTap={{ scale: 0.95 }}
-            className="bg-gradient-to-r from-[#FF6B00] to-[#FF2FB6] text-white w-fit px-6 py-3 rounded-full font-semibold flex items-center gap-2 shadow-lg"
-          >
-            Get A Quote <ArrowRight className="w-4 h-4" />
-          </motion.a>
+          {/* CTA Button wrapped in Link component */}
+          <Link href="/contact-us">
+            <motion.button
+              variants={buttonVariants}
+              initial="rest"
+              whileHover="hover"
+              whileTap={{ scale: 0.95 }}
+              className="bg-gradient-to-r from-[#FF6B00] to-[#FF2FB6] text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 shadow-lg"
+            >
+              Get A Quote <ArrowRight className="w-4 h-4" />
+            </motion.button>
+          </Link>
         </div>
 
         {/* Animated Illustration */}

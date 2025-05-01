@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Loader from "@/src/components/common/Loader";
 import { caseStudiesData } from "@/src/json/caseStudy/casyStudysData";
+import { ArrowRight } from "lucide-react";
 
 const slugify = (title: string) =>
   title
@@ -134,8 +135,9 @@ export default function SingleCaseStudy() {
           {cta.headline}
         </h2>
         <p className="text-lg text-gray-700 mb-6">{cta.subtext}</p>
-        <button className="bg-gradient-to-r from-pink-500 to-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:opacity-90 transition">
+        <button className="group inline-flex items-center bg-gradient-to-r from-pink-500 to-orange-500 text-white px-6 py-3 rounded-full font-semibold shadow-md hover:opacity-90 hover:shadow-lg transform hover:scale-105 hover:-translate-y-1 transition-all duration-300">
           {cta.buttonText}
+          <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
         </button>
       </section>
     </div>

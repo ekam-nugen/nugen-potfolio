@@ -6,7 +6,7 @@ import { LucideIcon } from "lucide-react";
 import * as LucideIcons from "lucide-react";
 
 export interface Competency {
-  icon: keyof typeof LucideIcons; 
+  icon: keyof typeof LucideIcons;
   title: string;
   content: string;
 }
@@ -73,10 +73,10 @@ const CoreCompetencies: React.FC<CoreCompetenciesProps> = ({
           <Link
             href={ctaLink}
             data-bookctablock={ctaDataAttribute}
-            className="inline-flex items-center px-6 py-3 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-colors duration-300"
+            className="inline-flex items-center group px-6 py-3 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 hover:-translate-y-1"
           >
             {ctaText}
-            <LucideIcons.ArrowRight/>
+            <LucideIcons.ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
         </div>
       </div>

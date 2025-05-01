@@ -7,6 +7,7 @@ import Branding from "../../../public/brand-strategy-1.png";
 import Marketing from "../../../public/Marketing-cuate.svg";
 import Design from "../../../public/Advanced customization-cuate.svg";
 import webApp from "../../../public/mobile-app-development.png";
+import Link from "next/link";
 
 const services = [
   {
@@ -156,19 +157,21 @@ export default function ServicesSection() {
                 onMouseEnter={() => setCurrentImage(service.image)}
                 className="group cursor-pointer flex items-start justify-between border-b border-gray-200 pb-4"
               >
-                <div className="flex gap-4">
-                  <span className="text-lg font-bold text-[#ff6b3d]">
-                    {service.id}
-                  </span>
-                  <div>
-                    <h3 className="text-xl font-semibold group-hover:text-[#f0845a] transition-colors duration-300">
-                      {service.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm mt-1">
-                      {service.description}
-                    </p>
+                <Link href={service?.href}>
+                  <div className="flex gap-4">
+                    <span className="text-lg font-bold text-[#ff6b3d]">
+                      {service.id}
+                    </span>
+                    <div>
+                      <h3 className="text-xl font-semibold group-hover:text-[#f0845a] transition-colors duration-300">
+                        {service.title}
+                      </h3>
+                      <p className="text-gray-600 text-sm mt-1">
+                        {service.description}
+                      </p>
+                    </div>
                   </div>
-                </div>
+                </Link>
 
                 {/* Arrow Icon */}
                 {/* <ArrowUpRight className="w-5 h-5 text-gray-400 opacity-0 group-hover:opacity-100 group-hover:text-black transition duration-300 mt-1" /> */}
