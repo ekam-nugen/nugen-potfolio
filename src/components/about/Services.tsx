@@ -75,9 +75,12 @@ const Services = ({ className }: AboutServices) => {
                         <li key={index}>{benefit}</li>
                       ))}
                     </ul>
-                    <button className=" hover:bg-gradient-to-r border border-gray-300 from-orange-400 to-purple-400 hover:text-white bg-white text-gray-800 font-medium py-2 px-4 rounded-lg transition-colors duration-300 cursor-pointer">
+                    <a
+                      className=" hover:bg-gradient-to-r border border-gray-300 from-orange-400 to-purple-400 hover:text-white bg-white text-gray-800 font-medium py-2 px-4 rounded-lg transition-colors duration-300 cursor-pointer"
+                      href={service?.href}
+                    >
                       Explore
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>

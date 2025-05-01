@@ -119,6 +119,7 @@ export const servicesData = [
       "⚙️ Performance Optimization",
       "📅 Regular Backups",
     ],
+    href: "/services/wordpress",
   },
   {
     id: 2,
@@ -131,6 +132,7 @@ export const servicesData = [
       "🛠️ Custom Workflows",
       "🔗 Seamless Integrations",
     ],
+    href: "/services/cms",
   },
   {
     id: 3,
@@ -142,6 +144,7 @@ export const servicesData = [
       "🖌️ Consistent Aesthetics",
       "📊 Usability Testing",
     ],
+    href: "/services/uiux",
   },
   {
     id: 4,
@@ -154,6 +157,7 @@ export const servicesData = [
       "⚡ High Performance",
       "🔒 Secure Architecture",
     ],
+    href: "/services/webdevelopment",
   },
   {
     id: 5,
@@ -166,6 +170,7 @@ export const servicesData = [
       "📈 SEO Enhancements",
       "🛠️ Code Optimization",
     ],
+    href: "/services/seo",
   },
   {
     id: 6,
@@ -178,6 +183,7 @@ export const servicesData = [
       "🎨 Modern UI/UX",
       "⚡ Scalable Solutions",
     ],
+    href: "/services/appdevelopment",
   },
   {
     id: 7,
@@ -190,6 +196,7 @@ export const servicesData = [
       "🖼️ Visually Appealing",
       "🛠️ Robust Functionality",
     ],
+    href: "/services/webdevelopment",
   },
 ];
 
@@ -219,39 +226,39 @@ export const evoultionData = [
 
 export const aboutUsData = [
   {
-    name: "AI/ML/GenAI",
-    color: "border-green-500",
-    target: "view-ai-ml",
+    text: "Web Development",
+    borderColor: "border-orange-500",
+    href: "/services/webdevelopment",
   },
   {
-    name: "Web & Mobile Development",
-    color: "border-blue-500",
-    target: "view-backend-development",
+    text: "AI/ML & GEN AI",
+    href: "/services/intelligence",
+    borderColor: "border-blue-500",
   },
   {
-    name: "Custom Software Development",
-    color: "border-purple-500",
-    target: "view-frameworks",
+    text: "Cloud",
+    href: "/services/cloud-engineering",
+    borderColor: "border-green-500",
   },
   {
-    name: "E-commerce",
-    color: "border-orange-500",
-    target: "view-cms",
+    text: "Software Development",
+    href: "/services/cms",
+    borderColor: "border-yellow-500",
   },
   {
-    name: "UI/UX",
-    color: "border-pink-500",
-    target: "view-design",
+    text: "Back-End",
+    href: "/services/backend",
+    borderColor: "border-violet-500",
   },
   {
-    name: "Cloud Solutions",
-    color: "border-teal-500",
-    target: "view-cloud",
+    text: "Quality Assurance",
+    href: "/services/qa",
+    borderColor: "border-pink-500",
   },
   {
-    name: "Data Science & Analytics",
-    color: "border-indigo-500",
-    target: "view-warehousing",
+    text: "UI/UX",
+    href: "/services/uiux",
+    borderColor: "border-teal-500",
   },
 ];
 
@@ -524,7 +531,10 @@ export const servicesTechData: Service[] = [
               "Stay ahead in the app game with our continuous support and updates. Keep your app competitive with the latest features and optimizations.",
           },
         ],
-        link: { href: "/services/appdevelopment", text: "Dive into Mobile App Development" },
+        link: {
+          href: "/services/appdevelopment",
+          text: "Dive into Mobile App Development",
+        },
       },
       {
         id: "qa",
@@ -693,8 +703,11 @@ export const servicesTechData: Service[] = [
           },
         ],
         links: [
-          { href: "/services/blockchain", text: "Discover AR/VR Magic" },
-          { href: "/services/blockchain", text: "Explore Blockchain Solutions" },
+          { href: "/services/ar-vr", text: "Discover AR/VR Magic" },
+          {
+            href: "/services/blockchain",
+            text: "Explore Blockchain Solutions",
+          },
         ],
       },
     ],

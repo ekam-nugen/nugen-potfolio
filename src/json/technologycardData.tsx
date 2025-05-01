@@ -56,7 +56,7 @@ export const services = [
     subtitle:
       "Ensure software reliability through thorough testing and quality assurance.",
     linkTitle: "Explore QA Services",
-    link: "#",
+    link: "/services/qa",
   },
   {
     title: "Web Development",
@@ -78,6 +78,6 @@ export const services = [
     icon: <Users color="#ff6b3d" />,
     subtitle: "Build your remote dream team with our vetted tech talent.",
     linkTitle: "Hire Dedicated Teams",
-    link: "/book-an-appointmen",
+    link: "/book-an-appointment",
   },
 ];

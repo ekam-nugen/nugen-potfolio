@@ -179,14 +179,14 @@ export default function TechnologyShowcase() {
                 ))}
               </motion.div>
 
-              <motion.button
+              {/* <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.97 }}
                 transition={{ type: "spring", stiffness: 300 }}
                 className="mt-6 px-6 py-3 hover:bg-gradient-to-r from-orange-400 to-purple-500 hover:text-white bg-white text-black rounded-lg font-bold shadow hover:from-orange-500 transition"
               >
                 Explore Programming Solutions →
-              </motion.button>
+              </motion.button> */}
             </>
           ) : (
             <p className="text-gray-500 italic mt-6">

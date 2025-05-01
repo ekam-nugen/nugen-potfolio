@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
 import Branding from "../../../public/brand-strategy-1.png";
 import Marketing from "../../../public/Marketing-cuate.svg";
 import Design from "../../../public/Advanced customization-cuate.svg";
@@ -172,7 +171,7 @@ export default function ServicesSection() {
                 </div>
 
                 {/* Arrow Icon */}
-                <ArrowUpRight className="w-5 h-5 text-gray-400 opacity-0 group-hover:opacity-100 group-hover:text-black transition duration-300 mt-1" />
+                {/* <ArrowUpRight className="w-5 h-5 text-gray-400 opacity-0 group-hover:opacity-100 group-hover:text-black transition duration-300 mt-1" /> */}
               </motion.li>
             ))}
           </ul>

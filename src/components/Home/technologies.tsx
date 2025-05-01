@@ -72,22 +72,22 @@ const technologies = [
   },
   {
     name: "Java",
-    href: "/services/java",
+    href: "/technologies/java",
     icon: <FaJava color="#ff6b3d" />,
   },
   {
     name: ".NET",
-    href: "/services/dotnet",
+    href: "/technologies/dotnet",
     icon: <FaCube color="#ff6b3d" />,
   },
   {
     name: "Python",
-    href: "/services/python",
+    href: "/technologies/python",
     icon: <FaPython color="#ff6b3d" />,
   },
   {
     name: "UI/UX",
-    href: "/services/ui-ux",
+    href: "/services/uiux",
     icon: <FaPencilAlt color="#ff6b3d" />,
   },
   {
@@ -105,20 +105,20 @@ const technologies = [
     href: "/services/data-engineering",
     icon: <FaDatabase color="#ff6b3d" />,
   },
-  { name: "AWS", href: "/services/aws", icon: <FaAws color="#ff6b3d" /> },
+  { name: "AWS", href: "/technologies/aws", icon: <FaAws color="#ff6b3d" /> },
   {
     name: "Magento",
-    href: "/services/magento",
+    href: "/technologies/magento",
     icon: <FaMagento color="#ff6b3d" />,
   },
   {
     name: "Flutter",
-    href: "/services/flutter",
+    href: "/technologies/flutter",
     icon: <FaCube color="#ff6b3d" />,
   },
   {
     name: "PHP",
-    href: "/services/php",
+    href: "/technologies/php",
     icon: <FaFileCode color="#ff6b3d" />,
   },
   {

@@ -4956,6 +4956,96 @@ export const technologyStack: TechDescriptionProps[] = [
       "Multimodal AI refers to systems that combine and interpret different types of data—text, vision, audio—to interact with the world more like humans do.",
     imageSrc: "/clients/technologies/multimodal.jpg",
   },
+  {
+    value: "flutter",
+    label: "Flutter",
+    features: [
+      {
+        icon: <FaMobileAlt />,
+        title: "Cross-Platform Development",
+        desc: "Write once and deploy to iOS, Android, web, desktop — all from a single codebase.",
+      },
+      {
+        icon: <FaRocket />,
+        title: "High Performance UI",
+        desc: "Delivers smooth animations and 60fps performance with its Skia rendering engine.",
+      },
+      {
+        icon: <FaPaintBrush />,
+        title: "Customizable Widgets",
+        desc: "Offers rich widget libraries and pixel-perfect UI design capabilities.",
+      },
+      {
+        icon: <FaBolt />,
+        title: "Fast Development Cycle",
+        desc: "Hot reload enables real-time updates without restarting the app.",
+      },
+      {
+        icon: <FaPuzzlePiece />,
+        title: "Robust Plugin Ecosystem",
+        desc: "Integrates easily with native APIs and packages for extended functionality.",
+      },
+    ],
+    highlights: [
+      { name: "iOS & Android Apps", image: "/clients/illustration1.svg" },
+      { name: "Web & Desktop Support", image: "/clients/illustration2.svg" },
+      { name: "Flutter UI Prototypes", image: "/clients/illustration3.svg" },
+      { name: "E-commerce & SaaS Apps", image: "/clients/illustration4.svg" },
+      { name: "Real-time Applications", image: "/clients/illustration5.svg" },
+      { name: "Fintech Mobile Platforms", image: "/clients/illustration6.svg" },
+    ],
+    tagline:
+      "Flutter is Google’s UI toolkit for crafting beautiful, natively compiled apps for mobile, web, and desktop from a single codebase.",
+    imageSrc: "/clients/technologies/flutter.png",
+  },
+  {
+    value: "dotnet",
+    label: ".NET",
+    features: [
+      {
+        icon: <FaLaptopCode />,
+        title: "Unified Development Platform",
+        desc: "Build web, mobile, desktop, and cloud applications using a single .NET ecosystem.",
+      },
+      {
+        icon: <FaCloud />,
+        title: "Seamless Azure Integration",
+        desc: "Natively supports Microsoft Azure for scalable, secure cloud deployments.",
+      },
+      {
+        icon: <FaCogs />,
+        title: "High Performance Runtime",
+        desc: "Powered by the fast and scalable CoreCLR runtime for robust enterprise apps.",
+      },
+      {
+        icon: <FaShieldAlt />,
+        title: "Enterprise-grade Security",
+        desc: "Built-in security features and identity management tools for critical applications.",
+      },
+      {
+        icon: <FaDatabase />,
+        title: "Database & ORM Support",
+        desc: "Integrates easily with SQL Server, PostgreSQL, and Entity Framework for seamless data access.",
+      },
+    ],
+    highlights: [
+      { name: "Enterprise Web Apps", image: "/clients/illustration1.svg" },
+      { name: "Cloud-Native Solutions", image: "/clients/illustration2.svg" },
+      {
+        name: "Microservices Architecture",
+        image: "/clients/illustration3.svg",
+      },
+      { name: "Desktop Applications", image: "/clients/illustration4.svg" },
+      {
+        name: "API Development (REST/gRPC)",
+        image: "/clients/illustration5.svg",
+      },
+      { name: "IoT & Embedded Systems", image: "/clients/illustration6.svg" },
+    ],
+    tagline:
+      ".NET is Microsoft’s versatile development platform used for building modern, scalable applications across platforms and devices.",
+    imageSrc: "/clients/technologies/dotnet.png",
+  },
 ];
 
 export const reviewPlatforms = [

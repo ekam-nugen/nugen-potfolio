@@ -22,16 +22,16 @@ const HeroSection = () => {
             {aboutUsData?.map((service, index) => (
               <Link
                 key={index}
-                href="#services"
-                className={`px-6 py-3 border-l-4 ${service?.color} text-gray-800 font-medium hover:bg-slate-100 rounded-lg transition-colors duration-200`}
+                href={service.href}
+                className={`px-6 py-3 border-l-4 ${service?.borderColor} text-gray-800 font-medium hover:bg-slate-100 rounded-lg transition-colors duration-200`}
               >
-                {service.name}
+                {service.text}
               </Link>
             ))}
           </div>
 
           <Link
-            href="#"
+            href="/contact-us"
             className="inline-flex items-center px-6 py-3 hover:bg-gradient-to-r border border-gray-300 from-orange-400 to-purple-400 hover:text-white bg-white text-gray-800  font-semibold rounded-lg  duration-200"
           >
             Get In Touch With Us

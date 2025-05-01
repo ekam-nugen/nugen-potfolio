@@ -202,7 +202,7 @@ const HomePage: FC = () => {
                         <h1 className="mt-3 xs:mt-4 sm:mt-5 md:mt-6 text-lg xs:text-xl sm:text-2xl md:text-3xl font-extrabold text-gray-900 text-center">
                           Transform Your Business With Cutting Edge Solutions
                         </h1>
-                        <Link href={"/case-studys"}>
+                        <Link href={"/case-study"}>
                           <button className="mt-3 flex cursor-pointer xs:mt-4 sm:mt-5 md:mt-6 px-3 xs:px-4 sm:px-5 md:px-6 py-1 xs:py-1.5 sm:py-2 md:py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-full shadow-md transition-colors duration-300 text-xs xs:text-sm sm:text-base">
                             Learn More
                             <ArrowRight className="ml-2" />

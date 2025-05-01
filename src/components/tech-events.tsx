@@ -80,9 +80,12 @@ export default function TechEventsPage() {
             Meet us at the next global tech event or schedule a virtual demo to
             learn how we can transform your business.
           </p>
-          <button className="mt-4 px-6 py-3 bg-white text-orange-600 text-lg rounded-xl font-semibold transition hover:bg-gray-100 hover:scale-105 duration-200">
+          <a
+            href="/contact-us"
+            className="mt-4 px-6 py-3 bg-white text-orange-600 text-lg rounded-xl font-semibold transition hover:bg-gray-100 hover:scale-105 duration-200"
+          >
             Book a Free Consultation
-          </button>
+          </a>
         </div>
       </section>
     </div>
