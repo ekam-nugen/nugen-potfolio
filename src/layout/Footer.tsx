@@ -28,19 +28,19 @@ export default function Footer() {
             <h3 className="font-semibold text-zinc-800 mb-3 text-base">
               {section?.title}
             </h3>
-            <div className="space-y-2 text-sm text-gray-600">
+            <div className="space-y-2 text-sm text-gray-600 flex flex-col">
               {section?.links.map((link, idx: number) => (
-                <p
-                  key={link[0] + idx}
+                <a
+                  key={link.text + idx}
+                  href={link.href}
                   className="hover:text-zinc-900 hover:underline cursor-pointer transition"
                 >
-                  {link}
-                </p>
+                  {link.text}
+                </a>
               ))}
             </div>
           </div>
         ))}
-
         {/* Social links */}
         <div>
           <h3 className="font-semibold mb-3 text-zinc-800 text-base">

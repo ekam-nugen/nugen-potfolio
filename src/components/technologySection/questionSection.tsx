@@ -45,6 +45,7 @@ export const FAQSection: React.FC = () => {
 
   return (
     <motion.div
+      id="faq"
       className="bg-white py-12 px-4 sm:px-6 lg:px-8"
       initial="hidden"
       whileInView="visible"
