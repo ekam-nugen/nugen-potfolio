@@ -1,6 +1,7 @@
 "use client";
 
 import { useParams } from "next/navigation";
+import Head from "next/head";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Loader from "@/src/components/common/Loader";
@@ -55,8 +56,44 @@ export default function SingleCaseStudy() {
   return loading ? (
     <Loader />
   ) : (
-    <div className="bg-white text-gray-900">
-      {/* Hero */}
+    <>
+      {/* Head for SEO and Social Media */}
+      <Head>
+        <title>{`${hero.title} - Case Study | Nugen IT Services`}</title>
+        <meta
+          name="description"
+          content={
+            summary.text ||
+            "Discover how Nugen IT Services helped clients succeed with innovative technology solutions."
+          }
+        />
+        <meta
+          name="keywords"
+          content={`${hero.title}, case study, Nugen IT services, technology solutions, digital transformation, business success`}
+        />
+        <meta name="robots" content="index, follow" />
+        <meta
+          property="og:title"
+          content={`${hero.title} - Case Study | Nugen IT Services`}
+        />
+        <meta
+          property="og:description"
+          content={
+            summary.text ||
+            "Learn how we empowered businesses with transformative tech solutions."
+          }
+        />
+        <meta
+          property="og:image"
+          content={hero.backgroundImage || "/logo.png"}
+        />
+        <meta
+          property="og:url"
+          content={`https://nugeninfo.com/case-study/${slugify(hero.title)}`}
+        />
+      </Head>
+
+      {/* Hero Section */}
       <section className="relative overflow-hidden bg-white">
         <div className="absolute inset-0 z-0">
           <Image
@@ -140,6 +177,6 @@ export default function SingleCaseStudy() {
           <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
         </button>
       </section>
-    </div>
+    </>
   );
 }
