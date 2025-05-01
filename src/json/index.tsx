@@ -73,15 +73,30 @@ export const UserProfiles = [
 export const FooterSections = [
   {
     title: "Links",
-    links: ["About Us", "Contact Us", "Services", "Blog"],
+    links: [
+      { text: "About Us", href: "/about" },
+      { text: "Contact Us", href: "/contact-us" },
+      { text: "Services", href: "/services" },
+      { text: "Blog", href: "/blog" },
+    ],
   },
   {
     title: "Support",
-    links: ["FAQs", "Terms", "Privacy Policy", "Feedback"],
+    links: [
+      { text: "FAQs", href: "#faq" },
+      { text: "Terms", href: "#" },
+      { text: "Privacy Policy", href: "#" },
+      { text: "Feedback", href: "/contact-us" },
+    ],
   },
   {
     title: "User Guide",
-    links: ["Careers", "Testimonials", "News", "Events"],
+    links: [
+      { text: "Careers", href: "/technologies" },
+      { text: "Testimonials", href: "/review" },
+      { text: "News", href: "/events" },
+      { text: "Events", href: "/events" },
+    ],
   },
 ];
 
@@ -89,22 +104,22 @@ export const SocialLinks = [
   {
     icon: <FaTwitter />,
     label: "Twitter",
-    href: "#",
+    href: "https://x.com/_nugen_",
   },
   {
     icon: <FaInstagram />,
     label: "Instagram",
-    href: "#",
+    href: "https://www.instagram.com/nugen_it_services_/",
   },
   {
     icon: <FaLinkedinIn />,
     label: "LinkedIn",
-    href: "#",
+    href: "https://in.linkedin.com/company/nugen-it-services",
   },
   {
     icon: <FaFacebookF />,
     label: "Facebook",
-    href: "#",
+    href: "https://www.facebook.com/NugenITServices/",
   },
 ];
 
