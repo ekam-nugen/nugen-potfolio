@@ -96,6 +96,7 @@ export const FooterSections = [
       { text: "Testimonials", href: "/review" },
       { text: "News", href: "/events" },
       { text: "Events", href: "/events" },
+      { text: "Sitemap", href: "/sitemap" },
     ],
   },
 ];
