@@ -27,7 +27,7 @@ export default function Header() {
     pathname === href || pathname.startsWith(href + "/");
 
   const renderDesktopDropdown = (submenu: MenuItem[]) => (
-    <div className="absolute left-0 top-full w-64 bg-white shadow-xl rounded-xl transform transition-all duration-300 ease-in-out opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto pointer-events-none z-50">
+    <div className="absolute left-0 top-21 w-64 bg-white shadow-xl rounded-xl transform transition-all duration-300 ease-in-out opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto pointer-events-none z-50">
       <div className="divide-y divide-gray-200 divide-dashed">
         {submenu.map((section, index) => (
           <div key={index} className="relative group/sub">
@@ -87,13 +87,9 @@ export default function Header() {
               {headerData.map((item: MenuItem, index) => (
                 <div
                   key={index}
-                  className={item.submenu ? "relative group" : ""}
-                >
-                  {item.submenu ? (
-                    <>
-                      <Link
-                        href={item?.href || "#"}
-                        className={`font-medium flex items-center transition-all ${
+                  className={
+                    item.submenu
+                      ? `relative group cursor-pointer py-7 ${
                           item.submenu.some(
                             (s) =>
                               s.submenu?.some((sub) => isActive(sub.href!)) ||
@@ -101,7 +97,15 @@ export default function Header() {
                           )
                             ? "text-[#ff6b3d]"
                             : "text-black hover:text-[#ff6b3d]"
-                        }`}
+                        }`
+                      : ""
+                  }
+                >
+                  {item.submenu ? (
+                    <>
+                      <Link
+                        href={item?.href || "#"}
+                        className={`font-medium flex items-center transition-all`}
                       >
                         {item.label}
                         <ChevronDown className="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180" />
@@ -111,7 +115,7 @@ export default function Header() {
                   ) : (
                     <Link
                       href={item.href!}
-                      className={`font-medium transition ${
+                      className={`font-medium transition py-7 ${
                         isActive(item.href!)
                           ? "text-[#ff6b3d]"
                           : "text-black hover:text-[#ff6b3d]"
@@ -153,14 +157,6 @@ export default function Header() {
         }`}
       >
         <div className="space-y-4 py-4 px-4">
-          <Link
-            href="/"
-            className={`block py-2 font-medium ${
-              pathname === "/" ? "text-[#ff6b3d]" : "text-black"
-            }`}
-          >
-            Home
-          </Link>
           {headerData.map((item: MenuItem, index) => (
             <div key={index}>
               {item.submenu ? (
