@@ -43,7 +43,7 @@ export default function HowWeWork() {
         />
         <meta property="og:image" content="/logo.png" />
         <meta property="og:url" content="https://nugeninfo.com/how-we-work" />
-=      </Head>
+      </Head>
 
       {loading ? (
         <Loader />

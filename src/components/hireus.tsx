@@ -1,15 +1,20 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function HireUsPage() {
   const services = [
-    { title: "Web Development", icon: "🌐" },
-    { title: "Mobile Apps", icon: "📱" },
-    { title: "UI/UX Design", icon: "🎨" },
-    { title: "AI & ML Integration", icon: "🤖" },
-    { title: "Dedicated Developers", icon: "👨‍💻" },
-    { title: "Project Rescue", icon: "🚑" },
+    { title: "Web Development", icon: "🌐", href: "/services/webdevelopment" },
+    { title: "Mobile Apps", icon: "📱", href: "/services/appdevelopment" },
+    { title: "UI/UX Design", icon: "🎨", href: "/services/uiux" },
+    {
+      title: "AI & ML Integration",
+      icon: "🤖",
+      href: "/services/intelligence",
+    },
+    { title: "Dedicated Developers", icon: "👨‍💻", href: "/dedicated-team" },
+    { title: "Project Rescue", icon: "🚑", href: "/contact-us" },
   ];
 
   const stats = [
@@ -23,14 +28,14 @@ export default function HireUsPage() {
     {
       quote:
         "Nugen transformed our digital presence. Their team was responsive and delivered beyond expectations.",
-      name: "Jane Doe",
-      position: "CTO, TechCorp",
+      name: "Amandeep",
+      position: "facebook",
     },
     {
       quote:
         "The collaboration with Nugen was seamless. Their expertise in AI integration is top-notch.",
-      name: "John Smith",
-      position: "CEO, InnovateX",
+      name: "Satnam",
+      position: "Google",
     },
   ];
 
@@ -51,27 +56,31 @@ export default function HireUsPage() {
             Full-stack developers, UI/UX designers, and AI engineers to scale
             your vision fast.
           </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            className="mt-6 px-8 py-3 bg-gradient-to-r from-[#FF5E62] to-[#FF9966] text-white text-lg rounded-full font-semibold shadow-lg transition-all"
-          >
-            Book a Free Consultation
-          </motion.button>
+          <Link href="/contact-us">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              className="cursor-pointer mt-6 px-8 py-3 bg-gradient-to-r from-[#FF5E62] to-[#FF9966] text-white text-lg rounded-full font-semibold shadow-lg transition-all"
+            >
+              Book a Free Consultation
+            </motion.button>
+          </Link>
         </motion.div>
       </section>
 
       {/* Services */}
       <section className="py-20 px-6 bg-white">
         <div className="max-w-7xl mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {services.map(({ title, icon }, idx) => (
+          {services.map(({ title, icon, href }, idx) => (
             <motion.div
               key={idx}
               whileHover={{ y: -5, scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
               className="bg-[#FFF4F2] p-6 rounded-2xl text-center shadow-md"
             >
-              <div className="text-4xl mb-4">{icon}</div>
-              <h3 className="text-xl font-semibold">{title}</h3>
+              <Link href={href}>
+                <div className="text-4xl mb-4">{icon}</div>
+                <h3 className="text-xl font-semibold">{title}</h3>
+              </Link>
             </motion.div>
           ))}
         </div>
@@ -95,30 +104,8 @@ export default function HireUsPage() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-4xl mx-auto text-center space-y-12">
-          <h2 className="text-3xl md:text-4xl font-bold">
-            What Our Clients Say
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {testimonials.map(({ quote, name, position }, idx) => (
-              <motion.div
-                key={idx}
-                whileHover={{ scale: 1.02 }}
-                className="bg-[#FFF4F2] p-6 rounded-xl shadow"
-              >
-                <p className="italic text-[#444]">&quot;{quote}&quot;</p>
-                <div className="mt-4 text-[#FF5E62] font-semibold">{name}</div>
-                <div className="text-[#888] text-sm">{position}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Contact Form */}
-      <section className="bg-[#FFF4F2] py-20 px-6">
+      <section className="bg-white py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Let&apos;s Build Something Great Together
@@ -157,16 +144,41 @@ export default function HireUsPage() {
         </div>
       </section>
 
-      {/* Floating CTA */}
-      {/* <div className="fixed bottom-5 right-5 z-50">
-        <motion.a
-          whileHover={{ scale: 1.1 }}
-          href="#"
-          className="bg-gradient-to-r from-[#FF5E62] to-[#FF9966] text-white px-6 py-3 rounded-full shadow-lg text-sm font-semibold"
-        >
-          💬 Get a Quote
-        </motion.a>
-      </div> */}
+      {/* Testimonials */}
+      <section className="py-20 px-6 bg-[#FFF4F2] ">
+        <div className="max-w-4xl mx-auto text-center space-y-12">
+          <h2 className="text-3xl md:text-4xl font-bold">
+            What Our Clients Say
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {testimonials.map(({ quote, name, position }, idx) => (
+              <motion.div
+                key={idx}
+                whileHover={{ scale: 1.02 }}
+                className="bg-white p-6 rounded-xl shadow"
+              >
+                <p className="italic text-[#444]">&quot;{quote}&quot;</p>
+                <div className="mt-4 text-[#FF5E62] font-semibold">{name}</div>
+                <div className="text-[#888] text-sm">{position}</div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* View More Reviews Button */}
+          <motion.div whileHover={{ scale: 1.05 }} className="pt-4">
+            <button
+              className="bg-gradient-to-r from-orange-400 to-pink-500 text-white px-6 py-3 rounded-full font-semibold shadow-md hover:opacity-90 transition"
+              onClick={() => {
+                // You can replace this with a scroll, modal open, or route change
+                alert("Redirect to more reviews page or show modal.");
+              }}
+            >
+              View More Reviews →
+            </button>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 }
