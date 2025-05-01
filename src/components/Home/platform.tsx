@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import salesforce from "../../../public/salesforce.svg";
 import microsoft from "../../../public/microsoft-partner.svg";
 import adobe from "../../../public/adobe.svg";
+import { ArrowRight } from "lucide-react";
 
 const partners = [
   {
@@ -128,17 +129,22 @@ export default function PlatformSolutions() {
             variants={buttonVariants}
             className="mt-12 flex flex-col sm:flex-row justify-center gap-5"
           >
+            {/* Gradient Button */}
             <Link
               href="/contact-us"
-              className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300 flex items-center gap-2"
+              className="inline-flex items-center group cursor-pointer bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 hover:-translate-y-1"
             >
-              Share Your Requirements →
+              Share Your Requirements
+              <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
+
+            {/* Outline Button */}
             <Link
               href="/platforms"
-              className="border-2 border-gray-900 text-gray-900 px-6 py-3 rounded-full font-semibold text-sm hover:bg-gray-900 hover:text-white transition-all duration-300 flex items-center gap-2"
+              className="inline-flex items-center group border-2 border-gray-900 text-gray-900 px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300 hover:bg-gray-900 hover:text-white hover:shadow-md transform hover:scale-105 hover:-translate-y-1"
             >
-              Explore More →
+              Explore More
+              <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
           </motion.div>
         </div>

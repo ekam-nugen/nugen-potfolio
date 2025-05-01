@@ -44,7 +44,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased`}
-        suppressHydrationWarning // Added here
+        suppressHydrationWarning
       >
         <Header />
         {children}

@@ -30,7 +30,7 @@ export default function Events() {
             subheading={
               <>
                 Empower your business with <br />
-                Nugen it service
+                Nugen IT Service
               </>
             }
             tags={platformTags}

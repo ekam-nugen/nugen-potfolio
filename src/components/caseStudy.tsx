@@ -15,8 +15,10 @@ export default function CaseStudyHero() {
       .toLowerCase()
       .replace(/\s+/g, "-")
       .replace(/[^\w-]+/g, "");
+
   return (
-    <section className="relative  text-black overflow-hidden">
+    <section className="relative text-black overflow-hidden">
+      {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#feddd0] via-[#f9e4da] to-transparent z-0" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-20">
@@ -25,7 +27,7 @@ export default function CaseStudyHero() {
           modules={[Pagination, Autoplay]}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           loop={true}
-          speed={1000} // smoother slide transition (default is 300ms)
+          speed={1000}
           className="w-full"
         >
           {caseStudies.map((study, index) => (
@@ -50,19 +52,23 @@ export default function CaseStudyHero() {
                     {study.tags.map((tag, i) => (
                       <span
                         key={i}
-                        className="px-4 py-1 bg-white/10 border border-[#f9c0a7] rounded-full text-sm backdrop-blur-md hover:bg-white/20 transition"
+                        className="px-4 py-1 bg-white border border-orange-200 text-orange-600 rounded-full text-sm shadow-sm hover:bg-orange-50 transition"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
 
-                  <a
+                  {/* Button with animation */}
+                  <motion.a
                     href={`/case-study/${slugify(study.title)}`}
-                    className="bg-gradient-to-r from-orange-400 to-pink-500 hover:from-orange-500 hover:to-pink-600 text-white font-semibold px-6 py-3 rounded-md inline-flex items-center gap-2 transition"
+                    whileHover={{ scale: 1.05, y: -2 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                    className="inline-flex items-center gap-2 group bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg"
                   >
-                    {study.buttonText} <ArrowRight className="w-5 h-5" />
-                  </a>
+                    {study.buttonText}
+                    <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+                  </motion.a>
                 </motion.div>
 
                 {/* Right Image */}

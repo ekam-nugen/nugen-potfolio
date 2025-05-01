@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import award1 from "../../public/award-logo-1.svg";
+import Link from "next/link";
 
 const awards = [
   award1,
@@ -31,11 +32,12 @@ export default function AwardsSection() {
           {awards?.map((img, i) => (
             <motion.div
               key={i}
-              className="p-4 bg-white shadow-md rounded-lg hover:shadow-xl transition duration-300"
+              className="cursor-pointer p-4 bg-white shadow-md rounded-lg hover:shadow-xl transition duration-300"
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
             >
+              <Link href={"https://g.co/kgs/R5Fz71K"}>
               <Image
                 src={img}
                 alt={`Award ${i + 1}`}
@@ -43,6 +45,7 @@ export default function AwardsSection() {
                 height={100}
                 className="mx-auto object-contain h-24 w-auto"
               />
+              </Link>
             </motion.div>
           ))}
         </motion.div>

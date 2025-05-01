@@ -5,6 +5,7 @@ import user1 from "../../../public/user1.png";
 import user2 from "../../../public/user2.png";
 import user3 from "../../../public/user3.png";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const testimonials = [
   {
@@ -99,10 +100,12 @@ export default function TestimonialStatic({
       <div className="text-center mt-10">
         <Link
           href="/review"
-          className="bg-gradient-to-r from-pink-500 to-orange-500 hover:from-pink-600 hover:to-orange-600 text-white px-10 py-4 rounded-full shadow-xl transform transition-transform duration-300 hover:scale-105 text-sm font-medium"
+          className="inline-flex items-center group bg-gradient-to-r from-pink-500 to-orange-500 hover:from-pink-600 hover:to-orange-600 text-white px-10 py-4 rounded-full shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 hover:shadow-2xl text-sm font-medium"
         >
           Read More Reviews
+          <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
         </Link>
+
         <div className="flex justify-center items-center gap-6 mt-10 flex-wrap">
           <Image src={google} alt="Google" width={100} height={35} />
           <Image src={trustpilot} alt="Trustpilot" width={100} height={35} />
