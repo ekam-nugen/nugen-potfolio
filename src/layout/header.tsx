@@ -90,7 +90,7 @@ export default function Header() {
                   key={index}
                   className={
                     item.submenu
-                      ? `relative group cursor-pointer py-7 ${
+                      ? `relative group cursor-pointer py-8 ${
                           item.submenu.some(
                             (s) =>
                               s.submenu?.some((sub) => isActive(sub.href!)) ||
@@ -116,7 +116,7 @@ export default function Header() {
                   ) : (
                     <Link
                       href={item.href!}
-                      className={`font-medium transition py-7 ${
+                      className={`font-medium transition py-8 ${
                         isActive(item.href!)
                           ? "text-[#ff6b3d]"
                           : "text-black hover:text-[#ff6b3d]"
@@ -132,7 +132,7 @@ export default function Header() {
 
           <div className="hidden lg:block">
             <Link
-              href="/book-an-appointmen"
+              href="/book-an-appointment"
               className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-md font-medium transition-all"
             >
               Hire us
