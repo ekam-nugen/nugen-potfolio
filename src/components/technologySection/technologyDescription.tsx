@@ -6,6 +6,7 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import ContactPopup from "../contactusPopup";
 
 const TechDescription: React.FC<TechDescriptionProps> = ({
   value,
@@ -17,6 +18,9 @@ const TechDescription: React.FC<TechDescriptionProps> = ({
 }) => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const [fade, setFade] = useState(false);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const handlePopupOpen = () => setIsPopupOpen(true);
+  const handlePopupClose = () => setIsPopupOpen(false);
 
   useEffect(() => {
     setFade(true);
@@ -90,13 +94,13 @@ const TechDescription: React.FC<TechDescriptionProps> = ({
                   from India’s Highest-rated Company.
                 </h2>
 
-                <Link
-                  href="/contact-us"
+                <button
+                  onClick={handlePopupOpen}
                   className="bg-gradient-to-r from-[#ff7e5f] to-[#feb47b] cursor-pointer text-white font-bold py-3 px-6 rounded-full flex items-center justify-center gap-2 mx-auto hover:bg-gradient-to-l transition"
                 >
                   Discuss Your Requirements
                   <ArrowRight className="ml-2" />
-                </Link>
+                </button>
               </div>
               <div className="mt-6 text-center">
                 <h3 className="text-lg font-semibold text-gray-800 mb-2">
@@ -191,13 +195,15 @@ const TechDescription: React.FC<TechDescriptionProps> = ({
           <p className="text-lg md:text-xl mb-6">
             Let’s help you create robust, scalable, and intelligent solutions.
           </p>
-          <Link
-            href="/contact-us"
+          <button
+            onClick={handlePopupOpen}
             className="bg-white text-[#ff5f6d] font-bold py-3 px-8 rounded-full hover:bg-gray-100 cursor-pointer transition"
           >
             Get a Free Quote
-          </Link>
+          </button>
         </div>
+        {/* Contact Popup Render */}
+        {isPopupOpen && <ContactPopup onClose={handlePopupClose} />}
       </section>
     </div>
   );

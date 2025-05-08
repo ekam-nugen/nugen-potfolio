@@ -1,9 +1,14 @@
-import Link from "next/link";
+"use client";
 import Image from "next/image";
 import { industriesData } from "@/src/json";
 import { ArrowRight } from "lucide-react";
+import ContactPopup from "../contactusPopup";
+import { useState } from "react";
 
 const IndustriesWeEmpower = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const handlePopupOpen = () => setIsPopupOpen(true);
+  const handlePopupClose = () => setIsPopupOpen(false);
   return (
     <section className="py-8 sm:py-12 lg:py-16 xl:py-20 bg-gradient-to-r from-white via-[#fff1eb] to-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -35,16 +40,18 @@ const IndustriesWeEmpower = () => {
           ))}
         </div>
         <div className="mt-8 sm:mt-10 lg:mt-12 xl:mt-16 text-center">
-          <Link
-            href="/contact-us"
+          <button
+            onClick={handlePopupOpen}
             className="inline-flex items-center hover:bg-gradient-to-r from-orange-400 to-purple-500 hover:text-white bg-white text-black text-sm sm:text-base lg:text-lg font-semibold py-2.5 sm:py-3 lg:py-4 px-5 sm:px-6 lg:px-8 rounded-full transition-all duration-300 shadow-md hover:shadow-lg"
             data-bookctablock="Get In Touch With Us - Industries We Empower"
           >
             Get In Touch With Us
             <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-          </Link>
+          </button>
         </div>
       </div>
+      {/* Contact Popup Render */}
+      {isPopupOpen && <ContactPopup onClose={handlePopupClose} />}
     </section>
   );
 };

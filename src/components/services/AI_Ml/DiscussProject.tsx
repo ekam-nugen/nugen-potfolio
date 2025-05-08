@@ -1,9 +1,9 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import ContactPopup from "../../contactusPopup";
 
 interface DiscussProjectProps {
   className?: string;
@@ -14,6 +14,9 @@ const DiscussProject: React.FC<DiscussProjectProps> = ({
   className,
   imageSrc,
 }) => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const handlePopupOpen = () => setIsPopupOpen(true);
+  const handlePopupClose = () => setIsPopupOpen(false);
   return (
     <div className={`py-12 px-4 sm:px-6 lg:px-8 ${className}`}>
       <div className="max-w-7xl mx-auto">
@@ -50,17 +53,19 @@ const DiscussProject: React.FC<DiscussProjectProps> = ({
                 You make informed decisions based on our expert guidance.
               </li>
             </ul>
-            <Link
-              href="/contact-us"
+            <button
+              onClick={handlePopupOpen}
               data-bookctablock="Schedule a discovery call - API Development"
               className="inline-flex items-center px-6 py-3 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-colors duration-300"
             >
               Schedule a discovery call
               <ArrowRight className="ml-2" />
-            </Link>
+            </button>
           </div>
         </div>
       </div>
+      {/* Contact Popup Render */}
+      {isPopupOpen && <ContactPopup onClose={handlePopupClose} />}
     </div>
   );
 };

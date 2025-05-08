@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { FC, useRef } from "react";
+import { FC, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { slides } from "../json/homePage";
 import ComputerIcon from "../../public/computer-icon.png";
@@ -12,8 +12,12 @@ import ToolIcon from "../../public/mobile.png";
 import hash from "../../public/hash-icon.png";
 import settings from "../../public/setting-icon.webp";
 import Link from "next/link";
+import ContactPopup from "./contactusPopup";
 
 const HomePage: FC = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const handlePopupOpen = () => setIsPopupOpen(true);
+  const handlePopupClose = () => setIsPopupOpen(false);
   const iconRef = useRef(null);
   const computerRef = useRef(null);
   const hashRef = useRef(null);
@@ -143,7 +147,7 @@ const HomePage: FC = () => {
                               alt={rating.alt}
                               width={rating.width}
                               height={rating.height}
-                              className="object-contain w-16 sm:w-20 md:w-24"
+                              className="object-contain w-16 sm:w-20 md:w-34"
                             />
                           </li>
                         ))}
@@ -216,19 +220,28 @@ const HomePage: FC = () => {
                         <h3 className="text-md sm:text-xl md:text-2xl font-semibold text-gray-900 mb-4 sm:mb-6 text-center">
                           {slide.rightContent.services.header}
                         </h3>
-                        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mt-6 sm:mt-8">
+                        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mt-6 sm:mt-14">
                           {slide.rightContent.services.items.map(
-                            (service, idx) => (
-                              <a
-                                key={idx}
-                                href={service.href}
-                                className={`px-4 sm:px-6 py-2 sm:py-3 border-l-4 ${service.borderColor} text-gray-800 font-medium hover:bg-gray-100 rounded-lg transition-colors duration-200 text-sm sm:text-base`}
-                              >
-                                {service.text}
-                              </a>
-                            )
+                            (service, idx) => {
+                              const Icon = service.icon;
+                              return (
+                                <a
+                                  key={idx}
+                                  href={service.href}
+                                  className={`flex items-center gap-2  sm:px-6 py-2 sm:py-3 border-l-4 ${service.borderColor} text-gray-800 font-medium hover:bg-gray-100 rounded-lg transition-colors duration-200 text-sm sm:text-base`}
+                                >
+                                  {Icon ? (
+                                    <Icon className="w-4 h-4 text-[#FF6900]" />
+                                  ) : (
+                                    <span className="w-4 h-4 text-[#FF6900]"></span>
+                                  )}
+                                  {service.text}
+                                </a>
+                              );
+                            }
                           )}
                         </div>
+
                         <div className="flex justify-center mt-6 sm:mt-8">
                           <a
                             href={slide.rightContent.services.button.href}
@@ -259,14 +272,14 @@ const HomePage: FC = () => {
                             </Link>
                             from India&apos;s Highest-rated Company.
                           </h2>
-                          <a
+                          <button
                             // href={slide.rightContent.iconText.button.href}
-                            href="/contact-us"
-                            className="bg-orange-500 hover:bg-orange-600 text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-md font-semibold text-sm sm:text-base transition flex items-center gap-2"
+                            onClick={handlePopupOpen}
+                            className="cursor-pointer bg-orange-500 hover:bg-orange-600 text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-md font-semibold text-sm sm:text-base transition flex items-center gap-2"
                           >
                             Discuss Your Requirements
                             <ArrowRight className="w-5 h-5" />
-                          </a>
+                          </button>
                         </div>
                         <div className="mt-4 sm:mt-6 pt-4 sm:pt-5 border-t border-gray-200">
                           <h3 className="text-sm sm:text-base md:text-lg text-gray-800 font-semibold text-center">
@@ -329,6 +342,8 @@ const HomePage: FC = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+       {/* Contact Popup Render */}
+       {isPopupOpen && <ContactPopup onClose={handlePopupClose} />}
     </div>
   );
 };

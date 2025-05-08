@@ -6,9 +6,15 @@ import {
 } from "@/src/json/testimonialjson";
 import Image from "next/image";
 import google from "../../../public/award-logo-1.svg";
-import trustpilot from "../../../public/trustpilot-logo.png";
+import Link from "next/link";
+import { useState } from "react";
+import ContactPopup from "../contactusPopup";
+// import trustpilot from "../../../public/trustpilot-logo.png";
 
 export default function ShowReviewsPage() {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const handlePopupOpen = () => setIsPopupOpen(true);
+  const handlePopupClose = () => setIsPopupOpen(false);
   const allTestimonials = [...TESTIMONOAL_DATA_ONE, ...TESTIMONOAL_DATA_TWO];
 
   return (
@@ -66,16 +72,23 @@ export default function ShowReviewsPage() {
         {/* Review Logos */}
         <div className="text-center mt-10">
           <div className="flex justify-center items-center gap-6 mt-6 flex-wrap">
-            <Image src={google} alt="Google" width={100} height={35} />
-            <Image src={trustpilot} alt="Trustpilot" width={100} height={35} />
+            <Link href={"https://g.co/kgs/15FsLmA"}>
+              <Image src={google} alt="Google" width={100} height={35} />
+            </Link>
+            {/* <Image src={trustpilot} alt="Trustpilot" width={100} height={35} /> */}
           </div>
         </div>
         <div className="mt-16">
-          <a href="/contact-us" className="cursor-pointer bg-gradient-to-r from-pink-500 to-orange-500 hover:from-pink-600 hover:to-orange-600 text-white px-10 py-4 rounded-full text-lg shadow-xl font-semibold transform transition-transform duration-300 hover:scale-105">
+          <button
+            onClick={handlePopupOpen}
+            className="cursor-pointer bg-gradient-to-r from-pink-500 to-orange-500 hover:from-pink-600 hover:to-orange-600 text-white px-10 py-4 rounded-full text-lg shadow-xl font-semibold transform transition-transform duration-300 hover:scale-105"
+          >
             Share Your Story
-          </a>
+          </button>
         </div>
       </div>
+      {/* Contact Popup Render */}
+      {isPopupOpen && <ContactPopup onClose={handlePopupClose} />}
     </section>
   );
 }

@@ -98,7 +98,7 @@ export default function BlogSection() {
         </motion.p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 ml-10 mr-10">
         {/* Featured Blog Card with Animation */}
         <motion.div
           initial="hidden"
@@ -132,6 +132,15 @@ export default function BlogSection() {
                     By{" "}
                     <span className="font-medium">{featuredPost.author}</span>,{" "}
                     {featuredPost.role}
+                    {/* Read This Blog Button */}
+                    <button
+                      onClick={() =>
+                        router.push(`/blog/${slugify(featuredPost.title)}`)
+                      }
+                      className="cursor-pointer mt-6 inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-2 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"
+                    >
+                      Read this blog →
+                    </button>
                   </p>
                 </div>
               </motion.div>
@@ -140,7 +149,7 @@ export default function BlogSection() {
         </motion.div>
 
         {/* Side Articles */}
-        <div className="col-span-1 lg:col-span-2 flex flex-col gap-8 justify-center">
+        <div className="col-span-1 lg:col-span-2 flex flex-col gap-8 justify-center ml-38">
           {blogData.slice(0, 5).map((post, idx) => (
             <motion.div
               key={idx}
@@ -184,7 +193,7 @@ export default function BlogSection() {
               href="/blog"
               variants={buttonVariants}
               className="cursor-pointer bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 hover:-translate-y-1"
-              >
+            >
               Read More Blog Post →
             </motion.a>
           </motion.div>

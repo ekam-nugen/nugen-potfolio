@@ -6,7 +6,7 @@ import {
   Globe,
   Smartphone,
   Users,
-  FlaskRound,
+  // FlaskRound,
 } from "lucide-react";
 import { BsRobot } from "react-icons/bs";
 
@@ -50,14 +50,14 @@ export const services = [
     linkTitle: "Learn About UI/UX",
     link: "/services/uiux",
   },
-  {
-    title: "QA",
-    icon: <FlaskRound color="#ff6b3d" />,
-    subtitle:
-      "Ensure software reliability through thorough testing and quality assurance.",
-    linkTitle: "Explore QA Services",
-    link: "/services/qa",
-  },
+  // {
+  //   title: "QA",
+  //   icon: <FlaskRound color="#ff6b3d" />,
+  //   subtitle:
+  //     "Ensure software reliability through thorough testing and quality assurance.",
+  //   linkTitle: "Explore QA Services",
+  //   link: "/services/qa",
+  // },
   {
     title: "Web Development",
     icon: <Globe color="#ff6b3d" />,

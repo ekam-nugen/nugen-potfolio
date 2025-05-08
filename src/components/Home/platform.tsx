@@ -7,6 +7,8 @@ import salesforce from "../../../public/salesforce.svg";
 import microsoft from "../../../public/microsoft-partner.svg";
 import adobe from "../../../public/adobe.svg";
 import { ArrowRight } from "lucide-react";
+import { useState } from "react";
+import ContactPopup from "../contactusPopup";
 
 const partners = [
   {
@@ -27,6 +29,9 @@ const partners = [
 ];
 
 export default function PlatformSolutions() {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const handlePopupOpen = () => setIsPopupOpen(true);
+  const handlePopupClose = () => setIsPopupOpen(false);
   // Animation variants for title and subtitle
   const textVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -109,9 +114,9 @@ export default function PlatformSolutions() {
                   <Image
                     src={partner.icon}
                     alt={partner.title}
-                    width={60}
-                    height={60}
-                    className="object-contain"
+                    width={130}
+                    height={140}
+                    className="object-contain h-10"
                   />
                   <span className="text-base font-semibold text-gray-900">
                     {partner.title}
@@ -130,13 +135,13 @@ export default function PlatformSolutions() {
             className="mt-12 flex flex-col sm:flex-row justify-center gap-5"
           >
             {/* Gradient Button */}
-            <Link
-              href="/contact-us"
+            <button
+              onClick={handlePopupOpen}
               className="inline-flex items-center group cursor-pointer bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 hover:-translate-y-1"
             >
               Share Your Requirements
               <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </Link>
+            </button>
 
             {/* Outline Button */}
             <Link
@@ -149,6 +154,8 @@ export default function PlatformSolutions() {
           </motion.div>
         </div>
       </div>
+      {/* Contact Popup Render */}
+      {isPopupOpen && <ContactPopup onClose={handlePopupClose} />}
     </section>
   );
 }

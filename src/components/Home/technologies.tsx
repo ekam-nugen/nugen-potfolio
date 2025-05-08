@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
@@ -19,6 +20,7 @@ import {
   FaDatabase,
 } from "react-icons/fa";
 import { ArrowRight } from "lucide-react";
+import ContactPopup from "../contactusPopup";
 
 const technologies = [
   {
@@ -135,6 +137,10 @@ const technologies = [
 ];
 
 export default function TechnologySection() {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const handlePopupOpen = () => setIsPopupOpen(true);
+  const handlePopupClose = () => setIsPopupOpen(false);
   // Animation variants for title and subtitles
   const textVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -240,20 +246,20 @@ export default function TechnologySection() {
         className="flex flex-col sm:flex-row justify-center items-center gap-4"
       >
         <motion.div
-          whileHover="hover"
+          whileHover={{ scale: 1.05 }}
           variants={buttonVariants}
-          className="inline-flex items-center group cursor-pointer bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 hover:-translate-y-1"
+          className="inline-flex items-center group cursor-pointer bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+          onClick={handlePopupOpen}
         >
-          <Link href="/contact-us" className="flex items-center">
+          <div className="flex items-center">
             Get A Quote
             <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-          </Link>
+          </div>
         </motion.div>
 
         <motion.div
-          whileHover="hover"
-          variants={buttonVariants}
-          className="inline-flex items-center group cursor-pointer border border-gray-300 hover:bg-gray-100 text-gray-800 font-medium px-6 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 hover:-translate-y-1"
+          whileHover={{ scale: 1.05 }}
+          className="inline-flex items-center group cursor-pointer border border-gray-300 hover:bg-gray-100 text-gray-800 font-medium px-6 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1"
         >
           <Link href="/technologies" className="flex items-center">
             See All Technologies
@@ -261,6 +267,8 @@ export default function TechnologySection() {
           </Link>
         </motion.div>
       </motion.div>
+
+      {isPopupOpen && <ContactPopup onClose={handlePopupClose} />}
     </section>
   );
 }

@@ -88,7 +88,7 @@ export default function ServicesSection() {
   return (
     <section className="bg-[#fef9f6] text-black px-6 md:px-16 py-20">
       {/* Header Section */}
-      <div className="w-full max-w-5xl mx-auto mb-16 text-center md:text-left">
+      <div className="w-full max-w-5xl mx-auto mb-16 text-center">
         <motion.h2
           initial="hidden"
           whileInView="visible"
@@ -103,14 +103,16 @@ export default function ServicesSection() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={textVariants}
-          className="text-gray-600 mt-4 text-base md:text-lg leading-relaxed max-w-3xl relative"
+          className="text-gray-600 mt-4 text-base md:text-lg leading-relaxed max-w-3xl mx-auto"
         >
           With every single one of our clients we bring forth a deep passion for{" "}
-          <span className="font-semibold text-[#f0845a]">
-            creative problem solving innovations
+          <span className="relative inline-block">
+            <span className="font-semibold text-[#f0845a]">
+              creative problem solving innovations
+            </span>
+            <span className="absolute -bottom-1 left-0 w-full h-1 bg-[#f0845a]/30 rounded-full" />
           </span>{" "}
           forward thinking brands boundaries
-          <span className="absolute -bottom-1 left-0 w-24 h-1 bg-[#f0845a]/30 rounded-full" />
         </motion.p>
       </div>
 
@@ -159,11 +161,8 @@ export default function ServicesSection() {
               >
                 <Link href={service?.href}>
                   <div className="flex gap-4">
-                    <span className="text-lg font-bold text-[#ff6b3d]">
-                      {service.id}
-                    </span>
                     <div>
-                      <h3 className="text-xl font-semibold group-hover:text-[#f0845a] transition-colors duration-300">
+                      <h3 className="text-xl font-semibold group-hover:text-[#ff6b3d] transition-colors duration-300">
                         {service.title}
                       </h3>
                       <p className="text-gray-600 text-sm mt-1">

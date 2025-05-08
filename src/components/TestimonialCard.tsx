@@ -4,7 +4,7 @@ import { Star, Quote, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import testimonials from "../json/testimonials";
 import googleimg from "../../public/award-logo-1.svg";
-import trustpilote from "../../public/trustpilot-logo.png";
+// import trustpilote from "../../public/trustpilot-logo.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -26,20 +26,22 @@ export default function TestimonialSection() {
             We help you build trust that lasts.
           </p>
           <div className="flex flex-wrap justify-center md:justify-start items-center gap-4 sm:gap-6 mb-6 sm:mb-8">
-            <Image
-              src={googleimg}
-              alt="Google Reviews"
-              width={100}
-              height={30}
-              className="grayscale-0 hover:grayscale transition w-auto h-6 sm:h-8"
-            />
-            <Image
+            <Link href={"https://g.co/kgs/psBb8y9"}>
+              <Image
+                src={googleimg}
+                alt="Google Reviews"
+                width={100}
+                height={100}
+                className="grayscale-0 hover:grayscale transition w-auto h-14 sm:h-18"
+              />
+            </Link>
+            {/* <Image
               src={trustpilote}
               alt="Trustpilot"
               width={100}
               height={30}
               className="grayscale-0 hover:grayscale transition w-auto h-6 sm:h-8"
-            />
+            /> */}
           </div>
           <Link
             href="/review"

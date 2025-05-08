@@ -1,8 +1,10 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import Image from "next/image";
 import salesforce from "../../../public/salesforce.svg";
 import microsoft from "../../../public/microsoft-partner.svg";
 import adobe from "../../../public/adobe.svg";
+import ContactPopup from "../contactusPopup";
 const platforms = [
   {
     name: "Salesforce",
@@ -26,6 +28,10 @@ const platforms = [
 ];
 
 export const TopPlatformsSection = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const handlePopupOpen = () => setIsPopupOpen(true);
+  const handlePopupClose = () => setIsPopupOpen(false);
+
   return (
     <section className="bg-gray-50 py-16 px-4">
       <div className="max-w-6xl mx-auto text-center">
@@ -51,16 +57,18 @@ export const TopPlatformsSection = () => {
               <p className="text-sm text-gray-600 mb-4">
                 {platform.description}
               </p>
-              <a
-                href="/contact-us"
+              <button
+                onClick={handlePopupOpen}
                 className="text-sm font-medium text-black hover:text-[#ff896b] transition-colors"
               >
                 Know More →
-              </a>
+              </button>
             </div>
           ))}
         </div>
       </div>
+      {/* Contact Popup Render */}
+      {isPopupOpen && <ContactPopup onClose={handlePopupClose} />}
     </section>
   );
 };

@@ -1,9 +1,9 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight, User } from "lucide-react";
 import { headerData } from "../json/menuData";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -11,6 +11,7 @@ interface MenuItem {
   label: string;
   href?: string;
   submenu?: MenuItem[];
+  icon?: React.ElementType;
 }
 
 export default function Header() {
@@ -19,6 +20,11 @@ export default function Header() {
     null
   );
   const pathname = usePathname();
+
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+    setOpenMobileDropdown(null);
+  }, [pathname]);
 
   const toggleMobileDropdown = (label: string) => {
     setOpenMobileDropdown((prev) => (prev === label ? null : label));
@@ -30,40 +36,53 @@ export default function Header() {
   const renderDesktopDropdown = (submenu: MenuItem[]) => (
     <div className="absolute left-0 top-21 w-64 bg-white shadow-xl rounded-xl transform transition-all duration-300 ease-in-out opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto pointer-events-none z-50">
       <div className="divide-y divide-gray-200 divide-dashed">
-        {submenu.map((section, index) => (
-          <div key={index} className="relative group/sub">
-            {section.submenu ? (
-              <>
-                <div className="flex items-center justify-between px-4 py-2 hover:bg-gray-100 cursor-pointer text-black font-semibold transition-all duration-200">
+        {submenu.map((section, index) => {
+          const Icon = section.icon;
+          return (
+            <div key={index} className="relative group/sub">
+              {section.submenu ? (
+                <>
+                  <div className="flex items-center justify-between px-4 py-2 hover:bg-gray-100 cursor-pointer text-black font-semibold transition-all duration-200">
+                    <span className="flex items-center gap-2">
+                      {Icon && <Icon className="w-4 h-4" />}
+                      {section.label}
+                    </span>
+                    <ChevronRight className="w-4 h-4 text-[#ff6b3d]" />
+                  </div>
+                  <div className="absolute left-full top-0 w-64 bg-white shadow-xl rounded-xl transform transition-all duration-300 ease-in-out opacity-0 scale-95 group-hover/sub:opacity-100 group-hover/sub:scale-100 group-hover/sub:pointer-events-auto pointer-events-none z-50">
+                    {section.submenu.map((item, idx) => {
+                      const SubIcon = item.icon;
+                      return (
+                        <Link
+                          key={idx}
+                          href={item.href!}
+                          className={`block px-4 py-2 hover:bg-gray-100 transition flex items-center gap-2 ${
+                            isActive(item.href!)
+                              ? "text-[#ff6b3d]"
+                              : "text-black"
+                          }`}
+                        >
+                          {SubIcon && <SubIcon className="w-4 h-4" />}
+                          {item.label}
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </>
+              ) : (
+                <Link
+                  href={section.href!}
+                  className={`block px-4 py-2 hover:bg-gray-100 transition flex items-center gap-2 ${
+                    isActive(section.href!) ? "text-[#ff6b3d]" : "text-black"
+                  } font-medium`}
+                >
+                  {Icon && <Icon className="w-4 h-4" />}
                   {section.label}
-                  <ChevronRight className="w-4 h-4 text-[#ff6b3d]" />
-                </div>
-                <div className="absolute left-full top-0 w-64 bg-white shadow-xl rounded-xl transform transition-all duration-300 ease-in-out opacity-0 scale-95 group-hover/sub:opacity-100 group-hover/sub:scale-100 group-hover/sub:pointer-events-auto pointer-events-none z-50">
-                  {section.submenu.map((item, idx) => (
-                    <Link
-                      key={idx}
-                      href={item.href!}
-                      className={`block px-4 py-2 hover:bg-gray-100 transition ${
-                        isActive(item.href!) ? "text-[#ff6b3d]" : "text-black"
-                      }`}
-                    >
-                      {item.label}
-                    </Link>
-                  ))}
-                </div>
-              </>
-            ) : (
-              <Link
-                href={section.href!}
-                className={`block px-4 py-2 hover:bg-gray-100 transition ${
-                  isActive(section.href!) ? "text-[#ff6b3d]" : "text-black"
-                } font-medium`}
-              >
-                {section.label}
-              </Link>
-            )}
-          </div>
-        ))}
+                </Link>
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   );
@@ -76,66 +95,70 @@ export default function Header() {
             <Image
               src="/logo.png"
               alt="Logo"
-              width={350}
-              height={150}
-              className="h-20 w-auto"
+              width={80}
+              height={80}
+              className="h-10 w-auto"
             />
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center justify-center flex-1 mx-8">
             <div className="flex items-center justify-center space-x-6">
-              {headerData.map((item: MenuItem, index) => (
-                <div
-                  key={index}
-                  className={
-                    item.submenu
-                      ? `relative group cursor-pointer py-8 ${
-                          item.submenu.some(
-                            (s) =>
-                              s.submenu?.some((sub) => isActive(sub.href!)) ||
-                              isActive(s.href!)
-                          )
-                            ? "text-[#ff6b3d]"
-                            : "text-black hover:text-[#ff6b3d]"
-                        }`
-                      : ""
-                  }
-                >
-                  {item.submenu ? (
-                    <>
+              {headerData.map((item: MenuItem, index) => {
+                const Icon = item.icon;
+                const active = item.href && isActive(item.href);
+                return (
+                  <div
+                    key={index}
+                    className="relative group cursor-pointer py-8"
+                  >
+                    {item.submenu ? (
+                      <>
+                        <div className="flex items-center gap-2">
+                          <div className="bg-[#FF6B3D] text-white p-1 rounded-full shadow-md">
+                            {Icon && <Icon className="w-3 h-3" />}
+                          </div>
+                          <Link
+                            href={item?.href || "#"}
+                            className="font-medium flex items-center gap-1 hover:text-[#ff6b3d]"
+                          >
+                            {item.label}
+                            <ChevronDown className="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180" />
+                          </Link>
+                        </div>
+                        {renderDesktopDropdown(item.submenu)}
+                      </>
+                    ) : (
                       <Link
-                        href={item?.href || "#"}
-                        className={`font-medium flex items-center transition-all`}
+                        href={item.href!}
+                        className="flex items-center gap-2 hover:text-[#ff6b3d]"
                       >
-                        {item.label}
-                        <ChevronDown className="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180" />
+                        <div className="bg-[#FF6B3D] text-white p-1 rounded-full shadow-md">
+                          {Icon && <Icon className="w-3 h-3" />}
+                        </div>
+                        <span
+                          className={`font-medium ${
+                            active ? "text-[#ff6b3d]" : "text-black"
+                          }`}
+                        >
+                          {item.label}
+                        </span>
                       </Link>
-                      {renderDesktopDropdown(item.submenu)}
-                    </>
-                  ) : (
-                    <Link
-                      href={item.href!}
-                      className={`font-medium transition py-8 ${
-                        isActive(item.href!)
-                          ? "text-[#ff6b3d]"
-                          : "text-black hover:text-[#ff6b3d]"
-                      }`}
-                    >
-                      {item.label}
-                    </Link>
-                  )}
-                </div>
-              ))}
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </nav>
 
+          {/* Contact Button */}
           <div className="hidden lg:block">
             <Link
-              href="/book-an-appointment"
-              className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-md font-medium transition-all"
+              href="/contact"
+              className="bg-gradient-to-r from-orange-400 to-purple-400 text-white px-6 py-2 rounded-full font-medium shadow-md flex items-center gap-2 transition hover:scale-105"
             >
-              Hire us
+              <User className="w-4 h-4" />
+              Contact Us
             </Link>
           </div>
 
@@ -152,7 +175,6 @@ export default function Header() {
       </div>
 
       {/* Mobile Navigation */}
-      {/* Mobile Navigation */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -164,93 +186,56 @@ export default function Header() {
             className="absolute left-0 right-0 top-full bg-white shadow-md z-50 overflow-hidden lg:hidden"
           >
             <div className="py-4 px-4 space-y-4">
-              {headerData.map((item: MenuItem, index) => (
-                <div key={index}>
-                  {item.submenu ? (
-                    <>
-                      <button
-                        className="flex justify-between w-full text-left py-2 text-black font-medium"
-                        onClick={() => toggleMobileDropdown(item.label)}
+              {headerData.map((item: MenuItem, index) => {
+                const Icon = item.icon;
+                return (
+                  <div key={index}>
+                    {item.submenu ? (
+                      <>
+                        <button
+                          className="flex justify-between items-center w-full text-left py-2 text-black font-medium"
+                          onClick={() => toggleMobileDropdown(item.label)}
+                        >
+                          <span className="flex items-center gap-2">
+                            <div className="bg-[#FF6B3D] text-white p-1 rounded-full shadow-md">
+                              {Icon && <Icon className="w-3 h-3" />}
+                            </div>
+                            {item.label}
+                          </span>
+                          <ChevronDown
+                            className={`w-4 h-4 transition-transform duration-300 ${
+                              openMobileDropdown === item.label
+                                ? "rotate-180 text-[#ff6b3d]"
+                                : ""
+                            }`}
+                          />
+                        </button>
+                      </>
+                    ) : (
+                      <Link
+                        href={item.href!}
+                        className={`flex items-center gap-2 py-2 font-medium ${
+                          isActive(item.href!) ? "text-[#ff6b3d]" : "text-black"
+                        }`}
                       >
+                        <div className="bg-[#FF6B3D] text-white p-1 rounded-full shadow-md">
+                          {Icon && <Icon className="w-3 h-3" />}
+                        </div>
                         {item.label}
-                        <ChevronDown
-                          className={`w-4 h-4 transition-transform duration-300 ${
-                            openMobileDropdown === item.label
-                              ? "rotate-180 text-[#ff6b3d]"
-                              : ""
-                          }`}
-                        />
-                      </button>
+                      </Link>
+                    )}
+                  </div>
+                );
+              })}
 
-                      <AnimatePresence initial={false}>
-                        {openMobileDropdown === item.label && (
-                          <motion.div
-                            key="submenu"
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: "auto", opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            transition={{ duration: 0.2 }}
-                            className="pl-4 overflow-hidden space-y-2"
-                          >
-                            {item.submenu.map((sub, idx) =>
-                              sub.submenu ? (
-                                <div key={idx}>
-                                  <div className="text-sm font-semibold text-black">
-                                    {sub.label}
-                                  </div>
-                                  <div className="ml-4 space-y-1">
-                                    {sub.submenu.map((nested, nidx) => (
-                                      <Link
-                                        key={nidx}
-                                        href={nested.href!}
-                                        className={`block text-sm ${
-                                          isActive(nested.href!)
-                                            ? "text-[#ff6b3d]"
-                                            : "text-gray-700 hover:underline"
-                                        }`}
-                                      >
-                                        {nested.label}
-                                      </Link>
-                                    ))}
-                                  </div>
-                                </div>
-                              ) : (
-                                <Link
-                                  key={idx}
-                                  href={sub.href!}
-                                  className={`block text-sm ${
-                                    isActive(sub.href!)
-                                      ? "text-[#ff6b3d]"
-                                      : "text-gray-700 hover:underline"
-                                  }`}
-                                >
-                                  {sub.label}
-                                </Link>
-                              )
-                            )}
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </>
-                  ) : (
-                    <Link
-                      href={item.href!}
-                      className={`block py-2 font-medium ${
-                        isActive(item.href!) ? "text-[#ff6b3d]" : "text-black"
-                      }`}
-                    >
-                      {item.label}
-                    </Link>
-                  )}
-                </div>
-              ))}
               <Link
-                href="/book-an-appointment"
-                className={`block py-2 font-medium ${
-                  pathname === "/contact" ? "text-[#ff6b3d]" : "text-black"
-                }`}
+                href="/contact"
+                className="flex items-center gap-2 py-2 font-medium text-black"
               >
-                Hire us
+                <div className="bg-gradient-to-r from-orange-400 to-purple-400 text-white p-2 rounded-full shadow-md">
+                  <User className="w-4 h-4" />
+                </div>
+                Contact Us
               </Link>
             </div>
           </motion.div>

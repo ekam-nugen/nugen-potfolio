@@ -143,7 +143,7 @@ const ContactUsSection = () => {
               variants={inputVariants}
               className="text-sm text-gray-500 mt-2"
             >
-              ✅ 100% Confidential | 📝 We Sign NDA
+              ✅ 100% Confidential
             </motion.p>
           </form>
         </motion.div>
@@ -168,9 +168,9 @@ const ContactUsSection = () => {
           >
             <strong>📍 Address:</strong>
             <br />
-            C-196/A, Times Square Building,
+            Phase 8, C-196/A, Times Square Building,
             <br />
-            Ground Floor, Sector 74, SAS Nagar,
+            3 Floor, Sector 74, SAS Nagar,
             <br />
             Mohali, Punjab, 160071
           </motion.p>

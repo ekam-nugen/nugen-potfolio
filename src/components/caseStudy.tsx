@@ -21,7 +21,7 @@ export default function CaseStudyHero() {
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#feddd0] via-[#f9e4da] to-transparent z-0" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-20">
+      <div className="relative z-10 w-full px-4 py-20 md:px-20">
         <Swiper
           pagination={{ clickable: true }}
           modules={[Pagination, Autoplay]}
@@ -58,17 +58,23 @@ export default function CaseStudyHero() {
                       </span>
                     ))}
                   </div>
-
                   {/* Button with animation */}
-                  <motion.a
-                    href={`/case-study/${slugify(study.title)}`}
-                    whileHover={{ scale: 1.05, y: -2 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                    className="inline-flex items-center gap-2 group bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg"
-                  >
-                    {study.buttonText}
-                    <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
-                  </motion.a>
+                  <div className="ml-4">
+                    <motion.a
+                      href={`/case-study/${slugify(study.title)}`}
+                      whileHover={{ scale: 1.05, y: -2 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 25,
+                        duration: 0.0,
+                      }}
+                      className="inline-flex items-center gap-2 group bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 ease-in-out shadow-md hover:shadow-lg"
+                    >
+                      {study.buttonText}
+                      <ArrowRight className="w-5 h-5 transition-transform duration-300 ease-in-out group-hover:translate-x-1" />
+                    </motion.a>
+                  </div>
                 </motion.div>
 
                 {/* Right Image */}
@@ -76,7 +82,7 @@ export default function CaseStudyHero() {
                   initial={{ opacity: 0, x: 40 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6 }}
-                  className="md:w-1/2"
+                  className="md:w-1/2 pl-4 md:pl-10 pr-7 md:pr-10"
                 >
                   <Image
                     src={study?.image ?? ""}

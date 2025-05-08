@@ -1,8 +1,15 @@
+"use client";
 import Link from "next/link";
+import { useState } from "react";
 import { aboutUsData } from "@/src/json";
 import { ArrowRight } from "lucide-react";
+import ContactPopup from "../contactusPopup";
+
 
 const HeroSection = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const handlePopupOpen = () => setIsPopupOpen(true);
+  const handlePopupClose = () => setIsPopupOpen(false);
   return (
     <section className="bg-white py-16">
       <div className="container mx-auto px-4">
@@ -30,15 +37,17 @@ const HeroSection = () => {
             ))}
           </div>
 
-          <Link
-            href="/contact-us"
-            className="inline-flex items-center px-6 py-3 hover:bg-gradient-to-r border border-gray-300 from-orange-400 to-purple-400 hover:text-white bg-white text-gray-800  font-semibold rounded-lg  duration-200"
+          <button
+            onClick={handlePopupOpen}
+            className="cursor-pointer inline-flex items-center px-6 py-3 hover:bg-gradient-to-r border border-gray-300 from-orange-400 to-purple-400 hover:text-white bg-white text-gray-800  font-semibold rounded-lg  duration-200"
           >
             Get In Touch With Us
             <ArrowRight className="ml-2" strokeWidth={2} />
-          </Link>
+          </button>
         </div>
       </div>
+      {/* Contact Popup Render */}
+      {isPopupOpen && <ContactPopup onClose={handlePopupClose} />}
     </section>
   );
 };

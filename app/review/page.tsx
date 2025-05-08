@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import Head from "next/head";
 import Loader from "@/src/components/common/Loader";
-import ShowReviewsPage from "@/src/components/testi";
+import ShowReviewsPage from "@/src/components/testimonial";
 import ContactUsSection from "@/src/components/technologySection/contactSection";
 
 export default function HowWeWork() {

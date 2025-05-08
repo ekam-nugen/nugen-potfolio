@@ -1,32 +1,18 @@
+"use client";
 import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import ContactPopup from "./contactusPopup";
 
 export default function TechEventsPage() {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const handlePopupOpen = () => setIsPopupOpen(true);
+  const handlePopupClose = () => setIsPopupOpen(false);
   const events = [
     {
-      name: "Web Summit",
-      location: "Lisbon, Portugal",
-      date: "November 2023",
-      image: "/81b92286-843a-4ce7-90c4-9e77fb408c3d.webp",
-    },
-    {
-      name: "CES",
-      location: "Las Vegas, USA",
-      date: "January 2024",
-      image: "/81b92286-843a-4ce7-90c4-9e77fb408c3d.webp",
-    },
-    {
-      name: "TechCrunch Disrupt",
-      location: "San Francisco, USA",
-      date: "September 2023",
-      image: "/81b92286-843a-4ce7-90c4-9e77fb408c3d.webp",
-    },
-    {
-      name: "GITEX Global",
-      location: "Dubai, UAE",
-      date: "October 2023",
-      image: "/81b92286-843a-4ce7-90c4-9e77fb408c3d.webp",
+      name: "L.K.C.T.C.Jalandhar",
+      location: "Jalandhar",
+      date: "November 2024",
+      image: "/events/1745241842003.jpeg",
     },
   ];
 
@@ -52,7 +38,7 @@ export default function TechEventsPage() {
           {events.map((event, idx) => (
             <div
               key={idx}
-              className="group bg-orange-50 hover:bg-white transition p-6 rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 duration-300"
+              className="cursor-pointer group bg-orange-50 hover:bg-white transition p-6 rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 duration-300"
             >
               <Image
                 height={100}
@@ -81,10 +67,15 @@ export default function TechEventsPage() {
             Meet us at the next global tech event or schedule a virtual demo to
             learn how we can transform your business.
           </p>
-          <Link href="/contact-us" className="mt-4 px-6 py-3 bg-white text-orange-600 text-lg rounded-xl font-semibold transition hover:bg-gray-100 hover:scale-105 duration-200">
+          <button
+            onClick={handlePopupOpen}
+            className="cursor-pointer mt-4 px-6 py-3 bg-white text-orange-600 text-lg rounded-xl font-semibold transition hover:bg-gray-100 hover:scale-105 duration-200"
+          >
             Book a Free Consultation
-          </Link>
+          </button>
         </div>
+        {/* Contact Popup Render */}
+        {isPopupOpen && <ContactPopup onClose={handlePopupClose} />}
       </section>
     </div>
   );

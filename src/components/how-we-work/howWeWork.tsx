@@ -1,11 +1,14 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Star, ArrowRight } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
+import ContactPopup from "../contactusPopup";
 
 export default function HowWeWorkSection() {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const handlePopupOpen = () => setIsPopupOpen(true);
+  const handlePopupClose = () => setIsPopupOpen(false);
   // Animation variants for staggered text content
   const textVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -116,10 +119,10 @@ export default function HowWeWorkSection() {
             </p>
             <div className="flex flex-wrap gap-6 items-center text-sm text-gray-800">
               {[
-                { name: "Clutch", rating: 4.8 },
-                { name: "Trustpilot", rating: 4.8 },
+                // { name: "Clutch", rating: 4.8 },
+                // { name: "Trustpilot", rating: 4.8 },
                 { name: "Google", rating: 4.6 },
-                { name: "Goodfirms", rating: 4.8 },
+                // { name: "Goodfirms", rating: 4.8 },
               ].map(({ name, rating }, index) => (
                 <motion.div
                   key={name}
@@ -141,17 +144,17 @@ export default function HowWeWorkSection() {
           </motion.div>
 
           {/* CTA Button wrapped in Link component */}
-          <Link href="/contact-us">
+          <button onClick={handlePopupOpen}>
             <motion.button
               variants={buttonVariants}
               initial="rest"
               whileHover="hover"
               whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-[#FF6B00] to-[#FF2FB6] text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 shadow-lg"
+              className="cursor-pointer bg-gradient-to-r from-[#FF6B00] to-[#FF2FB6] text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 shadow-lg"
             >
               Get A Quote <ArrowRight className="w-4 h-4" />
             </motion.button>
-          </Link>
+          </button>
         </div>
 
         {/* Animated Illustration */}
@@ -172,6 +175,8 @@ export default function HowWeWorkSection() {
           />
         </motion.div>
       </div>
+      {/* Contact Popup Render */}
+      {isPopupOpen && <ContactPopup onClose={handlePopupClose} />}
     </section>
   );
 }
